@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>少女ウォーズ キャラまとめ表 | 幻想天下統一戦 データベース＆ダッシュボード</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20100%22><text y=%22.9em%22 font-size=%2290%22>⚔️</text></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-badge">GirlWars</span>
+        <h1 class="brand-title">少女ウォーズ キャラまとめ表</h1>
+        <span class="brand-sub">幻想天下統一戦 データベース & ダッシュボード</span>
+      </div>
+      <div class="header-actions">
+        <span id="data-meta-badge" class="meta-badge">読み込み中...</span>
+        <a href="https://github.com/OventoX/girlwars-matome" target="_blank" rel="noopener noreferrer" class="btn-github">
+          <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Tabs -->
+  <nav class="nav-tabs">
+    <div class="tabs-container">
+      <button class="tab-btn active" data-tab="catalog">
+        <span class="tab-icon">🎴</span> キャラクター一覧 (<span id="total-char-count">0</span>)
+      </button>
+      <button class="tab-btn" data-tab="tier">
+        <span class="tab-icon">🏆</span> Tier表・評価ランキング
+      </button>
+      <button class="tab-btn" data-tab="about">
+        <span class="tab-icon">ℹ️</span> データ出典・鮮度について
+      </button>
+    </div>
+  </nav>
+
+  <!-- Controls / Filters Area -->
+  <section class="controls-section" id="controls-panel">
+    <div class="controls-container">
+      <!-- Search -->
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="キャラ名（漢字・ひらがな）、声優名で検索..." autocomplete="off">
+        <button id="search-clear-btn" class="clear-btn" title="検索クリア">×</button>
+      </div>
+
+      <!-- Filters Row 1: Rarity & Freshness -->
+      <div class="filters-group">
+        <div class="filter-col">
+          <span class="filter-label">レアリティ:</span>
+          <div class="filter-chips" id="filter-rarity">
+            <button class="chip active" data-val="all">全レア</button>
+            <button class="chip chip-ur-sen" data-val="UR閃">UR閃</button>
+            <button class="chip chip-ur" data-val="UR">UR</button>
+            <button class="chip chip-ssr" data-val="SSR">SSR</button>
+            <button class="chip chip-bride" data-val="花嫁">花嫁</button>
+          </div>
+        </div>
+
+        <div class="filter-col">
+          <span class="filter-label">鮮度:</span>
+          <div class="filter-chips" id="filter-freshness">
+            <button class="chip active" data-val="all">全て</button>
+            <button class="chip chip-fresh" data-val="latest">🟢 2026年最新</button>
+            <button class="chip chip-outdated" data-val="outdated">⚠️ 2024年情報</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters Row 2: Type & System & Sort -->
+      <div class="filters-group">
+        <div class="filter-col">
+          <span class="filter-label">タイプ:</span>
+          <div class="filter-chips" id="filter-type">
+            <button class="chip active" data-val="all">全タイプ</button>
+            <button class="chip chip-type-power" data-val="力">力</button>
+            <button class="chip chip-type-wisdom" data-val="智">智</button>
+            <button class="chip chip-type-brave" data-val="猛">猛</button>
+          </div>
+        </div>
+
+        <div class="filter-col">
+          <span class="filter-label">系統属性:</span>
+          <div class="filter-chips" id="filter-system">
+            <button class="chip active" data-val="all">全系統</button>
+            <button class="chip chip-sys-wind" data-val="風">風</button>
+            <button class="chip chip-sys-flower" data-val="花">花</button>
+            <button class="chip chip-sys-snow" data-val="雪">雪</button>
+            <button class="chip chip-sys-moon" data-val="月">月</button>
+          </div>
+        </div>
+
+        <div class="filter-col sort-col">
+          <span class="filter-label">ソート:</span>
+          <select id="sort-select" class="sort-dropdown">
+            <option value="rarity-desc">レアリティ順（UR閃→UR→SSR）</option>
+            <option value="ruby-asc">五十音順（あ→ん）</option>
+            <option value="date-desc">更新日順（最新優先）</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Active Filters Summary -->
+      <div class="filter-status-bar">
+        <span>表示中: <strong id="filtered-count">0</strong> 件</span>
+        <button id="reset-filters-btn" class="btn-text">フィルターをリセット</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tab 1: Catalog (Card Gallery) -->
+  <main class="tab-content active" id="tab-catalog">
+    <div class="cards-grid" id="characters-container">
+      <!-- Cards rendered dynamically via app.js -->
+    </div>
+  </main>
+
+  <!-- Tab 2: Tier View -->
+  <section class="tab-content" id="tab-tier">
+    <div class="tier-view-container">
+      <div class="tier-subnav">
+        <button class="tier-sub-btn active" data-tier-view="atwiki">2024年 wiki Tier表（T0〜T3）</button>
+        <button class="tier-sub-btn" data-tier-view="ursen">2026年 UR閃キャラ強み一覧</button>
+      </div>
+
+      <!-- 2024 Tier View -->
+      <div class="tier-subcontent active" id="subview-tier-atwiki">
+        <div class="tier-banner">
+          <div class="banner-title">少女ウォーズ @ ウィキ Tier表（2024年8月15日時点）</div>
+          <p class="banner-desc">wikiの一枚絵ランキング補足に基づくPVP評価。T0（異議なしの強力）、T1（そこそこ強い）、T2（補強の次善）、T3（底辺）。出典: <a href="https://w.atwiki.jp/girlwars/pages/135.html" target="_blank" rel="noopener">少女ウォーズ@wiki Tier表</a></p>
+        </div>
+        <div class="tier-groups-container" id="atwiki-tier-groups">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- 2026 UR閃 Strengths View -->
+      <div class="tier-subcontent" id="subview-tier-ursen">
+        <div class="tier-banner fresh">
+          <div class="banner-title">2026年 UR閃キャラ強み・性能一覧（2026年11月5日更新）</div>
+          <p class="banner-desc">現環境における全UR閃キャラクターの強み・特徴の五十音順まとめ。出典: <a href="https://ameblo.jp/hetarerimuru/entry-12892549072.html" target="_blank" rel="noopener">へたれゲームプレイヤーリムルの日記と攻略情報</a></p>
+        </div>
+        <div class="ursen-strengths-grid" id="ursen-strengths-container">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tab 3: About & Freshness -->
+  <section class="tab-content" id="tab-about">
+    <div class="about-container">
+      <h2>データ出典・鮮度ポリシーについて</h2>
+      <p class="lead">本ツールは、ゲーム『少女ウォーズ：幻想天下統一戦』のキャラクター・スキル・評価データを一次情報から客観的にまとめ、視覚的に閲覧できる静的Webダッシュボードです。推測や創作データは一切含まず、出典と更新日を明記しています。</p>
+
+      <div class="source-cards">
+        <div class="source-card">
+          <div class="source-header">
+            <h3>少女ウォーズ @ ウィキ (atwiki)</h3>
+            <span class="source-tag tag-outdated">最終更新: 2024年8月15日（停止）</span>
+          </div>
+          <p>初期〜2024年夏までのSSRキャラ（54体）、URキャラ（12体）、花嫁（23体）の基礎属性（職業・CV・定位・セリフ）および韓国公式ラウンジ等由来の高画質スチルイラストを取得しています。※wiki側にはスキル本文・ステータス数値が存在しないため、本ツールでも捏造せず未記載として扱っています。</p>
+          <a href="https://w.atwiki.jp/girlwars/" target="_blank" class="btn-source-link">atwikiを開く ↗</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-header">
+            <h3>へたれゲームプレイヤーリムル (ameblo)</h3>
+            <span class="source-tag tag-fresh">最終更新: 2026年11月5日（現役更新中）</span>
+          </div>
+          <p>2026年11月最新キャラ「メイヴ」を含む全UR閃キャラ（39体）およびURキャラ（33体）の性能解説、スキル・パッシブ・奥義・火炎/氷魂超進化の全文効果テキスト、系統属性（風花雪月）、強み要約を提供しています。</p>
+          <a href="https://ameblo.jp/hetarerimuru/entry-12892549072.html" target="_blank" class="btn-source-link">強み一覧記事を開く ↗</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-header">
+            <h3>マトメバコ！ (kokomatoblog.com)</h3>
+            <span class="source-tag tag-fresh">最終更新: 2026年11月9日（現役更新中）</span>
+          </div>
+          <p>最新のUR閃キャラクター（メイヴ、巴御前、ローラン、オジマンディアス等）のスキル評価ハイライト、おすすめ宝石、および高画質な公式ゲーム内立ち絵PNG画像を提供しています。</p>
+          <a href="https://kokomatoblog.com/category/game/shoujyowars" target="_blank" class="btn-source-link">マトメバコ！少女ウォーズ記事 ↗</a>
+        </div>
+      </div>
+
+      <div class="copyright-notice">
+        <h3>著作権および権利表記</h3>
+        <p>本サイトに掲載されている『少女ウォーズ：幻想天下統一戦』に関する画像、スキルテキスト、キャラクター名等の著作権・知的財産権は、Y2SGAMES および原権利者に帰属します。画像は公式一次情報および各攻略ブログ様からの直リンク引用＋クレジット表記に基づき表示しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Character Detail Modal -->
+  <div class="modal-backdrop" id="char-modal" style="display: none;">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" title="閉じる（Esc）">&times;</button>
+      <div class="modal-body" id="modal-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="tier_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
