@@ -1,5 +1,6 @@
 /**
  * 少女ウォーズ キャラまとめ表 - Application Logic
+ * Full-featured with Party Simulator & Favorites & Offline PWA
  */
 
 (function() {
@@ -12,16 +13,29 @@
     type: 'all',
     system: 'all',
     freshness: 'all',
+    favFilter: 'all', // 'all' or 'fav'
     sort: 'rarity-desc',
     activeTab: 'catalog',
     tierSubView: 'atwiki',
-    selectedChar: null
+    selectedChar: null,
+    
+    // Persistent lists
+    favorites: new Set(),
+    // Party: 12 slots (0-2: 前列, 3-5: 後列, 6-11: 控え)
+    party: new Array(12).fill(null)
+  };
+
+  // LocalStorage Keys
+  const STORAGE_KEYS = {
+    FAVORITES: 'gw_favorites_v1',
+    PARTY: 'gw_party_v1'
   };
 
   // DOM Elements
   const el = {
     metaBadge: document.getElementById('data-meta-badge'),
     totalCharCount: document.getElementById('total-char-count'),
+    partyCountBadge: document.getElementById('party-count-badge'),
     filteredCount: document.getElementById('filtered-count'),
     searchInput: document.getElementById('search-input'),
     searchClearBtn: document.getElementById('search-clear-btn'),
@@ -32,18 +46,61 @@
     modalContent: document.getElementById('modal-content'),
     modalCloseBtn: document.getElementById('modal-close-btn'),
     tabCatalog: document.getElementById('tab-catalog'),
+    tabParty: document.getElementById('tab-party'),
     tabTier: document.getElementById('tab-tier'),
     tabAbout: document.getElementById('tab-about'),
     controlsPanel: document.getElementById('controls-panel'),
     atwikiTierGroups: document.getElementById('atwiki-tier-groups'),
-    ursenStrengthsContainer: document.getElementById('ursen-strengths-container')
+    ursenStrengthsContainer: document.getElementById('ursen-strengths-container'),
+
+    // Party Controls
+    btnExportParty: document.getElementById('btn-export-party'),
+    btnImportParty: document.getElementById('btn-import-party'),
+    btnClearParty: document.getElementById('btn-clear-party'),
+    synergyPowerCount: document.getElementById('synergy-power-count'),
+    synergyWisdomCount: document.getElementById('synergy-wisdom-count'),
+    synergyBraveCount: document.getElementById('synergy-brave-count'),
+    synergyWindCount: document.getElementById('synergy-wind-count'),
+    synergyFlowerCount: document.getElementById('synergy-flower-count'),
+    synergySnowCount: document.getElementById('synergy-snow-count'),
+    synergyMoonCount: document.getElementById('synergy-moon-count')
   };
+
+  // Load persistent state
+  function loadPersistedState() {
+    try {
+      const favRaw = localStorage.getItem(STORAGE_KEYS.FAVORITES);
+      if (favRaw) {
+        state.favorites = new Set(JSON.parse(favRaw));
+      }
+      const partyRaw = localStorage.getItem(STORAGE_KEYS.PARTY);
+      if (partyRaw) {
+        const parsed = JSON.parse(partyRaw);
+        if (Array.isArray(parsed) && parsed.length === 12) {
+          state.party = parsed;
+        }
+      }
+    } catch (e) {
+      console.warn('Could not read from localStorage:', e);
+    }
+  }
+
+  function savePersistedState() {
+    try {
+      localStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify([...state.favorites]));
+      localStorage.setItem(STORAGE_KEYS.PARTY, JSON.stringify(state.party));
+    } catch (e) {
+      console.warn('Could not save to localStorage:', e);
+    }
+  }
 
   // Initialize
   function init() {
+    loadPersistedState();
     setupMetaBadge();
     setupEventListeners();
     renderCards();
+    renderPartyView();
     renderTierView();
   }
 
@@ -55,6 +112,14 @@
     }
     if (el.totalCharCount) {
       el.totalCharCount.textContent = count;
+    }
+    updatePartyBadge();
+  }
+
+  function updatePartyBadge() {
+    const assignedCount = state.party.filter(Boolean).length;
+    if (el.partyCountBadge) {
+      el.partyCountBadge.textContent = `${assignedCount}/12`;
     }
   }
 
@@ -68,6 +133,7 @@
         state.activeTab = tab;
 
         el.tabCatalog.classList.toggle('active', tab === 'catalog');
+        if (el.tabParty) el.tabParty.classList.toggle('active', tab === 'party');
         el.tabTier.classList.toggle('active', tab === 'tier');
         el.tabAbout.classList.toggle('active', tab === 'about');
 
@@ -105,6 +171,7 @@
     // Filter Chips
     setupChipGroup('filter-rarity', 'rarity');
     setupChipGroup('filter-freshness', 'freshness');
+    setupChipGroup('filter-fav', 'favFilter');
     setupChipGroup('filter-type', 'type');
     setupChipGroup('filter-system', 'system');
 
@@ -120,6 +187,7 @@
       el.searchInput.value = '';
       state.rarity = 'all';
       state.freshness = 'all';
+      state.favFilter = 'all';
       state.type = 'all';
       state.system = 'all';
       state.sort = 'rarity-desc';
@@ -133,6 +201,24 @@
 
       renderCards();
     });
+
+    // Party action buttons
+    if (el.btnExportParty) {
+      el.btnExportParty.addEventListener('click', exportPartyToClipboard);
+    }
+    if (el.btnImportParty) {
+      el.btnImportParty.addEventListener('click', importPartyFromPrompt);
+    }
+    if (el.btnClearParty) {
+      el.btnClearParty.addEventListener('click', () => {
+        if (confirm('編成中の部隊をすべてクリアしますか？')) {
+          state.party = new Array(12).fill(null);
+          savePersistedState();
+          updatePartyBadge();
+          renderPartyView();
+        }
+      });
+    }
 
     // Modal close
     el.modalCloseBtn.addEventListener('click', closeModal);
@@ -197,6 +283,11 @@
         if (c.sourceInfo && c.sourceInfo.isOutdated) return false;
       } else if (state.freshness === 'outdated') {
         if (!c.sourceInfo || !c.sourceInfo.isOutdated) return false;
+      }
+
+      // Favorite filter
+      if (state.favFilter === 'fav') {
+        if (!state.favorites.has(c.id)) return false;
       }
 
       return true;
@@ -285,6 +376,9 @@
         tierHtml = `<span class="badge-tier-tag">${c.evaluation.tierRank}</span>`;
       }
 
+      // Favorite state
+      const isFav = state.favorites.has(c.id);
+
       // Visual / Illustration
       let visualHtml = '';
       if (c.illustUrl) {
@@ -295,6 +389,14 @@
             </div>
             ${freshBadgeHtml}
             <img class="card-img" src="${c.illustUrl}" alt="${c.name}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'card-placeholder\\'><span>⚔️</span><span>イラスト準備中</span></div>';">
+            <div class="card-actions-quick" onclick="event.stopPropagation();">
+              <button class="btn-card-quick btn-card-fav ${isFav ? 'active' : ''}" data-char-id="${c.id}" title="お気に入り登録">
+                ${isFav ? '★' : '☆'}
+              </button>
+              <button class="btn-card-quick btn-card-add-party" data-char-id="${c.id}" title="部隊に編成">
+                ＋編成
+              </button>
+            </div>
           </div>
         `;
       } else {
@@ -307,6 +409,14 @@
             <div class="card-placeholder">
               <span style="font-size: 1.8rem;">👘</span>
               <span>イラスト準備中</span>
+            </div>
+            <div class="card-actions-quick" onclick="event.stopPropagation();">
+              <button class="btn-card-quick btn-card-fav ${isFav ? 'active' : ''}" data-char-id="${c.id}" title="お気に入り登録">
+                ${isFav ? '★' : '☆'}
+              </button>
+              <button class="btn-card-quick btn-card-add-party" data-char-id="${c.id}" title="部隊に編成">
+                ＋編成
+              </button>
             </div>
           </div>
         `;
@@ -335,15 +445,198 @@
         </div>
       `;
 
+      // Card click
       card.addEventListener('click', () => openModal(c));
       card.addEventListener('keydown', e => {
         if (e.key === 'Enter') openModal(c);
       });
 
+      // Quick action listeners
+      const favBtn = card.querySelector('.btn-card-fav');
+      if (favBtn) {
+        favBtn.addEventListener('click', e => {
+          e.stopPropagation();
+          toggleFavorite(c.id, favBtn);
+        });
+      }
+
+      const addPartyBtn = card.querySelector('.btn-card-add-party');
+      if (addPartyBtn) {
+        addPartyBtn.addEventListener('click', e => {
+          e.stopPropagation();
+          addCharacterToParty(c);
+        });
+      }
+
       fragment.appendChild(card);
     });
 
     el.cardsContainer.appendChild(fragment);
+  }
+
+  // Favorite toggle
+  function toggleFavorite(charId, btnEl) {
+    if (state.favorites.has(charId)) {
+      state.favorites.delete(charId);
+      if (btnEl) {
+        btnEl.classList.remove('active');
+        btnEl.textContent = '☆';
+      }
+    } else {
+      state.favorites.add(charId);
+      if (btnEl) {
+        btnEl.classList.add('active');
+        btnEl.textContent = '★';
+      }
+    }
+    savePersistedState();
+    if (state.favFilter === 'fav') {
+      renderCards();
+    }
+  }
+
+  // Party Management Logic
+  function addCharacterToParty(c) {
+    // Check if already in party
+    const existingIndex = state.party.findIndex(item => item && item.id === c.id);
+    if (existingIndex !== -1) {
+      alert(`「${c.name}」は既にスロット ${existingIndex + 1} に編成されています。`);
+      return;
+    }
+
+    // Find first empty slot
+    const emptyIndex = state.party.findIndex(item => item === null);
+    if (emptyIndex === -1) {
+      alert('部隊枠（12枠）が満員です。不要なキャラを外してから追加してください。');
+      return;
+    }
+
+    state.party[emptyIndex] = c;
+    savePersistedState();
+    updatePartyBadge();
+    renderPartyView();
+
+    // Visual feedback
+    alert(`「${c.name}」をスロット ${emptyIndex + 1} に追加しました！`);
+  }
+
+  function removeCharacterFromParty(slotIndex) {
+    state.party[slotIndex] = null;
+    savePersistedState();
+    updatePartyBadge();
+    renderPartyView();
+  }
+
+  function renderPartyView() {
+    for (let i = 0; i < 12; i++) {
+      const slotEl = document.getElementById(`slot-0`); // template
+      const targetSlot = document.getElementById(`slot-${i}`);
+      const parentSlot = targetSlot ? targetSlot.parentElement : null;
+      if (!targetSlot) continue;
+
+      const c = state.party[i];
+      if (c) {
+        if (parentSlot) parentSlot.classList.remove('empty');
+        let tClass = 'tag-power';
+        if (c.type === '智') tClass = 'tag-wisdom';
+        else if (c.type === '猛') tClass = 'tag-brave';
+
+        targetSlot.innerHTML = `
+          ${c.illustUrl ? `<img class="slot-char-avatar" src="${c.illustUrl}" alt="${c.name}">` : `<div class="slot-char-avatar" style="display:flex;align-items:center;justify-content:center;color:#64748b;">⚔️</div>`}
+          <div class="slot-char-info">
+            <div style="display:flex; gap: 4px; align-items: center;">
+              <span class="badge-rarity badge-${c.rarity === 'UR閃' ? 'ur-sen' : c.rarity.toLowerCase()}" style="font-size: 0.65rem; padding: 1px 5px;">${c.rarity}</span>
+              <span class="badge-tag ${tClass}" style="font-size: 0.65rem; padding: 0 4px;">${c.type}</span>
+              ${c.system ? `<span class="badge-tag tag-sys-${c.system === '風' ? 'wind' : c.system === '花' ? 'flower' : c.system === '雪' ? 'snow' : 'moon'}" style="font-size: 0.65rem; padding: 0 4px;">${c.system}</span>` : ''}
+            </div>
+            <div class="slot-char-name">${c.name}</div>
+          </div>
+          <button class="slot-remove-btn" data-slot="${i}" title="部隊から外す">×</button>
+        `;
+
+        const rmBtn = targetSlot.querySelector('.slot-remove-btn');
+        if (rmBtn) {
+          rmBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            removeCharacterFromParty(i);
+          });
+        }
+      } else {
+        if (parentSlot) parentSlot.classList.add('empty');
+        targetSlot.innerHTML = `<span style="color: var(--text-muted); font-size: 0.8rem;">＋ 空きスロット</span>`;
+      }
+    }
+
+    updateSynergyMeters();
+  }
+
+  function updateSynergyMeters() {
+    // Only frontline + backline (0..5) count for battle synergy
+    const frontline = state.party.slice(0, 6).filter(Boolean);
+
+    let power = 0, wisdom = 0, brave = 0;
+    let wind = 0, flower = 0, snow = 0, moon = 0;
+
+    frontline.forEach(c => {
+      if (c.type === '力') power++;
+      else if (c.type === '智') wisdom++;
+      else if (c.type === '猛') brave++;
+
+      if (c.system === '風') wind++;
+      else if (c.system === '花') flower++;
+      else if (c.system === '雪') snow++;
+      else if (c.system === '月') moon++;
+    });
+
+    if (el.synergyPowerCount) el.synergyPowerCount.textContent = power;
+    if (el.synergyWisdomCount) el.synergyWisdomCount.textContent = wisdom;
+    if (el.synergyBraveCount) el.synergyBraveCount.textContent = brave;
+
+    if (el.synergyWindCount) el.synergyWindCount.textContent = wind;
+    if (el.synergyFlowerCount) el.synergyFlowerCount.textContent = flower;
+    if (el.synergySnowCount) el.synergySnowCount.textContent = snow;
+    if (el.synergyMoonCount) el.synergyMoonCount.textContent = moon;
+  }
+
+  function exportPartyToClipboard() {
+    const names = state.party.map((c, i) => {
+      if (!c) return `枠${i + 1}: (空)`;
+      return `枠${i + 1}: ${c.name} (${c.rarity})`;
+    }).join('\n');
+
+    const textToCopy = `【少女ウォーズ部隊編成】\n${names}\n\n作成: 少女ウォーズまとめ表 (https://oventox.github.io/girlwars-matome/)`;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      alert('部隊編成テキストをクリップボードにコピーしました！\nメモやSNS等に貼り付けて共有できます。');
+    }).catch(() => {
+      prompt('以下の編成テキストをコピーしてください:', textToCopy);
+    });
+  }
+
+  function importPartyFromPrompt() {
+    const raw = prompt('編成テキストまたはカンマ区切りのキャラ名を入力してください:');
+    if (!raw) return;
+
+    const allChars = window.GIRLWARS_DATA || [];
+    const lines = raw.split(/[\n,、]/).map(s => s.trim()).filter(Boolean);
+    const newParty = new Array(12).fill(null);
+    let slot = 0;
+
+    lines.forEach(line => {
+      if (slot >= 12) return;
+      // remove prefix like 枠1:
+      const cleanName = line.replace(/^枠\d+[:：]\s*/, '').replace(/\s*\(.*?\)/, '').trim();
+      const matched = allChars.find(c => c.name === cleanName || cleanName.includes(c.name));
+      if (matched) {
+        newParty[slot] = matched;
+        slot++;
+      }
+    });
+
+    state.party = newParty;
+    savePersistedState();
+    updatePartyBadge();
+    renderPartyView();
+    alert(`${slot} 体のキャラクターを部隊に反映しました！`);
   }
 
   // Open Modal
@@ -558,14 +851,26 @@
             <strong>一次情報出典:</strong> ${c.sourceInfo ? c.sourceInfo.sourceName : '公式/wiki'}
             （最終更新: ${c.sourceInfo ? c.sourceInfo.updatedAt : '不明'}）
           </div>
-          ${c.sourceInfo && c.sourceInfo.primaryUrl ? `
-            <a href="${c.sourceInfo.primaryUrl}" target="_blank" rel="noopener noreferrer" class="btn-open-source">
-              出典元の記事を見る ↗
-            </a>
-          ` : ''}
+          <div style="display: flex; gap: 8px;">
+            <button id="modal-btn-add-party" class="btn-secondary" style="background: var(--accent-rose); color: #fff; border-color: var(--accent-rose);">
+              ＋ 部隊に編成
+            </button>
+            ${c.sourceInfo && c.sourceInfo.primaryUrl ? `
+              <a href="${c.sourceInfo.primaryUrl}" target="_blank" rel="noopener noreferrer" class="btn-open-source">
+                出典元の記事を見る ↗
+              </a>
+            ` : ''}
+          </div>
         </div>
       </div>
     `;
+
+    const modalAddPartyBtn = document.getElementById('modal-btn-add-party');
+    if (modalAddPartyBtn) {
+      modalAddPartyBtn.addEventListener('click', () => {
+        addCharacterToParty(c);
+      });
+    }
 
     el.charModal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
@@ -602,18 +907,16 @@
       else if (tKey === 'T2') badgeClass = 'tier-t2';
       else if (tKey === 'T3') badgeClass = 'tier-t3';
 
-      // Find matching items from atwikiMap
       const items = Object.values(atwikiMap).filter(item => item.tier === tKey);
 
       let itemsHtml = '';
       if (items.length > 0) {
         itemsHtml = items.map(item => {
-          // find character in master data for image fallback
           const matchedChar = allChars.find(c => c.name === item.name || c.name.includes(item.name));
           const iconSrc = item.iconUrl || (matchedChar && matchedChar.illustUrl) || '';
 
           return `
-            <div class="tier-item-card">
+            <div class="tier-item-card" style="cursor: pointer;" onclick="window.__openCharByName('${escapeHtml(item.name)}')">
               ${iconSrc ? `<img class="tier-item-icon" src="${iconSrc}" alt="${item.name}" loading="lazy">` : `<div class="tier-item-icon" style="display:flex;align-items:center;justify-content:center;color:#64748b;">⚔️</div>`}
               <div class="tier-item-info">
                 <div class="tier-item-name">${item.fullName || item.name}</div>
@@ -674,6 +977,15 @@
       });
     }
   }
+
+  // Global helper for Tier card click
+  window.__openCharByName = function(name) {
+    const allChars = window.GIRLWARS_DATA || [];
+    const matched = allChars.find(c => c.name === name || c.name.includes(name) || name.includes(c.name));
+    if (matched) {
+      openModal(matched);
+    }
+  };
 
   function escapeHtml(str) {
     if (!str) return '';

@@ -98,37 +98,33 @@ def parse_char_detail(url):
 
 def fetch_rimuru_catalog():
     strengths_map = parse_strengths_map()
+    char_entries = []
     
     # 1. UR閃 characters
     print("[RIMURU] Fetching UR閃 catalog...")
     html_ur_sen = fetch_html(RIMURU_UR_SEN_SUMMARY)
     soup_sen = parse_soup(html_ur_sen)
     
-    char_entries = []
-    
-    # In ameblo, links to individual entries are like href="https://ameblo.jp/hetarerimuru/entry-XXXX.html"
     body_sen = soup_sen.find('article') or soup_sen.find(class_=re.compile(r'skin-entryBody|entryBody|articleBody'))
     text_sen = body_sen.text if body_sen else ""
-    parts = re.split(r'名前：', text_sen)
+    parts_sen = re.split(r'名前：', text_sen)
     
-    # Find links in body
-    links = body_sen.find_all('a', href=re.compile(r'entry-\d+\.html')) if body_sen else []
-    link_map = {}
-    for a in links:
+    links_sen = body_sen.find_all('a', href=re.compile(r'entry-\d+\.html')) if body_sen else []
+    link_map_sen = {}
+    for a in links_sen:
         t = a.text.strip()
         h = a['href']
-        for p in parts[1:]:
+        for p in parts_sen[1:]:
             raw_n = p.split('\n')[0].strip()
             clean_n = re.sub(r'（.*?）|\(.*?\)', '', raw_n).strip()
-            if clean_n in t and clean_n not in link_map:
-                link_map[clean_n] = h
+            if clean_n in t and clean_n not in link_map_sen:
+                link_map_sen[clean_n] = h
 
-    for p in parts[1:]:
+    for p in parts_sen[1:]:
         lines = [l.strip() for l in p.split('\n') if l.strip()]
         if not lines:
             continue
         raw_name = lines[0]
-        # Match ruby if present: e.g. 芦屋道満（あしやどうまん）
         ruby_match = re.search(r'（(.*?)）|\((.*?)\)', raw_name)
         ruby = (ruby_match.group(1) or ruby_match.group(2)) if ruby_match else ""
         clean_name = re.sub(r'（.*?）|\(.*?\)', '', raw_name).strip()
@@ -144,12 +140,12 @@ def fetch_rimuru_catalog():
             elif '系統：' in l:
                 system = l.split('：')[-1].strip()
 
-        detail_url = link_map.get(clean_name)
+        detail_url = link_map_sen.get(clean_name)
         skills = None
         illust_url = None
 
         if detail_url:
-            print(f"  Fetching details for {clean_name} ({detail_url})...")
+            print(f"  Fetching details for UR閃 {clean_name} ({detail_url})...")
             skills, detail_img = parse_char_detail(detail_url)
             illust_url = detail_img
             time.sleep(0.05)
@@ -180,7 +176,80 @@ def fetch_rimuru_catalog():
             }
         })
 
-    print(f"[RIMURU] Successfully compiled {len(char_entries)} UR閃 characters.")
+    # 2. UR characters
+    print("[RIMURU] Fetching UR catalog...")
+    html_ur = fetch_html(RIMURU_UR_SUMMARY)
+    soup_ur = parse_soup(html_ur)
+    body_ur = soup_ur.find('article') or soup_ur.find(class_=re.compile(r'skin-entryBody|entryBody|articleBody'))
+    text_ur = body_ur.text if body_ur else ""
+    parts_ur = re.split(r'名前：', text_ur)
+    
+    links_ur = body_ur.find_all('a', href=re.compile(r'entry-\d+\.html')) if body_ur else []
+    link_map_ur = {}
+    for a in links_ur:
+        t = a.text.strip()
+        h = a['href']
+        for p in parts_ur[1:]:
+            raw_n = p.split('\n')[0].strip()
+            clean_n = re.sub(r'（.*?）|\(.*?\)', '', raw_n).strip()
+            if clean_n in t and clean_n not in link_map_ur:
+                link_map_ur[clean_n] = h
+
+    for p in parts_ur[1:]:
+        lines = [l.strip() for l in p.split('\n') if l.strip()]
+        if not lines:
+            continue
+        raw_name = lines[0]
+        ruby_match = re.search(r'（(.*?)）|\((.*?)\)', raw_name)
+        ruby = (ruby_match.group(1) or ruby_match.group(2)) if ruby_match else ""
+        clean_name = re.sub(r'（.*?）|\(.*?\)', '', raw_name).strip()
+
+        init_rank = "UR"
+        ctype = "力"
+        system = "風"
+        for l in lines[1:8]:
+            if '初期ランク：' in l:
+                init_rank = l.split('：')[-1].strip()
+            elif 'タイプ：' in l:
+                ctype = l.split('：')[-1].replace('将', '').strip()
+            elif '系統：' in l:
+                system = l.split('：')[-1].strip()
+
+        detail_url = link_map_ur.get(clean_name)
+        skills = None
+        illust_url = None
+
+        if detail_url:
+            print(f"  Fetching details for UR {clean_name} ({detail_url})...")
+            skills, detail_img = parse_char_detail(detail_url)
+            illust_url = detail_img
+            time.sleep(0.05)
+
+        char_entries.append({
+            'id': f"rimuru_ur_{clean_name}",
+            'name': clean_name,
+            'ruby': ruby,
+            'rarity': 'UR',
+            'type': ctype,
+            'system': system,
+            'initialRarity': init_rank,
+            'illustUrl': illust_url,
+            'illustSource': 'へたれリムルブログ',
+            'illustCredit': 'へたれゲームプレイヤーリムル (ameblo)',
+            'skills': skills,
+            'evaluation': {
+                'tierRank': 'UR',
+                'summary': f"{system}系統の{ctype}将キャラ。初期ランク{init_rank}。"
+            },
+            'sourceInfo': {
+                'primaryUrl': detail_url or RIMURU_UR_SUMMARY,
+                'sourceName': 'へたれゲームプレイヤーリムルの日記と攻略情報',
+                'updatedAt': '2025-03-21',
+                'isOutdated': False
+            }
+        })
+
+    print(f"[RIMURU] Successfully compiled {len(char_entries)} total characters (UR閃 + UR).")
     return char_entries
 
 if __name__ == '__main__':

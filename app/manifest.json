@@ -1,0 +1,17 @@
+{
+  "name": "少女ウォーズ キャラまとめ表",
+  "short_name": "少女ウォーズDB",
+  "description": "ゲーム『少女ウォーズ：幻想天下統一戦』のキャラクターデータベース・部隊編成シミュレータ＆Tierまとめ",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0c0f17",
+  "theme_color": "#e11d48",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230c0f17%22/><text y=%22.9em%22 x=%22.1em%22 font-size=%2280%22>⚔️</text></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
