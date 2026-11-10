@@ -84,8 +84,13 @@ def fetch_atwiki_characters():
 
     unique = {}
     for t, h in pages:
-        if h not in unique and not any(t.startswith(x) for x in ['登録', 'Wiki初心者', 'トップ', 'メニュー', '右メニュー', 'FAQ', 'PVP', 'コンテンツ', 'システム', 'ギフト', '同盟', '初恋', '世界', '冒険', '初心者', '毎日', '編集', '戦闘攻略', 'キャラ育成', 'Tier表', '装備', '募集']):
-            unique[h] = t
+        clean_t = t.strip()
+        if re.search(r'\d+日前', clean_t):
+            continue
+        if any(clean_t.startswith(x) for x in ['登録', 'Wiki初心者', 'トップ', 'メニュー', '右メニュー', 'FAQ', 'PVP', 'コンテンツ', 'システム', 'ギフト', '同盟', '初恋', '世界', '冒険', '初心者', '毎日', '編集', '戦闘攻略', 'キャラ育成', 'Tier表', '装備', '募集', 'イベント一覧']):
+            continue
+        if h not in unique:
+            unique[h] = clean_t
 
     tier_map = fetch_atwiki_tier()
     char_list = []

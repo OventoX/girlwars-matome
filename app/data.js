@@ -1,7 +1,7 @@
 /**
  * 少女ウォーズ キャラクター統合データベース (GirlWars Character Database)
- * Generated: 2026-11-10 08:39
- * Total characters: 162 (UR閃: 39, UR: 33, SSR: 66, 花嫁: 24)
+ * Generated: 2026-11-10 09:21
+ * Total characters: 151 (UR閃: 39, UR: 33, SSR: 55, 花嫁: 24)
  * 
  * 厳格な著作権・出典明記ルールに基づき生成されています。
  * - 2026年最新キャラ/スキル: へたれゲームプレイヤーリムル (ameblo) & マトメバコ！ (kokomatoblog.com)
@@ -9,14 +9,14 @@
  */
 
 window.GIRLWARS_METADATA = {
-  generatedAt: "2026-11-10 08:39",
-  totalCount: 162,
+  generatedAt: "2026-11-10 09:21",
+  totalCount: 151,
   urSenCount: 39,
   urCount: 33,
-  ssrCount: 66,
+  ssrCount: 55,
   brideCount: 24,
   withSkillsCount: 72,
-  withIllustCount: 161
+  withIllustCount: 151
 };
 
 window.GIRLWARS_DATA = [
@@ -3183,276 +3183,6 @@ window.GIRLWARS_DATA = [
     }
   },
   {
-    "id": "wiki_816__Tier_",
-    "name": "816日前Tier表",
-    "title": "816日前Tier表",
-    "rarity": "SSR",
-    "type": "力",
-    "role": "",
-    "cv": "",
-    "illustUrl": "https://img.atwiki.jp/girlwars/attach/135/218/%E3%82%B5%E3%83%B3%E3%82%BF.png",
-    "illustSource": "少女ウォーズ@wiki",
-    "illustCredit": "少女ウォーズ@wiki / 公式スチル",
-    "dialogues": {},
-    "story": "",
-    "skills": null,
-    "evaluation": {
-      "tierRank": null,
-      "summary": "",
-      "iconUrl": null
-    },
-    "sourceInfo": {
-      "primaryUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
-      "sourceName": "少女ウォーズ@wiki",
-      "updatedAt": "2024-08-15",
-      "isOutdated": true
-    },
-    "ruby": ""
-  },
-  {
-    "id": "wiki_817____",
-    "name": "817日前装備",
-    "title": "817日前装備",
-    "rarity": "SSR",
-    "type": "力",
-    "role": "",
-    "cv": "",
-    "illustUrl": "https://img.atwiki.jp/girlwars/attach/134/186/%E8%A3%85%E5%82%99%EF%BC%91.png",
-    "illustSource": "少女ウォーズ@wiki",
-    "illustCredit": "少女ウォーズ@wiki / 公式スチル",
-    "dialogues": {},
-    "story": "",
-    "skills": null,
-    "evaluation": {
-      "tierRank": null,
-      "summary": "",
-      "iconUrl": null
-    },
-    "sourceInfo": {
-      "primaryUrl": "https://w.atwiki.jp/girlwars/pages/134.html",
-      "sourceName": "少女ウォーズ@wiki",
-      "updatedAt": "2024-08-15",
-      "isOutdated": true
-    },
-    "ruby": ""
-  },
-  {
-    "id": "wiki_833____",
-    "name": "833日前同盟",
-    "title": "833日前同盟",
-    "rarity": "SSR",
-    "type": "力",
-    "role": "",
-    "cv": "",
-    "illustUrl": "https://img.atwiki.jp/girlwars/attach/133/123/%E5%90%8C%E7%9B%9F%E7%94%BB%E9%9D%A2.png",
-    "illustSource": "少女ウォーズ@wiki",
-    "illustCredit": "少女ウォーズ@wiki / 公式スチル",
-    "dialogues": {},
-    "story": "",
-    "skills": null,
-    "evaluation": {
-      "tierRank": null,
-      "summary": "",
-      "iconUrl": null
-    },
-    "sourceInfo": {
-      "primaryUrl": "https://w.atwiki.jp/girlwars/pages/133.html",
-      "sourceName": "少女ウォーズ@wiki",
-      "updatedAt": "2024-08-15",
-      "isOutdated": true
-    },
-    "ruby": ""
-  },
-  {
-    "id": "wiki_838__PVP_____",
-    "name": "838日前PVPコンテンツ",
-    "title": "838日前PVPコンテンツ",
-    "rarity": "SSR",
-    "type": "力",
-    "role": "",
-    "cv": "",
-    "illustUrl": "https://img.atwiki.jp/girlwars/attach/132/104/%E7%AB%B6%E6%8A%80%E5%A0%B4.jpg",
-    "illustSource": "少女ウォーズ@wiki",
-    "illustCredit": "少女ウォーズ@wiki / 公式スチル",
-    "dialogues": {},
-    "story": "",
-    "skills": null,
-    "evaluation": {
-      "tierRank": null,
-      "summary": "",
-      "iconUrl": null
-    },
-    "sourceInfo": {
-      "primaryUrl": "https://w.atwiki.jp/girlwars/pages/132.html",
-      "sourceName": "少女ウォーズ@wiki",
-      "updatedAt": "2024-08-15",
-      "isOutdated": true
-    },
-    "ruby": ""
-  },
-  {
-    "id": "wiki_843____",
-    "name": "843日前世界",
-    "title": "843日前世界",
-    "rarity": "SSR",
-    "type": "力",
-    "role": "",
-    "cv": "",
-    "illustUrl": "https://img.atwiki.jp/girlwars/attach/130/80/%E4%B8%96%E7%95%8C.jpg",
-    "illustSource": "少女ウォーズ@wiki",
-    "illustCredit": "少女ウォーズ@wiki / 公式スチル",
-    "dialogues": {},
-    "story": "",
-    "skills": null,
-    "evaluation": {
-      "tierRank": null,
-      "summary": "",
-      "iconUrl": null
-    },
-    "sourceInfo": {
-      "primaryUrl": "https://w.atwiki.jp/girlwars/pages/130.html",
-      "sourceName": "少女ウォーズ@wiki",
-      "updatedAt": "2024-08-15",
-      "isOutdated": true
-    },
-    "ruby": ""
-  },
-  {
-    "id": "wiki_843____",
-    "name": "843日前冒険",
-    "title": "843日前冒険",
-    "rarity": "SSR",
-    "type": "力",
-    "role": "",
-    "cv": "",
-    "illustUrl": "https://img.atwiki.jp/girlwars/attach/131/88/%E3%83%80%E3%83%B3%E3%82%B8%E3%83%A7%E3%83%B3.png",
-    "illustSource": "少女ウォーズ@wiki",
-    "illustCredit": "少女ウォーズ@wiki / 公式スチル",
-    "dialogues": {},
-    "story": "",
-    "skills": null,
-    "evaluation": {
-      "tierRank": null,
-      "summary": "",
-      "iconUrl": null
-    },
-    "sourceInfo": {
-      "primaryUrl": "https://w.atwiki.jp/girlwars/pages/131.html",
-      "sourceName": "少女ウォーズ@wiki",
-      "updatedAt": "2024-08-15",
-      "isOutdated": true
-    },
-    "ruby": ""
-  },
-  {
-    "id": "wiki_845_________",
-    "name": "845日前初心者イベント",
-    "title": "845日前初心者イベント",
-    "rarity": "SSR",
-    "type": "力",
-    "role": "",
-    "cv": "",
-    "illustUrl": "https://img.atwiki.jp/girlwars/attach/129/77/1.jpg",
-    "illustSource": "少女ウォーズ@wiki",
-    "illustCredit": "少女ウォーズ@wiki / 公式スチル",
-    "dialogues": {},
-    "story": "",
-    "skills": null,
-    "evaluation": {
-      "tierRank": null,
-      "summary": "",
-      "iconUrl": null
-    },
-    "sourceInfo": {
-      "primaryUrl": "https://w.atwiki.jp/girlwars/pages/129.html",
-      "sourceName": "少女ウォーズ@wiki",
-      "updatedAt": "2024-08-15",
-      "isOutdated": true
-    },
-    "ruby": ""
-  },
-  {
-    "id": "wiki_846______",
-    "name": "846日前初恋の庭",
-    "title": "846日前初恋の庭",
-    "rarity": "SSR",
-    "type": "力",
-    "role": "",
-    "cv": "",
-    "illustUrl": "https://img.atwiki.jp/girlwars/attach/128/70/%E5%88%9D%E6%81%8B.png",
-    "illustSource": "少女ウォーズ@wiki",
-    "illustCredit": "少女ウォーズ@wiki / 公式スチル",
-    "dialogues": {},
-    "story": "",
-    "skills": null,
-    "evaluation": {
-      "tierRank": null,
-      "summary": "",
-      "iconUrl": null
-    },
-    "sourceInfo": {
-      "primaryUrl": "https://w.atwiki.jp/girlwars/pages/128.html",
-      "sourceName": "少女ウォーズ@wiki",
-      "updatedAt": "2024-08-15",
-      "isOutdated": true
-    },
-    "ruby": ""
-  },
-  {
-    "id": "wiki_850______",
-    "name": "850日前戦闘攻略",
-    "title": "850日前戦闘攻略",
-    "rarity": "SSR",
-    "type": "力",
-    "role": "",
-    "cv": "",
-    "illustUrl": "https://img.atwiki.jp/girlwars/attach/127/68/1%20.png",
-    "illustSource": "少女ウォーズ@wiki",
-    "illustCredit": "少女ウォーズ@wiki / 公式スチル",
-    "dialogues": {},
-    "story": "",
-    "skills": null,
-    "evaluation": {
-      "tierRank": null,
-      "summary": "",
-      "iconUrl": null
-    },
-    "sourceInfo": {
-      "primaryUrl": "https://w.atwiki.jp/girlwars/pages/127.html",
-      "sourceName": "少女ウォーズ@wiki",
-      "updatedAt": "2024-08-15",
-      "isOutdated": true
-    },
-    "ruby": ""
-  },
-  {
-    "id": "wiki_871________",
-    "name": "871日前毎日のお仕事",
-    "title": "871日前毎日のお仕事",
-    "rarity": "SSR",
-    "type": "力",
-    "role": "",
-    "cv": "",
-    "illustUrl": null,
-    "illustSource": "少女ウォーズ@wiki",
-    "illustCredit": "少女ウォーズ@wiki / 公式スチル",
-    "dialogues": {},
-    "story": "",
-    "skills": null,
-    "evaluation": {
-      "tierRank": null,
-      "summary": "",
-      "iconUrl": null
-    },
-    "sourceInfo": {
-      "primaryUrl": "https://w.atwiki.jp/girlwars/pages/126.html",
-      "sourceName": "少女ウォーズ@wiki",
-      "updatedAt": "2024-08-15",
-      "isOutdated": true
-    },
-    "ruby": ""
-  },
-  {
     "id": "wiki_________",
     "name": "アレクサンドロス",
     "title": "SSR/SSRアレクサンドロス",
@@ -5719,44 +5449,6 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "れおにだすいっせい"
-  },
-  {
-    "id": "wiki_______",
-    "name": "イベント一覧",
-    "title": "イベント一覧",
-    "rarity": "SSR",
-    "type": "力",
-    "role": "",
-    "cv": "",
-    "illustUrl": "https://img.atwiki.jp/girlwars/attach/4/143/%E3%82%BF%E3%82%B3%E7%84%BC%E3%81%8D%EF%BC%91.png",
-    "illustSource": "少女ウォーズ@wiki",
-    "illustCredit": "少女ウォーズ@wiki / 公式スチル",
-    "dialogues": {
-      "一攫千金\t1日11:10 ~4日23:59": "神兵啓霊\t16日00:00 ~18日23:59",
-      "スパ秘宝\t2日00:00 ~4日23:59": "一攫千金\t17日11:10 ~20日23:59",
-      "溶鍊基金\t1日11:10 ~17日11:10": "活躍基金\t17日11:10 ~1日11:10",
-      "カーニバル\t5日11:10 ~9日11:10": "女神の試練\t20日00:00 ~23日23:59",
-      "タコ焼き\t5日11:10 ~9日23:59": "スパ秘宝\t22日00:00 ~24日23:59",
-      "宝探しの旅\t9日11:10 ~13日23:59": "下着のラッキースター\t22日00:00 ~27日23:59",
-      "遊びタイム\t10日00:00 ~15日23:59": "世界の富豪\t24日00:00 ~27日23:59",
-      "宝具カーニバル\t12日00:00 ~17日23:59": "宝具カーニバル\t26日00:00 ~31日23:59",
-      "古墳宝探\t13日11:10 ~16日23:59": "キックバック\t27日00:00 ~29日23:59",
-      "サッカー大会\t16日00:00 ~19日23:59": "絵馬祈願\t28日00:00 ~31日23:59"
-    },
-    "story": "",
-    "skills": null,
-    "evaluation": {
-      "tierRank": null,
-      "summary": "",
-      "iconUrl": null
-    },
-    "sourceInfo": {
-      "primaryUrl": "https://w.atwiki.jp/girlwars/pages/4.html",
-      "sourceName": "少女ウォーズ@wiki",
-      "updatedAt": "2024-08-15",
-      "isOutdated": true
-    },
-    "ruby": ""
   },
   {
     "id": "wiki_____",
