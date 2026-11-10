@@ -1,6 +1,6 @@
 /**
  * 少女ウォーズ キャラまとめ表 - Application Logic
- * Full-featured with Party Simulator & Favorites & Offline PWA
+ * Full-featured with Party Simulator, Favorites, Table View & Smooth Rendering
  */
 
 (function() {
@@ -16,9 +16,14 @@
     favFilter: 'all', // 'all' or 'fav'
     sort: 'rarity-desc',
     activeTab: 'catalog',
+    viewMode: 'card', // 'card', 'table', 'gallery'
     tierSubView: 'atwiki',
     selectedChar: null,
     
+    // Smooth pagination
+    renderedLimit: 40,
+    PAGE_SIZE: 40,
+
     // Persistent lists
     favorites: new Set(),
     // Party: 12 slots (0-2: 前列, 3-5: 後列, 6-11: 控え)
@@ -28,7 +33,8 @@
   // LocalStorage Keys
   const STORAGE_KEYS = {
     FAVORITES: 'gw_favorites_v1',
-    PARTY: 'gw_party_v1'
+    PARTY: 'gw_party_v1',
+    VIEW_MODE: 'gw_view_mode_v1'
   };
 
   // DOM Elements
@@ -41,10 +47,22 @@
     searchClearBtn: document.getElementById('search-clear-btn'),
     sortSelect: document.getElementById('sort-select'),
     resetFiltersBtn: document.getElementById('reset-filters-btn'),
+    
+    // Catalog Views
     cardsContainer: document.getElementById('characters-container'),
+    tableContainer: document.getElementById('characters-table-container'),
+    tableBody: document.getElementById('characters-table-body'),
+    loadMoreContainer: document.getElementById('load-more-container'),
+    btnLoadMore: document.getElementById('btn-load-more'),
+    remainingCount: document.getElementById('remaining-count'),
+    viewSwitcher: document.getElementById('view-mode-switcher'),
+
+    // Modal
     charModal: document.getElementById('char-modal'),
     modalContent: document.getElementById('modal-content'),
     modalCloseBtn: document.getElementById('modal-close-btn'),
+
+    // Tabs
     tabCatalog: document.getElementById('tab-catalog'),
     tabParty: document.getElementById('tab-party'),
     tabTier: document.getElementById('tab-tier'),
@@ -80,6 +98,10 @@
           state.party = parsed;
         }
       }
+      const savedView = localStorage.getItem(STORAGE_KEYS.VIEW_MODE);
+      if (savedView && ['card', 'table', 'gallery'].includes(savedView)) {
+        state.viewMode = savedView;
+      }
     } catch (e) {
       console.warn('Could not read from localStorage:', e);
     }
@@ -89,6 +111,7 @@
     try {
       localStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify([...state.favorites]));
       localStorage.setItem(STORAGE_KEYS.PARTY, JSON.stringify(state.party));
+      localStorage.setItem(STORAGE_KEYS.VIEW_MODE, state.viewMode);
     } catch (e) {
       console.warn('Could not save to localStorage:', e);
     }
@@ -99,7 +122,8 @@
     loadPersistedState();
     setupMetaBadge();
     setupEventListeners();
-    renderCards();
+    updateViewModeUI();
+    renderCatalog();
     renderPartyView();
     renderTierView();
   }
@@ -108,7 +132,7 @@
     const meta = window.GIRLWARS_METADATA || {};
     const count = meta.totalCount || (window.GIRLWARS_DATA || []).length;
     if (el.metaBadge) {
-      el.metaBadge.textContent = `全 ${count} 体収録 (最新: 2026年11月)`;
+      el.metaBadge.textContent = `全 ${count} 体収録 (スキル全文: ${meta.withSkillsCount || 72}体)`;
     }
     if (el.totalCharCount) {
       el.totalCharCount.textContent = count;
@@ -120,6 +144,23 @@
     const assignedCount = state.party.filter(Boolean).length;
     if (el.partyCountBadge) {
       el.partyCountBadge.textContent = `${assignedCount}/12`;
+    }
+  }
+
+  function updateViewModeUI() {
+    if (el.viewSwitcher) {
+      el.viewSwitcher.querySelectorAll('.view-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.view === state.viewMode);
+      });
+    }
+
+    if (state.viewMode === 'table') {
+      el.cardsContainer.style.display = 'none';
+      el.tableContainer.style.display = 'block';
+    } else {
+      el.cardsContainer.style.display = 'grid';
+      el.tableContainer.style.display = 'none';
+      el.cardsContainer.classList.toggle('view-gallery', state.viewMode === 'gallery');
     }
   }
 
@@ -144,6 +185,51 @@
       });
     });
 
+    // View Mode Switcher
+    if (el.viewSwitcher) {
+      el.viewSwitcher.querySelectorAll('.view-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.viewMode = btn.dataset.view;
+          state.renderedLimit = state.PAGE_SIZE;
+          savePersistedState();
+          updateViewModeUI();
+          renderCatalog();
+        });
+      });
+    }
+
+    // Load More Button
+    if (el.btnLoadMore) {
+      el.btnLoadMore.addEventListener('click', () => {
+        state.renderedLimit += state.PAGE_SIZE;
+        renderCatalog();
+      });
+    }
+
+    // Infinite scroll check
+    window.addEventListener('scroll', () => {
+      if (state.activeTab !== 'catalog' || state.viewMode === 'table') return;
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+        const filtered = getFilteredCharacters();
+        if (state.renderedLimit < filtered.length) {
+          state.renderedLimit += state.PAGE_SIZE;
+          renderCardsOnly(filtered);
+        }
+      }
+    }, { passive: true });
+
+    // Table Header Sort clicks
+    document.querySelectorAll('.matome-table th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const sortKey = th.dataset.sort;
+        if (sortKey) {
+          state.sort = sortKey;
+          el.sortSelect.value = sortKey;
+          renderCatalog();
+        }
+      });
+    });
+
     // Tier Subviews
     document.querySelectorAll('.tier-sub-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -159,13 +245,15 @@
     // Search input
     el.searchInput.addEventListener('input', e => {
       state.search = e.target.value.trim().toLowerCase();
-      renderCards();
+      state.renderedLimit = state.PAGE_SIZE;
+      renderCatalog();
     });
 
     el.searchClearBtn.addEventListener('click', () => {
       el.searchInput.value = '';
       state.search = '';
-      renderCards();
+      state.renderedLimit = state.PAGE_SIZE;
+      renderCatalog();
     });
 
     // Filter Chips
@@ -178,7 +266,7 @@
     // Sort select
     el.sortSelect.addEventListener('change', e => {
       state.sort = e.target.value;
-      renderCards();
+      renderCatalog();
     });
 
     // Reset filters
@@ -192,6 +280,7 @@
       state.system = 'all';
       state.sort = 'rarity-desc';
       el.sortSelect.value = 'rarity-desc';
+      state.renderedLimit = state.PAGE_SIZE;
 
       document.querySelectorAll('.filter-chips').forEach(group => {
         group.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
@@ -199,7 +288,7 @@
         if (allChip) allChip.classList.add('active');
       });
 
-      renderCards();
+      renderCatalog();
     });
 
     // Party action buttons
@@ -241,7 +330,8 @@
         group.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
         chip.classList.add('active');
         state[stateKey] = chip.dataset.val;
-        renderCards();
+        state.renderedLimit = state.PAGE_SIZE;
+        renderCatalog();
       });
     });
   }
@@ -313,10 +403,118 @@
     });
   }
 
-  // Render Card Gallery
-  function renderCards() {
+  // Master Render Coordinator
+  function renderCatalog() {
     const list = getFilteredCharacters();
     el.filteredCount.textContent = list.length;
+
+    if (state.viewMode === 'table') {
+      renderTableOnly(list);
+    } else {
+      renderCardsOnly(list);
+    }
+  }
+
+  // Render Table View (まとめ表)
+  function renderTableOnly(list) {
+    el.tableBody.innerHTML = '';
+    el.loadMoreContainer.style.display = 'none';
+
+    if (list.length === 0) {
+      el.tableBody.innerHTML = `
+        <tr>
+          <td colspan="9" style="text-align: center; padding: 40px; color: var(--text-muted);">
+            該当するキャラクターが見つかりませんでした。
+          </td>
+        </tr>
+      `;
+      return;
+    }
+
+    const fragment = document.createDocumentFragment();
+
+    list.forEach(c => {
+      const tr = document.createElement('tr');
+
+      // Rarity class
+      let rClass = 'badge-ssr';
+      if (c.rarity === 'UR閃') rClass = 'badge-ur-sen';
+      else if (c.rarity === 'UR') rClass = 'badge-ur';
+      else if (c.rarity === '花嫁') rClass = 'badge-bride';
+
+      // Type class
+      let tClass = 'tag-power';
+      if (c.type === '智') tClass = 'tag-wisdom';
+      else if (c.type === '猛') tClass = 'tag-brave';
+
+      // System tag
+      let sysHtml = '-';
+      if (c.system) {
+        const sysClass = {
+          '風': 'tag-sys-wind',
+          '花': 'tag-sys-flower',
+          '雪': 'tag-sys-snow',
+          '月': 'tag-sys-moon'
+        }[c.system] || '';
+        sysHtml = `<span class="badge-tag ${sysClass}">${c.system}</span>`;
+      }
+
+      // Freshness
+      const isFresh = c.sourceInfo && !c.sourceInfo.isOutdated;
+      const freshHtml = isFresh
+        ? `<span class="badge-freshness badge-fresh" style="position:static;">🟢 最新</span>`
+        : `<span class="badge-freshness badge-outdated" style="position:static;">⚠️ '24</span>`;
+
+      // Skill status
+      const hasSkills = Boolean(c.skills && (c.skills.normal || c.skills.passive || c.skills.ultimate));
+      const skillBadge = hasSkills
+        ? `<span style="color:#10b981; font-weight:bold; font-size:0.75rem;">✔ 全文あり</span>`
+        : `<span style="color:#64748b; font-size:0.75rem;">- 未記載</span>`;
+
+      const roleSnippet = (c.evaluation && c.evaluation.summary) || c.role || '-';
+      const isFav = state.favorites.has(c.id);
+
+      tr.innerHTML = `
+        <td>
+          ${c.illustUrl ? `<img class="table-char-thumb" src="${c.illustUrl}" alt="${c.name}" loading="lazy">` : `<div class="table-char-thumb" style="display:flex;align-items:center;justify-content:center;color:#64748b;">⚔️</div>`}
+        </td>
+        <td>
+          <div class="table-char-name-col">
+            ${c.ruby ? `<span class="table-char-ruby">${c.ruby}</span>` : ''}
+            <span class="table-char-name">${c.name}</span>
+          </div>
+        </td>
+        <td><span class="badge-rarity ${rClass}" style="font-size:0.75rem; padding:2px 6px;">${c.rarity}</span></td>
+        <td><span class="badge-tag ${tClass}">${c.type}将</span></td>
+        <td>${sysHtml}</td>
+        <td><div class="table-role-snippet">${escapeHtml(roleSnippet)}</div></td>
+        <td>${skillBadge}</td>
+        <td>${freshHtml}</td>
+        <td onclick="event.stopPropagation();">
+          <button class="btn-card-quick btn-card-fav ${isFav ? 'active' : ''}" data-char-id="${c.id}" style="padding:2px 6px;" title="お気に入り">
+            ${isFav ? '★' : '☆'}
+          </button>
+        </td>
+      `;
+
+      tr.addEventListener('click', () => openModal(c));
+
+      const favBtn = tr.querySelector('.btn-card-fav');
+      if (favBtn) {
+        favBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleFavorite(c.id, favBtn);
+        });
+      }
+
+      fragment.appendChild(tr);
+    });
+
+    el.tableBody.appendChild(fragment);
+  }
+
+  // Render Card Gallery with Smooth Virtual Pagination
+  function renderCardsOnly(list) {
     el.cardsContainer.innerHTML = '';
 
     if (list.length === 0) {
@@ -331,12 +529,15 @@
       if (resetBtn) {
         resetBtn.addEventListener('click', () => el.resetFiltersBtn.click());
       }
+      el.loadMoreContainer.style.display = 'none';
       return;
     }
 
+    // Slice to smooth render limit
+    const toRender = list.slice(0, state.renderedLimit);
     const fragment = document.createDocumentFragment();
 
-    list.forEach(c => {
+    toRender.forEach(c => {
       const card = document.createElement('div');
       card.className = 'char-card';
       card.setAttribute('tabindex', '0');
@@ -422,7 +623,6 @@
         `;
       }
 
-      // Role / Summary snippet
       const roleSnippet = (c.evaluation && c.evaluation.summary) || c.role || (c.cv ? `CV: ${c.cv}` : '');
 
       card.innerHTML = `
@@ -445,13 +645,11 @@
         </div>
       `;
 
-      // Card click
       card.addEventListener('click', () => openModal(c));
       card.addEventListener('keydown', e => {
         if (e.key === 'Enter') openModal(c);
       });
 
-      // Quick action listeners
       const favBtn = card.querySelector('.btn-card-fav');
       if (favBtn) {
         favBtn.addEventListener('click', e => {
@@ -472,6 +670,14 @@
     });
 
     el.cardsContainer.appendChild(fragment);
+
+    // Show/hide Load More
+    if (state.renderedLimit < list.length) {
+      el.loadMoreContainer.style.display = 'flex';
+      el.remainingCount.textContent = list.length - state.renderedLimit;
+    } else {
+      el.loadMoreContainer.style.display = 'none';
+    }
   }
 
   // Favorite toggle
@@ -491,20 +697,18 @@
     }
     savePersistedState();
     if (state.favFilter === 'fav') {
-      renderCards();
+      renderCatalog();
     }
   }
 
   // Party Management Logic
   function addCharacterToParty(c) {
-    // Check if already in party
     const existingIndex = state.party.findIndex(item => item && item.id === c.id);
     if (existingIndex !== -1) {
       alert(`「${c.name}」は既にスロット ${existingIndex + 1} に編成されています。`);
       return;
     }
 
-    // Find first empty slot
     const emptyIndex = state.party.findIndex(item => item === null);
     if (emptyIndex === -1) {
       alert('部隊枠（12枠）が満員です。不要なキャラを外してから追加してください。');
@@ -515,9 +719,7 @@
     savePersistedState();
     updatePartyBadge();
     renderPartyView();
-
-    // Visual feedback
-    alert(`「${c.name}」をスロット ${emptyIndex + 1} に追加しました！`);
+    alert(`「${c.name}」を部隊スロット ${emptyIndex + 1} に追加しました！`);
   }
 
   function removeCharacterFromParty(slotIndex) {
@@ -529,7 +731,6 @@
 
   function renderPartyView() {
     for (let i = 0; i < 12; i++) {
-      const slotEl = document.getElementById(`slot-0`); // template
       const targetSlot = document.getElementById(`slot-${i}`);
       const parentSlot = targetSlot ? targetSlot.parentElement : null;
       if (!targetSlot) continue;
@@ -571,7 +772,6 @@
   }
 
   function updateSynergyMeters() {
-    // Only frontline + backline (0..5) count for battle synergy
     const frontline = state.party.slice(0, 6).filter(Boolean);
 
     let power = 0, wisdom = 0, brave = 0;
@@ -623,7 +823,6 @@
 
     lines.forEach(line => {
       if (slot >= 12) return;
-      // remove prefix like 枠1:
       const cleanName = line.replace(/^枠\d+[:：]\s*/, '').replace(/\s*\(.*?\)/, '').trim();
       const matched = allChars.find(c => c.name === cleanName || cleanName.includes(c.name));
       if (matched) {
@@ -643,18 +842,15 @@
   function openModal(c) {
     state.selectedChar = c;
 
-    // Rarity class
     let rClass = 'badge-ssr';
     if (c.rarity === 'UR閃') rClass = 'badge-ur-sen';
     else if (c.rarity === 'UR') rClass = 'badge-ur';
     else if (c.rarity === '花嫁') rClass = 'badge-bride';
 
-    // Type tag
     let tClass = 'tag-power';
     if (c.type === '智') tClass = 'tag-wisdom';
     else if (c.type === '猛') tClass = 'tag-brave';
 
-    // Warning box for outdated
     let warningBoxHtml = '';
     if (c.sourceInfo && c.sourceInfo.isOutdated) {
       warningBoxHtml = `
@@ -664,7 +860,6 @@
       `;
     }
 
-    // Big Visual
     let visualHtml = '';
     if (c.illustUrl) {
       visualHtml = `
@@ -677,7 +872,6 @@
       `;
     }
 
-    // Skills section
     let skillsHtml = '';
     if (c.skills && (c.skills.normal || c.skills.passive || c.skills.ultimate)) {
       let normalHtml = '';
@@ -753,7 +947,6 @@
       `;
     }
 
-    // Evaluation Box
     let evalHtml = '';
     if (c.evaluation && (c.evaluation.summary || c.evaluation.summaryBullets || c.evaluation.tierRank)) {
       let bulletsHtml = '';
@@ -790,7 +983,6 @@
       `;
     }
 
-    // Dialogues
     let dialogueHtml = '';
     if (c.dialogues && Object.keys(c.dialogues).length) {
       const dItems = Object.entries(c.dialogues).map(([k, v]) => `
@@ -810,7 +1002,6 @@
       `;
     }
 
-    // Story
     let storyHtml = '';
     if (c.story) {
       storyHtml = `
@@ -821,7 +1012,6 @@
       `;
     }
 
-    // Modal Inner Assembly
     el.modalContent.innerHTML = `
       ${visualHtml}
       <div class="modal-content-inner">
@@ -888,7 +1078,6 @@
     const atwikiMap = tierData.atwiki2024 || {};
     const allChars = window.GIRLWARS_DATA || [];
 
-    // 1. atwiki Tier (T0, T1, T2, T3)
     const tiers = ['T0', 'T1', 'T2', 'T3'];
     const tierLabels = {
       'T0': '異議なしの強力キャラ（最上位PVP必須）',
@@ -942,7 +1131,6 @@
       el.atwikiTierGroups.appendChild(groupEl);
     });
 
-    // 2. 2026 UR閃 Strengths View
     const urSenChars = allChars.filter(c => c.rarity === 'UR閃');
     el.ursenStrengthsContainer.innerHTML = '';
 

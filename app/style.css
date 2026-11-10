@@ -1045,6 +1045,138 @@ body {
   margin-bottom: 6px;
 }
 
+/* ================= View Switcher & Table Styles ================= */
+.view-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.view-btn {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.view-btn:hover {
+  border-color: var(--text-muted);
+  color: #fff;
+}
+
+.view-btn.active {
+  background: var(--accent-rose);
+  border-color: var(--accent-rose);
+  color: #fff;
+}
+
+/* Gallery View Mode */
+.cards-grid.view-gallery {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.cards-grid.view-gallery .card-visual {
+  aspect-ratio: 16 / 11;
+}
+
+/* Table View (まとめ表) */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.matome-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  text-align: left;
+}
+
+.matome-table th,
+.matome-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.matome-table th {
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.matome-table th.sortable {
+  cursor: pointer;
+}
+
+.matome-table th.sortable:hover {
+  color: #fff;
+  background: #273142;
+}
+
+.matome-table tbody tr {
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.matome-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.table-char-thumb {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: #000;
+  display: block;
+}
+
+.table-char-name-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-char-ruby {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.table-char-name {
+  font-weight: 700;
+  color: #fff;
+}
+
+.table-role-snippet {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 10px;
+}
+
 /* Card Quick Action Buttons */
 .card-actions-quick {
   position: absolute;

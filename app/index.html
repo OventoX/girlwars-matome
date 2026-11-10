@@ -119,18 +119,56 @@
         </div>
       </div>
 
-      <!-- Active Filters Summary -->
+      <!-- Active Filters Summary & View Switcher -->
       <div class="filter-status-bar">
-        <span>表示中: <strong id="filtered-count">0</strong> 件</span>
-        <button id="reset-filters-btn" class="btn-text">フィルターをリセット</button>
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+          <span>表示中: <strong id="filtered-count">0</strong> 件</span>
+          <button id="reset-filters-btn" class="btn-text">フィルターをリセット</button>
+        </div>
+        <div class="view-switcher" id="view-mode-switcher">
+          <span class="filter-label" style="margin-right: 4px;">表示形式:</span>
+          <button class="view-btn active" data-view="card" title="標準カード表示">🎴 カード</button>
+          <button class="view-btn" data-view="table" title="まとめ表（テーブル）表示">📋 まとめ表</button>
+          <button class="view-btn" data-view="gallery" title="大画像ギャラリー表示">🖼️ ギャラリー</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Tab 1: Catalog (Card Gallery) -->
+  <!-- Tab 1: Catalog (Card Gallery / Table) -->
   <main class="tab-content active" id="tab-catalog">
+    <!-- Card Grid View -->
     <div class="cards-grid" id="characters-container">
       <!-- Cards rendered dynamically via app.js -->
+    </div>
+
+    <!-- Table View (まとめ表) -->
+    <div class="table-container" id="characters-table-container" style="display: none;">
+      <table class="matome-table" id="characters-table">
+        <thead>
+          <tr>
+            <th style="width: 50px;">画像</th>
+            <th data-sort="ruby-asc" class="sortable">キャラ名 ↕</th>
+            <th data-sort="rarity-desc" class="sortable" style="width: 75px;">レア ↕</th>
+            <th style="width: 60px;">タイプ</th>
+            <th style="width: 60px;">系統</th>
+            <th>強み・評価要約 / 定位</th>
+            <th style="width: 100px;">スキル詳細</th>
+            <th data-sort="date-desc" class="sortable" style="width: 85px;">鮮度 ↕</th>
+            <th style="width: 80px;">操作</th>
+          </tr>
+        </thead>
+        <tbody id="characters-table-body">
+          <!-- Rendered via JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Load More Container -->
+    <div class="load-more-container" id="load-more-container" style="display: none;">
+      <button id="btn-load-more" class="btn-secondary" style="padding: 10px 24px; font-size: 0.9rem;">
+        さらに読み込む (<span id="remaining-count">0</span> 件)
+      </button>
     </div>
   </main>
 
