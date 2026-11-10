@@ -1,6 +1,6 @@
 /**
  * 少女ウォーズ キャラクター統合データベース (GirlWars Character Database)
- * Generated: 2026-11-10 09:37
+ * Generated: 2026-11-10 09:48
  * Total characters: 151 (UR閃: 39, UR: 33, SSR: 55, 花嫁: 24)
  * 
  * 厳格な著作権・出典明記ルールに基づき生成されています。
@@ -9,14 +9,101 @@
  */
 
 window.GIRLWARS_METADATA = {
-  generatedAt: "2026-11-10 09:37",
+  generatedAt: "2026-11-10 09:48",
   totalCount: 151,
   urSenCount: 39,
   urCount: 33,
   ssrCount: 55,
   brideCount: 24,
   withSkillsCount: 72,
-  withIllustCount: 151
+  withIllustCount: 151,
+  withTagsCount: 100,
+  tagsMaster: [
+  {
+    "id": "aoe",
+    "name": "全体攻撃",
+    "icon": "💥",
+    "desc": "敵全体または全員への範囲ダメージ"
+  },
+  {
+    "id": "control",
+    "name": "行動不能付与",
+    "icon": "❄️",
+    "desc": "眩暈、凍結、沈黙、石化、麻痺等の行動制限"
+  },
+  {
+    "id": "rage_gain",
+    "name": "戦意回復",
+    "icon": "⚡",
+    "desc": "自身または味方の戦意（ゲージ）回復・獲得"
+  },
+  {
+    "id": "rage_drain",
+    "name": "戦意減少",
+    "icon": "🔻",
+    "desc": "敵の戦意減少、低下、吸収効果"
+  },
+  {
+    "id": "revive",
+    "name": "復活/死亡回避",
+    "icon": "🕊️",
+    "desc": "致死ダメージ無効化、死亡回避、HP復活"
+  },
+  {
+    "id": "self_heal",
+    "name": "自己回復",
+    "icon": "💖",
+    "desc": "自身のHP回復、持続リジェネ"
+  },
+  {
+    "id": "team_heal",
+    "name": "味方回復",
+    "icon": "🌿",
+    "desc": "味方全体または周囲の味方HP治療"
+  },
+  {
+    "id": "dmg_share",
+    "name": "被ダメ分配",
+    "icon": "🛡️",
+    "desc": "味方の被ダメージ分担、肩代わり"
+  },
+  {
+    "id": "debuff",
+    "name": "デバフ付与",
+    "icon": "💀",
+    "desc": "敵への烙印、重傷、禁療、黒血侵食、防御低下等"
+  },
+  {
+    "id": "cleanse",
+    "name": "デバフ解除/免疫",
+    "icon": "✨",
+    "desc": "弱体・行動不能効果の解除または免疫"
+  },
+  {
+    "id": "counter",
+    "name": "追撃/反撃",
+    "icon": "⚔️",
+    "desc": "敵の行動時や被弾時の自動反撃・追撃"
+  },
+  {
+    "id": "anti_followup",
+    "name": "追撃阻止",
+    "icon": "🛑",
+    "desc": "敵の追撃行動を高確率で阻止・中断"
+  },
+  {
+    "id": "ignore_def",
+    "name": "防御無視/貫通",
+    "icon": "🎯",
+    "desc": "敵の防御力またはダメージ軽減の無視・貫通"
+  },
+  {
+    "id": "buff",
+    "name": "バフ付与/自己強化",
+    "icon": "⭐",
+    "desc": "攻撃力、会心、増傷等の味方または自己強化"
+  }
+]
 };
 
 window.GIRLWARS_DATA = [
@@ -58,14 +145,115 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 芦屋道満は、致命ダメージを受ける際に闇の下僕を持っている敵が代わりにダメージを受け道満がHPを回復できる点、闇の下僕や絆による敵への被ダメージの分配効果がとにかく強力なキャラです。\nまた、呪い爆発による全体攻撃とデバフが発生する点、闇の下僕の効果で確率で眩暈が発生しダメージを与える点、スキル発動後に最大HPが増加しHPも回復できる点、一回死亡を回避しHPと戦意を大きく回復できる点などもとても強力です。"
+      "summary": "UR閃 芦屋道満は、致命ダメージを受ける際に闇の下僕を持っている敵が代わりにダメージを受け道満がHPを回復できる点、闇の下僕や絆による敵への被ダメージの分配効果がとにかく強力なキャラです。\nまた、呪い爆発による全体攻撃とデバフが発生する点、闇の下僕の効果で確率で眩暈が発生しダメージを与える点、スキル発動後に最大HPが増加しHPも回復できる点、一回死亡を回避しHPと戦意を大きく回復できる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-11-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12942771177.html",
+          "tier": null,
+          "summary": "UR閃 芦屋道満は、致命ダメージを受ける際に闇の下僕を持っている敵が代わりにダメージを受け道満がHPを回復できる点、闇の下僕や絆による敵への被ダメージの分配効果がとにかく強力なキャラです。\nまた、呪い爆発による全体攻撃とデバフが発生する点、闇の下僕の効果で確率で眩暈が発生しダメージを与える点、スキル発動後に最大HPが増加しHPも回復できる点、一回死亡を回避しHPと戦意を大きく回復できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-11-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12942771177.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 芦屋道満は、致命ダメージを受ける際に闇の下僕を持っている敵が代わりにダメージを受け道満がHPを回復できる点、闇の下僕や絆による敵への被ダメージの分配効果..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12942771177.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-11-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "dmg_share",
+        "name": "被ダメ分配",
+        "icon": "🛡️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_アストルフォ",
@@ -105,14 +293,130 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 アストルフォは、条件が揃えば致命ダメージを最大３回まで回避しHPと戦意を回復できる点、月面レールガンによる敵の防御と減傷を無視した高威力の攻撃がとにかく強力なキャラです。\nまた、スキル攻撃によって敵の戦意吸収や自身のHPを回復できるバフの付与などができる点、通常攻撃がアルガリア砲に変化する点、戦術阻害ユニットを付与された敵の攻撃が前列のみの対象になる点、ヒポグリフ・ブースターによって受ける追加ダメージを５０％減少させつつスキル攻撃を３０％の確率で回避できる点などもとても強力です。"
+      "summary": "UR閃 アストルフォは、条件が揃えば致命ダメージを最大３回まで回避しHPと戦意を回復できる点、月面レールガンによる敵の防御と減傷を無視した高威力の攻撃がとにかく強力なキャラです。\nまた、スキル攻撃によって敵の戦意吸収や自身のHPを回復できるバフの付与などができる点、通常攻撃がアルガリア砲に変化する点、戦術阻害ユニットを付与された敵の攻撃が前列のみの対象になる点、ヒポグリフ・ブースターによって受ける追加ダメージを５０％減少させつつスキル攻撃を３０％の確率で回避できる点などもとても強力です。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T1",
+          "comment": "アストルフォは、その強力な性能で特に「激情モード」が際立っています。彼女は防御力が高く、強力な攻撃力を持ち、仲間と協力することで全体奥義を連発できます。しかし、激情モードは一度限りで、死亡すると再び激情状態に入ることができません。そのため、マーリンのようなキャラと組み合わせることを推奨します。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/223/%E3%82%A2%E3%82%B9%E3%83%88%E3%83%AB%E3%83%95%E3%82%A9.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-08-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12976000971.html",
+          "tier": null,
+          "summary": "UR閃 アストルフォは、条件が揃えば致命ダメージを最大３回まで回避しHPと戦意を回復できる点、月面レールガンによる敵の防御と減傷を無視した高威力の攻撃がとにかく強力なキャラです。\nまた、スキル攻撃によって敵の戦意吸収や自身のHPを回復できるバフの付与などができる点、通常攻撃がアルガリア砲に変化する点、戦術阻害ユニットを付与された敵の攻撃が前列のみの対象になる点、ヒポグリフ・ブースターによって受ける追加ダメージを５０％減少させつつスキル攻撃を３０％の確率で回避できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T1 に選出",
+          "reason": "アストルフォは、その強力な性能で特に「激情モード」が際立っています。彼女は防御力が高く、強力な攻撃力を持ち、仲間と協力することで全体奥義を連発できます。しかし、..."
+        },
+        {
+          "date": "2026-08-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12976000971.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 アストルフォは、条件が揃えば致命ダメージを最大３回まで回避しHPと戦意を回復できる点、月面レールガンによる敵の防御と減傷を無視した高威力の攻撃がとにかく..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12976000971.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-08-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_安倍晴明",
@@ -152,14 +456,130 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 安倍晴明は、奥義や超奥義時に多くの五行の力によって自陣を有利にできる点、味方のターン毎に自身と味方に戦意とHPを回復できる点がとにかく強力なキャラです。\nまた、等価交換によって味方へのダメージを１回無効化し回復量の削減を受けずにHPを回復できる点、奥義と超奥義時に主式神の攻撃が発生する点、継承行為によって大幅にステータスを高めHPを回復し戦意を引き継げる点、1回死亡を回避しHPと戦意を大きく回復できる点などもとても強力です。"
+      "summary": "UR閃 安倍晴明は、奥義や超奥義時に多くの五行の力によって自陣を有利にできる点、味方のターン毎に自身と味方に戦意とHPを回復できる点がとにかく強力なキャラです。\nまた、等価交換によって味方へのダメージを１回無効化し回復量の削減を受けずにHPを回復できる点、奥義と超奥義時に主式神の攻撃が発生する点、継承行為によって大幅にステータスを高めHPを回復し戦意を引き継げる点、1回死亡を回避しHPと戦意を大きく回復できる点などもとても強力です。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "先発の後衛に配置する必要があるため、その位置に競合が多く、現在はPVEでの利用が主です。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/203/%E6%99%B4%E6%98%8E.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-12-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12950383434.html",
+          "tier": null,
+          "summary": "UR閃 安倍晴明は、奥義や超奥義時に多くの五行の力によって自陣を有利にできる点、味方のターン毎に自身と味方に戦意とHPを回復できる点がとにかく強力なキャラです。\nまた、等価交換によって味方へのダメージを１回無効化し回復量の削減を受けずにHPを回復できる点、奥義と超奥義時に主式神の攻撃が発生する点、継承行為によって大幅にステータスを高めHPを回復し戦意を引き継げる点、1回死亡を回避しHPと戦意を大きく回復できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "先発の後衛に配置する必要があるため、その位置に競合が多く、現在はPVEでの利用が主です。"
+        },
+        {
+          "date": "2025-12-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12950383434.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 安倍晴明は、奥義や超奥義時に多くの五行の力によって自陣を有利にできる点、味方のターン毎に自身と味方に戦意とHPを回復できる点がとにかく強力なキャラです。..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12950383434.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-12-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_エカテリーナ",
@@ -199,14 +619,116 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 エカテリーナは、奥義によって敵全体を攻撃しつつ複数の敵を行動不能にする可能性がある点、鮮血復讐によって戦闘終了まで受けるダメージを５０％カットし必ずスキルが発動出来る点、脆弱刻印による敵の防御等を下げ自身の防御等を上げれる点、登場から３ターンの間で被ダメージを６０％カットし与ダメージが１００％アップする点がとにかく強力なキャラです。\nまた、鮮血束縛等を解除された場合に目標の最大HPに依存する追加ダメージを与えれる点、１回復活出来て最大戦意とHPを大きく回復できる点、脆弱刻印を持っている敵に味方キャラが攻撃した時に追加ダメージを与えれる点などもとても強力です。"
+      "summary": "UR閃 エカテリーナは、奥義によって敵全体を攻撃しつつ複数の敵を行動不能にする可能性がある点、鮮血復讐によって戦闘終了まで受けるダメージを５０％カットし必ずスキルが発動出来る点、脆弱刻印による敵の防御等を下げ自身の防御等を上げれる点、登場から３ターンの間で被ダメージを６０％カットし与ダメージが１００％アップする点がとにかく強力なキャラです。\nまた、鮮血束縛等を解除された場合に目標の最大HPに依存する追加ダメージを与えれる点、１回復活出来て最大戦意とHPを大きく回復できる点、脆弱刻印を持っている敵に味方キャラが攻撃した時に追加ダメージを与えれる点などもとても強力です。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "PVEではまだ一定の活躍を見せることがあります。登場に奥義を発動でき、復活後も再び奥義を発動できます。星7までの育成を推奨し、URへの昇格をおすすめします。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/221/%E3%82%A8%E3%82%AB%E3%83%86%E3%83%AA%E3%83%BC%E3%83%8A.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-06-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12911249534.html",
+          "tier": null,
+          "summary": "UR閃 エカテリーナは、奥義によって敵全体を攻撃しつつ複数の敵を行動不能にする可能性がある点、鮮血復讐によって戦闘終了まで受けるダメージを５０％カットし必ずスキルが発動出来る点、脆弱刻印による敵の防御等を下げ自身の防御等を上げれる点、登場から３ターンの間で被ダメージを６０％カットし与ダメージが１００％アップする点がとにかく強力なキャラです。\nまた、鮮血束縛等を解除された場合に目標の最大HPに依存する追加ダメージを与えれる点、１回復活出来て最大戦意とHPを大きく回復できる点、脆弱刻印を持っている敵に味方キャラが攻撃した時に追加ダメージを与えれる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "PVEではまだ一定の活躍を見せることがあります。登場に奥義を発動でき、復活後も再び奥義を発動できます。星7までの育成を推奨し、URへの昇格をおすすめします。"
+        },
+        {
+          "date": "2025-06-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12911249534.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 エカテリーナは、奥義によって敵全体を攻撃しつつ複数の敵を行動不能にする可能性がある点、鮮血復讐によって戦闘終了まで受けるダメージを５０％カットし必ずスキ..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12911249534.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-06-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_オジマンディアス",
@@ -254,6 +776,42 @@ window.GIRLWARS_DATA = [
         "奥義：確率で敵1列に回復無効化、味方1列に奥義ダメバフ",
         "味方が奥義発動で自身の戦意回復",
         "最大で3回復活可能"
+      ],
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-09-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12979053012.html",
+          "tier": null,
+          "summary": "UR閃 オジマンディアスは、ホルスの目による周囲の味方のHPを５０％未満にさせずにHPを回復する効果、致命ダメージを無効化しつつHPと戦意を回復できる太陽神に選ばれし者を最大３回発動できる点がとにかく強力なキャラです。\nまた、オジマンディアスの神殿によって敵全体の奥義減傷を下げつつ味方のコントロール率を大幅に高めれる点、様々なタイミングで付与されるファラオの慈悲による味方全体へのバフ、確率は低いが敵一体に約１０億のダメージを与えることができる即死効果、枯れの権能による回復効果を無効化しダメージを与えることができる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-ojimanndiasu",
+          "bullets": [
+            "味方のデバフ解除すると全体の攻防ステアップ",
+            "黒血侵食をランダムで回復",
+            "スキル：確率で回復無効化＋追加ダメ、高確率で行動不可",
+            "奥義：確率で敵1列に回復無効化、味方1列に奥義ダメバフ",
+            "味方が奥義発動で自身の戦意回復",
+            "最大で3回復活可能"
+          ],
+          "gems": []
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2026-09-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12979053012.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 オジマンディアスは、ホルスの目による周囲の味方のHPを５０％未満にさせずにHPを回復する効果、致命ダメージを無効化しつつHPと戦意を回復できる太陽神に選..."
+        }
       ]
     },
     "sourceInfo": {
@@ -261,7 +819,65 @@ window.GIRLWARS_DATA = [
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-09-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_オデュッセウス",
@@ -301,14 +917,101 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 オデュッセウスは、自身のHP減少によって最大で回避率が５０％まで上がる点、木馬戦術効果によって敵２名の奥義とスキルを封じつつ強靭を下げれる点、２回まで生命極限によってHPが２０％以下になるダメージを無効化し治療削減効果を受けずにHPを回復し戦意も回復できる点がとにかく強力なキャラです。\nまた、否決の槍による追撃／反撃／回避不能効果と減傷ダウンの効果、味方ターン開始時に自身の黒血浸食効果を癒やしつつシールドを付与できる点、切裂効果によって対象が行動するたびにダメージを与えれる点、戦意を回復する手段を複数持っている点などもとても強力です。"
+      "summary": "UR閃 オデュッセウスは、自身のHP減少によって最大で回避率が５０％まで上がる点、木馬戦術効果によって敵２名の奥義とスキルを封じつつ強靭を下げれる点、２回まで生命極限によってHPが２０％以下になるダメージを無効化し治療削減効果を受けずにHPを回復し戦意も回復できる点がとにかく強力なキャラです。\nまた、否決の槍による追撃／反撃／回避不能効果と減傷ダウンの効果、味方ターン開始時に自身の黒血浸食効果を癒やしつつシールドを付与できる点、切裂効果によって対象が行動するたびにダメージを与えれる点、戦意を回復する手段を複数持っている点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-01-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12953802687.html",
+          "tier": null,
+          "summary": "UR閃 オデュッセウスは、自身のHP減少によって最大で回避率が５０％まで上がる点、木馬戦術効果によって敵２名の奥義とスキルを封じつつ強靭を下げれる点、２回まで生命極限によってHPが２０％以下になるダメージを無効化し治療削減効果を受けずにHPを回復し戦意も回復できる点がとにかく強力なキャラです。\nまた、否決の槍による追撃／反撃／回避不能効果と減傷ダウンの効果、味方ターン開始時に自身の黒血浸食効果を癒やしつつシールドを付与できる点、切裂効果によって対象が行動するたびにダメージを与えれる点、戦意を回復する手段を複数持っている点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-01-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12953802687.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 オデュッセウスは、自身のHP減少によって最大で回避率が５０％まで上がる点、木馬戦術効果によって敵２名の奥義とスキルを封じつつ強靭を下げれる点、２回まで生..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12953802687.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-01-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_オベロン",
@@ -348,14 +1051,108 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 オベロンは、攻撃又はスキルの後に発動することができる双生幽蝶による回復と攻撃、超奥義時に敵に黒血浸食を与えつつ味方の黒血浸食を癒し体力を回復できる点がとにかく強力なキャラです。\nまた、生長の層数が変化するたび敵に様々な効果を与えれる点、命隙の淵による黒血浸食効果、奥義攻撃で敵を倒した場合にオベロンがすぐに戦意を１０００点回復できる点、一度死亡を回避し自身のHPと戦意を回復しつつ味方全体の戦意を回復できる点などもとても強力です。"
+      "summary": "UR閃 オベロンは、攻撃又はスキルの後に発動することができる双生幽蝶による回復と攻撃、超奥義時に敵に黒血浸食を与えつつ味方の黒血浸食を癒し体力を回復できる点がとにかく強力なキャラです。\nまた、生長の層数が変化するたび敵に様々な効果を与えれる点、命隙の淵による黒血浸食効果、奥義攻撃で敵を倒した場合にオベロンがすぐに戦意を１０００点回復できる点、一度死亡を回避し自身のHPと戦意を回復しつつ味方全体の戦意を回復できる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-05-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12964746197.html",
+          "tier": null,
+          "summary": "UR閃 オベロンは、攻撃又はスキルの後に発動することができる双生幽蝶による回復と攻撃、超奥義時に敵に黒血浸食を与えつつ味方の黒血浸食を癒し体力を回復できる点がとにかく強力なキャラです。\nまた、生長の層数が変化するたび敵に様々な効果を与えれる点、命隙の淵による黒血浸食効果、奥義攻撃で敵を倒した場合にオベロンがすぐに戦意を１０００点回復できる点、一度死亡を回避し自身のHPと戦意を回復しつつ味方全体の戦意を回復できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-05-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12964746197.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 オベロンは、攻撃又はスキルの後に発動することができる双生幽蝶による回復と攻撃、超奥義時に敵に黒血浸食を与えつつ味方の黒血浸食を癒し体力を回復できる点がと..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12964746197.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-05-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_オリオン",
@@ -395,14 +1192,115 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 オリオンは、回避率と回避阻止率を持っていること、宿敵効果で発動する目標の強靭をー５０％できる点がとにかく強力なキャラです。\nまた、星々の威圧によって敵全体に強力なデバフをかけれる点、条件を満たせば対象のブロック率と減傷を無視できる点、死亡を１度回避しHPと戦意を回復できる点、戦意を回復する手段が豊富な点などもとても強力です。"
+      "summary": "UR閃 オリオンは、回避率と回避阻止率を持っていること、宿敵効果で発動する目標の強靭をー５０％できる点がとにかく強力なキャラです。\nまた、星々の威圧によって敵全体に強力なデバフをかけれる点、条件を満たせば対象のブロック率と減傷を無視できる点、死亡を１度回避しHPと戦意を回復できる点、戦意を回復する手段が豊富な点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-09-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12926840106.html",
+          "tier": null,
+          "summary": "UR閃 オリオンは、回避率と回避阻止率を持っていること、宿敵効果で発動する目標の強靭をー５０％できる点がとにかく強力なキャラです。\nまた、星々の威圧によって敵全体に強力なデバフをかけれる点、条件を満たせば対象のブロック率と減傷を無視できる点、死亡を１度回避しHPと戦意を回復できる点、戦意を回復する手段が豊富な点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-09-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12926840106.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 オリオンは、回避率と回避阻止率を持っていること、宿敵効果で発動する目標の強靭をー５０％できる点がとにかく強力なキャラです。\nまた、星々の威圧によって敵全..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12926840106.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-09-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_カエサル",
@@ -442,14 +1340,123 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 カエサルは、敵全体の攻撃を２５％ダウンさせるパッシブ、混乱効果で敵が与えたダメージを１ターンの間中そのまま反射することができる点、奥義で敵の最大HPを大きく減少させられる点がとにかく強力なキャラです。\nまた、ダメージを受けるたびに防御が上がる点、「来た、見た、届けた」効果により受けたコントロール効果を反射し戦意を回復できる点、カエサルを退場させた時に敵に強力なデバフを与える点、１回死亡を回避しHPと戦意を大きく回復できる点などもとても強力です。"
+      "summary": "UR閃 カエサルは、敵全体の攻撃を２５％ダウンさせるパッシブ、混乱効果で敵が与えたダメージを１ターンの間中そのまま反射することができる点、奥義で敵の最大HPを大きく減少させられる点がとにかく強力なキャラです。\nまた、ダメージを受けるたびに防御が上がる点、「来た、見た、届けた」効果により受けたコントロール効果を反射し戦意を回復できる点、カエサルを退場させた時に敵に強力なデバフを与える点、１回死亡を回避しHPと戦意を大きく回復できる点などもとても強力です。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "攻撃力削減能力と死亡時の攻撃力削減。パッシブで相手のダメージを低下させ、死亡後も倒した敵にデバフを付与します。最低でも星6までの育成を推奨します。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/219/%E3%82%AB%E3%82%A8%E3%82%B5%E3%83%AB.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-02-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12957037100.html",
+          "tier": null,
+          "summary": "UR閃 カエサルは、敵全体の攻撃を２５％ダウンさせるパッシブ、混乱効果で敵が与えたダメージを１ターンの間中そのまま反射することができる点、奥義で敵の最大HPを大きく減少させられる点がとにかく強力なキャラです。\nまた、ダメージを受けるたびに防御が上がる点、「来た、見た、届けた」効果により受けたコントロール効果を反射し戦意を回復できる点、カエサルを退場させた時に敵に強力なデバフを与える点、１回死亡を回避しHPと戦意を大きく回復できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "攻撃力削減能力と死亡時の攻撃力削減。パッシブで相手のダメージを低下させ、死亡後も倒した敵にデバフを付与します。最低でも星6までの育成を推奨します。"
+        },
+        {
+          "date": "2026-02-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12957037100.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 カエサルは、敵全体の攻撃を２５％ダウンさせるパッシブ、混乱効果で敵が与えたダメージを１ターンの間中そのまま反射することができる点、奥義で敵の最大HPを大..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12957037100.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-02-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_果心居士",
@@ -489,14 +1496,101 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 果心居士は、HP吸収率が最大７０％上がる点、一度復活できるだけでなく最大２回までHPを大きく回復することができる点がとにかく強力なキャラです。\nまた、奥義時に敵３名のHPを吸収できる点、条件を満たすと果心居士の攻撃が必ず会心攻撃になる点、登場及び復活後の最初のターンにコントロール効果を無効化しつつ奥義の威力を上げれる点、緋色の罠によってバフと確率で相手の行動阻害できる点などもとても強力です。"
+      "summary": "UR閃 果心居士は、HP吸収率が最大７０％上がる点、一度復活できるだけでなく最大２回までHPを大きく回復することができる点がとにかく強力なキャラです。\nまた、奥義時に敵３名のHPを吸収できる点、条件を満たすと果心居士の攻撃が必ず会心攻撃になる点、登場及び復活後の最初のターンにコントロール効果を無効化しつつ奥義の威力を上げれる点、緋色の罠によってバフと確率で相手の行動阻害できる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-08-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12974523066.html",
+          "tier": null,
+          "summary": "UR閃 果心居士は、HP吸収率が最大７０％上がる点、一度復活できるだけでなく最大２回までHPを大きく回復することができる点がとにかく強力なキャラです。\nまた、奥義時に敵３名のHPを吸収できる点、条件を満たすと果心居士の攻撃が必ず会心攻撃になる点、登場及び復活後の最初のターンにコントロール効果を無効化しつつ奥義の威力を上げれる点、緋色の罠によってバフと確率で相手の行動阻害できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-08-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12974523066.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 果心居士は、HP吸収率が最大７０％上がる点、一度復活できるだけでなく最大２回までHPを大きく回復することができる点がとにかく強力なキャラです。\nまた、奥..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12974523066.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-08-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "anti_followup",
+        "name": "追撃阻止",
+        "icon": "🛑",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_上泉信綱",
@@ -536,14 +1630,108 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 上泉信綱は、後列隊長技により３ターンの合計で敵全体にそれぞれの最大HP３０％分のダメージを与えれる点、皆斬により即死級のダメージを与えれる点がとにかく強力なキャラです。\nまた、転の道によって１回で受けるダメージを減らしつつ一部のダメージをカットして持続ダメージとして受ける点、ランダムだが全てのキャラ（敵味方）が行動する時に上泉信綱が有利になる効果が発生する点、極意道場によって戦意削減と返傷ダメージを無効に出来る点、敵が奥義を発動する際に５０％の確率でデバフをつけれる点、自身の増傷がターンが進むにつれて増加していく点、敵のHPを吸収しつつ戦意を回復できるスキル攻撃などもとても強力です。"
+      "summary": "UR閃 上泉信綱は、後列隊長技により３ターンの合計で敵全体にそれぞれの最大HP３０％分のダメージを与えれる点、皆斬により即死級のダメージを与えれる点がとにかく強力なキャラです。\nまた、転の道によって１回で受けるダメージを減らしつつ一部のダメージをカットして持続ダメージとして受ける点、ランダムだが全てのキャラ（敵味方）が行動する時に上泉信綱が有利になる効果が発生する点、極意道場によって戦意削減と返傷ダメージを無効に出来る点、敵が奥義を発動する際に５０％の確率でデバフをつけれる点、自身の増傷がターンが進むにつれて増加していく点、敵のHPを吸収しつつ戦意を回復できるスキル攻撃などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-06-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12907715616.html",
+          "tier": null,
+          "summary": "UR閃 上泉信綱は、後列隊長技により３ターンの合計で敵全体にそれぞれの最大HP３０％分のダメージを与えれる点、皆斬により即死級のダメージを与えれる点がとにかく強力なキャラです。\nまた、転の道によって１回で受けるダメージを減らしつつ一部のダメージをカットして持続ダメージとして受ける点、ランダムだが全てのキャラ（敵味方）が行動する時に上泉信綱が有利になる効果が発生する点、極意道場によって戦意削減と返傷ダメージを無効に出来る点、敵が奥義を発動する際に５０％の確率でデバフをつけれる点、自身の増傷がターンが進むにつれて増加していく点、敵のHPを吸収しつつ戦意を回復できるスキル攻撃などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-06-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12907715616.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 上泉信綱は、後列隊長技により３ターンの合計で敵全体にそれぞれの最大HP３０％分のダメージを与えれる点、皆斬により即死級のダメージを与えれる点がとにかく強..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12907715616.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-06-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_カール大帝",
@@ -583,14 +1771,109 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 カール大帝は、跡継ぎに続いて奥義を戦意の消耗なしで撃てる点、３ターンは耐えてくれる覇道、跡継ぎの戦意を最大まで回復させる戦意続行、主目標とその後方に大ダメージを与えつつ周囲にもダメージを与えれる点がとにかく強力なキャラです。\nまた、超奥義で大ダメージを与えつつ敵にデバフをかけたり跡継ぎにバフをかけ５０％の確率でスキル追撃できる点、跡継ぎの耐久面をあげれる点、奥義で目標に高い割合の黒血侵食をつけながらスキル発動率を下げれる点、HPと戦意を回復する手段を複数持っている点などもとても強力です。"
+      "summary": "UR閃 カール大帝は、跡継ぎに続いて奥義を戦意の消耗なしで撃てる点、３ターンは耐えてくれる覇道、跡継ぎの戦意を最大まで回復させる戦意続行、主目標とその後方に大ダメージを与えつつ周囲にもダメージを与えれる点がとにかく強力なキャラです。\nまた、超奥義で大ダメージを与えつつ敵にデバフをかけたり跡継ぎにバフをかけ５０％の確率でスキル追撃できる点、跡継ぎの耐久面をあげれる点、奥義で目標に高い割合の黒血侵食をつけながらスキル発動率を下げれる点、HPと戦意を回復する手段を複数持っている点などもとても強力です。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T2",
+          "comment": "カール大帝は、特に一対一の戦いに強く、他のキャラに対しても優れたパフォーマンスを発揮します。彼女は3ターンの不死能力を持ち、他のキャラと組み合わせることで強力なコンボを実現できます。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/220/%E3%82%AB%E3%83%BC%E3%83%AB%E5%A4%A7%E5%B8%9D.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-05-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12904056708.html",
+          "tier": null,
+          "summary": "UR閃 カール大帝は、跡継ぎに続いて奥義を戦意の消耗なしで撃てる点、３ターンは耐えてくれる覇道、跡継ぎの戦意を最大まで回復させる戦意続行、主目標とその後方に大ダメージを与えつつ周囲にもダメージを与えれる点がとにかく強力なキャラです。\nまた、超奥義で大ダメージを与えつつ敵にデバフをかけたり跡継ぎにバフをかけ５０％の確率でスキル追撃できる点、跡継ぎの耐久面をあげれる点、奥義で目標に高い割合の黒血侵食をつけながらスキル発動率を下げれる点、HPと戦意を回復する手段を複数持っている点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T2 に選出",
+          "reason": "カール大帝は、特に一対一の戦いに強く、他のキャラに対しても優れたパフォーマンスを発揮します。彼女は3ターンの不死能力を持ち、他のキャラと組み合わせることで強力な..."
+        },
+        {
+          "date": "2025-05-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12904056708.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 カール大帝は、跡継ぎに続いて奥義を戦意の消耗なしで撃てる点、３ターンは耐えてくれる覇道、跡継ぎの戦意を最大まで回復させる戦意続行、主目標とその後方に大ダ..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12904056708.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-05-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_ガウェイン",
@@ -630,14 +1913,116 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 ガウェインは、烈日騎士状態での受けるダメージをー９９％し自身の増傷を＋５０％する効果、複数の効果を持つ聖なる盾の効果、２回死亡を回避し数ターンの間は耐久面が大幅に強化される点がとにかく強力なキャラです。\nまた、超奥義発動時に味方全体にシールドを付与できる点、超奥義時の弱化と鼓舞、陽焔効果による追加ダメージ、スキルを発動するたびに永続的に耐久面が大幅に強化される点などもとても強力です。"
+      "summary": "UR閃 ガウェインは、烈日騎士状態での受けるダメージをー９９％し自身の増傷を＋５０％する効果、複数の効果を持つ聖なる盾の効果、２回死亡を回避し数ターンの間は耐久面が大幅に強化される点がとにかく強力なキャラです。\nまた、超奥義発動時に味方全体にシールドを付与できる点、超奥義時の弱化と鼓舞、陽焔効果による追加ダメージ、スキルを発動するたびに永続的に耐久面が大幅に強化される点などもとても強力です。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T1",
+          "comment": "聖なる盾が存在する限り、全能の盾と称するキャラ、コントロール能力と火力もそこそこあります。どのキャラと組み合わせてもいい性能があるので好評です。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/226/%E3%82%AC%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%B3.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-08-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12923794255.html",
+          "tier": null,
+          "summary": "UR閃 ガウェインは、烈日騎士状態での受けるダメージをー９９％し自身の増傷を＋５０％する効果、複数の効果を持つ聖なる盾の効果、２回死亡を回避し数ターンの間は耐久面が大幅に強化される点がとにかく強力なキャラです。\nまた、超奥義発動時に味方全体にシールドを付与できる点、超奥義時の弱化と鼓舞、陽焔効果による追加ダメージ、スキルを発動するたびに永続的に耐久面が大幅に強化される点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T1 に選出",
+          "reason": "聖なる盾が存在する限り、全能の盾と称するキャラ、コントロール能力と火力もそこそこあります。どのキャラと組み合わせてもいい性能があるので好評です。"
+        },
+        {
+          "date": "2025-08-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12923794255.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 ガウェインは、烈日騎士状態での受けるダメージをー９９％し自身の増傷を＋５０％する効果、複数の効果を持つ聖なる盾の効果、２回死亡を回避し数ターンの間は耐久..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12923794255.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-08-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "dmg_share",
+        "name": "被ダメ分配",
+        "icon": "🛡️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_項羽",
@@ -677,14 +2062,94 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 項羽は、百戦錬磨の効果によって吸血率やコントロール抵抗率などのステータスを大幅に上げることができる点、破軍によって自身だけじゃなく味方のスキル攻撃も大幅に強化できる点がとにかく強力なキャラです。\nまた、不敗効果によるダメージの無効化、鼓舞ー極によって味方１名に戦意の消耗なしで奥義追撃を撃たせる点、スキルを発動した後に必ず味方１名のスキル追撃を発生させる点、１度死亡を回避し味方全体にバフをかけれる点などもとても強力です。"
+      "summary": "UR閃 項羽は、百戦錬磨の効果によって吸血率やコントロール抵抗率などのステータスを大幅に上げることができる点、破軍によって自身だけじゃなく味方のスキル攻撃も大幅に強化できる点がとにかく強力なキャラです。\nまた、不敗効果によるダメージの無効化、鼓舞ー極によって味方１名に戦意の消耗なしで奥義追撃を撃たせる点、スキルを発動した後に必ず味方１名のスキル追撃を発生させる点、１度死亡を回避し味方全体にバフをかけれる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-10-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12935193009.html",
+          "tier": null,
+          "summary": "UR閃 項羽は、百戦錬磨の効果によって吸血率やコントロール抵抗率などのステータスを大幅に上げることができる点、破軍によって自身だけじゃなく味方のスキル攻撃も大幅に強化できる点がとにかく強力なキャラです。\nまた、不敗効果によるダメージの無効化、鼓舞ー極によって味方１名に戦意の消耗なしで奥義追撃を撃たせる点、スキルを発動した後に必ず味方１名のスキル追撃を発生させる点、１度死亡を回避し味方全体にバフをかけれる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-10-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12935193009.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 項羽は、百戦錬磨の効果によって吸血率やコントロール抵抗率などのステータスを大幅に上げることができる点、破軍によって自身だけじゃなく味方のスキル攻撃も大幅..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12935193009.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-10-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_真田幸村",
@@ -724,14 +2189,123 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 真田幸村は、敵の行動（追撃を含む）を止めつつダメージを与える身動き不能効果、通常攻撃が普通の魚猟銃に強化される点がとにかく強力なキャラです。\nまた、奥義や超奥義時に少数の敵にかなりのダメージを与えれる点、パッシブなどで回避率や回避阻止率を大きく上げることができる点、自身と味方の奥義回転率を上げれる点、戦闘不能時に１回復活しつつデバフをばら撒ける点などもとても強力です。"
+      "summary": "UR閃 真田幸村は、敵の行動（追撃を含む）を止めつつダメージを与える身動き不能効果、通常攻撃が普通の魚猟銃に強化される点がとにかく強力なキャラです。\nまた、奥義や超奥義時に少数の敵にかなりのダメージを与えれる点、パッシブなどで回避率や回避阻止率を大きく上げることができる点、自身と味方の奥義回転率を上げれる点、戦闘不能時に１回復活しつつデバフをばら撒ける点などもとても強力です。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T2",
+          "comment": "真田幸村は、全体攻撃を持つキャラの中でも特に優れており、仲間の戦意を回復させる能力を持っています。彼女は前衛としても一定の役割を果たします。しかし、初心者には他のURキャラの方が良い選択肢となる場合があります。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/207/%E5%B9%B8%E6%9D%91.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-04-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12963368905.html",
+          "tier": null,
+          "summary": "UR閃 真田幸村は、敵の行動（追撃を含む）を止めつつダメージを与える身動き不能効果、通常攻撃が普通の魚猟銃に強化される点がとにかく強力なキャラです。\nまた、奥義や超奥義時に少数の敵にかなりのダメージを与えれる点、パッシブなどで回避率や回避阻止率を大きく上げることができる点、自身と味方の奥義回転率を上げれる点、戦闘不能時に１回復活しつつデバフをばら撒ける点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T2 に選出",
+          "reason": "真田幸村は、全体攻撃を持つキャラの中でも特に優れており、仲間の戦意を回復させる能力を持っています。彼女は前衛としても一定の役割を果たします。しかし、初心者には他..."
+        },
+        {
+          "date": "2026-04-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12963368905.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 真田幸村は、敵の行動（追撃を含む）を止めつつダメージを与える身動き不能効果、通常攻撃が普通の魚猟銃に強化される点がとにかく強力なキャラです。\nまた、奥義..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12963368905.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-04-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "anti_followup",
+        "name": "追撃阻止",
+        "icon": "🛑",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_三蔵法師",
@@ -771,14 +2345,108 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 三蔵法師は、即心即仏によって回復量削減の影響を受けずにHPを回復できスキル追撃もできる点、ダメージの無効化と反射、行動不能付与、味方全体のHP回復ができる法相金身がとにかく強力なキャラです。\nまた、死亡を一度回避しHPと戦意を回復して即心即仏効果を獲得できる点、紅顔禍によって味方を守りつつ減傷を上げ戦意を回復できる点、味方のHPを回復する手段を複数持ってる点、自身は黒血浸食効果の影響を受けない点などもとても強力です。"
+      "summary": "UR閃 三蔵法師は、即心即仏によって回復量削減の影響を受けずにHPを回復できスキル追撃もできる点、ダメージの無効化と反射、行動不能付与、味方全体のHP回復ができる法相金身がとにかく強力なキャラです。\nまた、死亡を一度回避しHPと戦意を回復して即心即仏効果を獲得できる点、紅顔禍によって味方を守りつつ減傷を上げ戦意を回復できる点、味方のHPを回復する手段を複数持ってる点、自身は黒血浸食効果の影響を受けない点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-02-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12955391999.html",
+          "tier": null,
+          "summary": "UR閃 三蔵法師は、即心即仏によって回復量削減の影響を受けずにHPを回復できスキル追撃もできる点、ダメージの無効化と反射、行動不能付与、味方全体のHP回復ができる法相金身がとにかく強力なキャラです。\nまた、死亡を一度回避しHPと戦意を回復して即心即仏効果を獲得できる点、紅顔禍によって味方を守りつつ減傷を上げ戦意を回復できる点、味方のHPを回復する手段を複数持ってる点、自身は黒血浸食効果の影響を受けない点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-02-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12955391999.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 三蔵法師は、即心即仏によって回復量削減の影響を受けずにHPを回復できスキル追撃もできる点、ダメージの無効化と反射、行動不能付与、味方全体のHP回復ができ..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12955391999.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-02-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_スカアハ",
@@ -823,6 +2491,39 @@ window.GIRLWARS_DATA = [
         "脱衣前のヒントまとめ",
         "脱衣後のヒントまとめ",
         "限定衣装のヒントまとめ"
+      ],
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-12-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12948657188.html",
+          "tier": null,
+          "summary": "UR閃 スカアハは、味方に強力なバフをかけつつ被ダメージを２０％カットできる影の領域の効果、HPが２０％以下になる際にダメージを無効化し治療削減を受けずにHPを回復しスキル追撃もできる点がとにかく強力なキャラです\nまた、敵キャラのHPが半分以下になる時スキルで追撃できる点、味方ターン開始時にルーン効果を全て獲得し影狩り効果を１層獲得できる点、深淵の注視効果によって敵の戦意回復速度を下げスキル攻撃を封じれる点、敵のターン終了時等に発動する悪霊呪縛によるダメージを与えれる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-sukaahawed",
+          "bullets": [
+            "脱衣前のヒントまとめ",
+            "脱衣後のヒントまとめ",
+            "限定衣装のヒントまとめ"
+          ],
+          "gems": []
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2025-12-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12948657188.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 スカアハは、味方に強力なバフをかけつつ被ダメージを２０％カットできる影の領域の効果、HPが２０％以下になる際にダメージを無効化し治療削減を受けずにHPを..."
+        }
       ]
     },
     "sourceInfo": {
@@ -830,7 +2531,65 @@ window.GIRLWARS_DATA = [
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-12-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_ソロモン",
@@ -870,14 +2629,123 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 ソロモンは、奥義時に敵と味方のバフとデバフ（コントロール含む）を入れ替えることができる点、２回復活できてHPと戦意を大きく回復しつつ悪夢のエネルギーを９層獲得できる点がとにかく強力なキャラです。\nまた、複数の方法で強力なデバフである甘い夢を付与できる点、条件はあるが戦意の消耗なしで奥義で反撃できる点、ハプニングによって次回の敵の被ダメを上げ高い確率で集中攻撃できる点、自身や味方の戦意回復手段を持っている点などもとても強力です。"
+      "summary": "UR閃 ソロモンは、奥義時に敵と味方のバフとデバフ（コントロール含む）を入れ替えることができる点、２回復活できてHPと戦意を大きく回復しつつ悪夢のエネルギーを９層獲得できる点がとにかく強力なキャラです。\nまた、複数の方法で強力なデバフである甘い夢を付与できる点、条件はあるが戦意の消耗なしで奥義で反撃できる点、ハプニングによって次回の敵の被ダメを上げ高い確率で集中攻撃できる点、自身や味方の戦意回復手段を持っている点などもとても強力です。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "ソロモンはPVPでの使用がほとんど見られず、復活を頼りにした戦術が主な用途です。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/216/%E3%82%BD%E3%83%AD%E3%83%A2%E3%83%B3.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-06-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12970042614.html",
+          "tier": null,
+          "summary": "UR閃 ソロモンは、奥義時に敵と味方のバフとデバフ（コントロール含む）を入れ替えることができる点、２回復活できてHPと戦意を大きく回復しつつ悪夢のエネルギーを９層獲得できる点がとにかく強力なキャラです。\nまた、複数の方法で強力なデバフである甘い夢を付与できる点、条件はあるが戦意の消耗なしで奥義で反撃できる点、ハプニングによって次回の敵の被ダメを上げ高い確率で集中攻撃できる点、自身や味方の戦意回復手段を持っている点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "ソロモンはPVPでの使用がほとんど見られず、復活を頼りにした戦術が主な用途です。"
+        },
+        {
+          "date": "2026-06-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12970042614.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 ソロモンは、奥義時に敵と味方のバフとデバフ（コントロール含む）を入れ替えることができる点、２回復活できてHPと戦意を大きく回復しつつ悪夢のエネルギーを９..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12970042614.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-06-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_玉藻前",
@@ -917,14 +2785,122 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 玉藻前は、奥義と超奥義の発動時に味方キャラ１名のデバフを全て解除し敵目標３名に同じデバフをつけれる点、味方ターンが開始する時に自身と味方１名の戦意を回復でき自身が死亡しても３ターン効果が残る点、様々なパッシブやバフによって自身や味方の様々なステータスを強化できる点がとにかく強力なキャラです。\nまた、自身や味方のHPを回復できる手段をもっている点、戦意回復手段が豊富な点、条件を満たした時の超奥義の威力が高い点、\nHPが２０％以下になる攻撃を一度回避し九尾の力を大量に獲得し自身の黒血侵食を全て癒し体力を回復できる点などもとても強力です。"
+      "summary": "UR閃 玉藻前は、奥義と超奥義の発動時に味方キャラ１名のデバフを全て解除し敵目標３名に同じデバフをつけれる点、味方ターンが開始する時に自身と味方１名の戦意を回復でき自身が死亡しても３ターン効果が残る点、様々なパッシブやバフによって自身や味方の様々なステータスを強化できる点がとにかく強力なキャラです。\nまた、自身や味方のHPを回復できる手段をもっている点、戦意回復手段が豊富な点、条件を満たした時の超奥義の威力が高い点、\nHPが２０％以下になる攻撃を一度回避し九尾の力を大量に獲得し自身の黒血侵食を全て癒し体力を回復できる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-05-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12899362256.html",
+          "tier": null,
+          "summary": "UR閃 玉藻前は、奥義と超奥義の発動時に味方キャラ１名のデバフを全て解除し敵目標３名に同じデバフをつけれる点、味方ターンが開始する時に自身と味方１名の戦意を回復でき自身が死亡しても３ターン効果が残る点、様々なパッシブやバフによって自身や味方の様々なステータスを強化できる点がとにかく強力なキャラです。\nまた、自身や味方のHPを回復できる手段をもっている点、戦意回復手段が豊富な点、条件を満たした時の超奥義の威力が高い点、\nHPが２０％以下になる攻撃を一度回避し九尾の力を大量に獲得し自身の黒血侵食を全て癒し体力を回復できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-05-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12899362256.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 玉藻前は、奥義と超奥義の発動時に味方キャラ１名のデバフを全て解除し敵目標３名に同じデバフをつけれる点、味方ターンが開始する時に自身と味方１名の戦意を回復..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12899362256.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-05-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_伊達政宗",
@@ -964,14 +2940,109 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 伊達政宗は、自身の攻撃力を上げれる継承行為、邪気や龍の魔眼によって敵の攻撃を無効化しダメージを与えれる点、後列にいる場合とにかく硬い点がとにかく強力なキャラです。\nまた、敵キャラが死亡などの状態になるたび自身のHPを回復できる点、奥義や超奥義をかなりの高威力で放てる点、継承行為の発動条件が増えた点、緩い条件で１回死亡を回避できる点などもとても強力です。"
+      "summary": "UR閃 伊達政宗は、自身の攻撃力を上げれる継承行為、邪気や龍の魔眼によって敵の攻撃を無効化しダメージを与えれる点、後列にいる場合とにかく硬い点がとにかく強力なキャラです。\nまた、敵キャラが死亡などの状態になるたび自身のHPを回復できる点、奥義や超奥義をかなりの高威力で放てる点、継承行為の発動条件が増えた点、緩い条件で１回死亡を回避できる点などもとても強力です。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T2",
+          "comment": "伊達政宗は強力な性能を持ち、特に低レベルの戦闘では圧倒的な力を発揮します。しかし、彼女には後衛の位置を奪われやすいなどの致命的な欠点があります。初心者には低レベルの戦闘での使用を推奨しますが、過度に依存しないよう注意が必要です。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/204/%E6%94%BF%E5%AE%97.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-10-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12939166535.html",
+          "tier": null,
+          "summary": "UR閃 伊達政宗は、自身の攻撃力を上げれる継承行為、邪気や龍の魔眼によって敵の攻撃を無効化しダメージを与えれる点、後列にいる場合とにかく硬い点がとにかく強力なキャラです。\nまた、敵キャラが死亡などの状態になるたび自身のHPを回復できる点、奥義や超奥義をかなりの高威力で放てる点、継承行為の発動条件が増えた点、緩い条件で１回死亡を回避できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T2 に選出",
+          "reason": "伊達政宗は強力な性能を持ち、特に低レベルの戦闘では圧倒的な力を発揮します。しかし、彼女には後衛の位置を奪われやすいなどの致命的な欠点があります。初心者には低レベ..."
+        },
+        {
+          "date": "2025-10-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12939166535.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 伊達政宗は、自身の攻撃力を上げれる継承行為、邪気や龍の魔眼によって敵の攻撃を無効化しダメージを与えれる点、後列にいる場合とにかく硬い点がとにかく強力なキ..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12939166535.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-10-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "anti_followup",
+        "name": "追撃阻止",
+        "icon": "🛑",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_趙子龍",
@@ -1011,14 +3082,109 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "ＵＲ閃 趙子龍は、攻撃のタイミングがかみ合えば七進七出・神によって一方的に攻め続けれる点、使用上限はあるが七進七出・神を様々な条件で発動できる点、超奥義で条件を満たせば敵の防御力を１００％無視できる点がとにかく強力なキャラです。\nまた、入れ替わった奥義と超奥義の威力が高い点、パッシブで会心に関する耐性を大幅に上げれる点、HPが２０％以下になる攻撃を一度回避でき戦意を大きく回復できる点、火鳳憑依状態で付けることが出来る焼き払い効果などもとても強力です。"
+      "summary": "ＵＲ閃 趙子龍は、攻撃のタイミングがかみ合えば七進七出・神によって一方的に攻め続けれる点、使用上限はあるが七進七出・神を様々な条件で発動できる点、超奥義で条件を満たせば敵の防御力を１００％無視できる点がとにかく強力なキャラです。\nまた、入れ替わった奥義と超奥義の威力が高い点、パッシブで会心に関する耐性を大幅に上げれる点、HPが２０％以下になる攻撃を一度回避でき戦意を大きく回復できる点、火鳳憑依状態で付けることが出来る焼き払い効果などもとても強力です。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "サンタの登場以降、その強さを失い、現在はPVEでしか役立たないキャラとなっています。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/199/%E8%B6%99%E5%AD%90%E9%BE%8D.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-04-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12894224260.html",
+          "tier": null,
+          "summary": "ＵＲ閃 趙子龍は、攻撃のタイミングがかみ合えば七進七出・神によって一方的に攻め続けれる点、使用上限はあるが七進七出・神を様々な条件で発動できる点、超奥義で条件を満たせば敵の防御力を１００％無視できる点がとにかく強力なキャラです。\nまた、入れ替わった奥義と超奥義の威力が高い点、パッシブで会心に関する耐性を大幅に上げれる点、HPが２０％以下になる攻撃を一度回避でき戦意を大きく回復できる点、火鳳憑依状態で付けることが出来る焼き払い効果などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "サンタの登場以降、その強さを失い、現在はPVEでしか役立たないキャラとなっています。"
+        },
+        {
+          "date": "2025-04-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12894224260.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "ＵＲ閃 趙子龍は、攻撃のタイミングがかみ合えば七進七出・神によって一方的に攻め続けれる点、使用上限はあるが七進七出・神を様々な条件で発動できる点、超奥義で条件を..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12894224260.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-04-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_長宗我部元親",
@@ -1054,14 +3220,130 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 長宗我部元親は超奥義が目標のブロックと減傷を無視した敵全体への高いダメージに加え重傷デバフやバフの効果もある点、与ダメージ次第だがHPが５０％以下になっても複数回回復できる点がとにかく強力なキャラです。\nまた、高い確率で眩暈や重傷などをばら撒ける点、スキル攻撃をした際に条件を満たせば敵の現在の戦意を５０％吸収できる点、１ターンに一度だがHPが５０％以下の時にスキルや奥義などで反撃できる点、HPが２０％以下になる攻撃を一度回避したりクジラ伸び代が無くなった時に一度HPを回復できる点などもとても強力です。"
+      "summary": "UR閃 長宗我部元親は超奥義が目標のブロックと減傷を無視した敵全体への高いダメージに加え重傷デバフやバフの効果もある点、与ダメージ次第だがHPが５０％以下になっても複数回回復できる点がとにかく強力なキャラです。\nまた、高い確率で眩暈や重傷などをばら撒ける点、スキル攻撃をした際に条件を満たせば敵の現在の戦意を５０％吸収できる点、１ターンに一度だがHPが５０％以下の時にスキルや奥義などで反撃できる点、HPが２０％以下になる攻撃を一度回避したりクジラ伸び代が無くなった時に一度HPを回復できる点などもとても強力です。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T1",
+          "comment": "元親は、現在唯一の禁療キャラであり、主にマーリンに対抗する役割を果たします。彼女のスキルは全体にダメージを与え、奥義の反撃をすることで無限の可能性があります。黒血侵食、コントロール、様々なバフもあり、彼女は高いポテンシャルを持っています。しかし、彼女の致命的な欠点は、防御力が低く、前衛に配置するとすぐに倒されてしまうことです。そのため、彼女は後衛の貴重な位置を確保する必要があります。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/208/%E5%85%83%E8%A6%AA.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-04-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12892202438.html",
+          "tier": null,
+          "summary": "UR閃 長宗我部元親は超奥義が目標のブロックと減傷を無視した敵全体への高いダメージに加え重傷デバフやバフの効果もある点、与ダメージ次第だがHPが５０％以下になっても複数回回復できる点がとにかく強力なキャラです。\nまた、高い確率で眩暈や重傷などをばら撒ける点、スキル攻撃をした際に条件を満たせば敵の現在の戦意を５０％吸収できる点、１ターンに一度だがHPが５０％以下の時にスキルや奥義などで反撃できる点、HPが２０％以下になる攻撃を一度回避したりクジラ伸び代が無くなった時に一度HPを回復できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T1 に選出",
+          "reason": "元親は、現在唯一の禁療キャラであり、主にマーリンに対抗する役割を果たします。彼女のスキルは全体にダメージを与え、奥義の反撃をすることで無限の可能性があります。黒..."
+        },
+        {
+          "date": "2025-04-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12892202438.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 長宗我部元親は超奥義が目標のブロックと減傷を無視した敵全体への高いダメージに加え重傷デバフやバフの効果もある点、与ダメージ次第だがHPが５０％以下になっ..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12892202438.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-04-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_塚原卜伝",
@@ -1101,14 +3383,94 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 塚原卜伝は、パッシブで回避率が上がり敵の追撃や反撃を受ける際にはさらに回避率が上がる点、死の線による強靭ダウンの効果と追加ダメージの発生と生命極限無効化がとにかく強力なキャラです。\nまた、目標に隙が付与されていた場合に自身や味方が様々なステータスを一部無視して攻撃できる点、味方ターンの開始時にランダムなバフをいくつか取得できる点、真・一の太刀による回避と免疫不能の攻撃、死亡を１度回避し体力と戦意を大きく回復しつつ敵に死の線を付与できる点などもとても強力です。"
+      "summary": "UR閃 塚原卜伝は、パッシブで回避率が上がり敵の追撃や反撃を受ける際にはさらに回避率が上がる点、死の線による強靭ダウンの効果と追加ダメージの発生と生命極限無効化がとにかく強力なキャラです。\nまた、目標に隙が付与されていた場合に自身や味方が様々なステータスを一部無視して攻撃できる点、味方ターンの開始時にランダムなバフをいくつか取得できる点、真・一の太刀による回避と免疫不能の攻撃、死亡を１度回避し体力と戦意を大きく回復しつつ敵に死の線を付与できる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-03-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12958379189.html",
+          "tier": null,
+          "summary": "UR閃 塚原卜伝は、パッシブで回避率が上がり敵の追撃や反撃を受ける際にはさらに回避率が上がる点、死の線による強靭ダウンの効果と追加ダメージの発生と生命極限無効化がとにかく強力なキャラです。\nまた、目標に隙が付与されていた場合に自身や味方が様々なステータスを一部無視して攻撃できる点、味方ターンの開始時にランダムなバフをいくつか取得できる点、真・一の太刀による回避と免疫不能の攻撃、死亡を１度回避し体力と戦意を大きく回復しつつ敵に死の線を付与できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-03-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12958379189.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 塚原卜伝は、パッシブで回避率が上がり敵の追撃や反撃を受ける際にはさらに回避率が上がる点、死の線による強靭ダウンの効果と追加ダメージの発生と生命極限無効化..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12958379189.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-03-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_董卓",
@@ -1148,14 +3510,101 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 董卓は、轟く・チェーンソーマニアによるシールド無視の効果と戦意が５００点未満にならない点、苦痛ドレイン効果による致命ダメージの無効化とコントロール付与無効化とダメージを回復に転換する効果がとにかく強力なキャラです。\nまた、董卓と同じ位置にいる敵キャラが自ら行動した際にスキルによる追撃を発動できる点、他の味方キャラが行動するたびに董卓が戦意を回復できる点、裂創による強靭ダウンの効果とチェーンソー斬裂ダメージの起爆、奥義で敵単体を攻撃しながら周囲の敵にもダメージを与えつつチェーンソーマニア状態なることができる点などもとても強力です。"
+      "summary": "UR閃 董卓は、轟く・チェーンソーマニアによるシールド無視の効果と戦意が５００点未満にならない点、苦痛ドレイン効果による致命ダメージの無効化とコントロール付与無効化とダメージを回復に転換する効果がとにかく強力なキャラです。\nまた、董卓と同じ位置にいる敵キャラが自ら行動した際にスキルによる追撃を発動できる点、他の味方キャラが行動するたびに董卓が戦意を回復できる点、裂創による強靭ダウンの効果とチェーンソー斬裂ダメージの起爆、奥義で敵単体を攻撃しながら周囲の敵にもダメージを与えつつチェーンソーマニア状態なることができる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-09-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12977447486.html",
+          "tier": null,
+          "summary": "UR閃 董卓は、轟く・チェーンソーマニアによるシールド無視の効果と戦意が５００点未満にならない点、苦痛ドレイン効果による致命ダメージの無効化とコントロール付与無効化とダメージを回復に転換する効果がとにかく強力なキャラです。\nまた、董卓と同じ位置にいる敵キャラが自ら行動した際にスキルによる追撃を発動できる点、他の味方キャラが行動するたびに董卓が戦意を回復できる点、裂創による強靭ダウンの効果とチェーンソー斬裂ダメージの起爆、奥義で敵単体を攻撃しながら周囲の敵にもダメージを与えつつチェーンソーマニア状態なることができる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-09-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12977447486.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 董卓は、轟く・チェーンソーマニアによるシールド無視の効果と戦意が５００点未満にならない点、苦痛ドレイン効果による致命ダメージの無効化とコントロール付与無..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12977447486.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-09-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "anti_followup",
+        "name": "追撃阻止",
+        "icon": "🛑",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_巴御前",
@@ -1203,6 +3652,57 @@ window.GIRLWARS_DATA = [
         "多くの敵に行動不能デバフを付与、しかも高確率",
         "奥義発動時、味方の全デバフ解除・味方の奥義誘発",
         "被ダメや与ダメでHP回復"
+      ],
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T0",
+          "comment": "巴御前は、もう一つのT0キャラであり、ゲームの代表的存在です。彼女は1ターン目で後衛のダメージ軽減、高強度の反撃、そして奥義のコントロール解除などの能力によりチームメンバーに追加の奥義を発動させるので、とても強力なキャラとされています。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/202/%E5%B7%B4.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-10-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12981927134.html",
+          "tier": null,
+          "summary": "UR閃 巴御前は、後列隊長技による後列のダメージを無効にできる点、奥義を発動した後にランダムな味方１名の奥義を戦意の消耗なしで撃てる点がとにかく強力なキャラです。\nまた、条件を満たして奥義を発動した際に味方１名（コントロールが付与されている味方優先）のデバフを全て解除できる点、HPを少し回復しながらスキルや奥義で反撃できる点、超奥義を連発できる可能性がある点、１回戦闘不能から復帰できHPと戦意を大きく回復できる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-ursentomoe",
+          "bullets": [
+            "自己バフ、被ダメ時に自己回復＋反撃持ち",
+            "敵味方に戦意回復速度のバフデバフ、死亡後も継続",
+            "後列隊長技で1ターン後列の被ダメ完全カット",
+            "多くの敵に行動不能デバフを付与、しかも高確率",
+            "奥義発動時、味方の全デバフ解除・味方の奥義誘発",
+            "被ダメや与ダメでHP回復"
+          ],
+          "gems": []
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T0 に選出",
+          "reason": "巴御前は、もう一つのT0キャラであり、ゲームの代表的存在です。彼女は1ターン目で後衛のダメージ軽減、高強度の反撃、そして奥義のコントロール解除などの能力によりチ..."
+        },
+        {
+          "date": "2026-10-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12981927134.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 巴御前は、後列隊長技による後列のダメージを無効にできる点、奥義を発動した後にランダムな味方１名の奥義を戦意の消耗なしで撃てる点がとにかく強力なキャラです..."
+        }
       ]
     },
     "sourceInfo": {
@@ -1210,7 +3710,79 @@ window.GIRLWARS_DATA = [
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-10-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_源頼光",
@@ -1250,14 +3822,101 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 源頼光は、鬼の力があれば２度死亡を回避しHPと戦意を回復し鬼神の一撃によって攻撃できる点、様々なタイミングで発動する鬼神の一撃が減傷無視や戦意吸収などできる点がとにかく強力なキャラです。\nまた、鬼の力があれば自身だけでなく味方のコントロール効果も解除できる点、スキル発動後にHPと戦意を回復しながら高い確率で鬼神の一撃を発動できる点、大江山の契り効果によって攻防のステータスを大きく上げつつシールドを付与できる点、属性転換により相性不利のダメージを軽減し有利なタイプに変化できる点などもとても強力です。"
+      "summary": "UR閃 源頼光は、鬼の力があれば２度死亡を回避しHPと戦意を回復し鬼神の一撃によって攻撃できる点、様々なタイミングで発動する鬼神の一撃が減傷無視や戦意吸収などできる点がとにかく強力なキャラです。\nまた、鬼の力があれば自身だけでなく味方のコントロール効果も解除できる点、スキル発動後にHPと戦意を回復しながら高い確率で鬼神の一撃を発動できる点、大江山の契り効果によって攻防のステータスを大きく上げつつシールドを付与できる点、属性転換により相性不利のダメージを軽減し有利なタイプに変化できる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-01-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12952194298.html",
+          "tier": null,
+          "summary": "UR閃 源頼光は、鬼の力があれば２度死亡を回避しHPと戦意を回復し鬼神の一撃によって攻撃できる点、様々なタイミングで発動する鬼神の一撃が減傷無視や戦意吸収などできる点がとにかく強力なキャラです。\nまた、鬼の力があれば自身だけでなく味方のコントロール効果も解除できる点、スキル発動後にHPと戦意を回復しながら高い確率で鬼神の一撃を発動できる点、大江山の契り効果によって攻防のステータスを大きく上げつつシールドを付与できる点、属性転換により相性不利のダメージを軽減し有利なタイプに変化できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-01-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12952194298.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 源頼光は、鬼の力があれば２度死亡を回避しHPと戦意を回復し鬼神の一撃によって攻撃できる点、様々なタイミングで発動する鬼神の一撃が減傷無視や戦意吸収などで..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12952194298.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-01-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_メイヴ",
@@ -1305,6 +3964,42 @@ window.GIRLWARS_DATA = [
         "味方ターン開始時、奥義が撃てるなら奥義発動",
         "ブロック烙印最多持ちに耐久ステータスデバフ、ブロック烙印持ちに追加ダメ・黒血侵食付与",
         "ブロック烙印持ちの追撃の戦意獲得阻止、追撃そもそもを阻止"
+      ],
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-11-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12983396846.html",
+          "tier": null,
+          "summary": "UR閃 メイヴは、敵キャラの追撃を４０％で阻止し阻止できなかった場合に阻止する確率が８０％に上がる点、敵キャラが死亡する際に様々なステータスをアップさせることができる点がとにかく強力なキャラです。\nまた、敵キャラの追撃を阻止した際にHPと戦意を少し回復しブロック烙印を付与できる点、敵キャラが追撃を発動する際に８０％の確率でブロック烙印を付与できる点、ブロック烙印による戦意減少とステータス低下、最大２回致命ダメージを無効化しHPと戦意を回復しつつ戦魂を得ることができる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-meiv",
+          "bullets": [
+            "そもそも戦意2,000が上限になってる",
+            "敵が何かしらの追撃する際、確率でブロック烙印を付与",
+            "ブロック烙印：戦意減少、増傷・戦意回復速度低下（デバフ無視を無効化）",
+            "味方ターン開始時、奥義が撃てるなら奥義発動",
+            "ブロック烙印最多持ちに耐久ステータスデバフ、ブロック烙印持ちに追加ダメ・黒血侵食付与",
+            "ブロック烙印持ちの追撃の戦意獲得阻止、追撃そもそもを阻止"
+          ],
+          "gems": []
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2026-11-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12983396846.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 メイヴは、敵キャラの追撃を４０％で阻止し阻止できなかった場合に阻止する確率が８０％に上がる点、敵キャラが死亡する際に様々なステータスをアップさせることが..."
+        }
       ]
     },
     "sourceInfo": {
@@ -1312,7 +4007,79 @@ window.GIRLWARS_DATA = [
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-11-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "anti_followup",
+        "name": "追撃阻止",
+        "icon": "🛑",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_八百比丘尼",
@@ -1352,14 +4119,115 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 八百比丘尼は、輪廻の契りによる味方キャラの復活効果、致命ダメージを受けた際に３回復活できる点、超奥義発動時に高い確率で複数の敵を行動不能にできる点がとにかく強力なキャラです。\nまた、戦意回復手段が豊富な点、人魚の毒効果によって敵がHPを回復する量の半分を黒血浸食効果にできる点、味方キャラが死亡した時に奥義をもって追撃できる点、菩提心の効果によりシールドを張り戦意を回復できる点などもとても強力です。"
+      "summary": "UR閃 八百比丘尼は、輪廻の契りによる味方キャラの復活効果、致命ダメージを受けた際に３回復活できる点、超奥義発動時に高い確率で複数の敵を行動不能にできる点がとにかく強力なキャラです。\nまた、戦意回復手段が豊富な点、人魚の毒効果によって敵がHPを回復する量の半分を黒血浸食効果にできる点、味方キャラが死亡した時に奥義をもって追撃できる点、菩提心の効果によりシールドを張り戦意を回復できる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-09-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12930994995.html",
+          "tier": null,
+          "summary": "UR閃 八百比丘尼は、輪廻の契りによる味方キャラの復活効果、致命ダメージを受けた際に３回復活できる点、超奥義発動時に高い確率で複数の敵を行動不能にできる点がとにかく強力なキャラです。\nまた、戦意回復手段が豊富な点、人魚の毒効果によって敵がHPを回復する量の半分を黒血浸食効果にできる点、味方キャラが死亡した時に奥義をもって追撃できる点、菩提心の効果によりシールドを張り戦意を回復できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-09-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12930994995.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 八百比丘尼は、輪廻の契りによる味方キャラの復活効果、致命ダメージを受けた際に３回復活できる点、超奥義発動時に高い確率で複数の敵を行動不能にできる点がとに..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12930994995.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-09-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_柳生十兵衛",
@@ -1399,14 +4267,94 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 柳生十兵衛は、見合い・見切るによって治療削減効果を受けずに最大４回までHPを大きく回復できる点、ずれた時空による特殊効果無効化と５０％ダメージカット及び目標変更効果がとにかく強力なキャラです。\nまた、切り跡効果により様々なタイミングで追加ダメージと減少ダウンを与えれる点、鏡花の盾によるシールド効果とダメージ反射、登場時や敵が行動した後に月の抄によって柳生十兵衛や味方に様々な効果を付与できる点、奥義時に非目標へ複数回ダメージを与えれる点などもとても強力です。"
+      "summary": "UR閃 柳生十兵衛は、見合い・見切るによって治療削減効果を受けずに最大４回までHPを大きく回復できる点、ずれた時空による特殊効果無効化と５０％ダメージカット及び目標変更効果がとにかく強力なキャラです。\nまた、切り跡効果により様々なタイミングで追加ダメージと減少ダウンを与えれる点、鏡花の盾によるシールド効果とダメージ反射、登場時や敵が行動した後に月の抄によって柳生十兵衛や味方に様々な効果を付与できる点、奥義時に非目標へ複数回ダメージを与えれる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-05-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12966519256.html",
+          "tier": null,
+          "summary": "UR閃 柳生十兵衛は、見合い・見切るによって治療削減効果を受けずに最大４回までHPを大きく回復できる点、ずれた時空による特殊効果無効化と５０％ダメージカット及び目標変更効果がとにかく強力なキャラです。\nまた、切り跡効果により様々なタイミングで追加ダメージと減少ダウンを与えれる点、鏡花の盾によるシールド効果とダメージ反射、登場時や敵が行動した後に月の抄によって柳生十兵衛や味方に様々な効果を付与できる点、奥義時に非目標へ複数回ダメージを与えれる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-05-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12966519256.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 柳生十兵衛は、見合い・見切るによって治療削減効果を受けずに最大４回までHPを大きく回復できる点、ずれた時空による特殊効果無効化と５０％ダメージカット及び..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12966519256.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-05-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_ヤマトタケル",
@@ -1446,14 +4394,87 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 ヤマトタケルは、ダメージを最大HPの３０％分受けるたびにHPを回復しスキル追撃を行う点、神剣解放状態の効果（戦意回復、攻撃範囲拡大、死亡しない）がとにかく強力なキャラです。\nまた、超奥義時に様々な効果（シールド解除、ブロック不可、回避不可など）を与えることができる点、前列の敵キャラからによる攻撃を受ける際に最終ダメージを５０％低下させ戦意を回復し剣の身構えもためることができる点、迎え火と清水という状態によって様々な恩恵を受けることができる点、攻撃時に相手のブロックや回避に耐性がある点などもとても強力です。"
+      "summary": "UR閃 ヤマトタケルは、ダメージを最大HPの３０％分受けるたびにHPを回復しスキル追撃を行う点、神剣解放状態の効果（戦意回復、攻撃範囲拡大、死亡しない）がとにかく強力なキャラです。\nまた、超奥義時に様々な効果（シールド解除、ブロック不可、回避不可など）を与えることができる点、前列の敵キャラからによる攻撃を受ける際に最終ダメージを５０％低下させ戦意を回復し剣の身構えもためることができる点、迎え火と清水という状態によって様々な恩恵を受けることができる点、攻撃時に相手のブロックや回避に耐性がある点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-07-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12972973345.html",
+          "tier": null,
+          "summary": "UR閃 ヤマトタケルは、ダメージを最大HPの３０％分受けるたびにHPを回復しスキル追撃を行う点、神剣解放状態の効果（戦意回復、攻撃範囲拡大、死亡しない）がとにかく強力なキャラです。\nまた、超奥義時に様々な効果（シールド解除、ブロック不可、回避不可など）を与えることができる点、前列の敵キャラからによる攻撃を受ける際に最終ダメージを５０％低下させ戦意を回復し剣の身構えもためることができる点、迎え火と清水という状態によって様々な恩恵を受けることができる点、攻撃時に相手のブロックや回避に耐性がある点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-07-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12972973345.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 ヤマトタケルは、ダメージを最大HPの３０％分受けるたびにHPを回復しスキル追撃を行う点、神剣解放状態の効果（戦意回復、攻撃範囲拡大、死亡しない）がとにか..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12972973345.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-07-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_リチャード",
@@ -1493,14 +4514,108 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 リチャードは、超奥義時に確定で敵２名を行動不能にできる点、強化された粉雪のベールが回避率を２５％も上げるとともに毎ターン味方全体にダモクレスの氷を付与できる点がとにかく強力なキャラです。\nまた、氷結の鎧によってスキルダメージを１回無効化できて戦意削減を無効化できる点、リチャードが氷結の鎧を持っている場合追加で敵の増傷を低下させターゲットを自身に変更する点、ダモクレスの氷を消耗又は解除されるたびに減傷と会心抵抗率を永続的に上昇させる点、死亡を１度回避しHPと戦意を大きく回復させつつダモクレスの氷を獲得できる点などもとても強力です。"
+      "summary": "UR閃 リチャードは、超奥義時に確定で敵２名を行動不能にできる点、強化された粉雪のベールが回避率を２５％も上げるとともに毎ターン味方全体にダモクレスの氷を付与できる点がとにかく強力なキャラです。\nまた、氷結の鎧によってスキルダメージを１回無効化できて戦意削減を無効化できる点、リチャードが氷結の鎧を持っている場合追加で敵の増傷を低下させターゲットを自身に変更する点、ダモクレスの氷を消耗又は解除されるたびに減傷と会心抵抗率を永続的に上昇させる点、死亡を１度回避しHPと戦意を大きく回復させつつダモクレスの氷を獲得できる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-07-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12971465121.html",
+          "tier": null,
+          "summary": "UR閃 リチャードは、超奥義時に確定で敵２名を行動不能にできる点、強化された粉雪のベールが回避率を２５％も上げるとともに毎ターン味方全体にダモクレスの氷を付与できる点がとにかく強力なキャラです。\nまた、氷結の鎧によってスキルダメージを１回無効化できて戦意削減を無効化できる点、リチャードが氷結の鎧を持っている場合追加で敵の増傷を低下させターゲットを自身に変更する点、ダモクレスの氷を消耗又は解除されるたびに減傷と会心抵抗率を永続的に上昇させる点、死亡を１度回避しHPと戦意を大きく回復させつつダモクレスの氷を獲得できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-07-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12971465121.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 リチャードは、超奥義時に確定で敵２名を行動不能にできる点、強化された粉雪のベールが回避率を２５％も上げるとともに毎ターン味方全体にダモクレスの氷を付与で..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12971465121.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-07-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_劉邦",
@@ -1540,14 +4655,101 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 劉邦は、劉邦が奥義／超奥義を２回発動するごとに奥義で１回追撃できる点、超奥義時に条件を満たせば敵全体を５０％の確率で眩暈にできる点がとにかく強力なキャラです。\nまた、奥義が全体攻撃で威力が高い点、斬蛇によって防御力と減傷を一部無視できる点、複数の方法でバフの無効化や解除とコピーができる点、死亡を一度回避しデバフを全て解除してHPと戦意を大きく回復できる点などもとても強力です。"
+      "summary": "UR閃 劉邦は、劉邦が奥義／超奥義を２回発動するごとに奥義で１回追撃できる点、超奥義時に条件を満たせば敵全体を５０％の確率で眩暈にできる点がとにかく強力なキャラです。\nまた、奥義が全体攻撃で威力が高い点、斬蛇によって防御力と減傷を一部無視できる点、複数の方法でバフの無効化や解除とコピーができる点、死亡を一度回避しデバフを全て解除してHPと戦意を大きく回復できる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-06-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12968001512.html",
+          "tier": null,
+          "summary": "UR閃 劉邦は、劉邦が奥義／超奥義を２回発動するごとに奥義で１回追撃できる点、超奥義時に条件を満たせば敵全体を５０％の確率で眩暈にできる点がとにかく強力なキャラです。\nまた、奥義が全体攻撃で威力が高い点、斬蛇によって防御力と減傷を一部無視できる点、複数の方法でバフの無効化や解除とコピーができる点、死亡を一度回避しデバフを全て解除してHPと戦意を大きく回復できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-06-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12968001512.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 劉邦は、劉邦が奥義／超奥義を２回発動するごとに奥義で１回追撃できる点、超奥義時に条件を満たせば敵全体を５０％の確率で眩暈にできる点がとにかく強力なキャラ..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12968001512.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-06-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_ロームルス",
@@ -1587,14 +4789,108 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 ロームルスは、全弾発射時に味方全体に浮遊守護効果を付与できる点、超奥義時の全弾発射では自分以外の味方全員に回避率を付与できる点、制限解除状態の間は死亡しない点がとにかく強力なキャラです。\nまた、１回の攻撃で受けるダメージ量が制限される点、自身や味方は様々な方法でシールドを獲得できる点、一度死亡を回避しHPと戦意を回復し制限解除状態になる点などもとても強力です。"
+      "summary": "UR閃 ロームルスは、全弾発射時に味方全体に浮遊守護効果を付与できる点、超奥義時の全弾発射では自分以外の味方全員に回避率を付与できる点、制限解除状態の間は死亡しない点がとにかく強力なキャラです。\nまた、１回の攻撃で受けるダメージ量が制限される点、自身や味方は様々な方法でシールドを獲得できる点、一度死亡を回避しHPと戦意を回復し制限解除状態になる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-11-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12946385058.html",
+          "tier": null,
+          "summary": "UR閃 ロームルスは、全弾発射時に味方全体に浮遊守護効果を付与できる点、超奥義時の全弾発射では自分以外の味方全員に回避率を付与できる点、制限解除状態の間は死亡しない点がとにかく強力なキャラです。\nまた、１回の攻撃で受けるダメージ量が制限される点、自身や味方は様々な方法でシールドを獲得できる点、一度死亡を回避しHPと戦意を回復し制限解除状態になる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-11-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12946385058.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 ロームルスは、全弾発射時に味方全体に浮遊守護効果を付与できる点、超奥義時の全弾発射では自分以外の味方全員に回避率を付与できる点、制限解除状態の間は死亡し..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12946385058.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-11-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_ローラン",
@@ -1642,6 +4938,42 @@ window.GIRLWARS_DATA = [
         "奥義：敵全体に固定ダメ＋味方のデバフを自分へ転移",
         "自己回復や味方回復、デバフ無効化などサポート性能高め",
         "味方に1ターンの絶対無敵を付与（2回）"
+      ],
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-10-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12980393756.html",
+          "tier": null,
+          "summary": "UR閃 ローランは、毎ターン自身にかかっているデバフを複数解除しHPを回復しつつ様々な効果をもつ祈言を得ることができる点、神啓現世によって味方１名の攻撃力などを上げて１ターンの間無敵にできる点がとにかく強力なキャラです。\nまた、ダメージ減少をはじめとした様々な効果のある殉道の志、自身に対するデバフダメージの無効化、解除不可のデバフ効果を付与されるたびに５０％で付与を無効化する点、最大２回まで致命ダメージを無効化しHPと戦意を回復しつつ自身と味方１名に祈言を３個ずつ付与できる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sh-roran",
+          "bullets": [
+            "味方ターン開始時、デバフ自動解除",
+            "その数に応じてHP回復と祈言を付与",
+            "スキル：与ダメ＋敵タンクの耐久力を落とす",
+            "奥義：敵全体に固定ダメ＋味方のデバフを自分へ転移",
+            "自己回復や味方回復、デバフ無効化などサポート性能高め",
+            "味方に1ターンの絶対無敵を付与（2回）"
+          ],
+          "gems": []
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2026-10-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12980393756.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 ローランは、毎ターン自身にかかっているデバフを複数解除しHPを回復しつつ様々な効果をもつ祈言を得ることができる点、神啓現世によって味方１名の攻撃力などを..."
+        }
       ]
     },
     "sourceInfo": {
@@ -1649,7 +4981,65 @@ window.GIRLWARS_DATA = [
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-10-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_ダンテ",
@@ -1689,14 +5079,122 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 ダンテは、毎ターン毎に味方キャラが初めて行動する時に一定の確率でスキル追撃できる点、神罰効果による敵の防御ダウンと戦意回復阻害がとにかく強力なキャラです。\nまた、奥義や超奥義で最大４体に神罰効果を付与できる点、条件を満たせば毎ターン１回のみだがスキルで反撃できる点、スキル発動後に自身と味方の強靭を上げれる点、１回致命ダメージを回避できHPを５０％と戦意を最大まで回復できる点などもとても強力です。"
+      "summary": "UR閃 ダンテは、毎ターン毎に味方キャラが初めて行動する時に一定の確率でスキル追撃できる点、神罰効果による敵の防御ダウンと戦意回復阻害がとにかく強力なキャラです。\nまた、奥義や超奥義で最大４体に神罰効果を付与できる点、条件を満たせば毎ターン１回のみだがスキルで反撃できる点、スキル発動後に自身と味方の強靭を上げれる点、１回致命ダメージを回避できHPを５０％と戦意を最大まで回復できる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-07-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12916978150.html",
+          "tier": null,
+          "summary": "UR閃 ダンテは、毎ターン毎に味方キャラが初めて行動する時に一定の確率でスキル追撃できる点、神罰効果による敵の防御ダウンと戦意回復阻害がとにかく強力なキャラです。\nまた、奥義や超奥義で最大４体に神罰効果を付与できる点、条件を満たせば毎ターン１回のみだがスキルで反撃できる点、スキル発動後に自身と味方の強靭を上げれる点、１回致命ダメージを回避できHPを５０％と戦意を最大まで回復できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-07-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12916978150.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 ダンテは、毎ターン毎に味方キャラが初めて行動する時に一定の確率でスキル追撃できる点、神罰効果による敵の防御ダウンと戦意回復阻害がとにかく強力なキャラです..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12916978150.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-07-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "anti_followup",
+        "name": "追撃阻止",
+        "icon": "🛑",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_ダ・ヴィンチ",
@@ -1736,14 +5234,108 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 ダ・ヴィンチは、受けたダメージを保存し起爆することができる魔法の種の効果、ダ・ヴィンチが与える奥義ダメージが合計で自身最大HPの１００％を超えるたびに敵キャラ１名の全てのバフを吸収し戦意を１０００点回復できる点がとにかく強力なキャラです。\nまた、ターン開始ごとに敵キャラ６名に目標最大HP１０％分の黒血侵食を与えれる点、黒血侵食効果を与えるたびに自身の最大HPが上昇する点、毎ターンの初回奥義時に５０％でスキル追撃が発動し通常のスキル発動確率が１００％になる点、ダメージを受けた後に５％のシールドを得る点などもとても強力です。"
+      "summary": "UR閃 ダ・ヴィンチは、受けたダメージを保存し起爆することができる魔法の種の効果、ダ・ヴィンチが与える奥義ダメージが合計で自身最大HPの１００％を超えるたびに敵キャラ１名の全てのバフを吸収し戦意を１０００点回復できる点がとにかく強力なキャラです。\nまた、ターン開始ごとに敵キャラ６名に目標最大HP１０％分の黒血侵食を与えれる点、黒血侵食効果を与えるたびに自身の最大HPが上昇する点、毎ターンの初回奥義時に５０％でスキル追撃が発動し通常のスキル発動確率が１００％になる点、ダメージを受けた後に５％のシールドを得る点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-08-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12920208434.html",
+          "tier": null,
+          "summary": "UR閃 ダ・ヴィンチは、受けたダメージを保存し起爆することができる魔法の種の効果、ダ・ヴィンチが与える奥義ダメージが合計で自身最大HPの１００％を超えるたびに敵キャラ１名の全てのバフを吸収し戦意を１０００点回復できる点がとにかく強力なキャラです。\nまた、ターン開始ごとに敵キャラ６名に目標最大HP１０％分の黒血侵食を与えれる点、黒血侵食効果を与えるたびに自身の最大HPが上昇する点、毎ターンの初回奥義時に５０％でスキル追撃が発動し通常のスキル発動確率が１００％になる点、ダメージを受けた後に５％のシールドを得る点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-08-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12920208434.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 ダ・ヴィンチは、受けたダメージを保存し起爆することができる魔法の種の効果、ダ・ヴィンチが与える奥義ダメージが合計で自身最大HPの１００％を超えるたびに敵..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12920208434.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-08-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "dmg_share",
+        "name": "被ダメ分配",
+        "icon": "🛡️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_ハンニバル・バルカ",
@@ -1783,14 +5375,108 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 ハンニバル・バルカは、脆弱な同盟により追加ダメージが発生する点、警戒効果によるダメージカットやシールド効果などがとにかく強力なキャラです。\nまた、背信の盟約により行動するごとに他のキャラにダメージをばら撒く点、味方が消費した警戒が５層に達するたび奥義で追撃できる点、スキル攻撃後に条件を満たした時スキル追撃を行える点、前列隊長技により自軍を有利に３ターンの間できる点、死亡を１度回避しHPと戦意を回復しつつ奥義を撃つことができる点などもとても強力です。"
+      "summary": "UR閃 ハンニバル・バルカは、脆弱な同盟により追加ダメージが発生する点、警戒効果によるダメージカットやシールド効果などがとにかく強力なキャラです。\nまた、背信の盟約により行動するごとに他のキャラにダメージをばら撒く点、味方が消費した警戒が５層に達するたび奥義で追撃できる点、スキル攻撃後に条件を満たした時スキル追撃を行える点、前列隊長技により自軍を有利に３ターンの間できる点、死亡を１度回避しHPと戦意を回復しつつ奥義を撃つことができる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-04-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12961825379.html",
+          "tier": null,
+          "summary": "UR閃 ハンニバル・バルカは、脆弱な同盟により追加ダメージが発生する点、警戒効果によるダメージカットやシールド効果などがとにかく強力なキャラです。\nまた、背信の盟約により行動するごとに他のキャラにダメージをばら撒く点、味方が消費した警戒が５層に達するたび奥義で追撃できる点、スキル攻撃後に条件を満たした時スキル追撃を行える点、前列隊長技により自軍を有利に３ターンの間できる点、死亡を１度回避しHPと戦意を回復しつつ奥義を撃つことができる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-04-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12961825379.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 ハンニバル・バルカは、脆弱な同盟により追加ダメージが発生する点、警戒効果によるダメージカットやシールド効果などがとにかく強力なキャラです。\nまた、背信の..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12961825379.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-04-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "dmg_share",
+        "name": "被ダメ分配",
+        "icon": "🛡️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_ペルセウス",
@@ -1830,14 +5516,122 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 ペルセウスは、敵のHP依存の割合ダメージを様々な方法で与えることができる点、超奥義後に２回のダメージを９９％カット出来るペルセウスの盾の効果、条件はあるが２つの方法でデバフ全てを解除できる点、敵の増傷・奥義減傷・減傷を減少させて自身は同量増加させることができる点がとにかく強力なキャラです。\nまた、攻撃を受けるたびに最大HPの１％以上の回復が約束されている点、味方ダメージの肩代りにより味方の耐久面を上げれる点、奥義発動時に主目標のバフ効果を全部解除できる点、死亡を１度回避し最大HPの５０％と戦意を全部回復できる点などもとても強力です。"
+      "summary": "UR閃 ペルセウスは、敵のHP依存の割合ダメージを様々な方法で与えることができる点、超奥義後に２回のダメージを９９％カット出来るペルセウスの盾の効果、条件はあるが２つの方法でデバフ全てを解除できる点、敵の増傷・奥義減傷・減傷を減少させて自身は同量増加させることができる点がとにかく強力なキャラです。\nまた、攻撃を受けるたびに最大HPの１％以上の回復が約束されている点、味方ダメージの肩代りにより味方の耐久面を上げれる点、奥義発動時に主目標のバフ効果を全部解除できる点、死亡を１度回避し最大HPの５０％と戦意を全部回復できる点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-07-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12913933644.html",
+          "tier": null,
+          "summary": "UR閃 ペルセウスは、敵のHP依存の割合ダメージを様々な方法で与えることができる点、超奥義後に２回のダメージを９９％カット出来るペルセウスの盾の効果、条件はあるが２つの方法でデバフ全てを解除できる点、敵の増傷・奥義減傷・減傷を減少させて自身は同量増加させることができる点がとにかく強力なキャラです。\nまた、攻撃を受けるたびに最大HPの１％以上の回復が約束されている点、味方ダメージの肩代りにより味方の耐久面を上げれる点、奥義発動時に主目標のバフ効果を全部解除できる点、死亡を１度回避し最大HPの５０％と戦意を全部回復できる点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-07-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12913933644.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 ペルセウスは、敵のHP依存の割合ダメージを様々な方法で与えることができる点、超奥義後に２回のダメージを９９％カット出来るペルセウスの盾の効果、条件はある..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12913933644.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-07-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "dmg_share",
+        "name": "被ダメ分配",
+        "icon": "🛡️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ursen_モーガン",
@@ -1877,14 +5671,115 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "UR閃 モーガンは、奥義時に複数の敵に行動不能とデバフ効果をばら撒ける可能性がある点、自身はコントロール効果を無効化しコントロール効果を受けた際にはHPと戦意を少し回復できる点がとにかく強力なキャラです。\nまた、敵ターンの開始時にコントロール無効化効果が付いたシールドを味方１名に張れる点、認知幻象によりデバフ効果の解除を妨害しバフ効果を解除できる点、死亡を１度回避しHPと戦意を大きく回復できる点、自身は戦意減少／吸収効果を受けない点などもとても強力です。"
+      "summary": "UR閃 モーガンは、奥義時に複数の敵に行動不能とデバフ効果をばら撒ける可能性がある点、自身はコントロール効果を無効化しコントロール効果を受けた際にはHPと戦意を少し回復できる点がとにかく強力なキャラです。\nまた、敵ターンの開始時にコントロール無効化効果が付いたシールドを味方１名に張れる点、認知幻象によりデバフ効果の解除を妨害しバフ効果を解除できる点、死亡を１度回避しHPと戦意を大きく回復できる点、自身は戦意減少／吸収効果を受けない点などもとても強力です。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2026-03-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12960102720.html",
+          "tier": null,
+          "summary": "UR閃 モーガンは、奥義時に複数の敵に行動不能とデバフ効果をばら撒ける可能性がある点、自身はコントロール効果を無効化しコントロール効果を受けた際にはHPと戦意を少し回復できる点がとにかく強力なキャラです。\nまた、敵ターンの開始時にコントロール無効化効果が付いたシールドを味方１名に張れる点、認知幻象によりデバフ効果の解除を妨害しバフ効果を解除できる点、死亡を１度回避しHPと戦意を大きく回復できる点、自身は戦意減少／吸収効果を受けない点などもとても強力です。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2026-03-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12960102720.html",
+          "change": "UR閃への昇格・最新性能評価",
+          "reason": "UR閃 モーガンは、奥義時に複数の敵に行動不能とデバフ効果をばら撒ける可能性がある点、自身はコントロール効果を無効化しコントロール効果を受けた際にはHPと戦意を..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12960102720.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2026-03-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_アキレウス",
@@ -1921,14 +5816,87 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "風系統の力将キャラ。初期ランクUR。"
+      "summary": "風系統の力将キャラ。初期ランクUR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-03-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12888413700.html",
+          "tier": null,
+          "summary": "風系統の力将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-03-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12888413700.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12888413700.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-03-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_アストルフォ",
@@ -1964,15 +5932,138 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "雪系統の力将キャラ。初期ランクUR。"
+      "tierRank": "T1",
+      "summary": "雪系統の力将キャラ。初期ランクUR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T1",
+          "comment": "アストルフォは、その強力な性能で特に「激情モード」が際立っています。彼女は防御力が高く、強力な攻撃力を持ち、仲間と協力することで全体奥義を連発できます。しかし、激情モードは一度限りで、死亡すると再び激情状態に入ることができません。そのため、マーリンのようなキャラと組み合わせることを推奨します。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/223/%E3%82%A2%E3%82%B9%E3%83%88%E3%83%AB%E3%83%95%E3%82%A9.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-06-04",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12854547922.html",
+          "tier": null,
+          "summary": "雪系統の力将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T1 に選出",
+          "reason": "アストルフォは、その強力な性能で特に「激情モード」が際立っています。彼女は防御力が高く、強力な攻撃力を持ち、仲間と協力することで全体奥義を連発できます。しかし、..."
+        },
+        {
+          "date": "2024-06-04",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12854547922.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12854547922.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-06-04",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "dmg_share",
+        "name": "被ダメ分配",
+        "icon": "🛡️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_アッティラ",
@@ -2008,8 +6099,45 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "雪系統の猛将キャラ。初期ランクUR。"
+      "tierRank": "T2",
+      "summary": "雪系統の猛将キャラ。初期ランクUR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T2",
+          "comment": "アッティラは、特に後衛で強力なコントロール力を発揮します。しかし、先発に配置されないとその力を発揮できないため、あまり推奨できかねます。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/222/%E3%82%A2%E3%83%83%E3%83%86%E3%82%A3%E3%83%A9.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-05-03",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12850518846.html",
+          "tier": null,
+          "summary": "雪系統の猛将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T2 に選出",
+          "reason": "アッティラは、特に後衛で強力なコントロール力を発揮します。しかし、先発に配置されないとその力を発揮できないため、あまり推奨できかねます。"
+        },
+        {
+          "date": "2024-05-03",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12850518846.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12850518846.html",
@@ -2044,7 +6172,86 @@ window.GIRLWARS_DATA = [
       "奥義2": "鷹神様の力により、我が敵に終焉を下す！",
       "死亡": "覚えてろ！次は倍返しだ！"
     },
-    "story": "【その一】\nアッティラは武芸を信奉する遊牧民族に生まれた。遊牧民の子供たちは皆、武芸の熟練を最終目標としており、アッティラはその中でも優秀な存在で、部族内の競技会で年々優勝を重ねてきた。彼女の優れた才能は、神々の注目さえ集めた。鷹神はアッティラの誕生日に部族の大祭司の身に憑依し、アッティラが自分の剣となる資格があると宣言し、自ら彼女を指導することを決めた。その日から、アッティラの日常は大きく変わった。神の弟子として、アッティラの身分は栄光を与えられたが、同時に人々に敬遠される事となった。大祭司たちの無言の注視を浴びながら神薬と呼ばれるものを飲んだ後、アッティラは少女らしい感性を失ったが、機械のような的確な判断力を得た。これにより、元から秀でていた武芸はさらに向上し、彼女は大祭司たちに推され族長の地位に就いた。\n\n【その二】\n各国からの侵入により、遊牧民の活動領域が減少しつつある。族内の基幹産業である放牧から得られる収益も年々減少し、米すら買えなくなるほどの窮地に陥った。アッティラは族人たちと長い相談をした後、遊牧民族に適した道を見つけるため、族長として仕事を探しに出ることにした！しかし、彼女の仕事探しの旅は順調ではなかった。幼い頃から甘やかされてきたアッティラは、一般人の仕事には不向きだった。体力と実力は認められたが、頭は良くない。そして最近、アッティラは建設現場で壁を壊してクビになった後、運命の手紙を受け取った。この手紙は彼女を暗殺者協会に誘うもので、給料も高く待遇も良く、仕事が終わった後には長い休暇も取れると書いてあった。当然のように、アッティラはためらうことなくこの仕事を引き受けた。少なくとも、この仕事で家具を壊しても賠償金を払う必要がないから！\n\n【その三】\nこれが最後のチャンスだ、絶対に稼いで族人たちに見せつけてやる！\n\nああ、落ちそう...待って！\n\n大丈夫だ、ここは武芸で補う！\n\nあたしは遊牧民族のアッティラだから！\n\nふう、なんとか受け止めた、さすがあたし...あれ？\n\n割れた？なぜ？しっかり受け止めたのに...\n\n店長、店長、話を聞いてくれ！"
+    "story": "【その一】\nアッティラは武芸を信奉する遊牧民族に生まれた。遊牧民の子供たちは皆、武芸の熟練を最終目標としており、アッティラはその中でも優秀な存在で、部族内の競技会で年々優勝を重ねてきた。彼女の優れた才能は、神々の注目さえ集めた。鷹神はアッティラの誕生日に部族の大祭司の身に憑依し、アッティラが自分の剣となる資格があると宣言し、自ら彼女を指導することを決めた。その日から、アッティラの日常は大きく変わった。神の弟子として、アッティラの身分は栄光を与えられたが、同時に人々に敬遠される事となった。大祭司たちの無言の注視を浴びながら神薬と呼ばれるものを飲んだ後、アッティラは少女らしい感性を失ったが、機械のような的確な判断力を得た。これにより、元から秀でていた武芸はさらに向上し、彼女は大祭司たちに推され族長の地位に就いた。\n\n【その二】\n各国からの侵入により、遊牧民の活動領域が減少しつつある。族内の基幹産業である放牧から得られる収益も年々減少し、米すら買えなくなるほどの窮地に陥った。アッティラは族人たちと長い相談をした後、遊牧民族に適した道を見つけるため、族長として仕事を探しに出ることにした！しかし、彼女の仕事探しの旅は順調ではなかった。幼い頃から甘やかされてきたアッティラは、一般人の仕事には不向きだった。体力と実力は認められたが、頭は良くない。そして最近、アッティラは建設現場で壁を壊してクビになった後、運命の手紙を受け取った。この手紙は彼女を暗殺者協会に誘うもので、給料も高く待遇も良く、仕事が終わった後には長い休暇も取れると書いてあった。当然のように、アッティラはためらうことなくこの仕事を引き受けた。少なくとも、この仕事で家具を壊しても賠償金を払う必要がないから！\n\n【その三】\nこれが最後のチャンスだ、絶対に稼いで族人たちに見せつけてやる！\n\nああ、落ちそう...待って！\n\n大丈夫だ、ここは武芸で補う！\n\nあたしは遊牧民族のアッティラだから！\n\nふう、なんとか受け止めた、さすがあたし...あれ？\n\n割れた？なぜ？しっかり受け止めたのに...\n\n店長、店長、話を聞いてくれ！",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "anti_followup",
+        "name": "追撃阻止",
+        "icon": "🛑",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_安倍晴明",
@@ -2080,8 +6287,45 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "風系統の智将キャラ。初期ランクUR。"
+      "tierRank": "T3",
+      "summary": "風系統の智将キャラ。初期ランクUR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "先発の後衛に配置する必要があるため、その位置に競合が多く、現在はPVEでの利用が主です。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/203/%E6%99%B4%E6%98%8E.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-05-29",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12851926134.html",
+          "tier": null,
+          "summary": "風系統の智将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "先発の後衛に配置する必要があるため、その位置に競合が多く、現在はPVEでの利用が主です。"
+        },
+        {
+          "date": "2024-05-29",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12851926134.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12851926134.html",
@@ -2116,7 +6360,79 @@ window.GIRLWARS_DATA = [
       "奥義2": "久遠なる天狐よ、我が命令に従え！行け、しろ！我が敵を喰らい尽くせ！",
       "死亡": "ううぅ...ちょっと寝てくる..."
     },
-    "story": "【その一】\n父親が陰陽師、母親が世間から身を隠していた仙狐であったため、安倍晴明は想像を絶する強力な霊力を持って生まれた。赤ん坊の頃は家のメイドに取り憑いた悪霊を一目見ただけで消し去り、成長すると、大人の陰陽師でも使いこなせないような陰陽術をいとも簡単に身につけ、さらに自分なりの新術式を開発することまでできるようになった。そのあまりに恐ろしい才能と、体に生えたキツネの耳と尻尾のせいで、周りの人たちは安倍晴明とは距離を置き、裏では「化け物」と呼んでいた。安倍晴明はこれらの誹謗中傷や嫉妬を笑い飛ばすだけであったが、その態度は人々の目には軽蔑と軽視に映り、ますます安倍晴明を憎むようになった。安倍晴明は陰陽師たちの間では評判が悪かったが、庶民の間では評判が高かった。子供たちは安倍晴明のことを「キツネ耳お姉さん」と呼び、大人たちは「陰陽師さま」と敬称をつけて呼んでいた。安倍晴明の変わった外見については、「陰陽師さまはあらゆる動物の式神を召喚できるから、体に耳や尻尾がついてるのも普通だろ？」と言っていた。\n\n【その二】\n安倍晴明には人間の友人はほとんどいないが、特に孤独を感じてはいない。彼女の霊力に満ちた目には、天も地も精霊でいっぱいの世界が映っていて、その精霊たちは彼女の周りの人間のように彼女を恐れていないのだ。彼女は折り紙が好きで、本物そっくりの動物を折り終えるたびに、天地の精霊たちがその中に押し入ろうと奔走した。これが式神の起源である。安倍晴明は式神の術式を開発し、ますます多くの式神が彼女のもとにやってくるようになった。確かに彼女には人間の友人はほとんどいないが、式神の友人ならたくさんいる。式神は安倍晴明のために喜び、安倍晴明のために涙を流した。彼らは安倍晴明を愛し、慕い、安倍晴明もそんな可愛い式神たちを本当の家族や友人のように扱っている。\n\n【その三】\n見ての通り、私は陰陽師......ん？耳？これはちょっとした術式だ......面白いでしょ？\n\nおや！遠くから見た感じ、君の家に邪悪な存在がいるようだけど、祓ってあげようか？\n\nえっ？別にいいって？でもおっさん、君、元気がないね。これは明らかに長い間、悪霊などと一緒に暮らしてきた影響で......\n\nふぅ......まさか奥さんの正体が悪霊だったなんて。おっさんもそれを知った上で暮らしているとは...人間って......本当に不思議な種族だなぁ......\n\n結局、あのおっさんに悪霊避けの御守を渡したけど...余計なお世話だったかなぁ..."
+    "story": "【その一】\n父親が陰陽師、母親が世間から身を隠していた仙狐であったため、安倍晴明は想像を絶する強力な霊力を持って生まれた。赤ん坊の頃は家のメイドに取り憑いた悪霊を一目見ただけで消し去り、成長すると、大人の陰陽師でも使いこなせないような陰陽術をいとも簡単に身につけ、さらに自分なりの新術式を開発することまでできるようになった。そのあまりに恐ろしい才能と、体に生えたキツネの耳と尻尾のせいで、周りの人たちは安倍晴明とは距離を置き、裏では「化け物」と呼んでいた。安倍晴明はこれらの誹謗中傷や嫉妬を笑い飛ばすだけであったが、その態度は人々の目には軽蔑と軽視に映り、ますます安倍晴明を憎むようになった。安倍晴明は陰陽師たちの間では評判が悪かったが、庶民の間では評判が高かった。子供たちは安倍晴明のことを「キツネ耳お姉さん」と呼び、大人たちは「陰陽師さま」と敬称をつけて呼んでいた。安倍晴明の変わった外見については、「陰陽師さまはあらゆる動物の式神を召喚できるから、体に耳や尻尾がついてるのも普通だろ？」と言っていた。\n\n【その二】\n安倍晴明には人間の友人はほとんどいないが、特に孤独を感じてはいない。彼女の霊力に満ちた目には、天も地も精霊でいっぱいの世界が映っていて、その精霊たちは彼女の周りの人間のように彼女を恐れていないのだ。彼女は折り紙が好きで、本物そっくりの動物を折り終えるたびに、天地の精霊たちがその中に押し入ろうと奔走した。これが式神の起源である。安倍晴明は式神の術式を開発し、ますます多くの式神が彼女のもとにやってくるようになった。確かに彼女には人間の友人はほとんどいないが、式神の友人ならたくさんいる。式神は安倍晴明のために喜び、安倍晴明のために涙を流した。彼らは安倍晴明を愛し、慕い、安倍晴明もそんな可愛い式神たちを本当の家族や友人のように扱っている。\n\n【その三】\n見ての通り、私は陰陽師......ん？耳？これはちょっとした術式だ......面白いでしょ？\n\nおや！遠くから見た感じ、君の家に邪悪な存在がいるようだけど、祓ってあげようか？\n\nえっ？別にいいって？でもおっさん、君、元気がないね。これは明らかに長い間、悪霊などと一緒に暮らしてきた影響で......\n\nふぅ......まさか奥さんの正体が悪霊だったなんて。おっさんもそれを知った上で暮らしているとは...人間って......本当に不思議な種族だなぁ......\n\n結局、あのおっさんに悪霊避けの御守を渡したけど...余計なお世話だったかなぁ...",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_エカテリーナ",
@@ -2152,8 +6468,45 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "雪系統の智将キャラ。初期ランクSSR。"
+      "tierRank": "T3",
+      "summary": "雪系統の智将キャラ。初期ランクSSR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "PVEではまだ一定の活躍を見せることがあります。登場に奥義を発動でき、復活後も再び奥義を発動できます。星7までの育成を推奨し、URへの昇格をおすすめします。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/221/%E3%82%A8%E3%82%AB%E3%83%86%E3%83%AA%E3%83%BC%E3%83%8A.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-06-28",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12854268812.html",
+          "tier": null,
+          "summary": "雪系統の智将キャラ。初期ランクSSR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "PVEではまだ一定の活躍を見せることがあります。登場に奥義を発動でき、復活後も再び奥義を発動できます。星7までの育成を推奨し、URへの昇格をおすすめします。"
+        },
+        {
+          "date": "2024-06-28",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12854268812.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12854268812.html",
@@ -2188,7 +6541,58 @@ window.GIRLWARS_DATA = [
       "奥義2": "命の中で咲き誇れ！血の棘よ！！",
       "死亡": "しばらく、休ませてもらいますね～"
     },
-    "story": "【その一】\nエカテリーナは彼女の過去のせいで、本当の自分を隠すことに慣れており、内なる感情を表現することを恥ずかしいと思っていた。彼女は無感情な女王で、玉座に座って民に最高の自由を与えているが、「自由の女王」本人は自由ではなかった。自分の地位や邪悪な大臣に縛られ、自分の心の壁に閉じこもっていたのだ。アルコールで自分を麻痺させ、外界を注意深く観察し、自由という名のコートを着て、孤独な玉座で寂しくうずくまっていた。異世界からの救世主である、彼に出会うまでは。彼の存在は女王の凍りついた世界に彩りをもたらした。彼女は心の檻から抜け出し、人々との付き合い方を学び、感情を表現することを学んだ。特に、救世主に対して自分を表現することを。彼女は不安と熱意を同時に抱いているが、生まれたばかりの子羊のように、憧れと希望を抱きながら新しい世界に向かって歩き出した。\n\n【その二】\nいつも気高く、エレガントなエカテリーナ女王が、なぜそのような...セクシーな服を着ているのか？モラルはどうしたのか？マナーは？ブランドショップは？…などと聞く人がいたら、慈悲深いマーリン女史は言葉を惜しまずに教えてくれるだろう...お金さえ払えば、ね。そう、エカテリーナ女王の誇らしげな姿を際立たせ、人々の頬を熱くさせるこの衣装は、今世紀一番偉い魔女、マーリン女史の手によって生み出されたものなのだ。エカテリーナ女王の依頼を受けたマーリンは、「サキュバスのハグ」と呼ばれるこのドレスを作り上げ、さらに魔法生物「コウモリの使い魔」まで装備させたのだ！この魔法のドレスの特殊能力については...。...まあ、エカテリーナ女王の完璧な体がこのドレスに包まれているのを見たら、特殊能力があるかないかなんてどうでもよくなるのではないか？\n\n【その三】\nマーリンさん、救世主にもっと好かれる魔法のアイテムと言っていらしたけど...本当にこのドレスで合っているのかしら？え？おまけにコウモリの使い魔も付いていますって？いいえ、そうじゃなくて...\n\nこのドレスはとてもシンプルに見えるけれど、着るのは簡単ではないようですわ。このロープはどこに...ああほら、コウモリちゃん、そこは噛まないで！あれ？着替えをサポートする機能があるんですの？便利すぎますわ！\n\n恥ずかしさと緊張でこの魔法のドレスの機能を聞くのを忘れてしまいましたけど、マーリンは大金を要求してきたのだから、きっととても強力な魔法アイテムなんでしょう！待っていてくださいませね、救世主様。すぐに会いに行きますわ！\n\nどうしてみんな私をジーっと見ていますの？うぅ...きっとこの魔法のドレスのせいなのでしょうね。もう、マーリンったら。今度会ったら、この「モテモテ」機能をオフにする方法を聞かないと。このままではみんなに迷惑をかけてしまうではないですか～。"
+    "story": "【その一】\nエカテリーナは彼女の過去のせいで、本当の自分を隠すことに慣れており、内なる感情を表現することを恥ずかしいと思っていた。彼女は無感情な女王で、玉座に座って民に最高の自由を与えているが、「自由の女王」本人は自由ではなかった。自分の地位や邪悪な大臣に縛られ、自分の心の壁に閉じこもっていたのだ。アルコールで自分を麻痺させ、外界を注意深く観察し、自由という名のコートを着て、孤独な玉座で寂しくうずくまっていた。異世界からの救世主である、彼に出会うまでは。彼の存在は女王の凍りついた世界に彩りをもたらした。彼女は心の檻から抜け出し、人々との付き合い方を学び、感情を表現することを学んだ。特に、救世主に対して自分を表現することを。彼女は不安と熱意を同時に抱いているが、生まれたばかりの子羊のように、憧れと希望を抱きながら新しい世界に向かって歩き出した。\n\n【その二】\nいつも気高く、エレガントなエカテリーナ女王が、なぜそのような...セクシーな服を着ているのか？モラルはどうしたのか？マナーは？ブランドショップは？…などと聞く人がいたら、慈悲深いマーリン女史は言葉を惜しまずに教えてくれるだろう...お金さえ払えば、ね。そう、エカテリーナ女王の誇らしげな姿を際立たせ、人々の頬を熱くさせるこの衣装は、今世紀一番偉い魔女、マーリン女史の手によって生み出されたものなのだ。エカテリーナ女王の依頼を受けたマーリンは、「サキュバスのハグ」と呼ばれるこのドレスを作り上げ、さらに魔法生物「コウモリの使い魔」まで装備させたのだ！この魔法のドレスの特殊能力については...。...まあ、エカテリーナ女王の完璧な体がこのドレスに包まれているのを見たら、特殊能力があるかないかなんてどうでもよくなるのではないか？\n\n【その三】\nマーリンさん、救世主にもっと好かれる魔法のアイテムと言っていらしたけど...本当にこのドレスで合っているのかしら？え？おまけにコウモリの使い魔も付いていますって？いいえ、そうじゃなくて...\n\nこのドレスはとてもシンプルに見えるけれど、着るのは簡単ではないようですわ。このロープはどこに...ああほら、コウモリちゃん、そこは噛まないで！あれ？着替えをサポートする機能があるんですの？便利すぎますわ！\n\n恥ずかしさと緊張でこの魔法のドレスの機能を聞くのを忘れてしまいましたけど、マーリンは大金を要求してきたのだから、きっととても強力な魔法アイテムなんでしょう！待っていてくださいませね、救世主様。すぐに会いに行きますわ！\n\nどうしてみんな私をジーっと見ていますの？うぅ...きっとこの魔法のドレスのせいなのでしょうね。もう、マーリンったら。今度会ったら、この「モテモテ」機能をオフにする方法を聞かないと。このままではみんなに迷惑をかけてしまうではないですか～。",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_沖田総司",
@@ -2225,14 +6629,87 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "月系統の猛将キャラ。初期ランクSSR。"
+      "summary": "月系統の猛将キャラ。初期ランクSSR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-12-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12878970036.html",
+          "tier": null,
+          "summary": "月系統の猛将キャラ。初期ランクSSR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-12-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12878970036.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12878970036.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-12-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_カエサル",
@@ -2268,8 +6745,45 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "花系統の力将キャラ。初期ランクSSR。"
+      "tierRank": "T3",
+      "summary": "花系統の力将キャラ。初期ランクSSR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "攻撃力削減能力と死亡時の攻撃力削減。パッシブで相手のダメージを低下させ、死亡後も倒した敵にデバフを付与します。最低でも星6までの育成を推奨します。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/219/%E3%82%AB%E3%82%A8%E3%82%B5%E3%83%AB.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-07-08",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12853051249.html",
+          "tier": null,
+          "summary": "花系統の力将キャラ。初期ランクSSR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "攻撃力削減能力と死亡時の攻撃力削減。パッシブで相手のダメージを低下させ、死亡後も倒した敵にデバフを付与します。最低でも星6までの育成を推奨します。"
+        },
+        {
+          "date": "2024-07-08",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12853051249.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12853051249.html",
@@ -2304,7 +6818,65 @@ window.GIRLWARS_DATA = [
       "奥義2": "すべては愛する民のため！悪は全部叩き潰してみせる！",
       "死亡": "若い肉体とはいえ、どうやらここまでのようだ…"
     },
-    "story": "【その一】\n最近、カエサル軍の中で大騒ぎが起こった。その理由は、ある日リーダーであるカエサルが目覚めたとき、獣耳と尻尾が生えていたことだ。カエサル軍での評判に影響するわけではない。なぜなら彼女が目覚めた後に下したいくつかの決断は、偉大な軍事指導者としての才能を何度も証明したからだ。主な問題は...戦場での見た目の変化が大きすぎることだった。健康的な筋肉がついた若い肉体は戦場で彼女を輝かせ、さらに今までと違い超豪快になった性格は、あまり叱られなくなったために落ち着かない兵士たちを驚かせ、そわそわさせた。長いこと議論しても解決策が浮かばなかったため、兵士たちは城主に助けを求めることにした。兵士たちは贈りものを持って訪れ、カエサルの身に行った異変の原因を突き止めるのを手伝ってほしいと城主に頼んだ。それを知った城主は驚き、原因究明のために最善を尽くすと兵士たちに約束し、それまではここに滞在するようにとカエサル一行に伝えた。\n\n【その二】\nカエサルが滞在しにくると聞いて、城の使用人たちは少し心配していた。だが今回やってきたカエサルは、相変わらず口はキツく、要求もあまり取り下げないものの、意外なことに、どうすれば物事をもっとうまくやれるかを皆の前で実演して教えてくれるようになった。これによって皆が多くを学ぶことができたのだ。しかし、彼女の変化はそういった部分だけでなく、行動により表われていた。例えば...夜襲だ！彼女は戦士であることを自負しており、自分の考えを頭の中に閉じ込めておくことができない。夜中に城主の部屋に駆け込み、城主の掛け布団を持ち上げ、持ってきたエロ本を城主の前に叩きつけ、満足げにこう言った！「どうだ、これが吾のコレクションだ！読み終えるまでここにいてやろう！」\n\n【その三】\nおっとーー悪者がいるぞ、こらしめろ。\n\nおやーー困っている人がいるようだ、吾に任せろ。\n\nなんだあの議員は！少し文句を言っただけでめそめそと…。まるで吾が悪党のようではないか！つまらん。\n\nまあ、他のことをしようか。むむ。そうだ、あれはどうだ！\n\nはは～これはいい、明日はこの格好で城主様に会いに行こうか？いや、ちょっと恥ずかしいけど...\n\nだが、吾みたいな少女は、自分の欲望に正直にならねば、うむ！\n\n直接攻めるのはNGだが、一緒にエロ本を読むぐらいならセーフであろう！\n\n城主様、グへヘ。\n\nはあはあ…。"
+    "story": "【その一】\n最近、カエサル軍の中で大騒ぎが起こった。その理由は、ある日リーダーであるカエサルが目覚めたとき、獣耳と尻尾が生えていたことだ。カエサル軍での評判に影響するわけではない。なぜなら彼女が目覚めた後に下したいくつかの決断は、偉大な軍事指導者としての才能を何度も証明したからだ。主な問題は...戦場での見た目の変化が大きすぎることだった。健康的な筋肉がついた若い肉体は戦場で彼女を輝かせ、さらに今までと違い超豪快になった性格は、あまり叱られなくなったために落ち着かない兵士たちを驚かせ、そわそわさせた。長いこと議論しても解決策が浮かばなかったため、兵士たちは城主に助けを求めることにした。兵士たちは贈りものを持って訪れ、カエサルの身に行った異変の原因を突き止めるのを手伝ってほしいと城主に頼んだ。それを知った城主は驚き、原因究明のために最善を尽くすと兵士たちに約束し、それまではここに滞在するようにとカエサル一行に伝えた。\n\n【その二】\nカエサルが滞在しにくると聞いて、城の使用人たちは少し心配していた。だが今回やってきたカエサルは、相変わらず口はキツく、要求もあまり取り下げないものの、意外なことに、どうすれば物事をもっとうまくやれるかを皆の前で実演して教えてくれるようになった。これによって皆が多くを学ぶことができたのだ。しかし、彼女の変化はそういった部分だけでなく、行動により表われていた。例えば...夜襲だ！彼女は戦士であることを自負しており、自分の考えを頭の中に閉じ込めておくことができない。夜中に城主の部屋に駆け込み、城主の掛け布団を持ち上げ、持ってきたエロ本を城主の前に叩きつけ、満足げにこう言った！「どうだ、これが吾のコレクションだ！読み終えるまでここにいてやろう！」\n\n【その三】\nおっとーー悪者がいるぞ、こらしめろ。\n\nおやーー困っている人がいるようだ、吾に任せろ。\n\nなんだあの議員は！少し文句を言っただけでめそめそと…。まるで吾が悪党のようではないか！つまらん。\n\nまあ、他のことをしようか。むむ。そうだ、あれはどうだ！\n\nはは～これはいい、明日はこの格好で城主様に会いに行こうか？いや、ちょっと恥ずかしいけど...\n\nだが、吾みたいな少女は、自分の欲望に正直にならねば、うむ！\n\n直接攻めるのはNGだが、一緒にエロ本を読むぐらいならセーフであろう！\n\n城主様、グへヘ。\n\nはあはあ…。",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_カール大帝",
@@ -2340,8 +6912,45 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "風系統の力将キャラ。初期ランクUR。"
+      "tierRank": "T2",
+      "summary": "風系統の力将キャラ。初期ランクUR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T2",
+          "comment": "カール大帝は、特に一対一の戦いに強く、他のキャラに対しても優れたパフォーマンスを発揮します。彼女は3ターンの不死能力を持ち、他のキャラと組み合わせることで強力なコンボを実現できます。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/220/%E3%82%AB%E3%83%BC%E3%83%AB%E5%A4%A7%E5%B8%9D.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-06-16",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12853890357.html",
+          "tier": null,
+          "summary": "風系統の力将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T2 に選出",
+          "reason": "カール大帝は、特に一対一の戦いに強く、他のキャラに対しても優れたパフォーマンスを発揮します。彼女は3ターンの不死能力を持ち、他のキャラと組み合わせることで強力な..."
+        },
+        {
+          "date": "2024-06-16",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12853890357.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12853890357.html",
@@ -2376,7 +6985,79 @@ window.GIRLWARS_DATA = [
       "奥義2": "かわいそうな虫たちよ、また旋風の中で悲鳴をあげよう！",
       "死亡": "ごめん、我は城主閣下に負担をかけてしまった…"
     },
-    "story": "【その一】\n幼少期からドラゴン退治の物語を聞いて育ったカールは、城に潜む邪竜を倒し、お姫様を救い出すという展開をいつも夢見ていた。そこで十四歳の頃、まだ幼いカールは荷物を背負って（水一本、パン一つ、そして剣一本だけ）、邪竜を探しに出かけた。彼女は色々な場所を旅して邪竜の情報を探したが、いつも子ども扱いされて無視された。悪人に狙われるのも日常茶飯事で、悪人に対して彼女は相手を本気で「しつけ」をし、そして礼儀正しく相手の所有物を取り上げた。石の上にも三年ということわざの通り、一年後、カールはついに邪竜の情報を掴み、すぐに討伐に赴いた。カールの到着を知ると、500年間部屋で閉じこもっていた竜姫は大喜びし、カールを自分の城に招待して自分のお気に入りの作品を見せつけた（全てエロ本）。一週間絶えずに布教し続ける竜姫から逃げ出したカールは禁断の知識が頭に叩き込まれ、顔は火が出そうなほど真っ赤になった。「この…恥知らずな邪竜め！！！」。\n\n【その二】\n幼少時の冒険体験の影響かもしれないが、カール大帝はエッチなことに深く嫌悪感を抱いている。そのため帝位に就いた後、カールは帝国の皇帝として、国内にあるエッチなものに関連するすべての書物（小説、漫画など）を廃棄する法令を発布し、発見された場合は即座に焚書処分することになった。カール大帝は、これらの書物は悪魔サタンによって人の世に撒かれた呪いで、その目的は人々の心を蝕み、欲望の淵に堕とすことだと考えている。そして、国民の魂を汚染から守るため、自分がやらなければならないと信じている。しかし、時が経つと共に、カール大帝は帝国全体が無気力になっていることに気が付いた。周りの護衛たちまでもまるで魂を吸い取られたかのように疲れ果てたように見え、帝国の出生率も著しく低下した。「分かったぞ、これはきっと悪魔サタンから我に対する挑戦だ！かかって来い！受けて立つぞ、卑怯な悪魔め！」この状況を理解していないカール大帝は再び闘志を燃やし、悪魔との断固たる闘いを誓った！\n\n【その三】\n帝国の少子化問題を解決するため、カール大帝は長い時間をかけて考えた末に、ついに素晴らしいアイデアを思いついた。まず国民の中から適切な若者を選び、用意したステージで発表会を催すのだ。具体的には、男性がそれぞれの才能を披露し、女性がそれを採点するというものだ。男性も気になる相手を選べる。つまり国家レベルの婚活ということだ。首都で開催され、地方にも広まっていった懇親会は、若者たちの恋愛への憧れを刺激し、帝国の結婚率と出生率を高めることができると確信していた。最初はカール大帝の予想通りに、この珍しいイベントは国民の注目を引きつけた。しかし、懇親会が盛り上がるにつれて、選ばれた男性たちはアイドルとなり、公演の内容はますます風紀を乱し、様々な罵り合いや口論を引き起こした。結果、逆に帝国の離婚率が大幅に上昇してしまった。かつて期待に心を躍らせていたカール大帝は疲れ果て、より深刻な結果を引き起こす前に懇親会を中止せざるを得なくなってしまった。"
+    "story": "【その一】\n幼少期からドラゴン退治の物語を聞いて育ったカールは、城に潜む邪竜を倒し、お姫様を救い出すという展開をいつも夢見ていた。そこで十四歳の頃、まだ幼いカールは荷物を背負って（水一本、パン一つ、そして剣一本だけ）、邪竜を探しに出かけた。彼女は色々な場所を旅して邪竜の情報を探したが、いつも子ども扱いされて無視された。悪人に狙われるのも日常茶飯事で、悪人に対して彼女は相手を本気で「しつけ」をし、そして礼儀正しく相手の所有物を取り上げた。石の上にも三年ということわざの通り、一年後、カールはついに邪竜の情報を掴み、すぐに討伐に赴いた。カールの到着を知ると、500年間部屋で閉じこもっていた竜姫は大喜びし、カールを自分の城に招待して自分のお気に入りの作品を見せつけた（全てエロ本）。一週間絶えずに布教し続ける竜姫から逃げ出したカールは禁断の知識が頭に叩き込まれ、顔は火が出そうなほど真っ赤になった。「この…恥知らずな邪竜め！！！」。\n\n【その二】\n幼少時の冒険体験の影響かもしれないが、カール大帝はエッチなことに深く嫌悪感を抱いている。そのため帝位に就いた後、カールは帝国の皇帝として、国内にあるエッチなものに関連するすべての書物（小説、漫画など）を廃棄する法令を発布し、発見された場合は即座に焚書処分することになった。カール大帝は、これらの書物は悪魔サタンによって人の世に撒かれた呪いで、その目的は人々の心を蝕み、欲望の淵に堕とすことだと考えている。そして、国民の魂を汚染から守るため、自分がやらなければならないと信じている。しかし、時が経つと共に、カール大帝は帝国全体が無気力になっていることに気が付いた。周りの護衛たちまでもまるで魂を吸い取られたかのように疲れ果てたように見え、帝国の出生率も著しく低下した。「分かったぞ、これはきっと悪魔サタンから我に対する挑戦だ！かかって来い！受けて立つぞ、卑怯な悪魔め！」この状況を理解していないカール大帝は再び闘志を燃やし、悪魔との断固たる闘いを誓った！\n\n【その三】\n帝国の少子化問題を解決するため、カール大帝は長い時間をかけて考えた末に、ついに素晴らしいアイデアを思いついた。まず国民の中から適切な若者を選び、用意したステージで発表会を催すのだ。具体的には、男性がそれぞれの才能を披露し、女性がそれを採点するというものだ。男性も気になる相手を選べる。つまり国家レベルの婚活ということだ。首都で開催され、地方にも広まっていった懇親会は、若者たちの恋愛への憧れを刺激し、帝国の結婚率と出生率を高めることができると確信していた。最初はカール大帝の予想通りに、この珍しいイベントは国民の注目を引きつけた。しかし、懇親会が盛り上がるにつれて、選ばれた男性たちはアイドルとなり、公演の内容はますます風紀を乱し、様々な罵り合いや口論を引き起こした。結果、逆に帝国の離婚率が大幅に上昇してしまった。かつて期待に心を躍らせていたカール大帝は疲れ果て、より深刻な結果を引き起こす前に懇親会を中止せざるを得なくなってしまった。",
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "dmg_share",
+        "name": "被ダメ分配",
+        "icon": "🛡️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_ガウェイン",
@@ -2412,15 +7093,124 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "花系統の力将キャラ。初期ランクUR。"
+      "tierRank": "T1",
+      "summary": "花系統の力将キャラ。初期ランクUR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T1",
+          "comment": "聖なる盾が存在する限り、全能の盾と称するキャラ、コントロール能力と火力もそこそこあります。どのキャラと組み合わせてもいい性能があるので好評です。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/226/%E3%82%AC%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%B3.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-07-20",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12860247578.html",
+          "tier": null,
+          "summary": "花系統の力将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T1 に選出",
+          "reason": "聖なる盾が存在する限り、全能の盾と称するキャラ、コントロール能力と火力もそこそこあります。どのキャラと組み合わせてもいい性能があるので好評です。"
+        },
+        {
+          "date": "2024-07-20",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12860247578.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12860247578.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-07-20",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "dmg_share",
+        "name": "被ダメ分配",
+        "icon": "🛡️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_ギルガメッシュ",
@@ -2457,14 +7247,115 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "花系統の智将キャラ。初期ランクUR。"
+      "summary": "花系統の智将キャラ。初期ランクUR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-01-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12880914637.html",
+          "tier": null,
+          "summary": "花系統の智将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-01-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12880914637.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12880914637.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-01-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_黄忠",
@@ -2501,14 +7392,94 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "月系統の猛将キャラ。初期ランクUR。"
+      "summary": "月系統の猛将キャラ。初期ランクUR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-02-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12884831371.html",
+          "tier": null,
+          "summary": "月系統の猛将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-02-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12884831371.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12884831371.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-02-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_コンスタンティノス",
@@ -2545,14 +7516,94 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "月系統の智将キャラ。初期ランクSSR。"
+      "summary": "月系統の智将キャラ。初期ランクSSR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-08-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12863999591.html",
+          "tier": null,
+          "summary": "月系統の智将キャラ。初期ランクSSR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12863999591.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12863999591.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-08-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_斎藤帰蝶",
@@ -2589,14 +7640,94 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "雪系統の智将キャラ。初期ランクSSR。"
+      "summary": "雪系統の智将キャラ。初期ランクSSR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-02-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12886768007.html",
+          "tier": null,
+          "summary": "雪系統の智将キャラ。初期ランクSSR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-02-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12886768007.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12886768007.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-02-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_坂田金時",
@@ -2633,14 +7764,101 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "雪系統の力将キャラ。初期ランクUR。"
+      "summary": "雪系統の力将キャラ。初期ランクUR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-01-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12882891468.html",
+          "tier": null,
+          "summary": "雪系統の力将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-01-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12882891468.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12882891468.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-01-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_真田幸村",
@@ -2676,8 +7894,45 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "花系統の猛将キャラ。初期ランクSSR。"
+      "tierRank": "T2",
+      "summary": "花系統の猛将キャラ。初期ランクSSR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T2",
+          "comment": "真田幸村は、全体攻撃を持つキャラの中でも特に優れており、仲間の戦意を回復させる能力を持っています。彼女は前衛としても一定の役割を果たします。しかし、初心者には他のURキャラの方が良い選択肢となる場合があります。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/207/%E5%B9%B8%E6%9D%91.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-07-16",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12853284237.html",
+          "tier": null,
+          "summary": "花系統の猛将キャラ。初期ランクSSR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T2 に選出",
+          "reason": "真田幸村は、全体攻撃を持つキャラの中でも特に優れており、仲間の戦意を回復させる能力を持っています。彼女は前衛としても一定の役割を果たします。しかし、初心者には他..."
+        },
+        {
+          "date": "2024-07-16",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12853284237.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12853284237.html",
@@ -2712,7 +7967,72 @@ window.GIRLWARS_DATA = [
       "奥義2": "つまらないもの、多く来れば来るほど焼けていくのだ！ふふ~",
       "死亡": "あ……魔気が止まらないようね……"
     },
-    "story": "【その一】\n魔気は欲望の力であり、人の欲望を歪め、宿主を欲望だけで動く理性のない邪悪な魔物に変えてしまう。真田幸村は魔気に侵されたが、その強大な武士の意志で押さえつけ、半魔化状態をかろうじて維持していた。そして、後に救世主などの治療を経て、魔化の欲望を完全に抑えることができた。普段の真田幸村は大ざっぱだが、男女のことになると普通の少女のように恥じらっていた。しかし、魔化した彼女はそういった話題でもためらいなく話し、救世者をからかうことを楽しんでいる。ある日、真田幸村は救世者と町に出て仕事をし、夕方に村人の家に泊まった。客室が1部屋しかなかったため、村人は自分が同村の兄弟の家に行くと言ったが、真田幸村は自分と救世者は夫婦だから1部屋で十分だと言いながら、救世者が恥ずかしそうに困っている様子を見ていじわるく笑った。結局、救世者は村人と共に寝泊まりし、真田幸村は一人部屋に泊まった。\n\n【その二】\n魔化の欲望を完全に安定させる前、真田幸村は時々魔化状態に陥っていた。人間としての意志を保つことはできるが、心は強い欲望に支配され、まるで飽くなき美食家のように、救世者に関するすべてに執着していた。たとえ髪の毛一本、少しの香りでさえも。この状態を防ぐため、普段から救世者と真田幸村の接触を増やし、彼女の心の欲求を解消する必要がある。この状態になってしまうと、すぐに救世者を真田幸村の視界から引き離し、暴走によるリスクを防ぐために武力を用いなければならない。鎮圧後には、鉄製の手錠で両手を拘束し、黒い眼帯で視界を遮る必要があり、その間に救世者と接触させてはならない。その後、夜の闇の中で救世者の部屋に移動し、救世者がその言葉に惑わされて束縛を解くのを防ぐため（実際にそういった例がある）に少なくとも1人の護衛が立ち会い、救世者に魔気を払う治療をさせるのだ。そうすれば、魔化した真田幸村を正常に戻すことができる。\n\n【その三】\n魔化って、ちょっと奇妙なんだ……何かを解明したように心が朗らかになって、独特な光景を目にすることができるんだ。\n\nもちろん、気が狂うような囁きやざわめきを無視できればの話だけど。うーん、魔物たちが無分別なのは、あの囁きのせいなんだろうか？\n\nわたしが魔化した姿は、醜いだろう……え、きれいだって？普段は見られない一面だから？ふふふ、さすがは城主様。狩りの範囲も桁外れだねえ。\n\n食え、食え、食え、一つになりたい……って、耳元でずっと呟かれるんだ。恐ろしい声でね。ん?大丈夫だよ、わたしは邪なものに魅了されたりしないから。たとえ魔気に惑わされて正気を失っても、城主さまを傷つけたりはしないよ。\n\nああ、ダーリ～ン。今夜も、私と一緒に楽しみたい？ふふふ……治療だけ？つまらないな、むしろ手錠を外して私にご奉仕させて……\n\nあっ、痛い！アマテラスめ！本気を出すなら私を解放して、決闘しろ！腹が立つ！"
+    "story": "【その一】\n魔気は欲望の力であり、人の欲望を歪め、宿主を欲望だけで動く理性のない邪悪な魔物に変えてしまう。真田幸村は魔気に侵されたが、その強大な武士の意志で押さえつけ、半魔化状態をかろうじて維持していた。そして、後に救世主などの治療を経て、魔化の欲望を完全に抑えることができた。普段の真田幸村は大ざっぱだが、男女のことになると普通の少女のように恥じらっていた。しかし、魔化した彼女はそういった話題でもためらいなく話し、救世者をからかうことを楽しんでいる。ある日、真田幸村は救世者と町に出て仕事をし、夕方に村人の家に泊まった。客室が1部屋しかなかったため、村人は自分が同村の兄弟の家に行くと言ったが、真田幸村は自分と救世者は夫婦だから1部屋で十分だと言いながら、救世者が恥ずかしそうに困っている様子を見ていじわるく笑った。結局、救世者は村人と共に寝泊まりし、真田幸村は一人部屋に泊まった。\n\n【その二】\n魔化の欲望を完全に安定させる前、真田幸村は時々魔化状態に陥っていた。人間としての意志を保つことはできるが、心は強い欲望に支配され、まるで飽くなき美食家のように、救世者に関するすべてに執着していた。たとえ髪の毛一本、少しの香りでさえも。この状態を防ぐため、普段から救世者と真田幸村の接触を増やし、彼女の心の欲求を解消する必要がある。この状態になってしまうと、すぐに救世者を真田幸村の視界から引き離し、暴走によるリスクを防ぐために武力を用いなければならない。鎮圧後には、鉄製の手錠で両手を拘束し、黒い眼帯で視界を遮る必要があり、その間に救世者と接触させてはならない。その後、夜の闇の中で救世者の部屋に移動し、救世者がその言葉に惑わされて束縛を解くのを防ぐため（実際にそういった例がある）に少なくとも1人の護衛が立ち会い、救世者に魔気を払う治療をさせるのだ。そうすれば、魔化した真田幸村を正常に戻すことができる。\n\n【その三】\n魔化って、ちょっと奇妙なんだ……何かを解明したように心が朗らかになって、独特な光景を目にすることができるんだ。\n\nもちろん、気が狂うような囁きやざわめきを無視できればの話だけど。うーん、魔物たちが無分別なのは、あの囁きのせいなんだろうか？\n\nわたしが魔化した姿は、醜いだろう……え、きれいだって？普段は見られない一面だから？ふふふ、さすがは城主様。狩りの範囲も桁外れだねえ。\n\n食え、食え、食え、一つになりたい……って、耳元でずっと呟かれるんだ。恐ろしい声でね。ん?大丈夫だよ、わたしは邪なものに魅了されたりしないから。たとえ魔気に惑わされて正気を失っても、城主さまを傷つけたりはしないよ。\n\nああ、ダーリ～ン。今夜も、私と一緒に楽しみたい？ふふふ……治療だけ？つまらないな、むしろ手錠を外して私にご奉仕させて……\n\nあっ、痛い！アマテラスめ！本気を出すなら私を解放して、決闘しろ！腹が立つ！",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_サンタ",
@@ -2748,8 +8068,45 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "花系統の智将キャラ。初期ランクSSR。"
+      "tierRank": "T0",
+      "summary": "花系統の智将キャラ。初期ランクSSR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T0",
+          "comment": "URサンタは登場以来、その強いコントロール効果により、敵が行動するたびに凍結される可能性が高く、最強のコントロールキャラとして、特に趙子龍を抑え込む重要なキャラクターです。サンタは強力ですが、強力なコントロールサポートとして決着をつける力はありません。彼女の一対一の戦いは、主にHPの決算優位によって勝利します。そのため、初心者にはサンタを最初のターゲットにすることはお勧めしません。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/218/%E3%82%B5%E3%83%B3%E3%82%BF.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-05-11",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12851278362.html",
+          "tier": null,
+          "summary": "花系統の智将キャラ。初期ランクSSR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T0 に選出",
+          "reason": "URサンタは登場以来、その強いコントロール効果により、敵が行動するたびに凍結される可能性が高く、最強のコントロールキャラとして、特に趙子龍を抑え込む重要なキャラ..."
+        },
+        {
+          "date": "2024-05-11",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12851278362.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12851278362.html",
@@ -2784,7 +8141,51 @@ window.GIRLWARS_DATA = [
       "奥義2": "一生分のプレゼントだ！ありがたく受け取るんだな！",
       "死亡": "プレゼント、あげたかった……"
     },
-    "story": "【その一】\nサンタは大富豪の家庭に生まれた。本人はお金を稼ぐことはできなかったが、使うのはとても上手だった。狂ったように損をしているように見えて、実際は１ドル残らず正しい場所で使っていたのだ。彼女は気前がよく、人の気持ちをよく理解しているように見え、瞬く間に一族と彼女自身のために空前の名声を築き上げ、人々が彼女の誕生日をクリスマスとして祝うまでになった。しかし、おとなしそうなふりをしている一方で、サンタは超生意気なガキ大将であり、人に贈り物をするのは相手をおだてて楽しんでいるだけだ。お金で何でもできると信じているのだ。サンタは城主様に出会って初めてお金を使わずに得られる幸せに気づき、それによって彼女は他の人の感情に共感できるようになり、お金の意味を徐々に理解するようになった。\n\n【その二】\nそれからは、サンタはあちこち旅を続け、人々に贈り物をするようになった。お金を無駄にするためではなく、人々に幸福をもたらし、自分もその中から幸せを得るためだった。しかし、しばらくすると、サンタはどこか虚しさを感じるようになった。幸せな人々は皆同じで、不幸な人々も十分なお金さえもらえれば幸せになれる。お金でどんな目的も達成でき、周りの人たちは皆彼女の行いを称賛している。彼女はそれが嫌だったわけではなく、ただ、多少退屈しているだけだ。彼女には特別な人がいて、他の人とは全く違う態度で彼女を扱ってくれることを望んでいるのかもしれない。いくらお金を使っても変わらない、そんな彼女の心の中で最も特別な人は城主様なのだ。城主様と一緒にいれば、きっともう虚しさは感じないだろう。\n\n【その三】\nクリスマスだ！俺様がやってきたぞ！\n\nプレゼントなら何でも言ってくれ！俺様には金がある！\n\nかわいい？そうだよ、俺様はこんなに可愛いんだ！\n\n貧乏でやることがないって？じゃあ、このお金をあげるから、俺様の車を引いてくれないか。ヘラジカたちを少し休ませてやりたいんだ。\n\n……本当にいいのか。しかもありがとうだって？面白くないな。\n\nそこの別荘は景色が良さそうだ。俺様は今晩あそこに泊まりたい。中の人間を追い出して、好きなだけ金をやればいいさ。\n\nあいつらはどうしてあんなに嬉しそうな顔をしてるんだ。お金は本当に便利だな。\n\n……つまらーん！毎日ほめられるのは最高だし、やりたい放題なのも最高だし、みんなに喜んでもらえるのも最高だ……でもつまらない！\n\nいくらお金を使っても、私に好き放題させない人って本当にいるのかな。\n\nやっぱり、城主様を探しに行こう！\n\n彼ならきっとできる！彼は他の人とは違う！\n\n城主様と一緒なら、きっと俺様は退屈しない！\n\n決めた！これを城主様にプレゼントするんだ！\n\nMerry Christmas！"
+    "story": "【その一】\nサンタは大富豪の家庭に生まれた。本人はお金を稼ぐことはできなかったが、使うのはとても上手だった。狂ったように損をしているように見えて、実際は１ドル残らず正しい場所で使っていたのだ。彼女は気前がよく、人の気持ちをよく理解しているように見え、瞬く間に一族と彼女自身のために空前の名声を築き上げ、人々が彼女の誕生日をクリスマスとして祝うまでになった。しかし、おとなしそうなふりをしている一方で、サンタは超生意気なガキ大将であり、人に贈り物をするのは相手をおだてて楽しんでいるだけだ。お金で何でもできると信じているのだ。サンタは城主様に出会って初めてお金を使わずに得られる幸せに気づき、それによって彼女は他の人の感情に共感できるようになり、お金の意味を徐々に理解するようになった。\n\n【その二】\nそれからは、サンタはあちこち旅を続け、人々に贈り物をするようになった。お金を無駄にするためではなく、人々に幸福をもたらし、自分もその中から幸せを得るためだった。しかし、しばらくすると、サンタはどこか虚しさを感じるようになった。幸せな人々は皆同じで、不幸な人々も十分なお金さえもらえれば幸せになれる。お金でどんな目的も達成でき、周りの人たちは皆彼女の行いを称賛している。彼女はそれが嫌だったわけではなく、ただ、多少退屈しているだけだ。彼女には特別な人がいて、他の人とは全く違う態度で彼女を扱ってくれることを望んでいるのかもしれない。いくらお金を使っても変わらない、そんな彼女の心の中で最も特別な人は城主様なのだ。城主様と一緒にいれば、きっともう虚しさは感じないだろう。\n\n【その三】\nクリスマスだ！俺様がやってきたぞ！\n\nプレゼントなら何でも言ってくれ！俺様には金がある！\n\nかわいい？そうだよ、俺様はこんなに可愛いんだ！\n\n貧乏でやることがないって？じゃあ、このお金をあげるから、俺様の車を引いてくれないか。ヘラジカたちを少し休ませてやりたいんだ。\n\n……本当にいいのか。しかもありがとうだって？面白くないな。\n\nそこの別荘は景色が良さそうだ。俺様は今晩あそこに泊まりたい。中の人間を追い出して、好きなだけ金をやればいいさ。\n\nあいつらはどうしてあんなに嬉しそうな顔をしてるんだ。お金は本当に便利だな。\n\n……つまらーん！毎日ほめられるのは最高だし、やりたい放題なのも最高だし、みんなに喜んでもらえるのも最高だ……でもつまらない！\n\nいくらお金を使っても、私に好き放題させない人って本当にいるのかな。\n\nやっぱり、城主様を探しに行こう！\n\n彼ならきっとできる！彼は他の人とは違う！\n\n城主様と一緒なら、きっと俺様は退屈しない！\n\n決めた！これを城主様にプレゼントするんだ！\n\nMerry Christmas！",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_ソロモン",
@@ -2820,8 +8221,45 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "月系統の智将キャラ。初期ランクUR。"
+      "tierRank": "T3",
+      "summary": "月系統の智将キャラ。初期ランクUR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "ソロモンはPVPでの使用がほとんど見られず、復活を頼りにした戦術が主な用途です。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/216/%E3%82%BD%E3%83%AD%E3%83%A2%E3%83%B3.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-06-12",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12853441850.html",
+          "tier": null,
+          "summary": "月系統の智将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "ソロモンはPVPでの使用がほとんど見られず、復活を頼りにした戦術が主な用途です。"
+        },
+        {
+          "date": "2024-06-12",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12853441850.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12853441850.html",
@@ -2856,7 +8294,72 @@ window.GIRLWARS_DATA = [
       "奥義2": "自慢の魔神ちゃんを見せてやろう！ちょっと痛いかもね！",
       "死亡": "あ！怪我をした！一ヶ月休まなきゃ！有給で！"
     },
-    "story": "【その一】\n世界一の魔法使いと言えば、ソロモンは必ず名前があがるほど有名だ。長年隠居していたのにもかかわらず、彼女の名声は魔法の国々の家庭で今でも広く知れ渡っており、まさに最も有名な子供と言っていいだろう。魔法学院での全教科満点は想像を絶するものだ。彼女はレメゲトンの術というものを生み出し、この術を用いて「七十二柱の魔神」と呼ばれる存在を過去から未来まで召喚することができる。これはエカテリーナによって召喚術の頂点と称された。当時、人々は魔法の国に輝く新世代のスターが現れると考えていた。しかし、ソロモンは魔法学院を卒業するとすぐに山中に逃げ込んだ。最初は誰もが、ただ自分の価値を高めようとしているだけなのだと思っていたが、彼女は山中の隠れ家を結界で何層にも封鎖し、自分の研究に専念すると宣言した。皆はこの事実を受け入れたが、これほど優秀な彼女が山中で一生を終えることはできないだろうと信じている。彼女がいつ山を降りるのかというのは、今一番ホットな賭けでもある。\n\n【その二】\n実際のところ、ソロモンが隠居した本当の理由は... 面倒だからだ。レメゲトンの術は、実験室を爆破してしまったとき、急いで修理するために考案された便利な術であり、七十二の労働力を一気に召喚して手伝わせることができるのだ。自分で手を動かす？そんなことは絶対に考えられない。本当はソロモンは山中にこもりたかったわけではなかったが、仕事で通勤している未来について魔法で予測するとすぐに荷物をまとめて魔法学院を脱走した。人付き合いが嫌いなために仲間外れにされ、魔法の実験で実験室を吹き飛ばすことで多額の負債を抱える辛い姿は、魔法学院を卒業したばかりの彼女にとってはダメージが大きすぎたのだ。最初は隠居に慣れず、半月過ぎるとこの生活が神に近いものなのではないかと感じ始めた。家が崩れた？魔神が修理に来る。食べ物がない？魔神が作物を育ててくれる。魔法の実験はまた失敗だ！魔神がすぐに片付けに来る！.....とにかく、魔神保護協会は強い非難を表明している。\n\n【その三】\n「魔神ちゃん！魔神ちゃん！早く来て、水を注いでくれ！」\n\n「どうして無視するの？あれ、またサボってるのか。」\n\n「あーあ、なんでも手伝ってくれる有能な助手がほしいなぁ」\n\n「料理が美味しいといいな！毎日この魔神たちが作る魔物料理じゃあ、胃が鉄製になりそうだよ！」\n\n「自分で勉強してみるのはどうだ？」\n\n「ソロモンよ、なぜ君にそんな考えが浮かぶんだ。よーく反省すべきだ！」\n\n「術をもう少し改善しよう。次こそは生活も料理もより便利になるように！」\n\n「ああ、本当に有能な助手が欲しかったよ！」"
+    "story": "【その一】\n世界一の魔法使いと言えば、ソロモンは必ず名前があがるほど有名だ。長年隠居していたのにもかかわらず、彼女の名声は魔法の国々の家庭で今でも広く知れ渡っており、まさに最も有名な子供と言っていいだろう。魔法学院での全教科満点は想像を絶するものだ。彼女はレメゲトンの術というものを生み出し、この術を用いて「七十二柱の魔神」と呼ばれる存在を過去から未来まで召喚することができる。これはエカテリーナによって召喚術の頂点と称された。当時、人々は魔法の国に輝く新世代のスターが現れると考えていた。しかし、ソロモンは魔法学院を卒業するとすぐに山中に逃げ込んだ。最初は誰もが、ただ自分の価値を高めようとしているだけなのだと思っていたが、彼女は山中の隠れ家を結界で何層にも封鎖し、自分の研究に専念すると宣言した。皆はこの事実を受け入れたが、これほど優秀な彼女が山中で一生を終えることはできないだろうと信じている。彼女がいつ山を降りるのかというのは、今一番ホットな賭けでもある。\n\n【その二】\n実際のところ、ソロモンが隠居した本当の理由は... 面倒だからだ。レメゲトンの術は、実験室を爆破してしまったとき、急いで修理するために考案された便利な術であり、七十二の労働力を一気に召喚して手伝わせることができるのだ。自分で手を動かす？そんなことは絶対に考えられない。本当はソロモンは山中にこもりたかったわけではなかったが、仕事で通勤している未来について魔法で予測するとすぐに荷物をまとめて魔法学院を脱走した。人付き合いが嫌いなために仲間外れにされ、魔法の実験で実験室を吹き飛ばすことで多額の負債を抱える辛い姿は、魔法学院を卒業したばかりの彼女にとってはダメージが大きすぎたのだ。最初は隠居に慣れず、半月過ぎるとこの生活が神に近いものなのではないかと感じ始めた。家が崩れた？魔神が修理に来る。食べ物がない？魔神が作物を育ててくれる。魔法の実験はまた失敗だ！魔神がすぐに片付けに来る！.....とにかく、魔神保護協会は強い非難を表明している。\n\n【その三】\n「魔神ちゃん！魔神ちゃん！早く来て、水を注いでくれ！」\n\n「どうして無視するの？あれ、またサボってるのか。」\n\n「あーあ、なんでも手伝ってくれる有能な助手がほしいなぁ」\n\n「料理が美味しいといいな！毎日この魔神たちが作る魔物料理じゃあ、胃が鉄製になりそうだよ！」\n\n「自分で勉強してみるのはどうだ？」\n\n「ソロモンよ、なぜ君にそんな考えが浮かぶんだ。よーく反省すべきだ！」\n\n「術をもう少し改善しよう。次こそは生活も料理もより便利になるように！」\n\n「ああ、本当に有能な助手が欲しかったよ！」",
+    "tags": [
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_伊達政宗",
@@ -2892,15 +8395,75 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "風系統の猛将キャラ。初期ランクSSR。"
+      "tierRank": "T2",
+      "summary": "風系統の猛将キャラ。初期ランクSSR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T2",
+          "comment": "伊達政宗は強力な性能を持ち、特に低レベルの戦闘では圧倒的な力を発揮します。しかし、彼女には後衛の位置を奪われやすいなどの致命的な欠点があります。初心者には低レベルの戦闘での使用を推奨しますが、過度に依存しないよう注意が必要です。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/204/%E6%94%BF%E5%AE%97.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-06-20",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12856471122.html",
+          "tier": null,
+          "summary": "風系統の猛将キャラ。初期ランクSSR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T2 に選出",
+          "reason": "伊達政宗は強力な性能を持ち、特に低レベルの戦闘では圧倒的な力を発揮します。しかし、彼女には後衛の位置を奪われやすいなどの致命的な欠点があります。初心者には低レベ..."
+        },
+        {
+          "date": "2024-06-20",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12856471122.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12856471122.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-06-20",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_趙子龍",
@@ -2936,8 +8499,45 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "月系統の猛将キャラ。初期ランクSSR。"
+      "tierRank": "T3",
+      "summary": "月系統の猛将キャラ。初期ランクSSR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "サンタの登場以降、その強さを失い、現在はPVEでしか役立たないキャラとなっています。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/199/%E8%B6%99%E5%AD%90%E9%BE%8D.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-05-13",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12851555875.html",
+          "tier": null,
+          "summary": "月系統の猛将キャラ。初期ランクSSR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "サンタの登場以降、その強さを失い、現在はPVEでしか役立たないキャラとなっています。"
+        },
+        {
+          "date": "2024-05-13",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12851555875.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12851555875.html",
@@ -2972,7 +8572,58 @@ window.GIRLWARS_DATA = [
       "奥義2": "女の子とのラブラブタイムを邪魔するんじゃない！",
       "死亡": "主君様、お逃げください…"
     },
-    "story": "【その一】\n子龍は幼い頃から美しい師匠に武術を習って育ち、無双の槍の腕を磨いていた。そのせいで次第に男女の概念が希薄になり、女の子とくっつく方を好むようになった。義侠心に厚い大人に成長し、弱い者を助け、悪人にいじめられている女の子を助けることもしばしばあった。子龍は、その力強くハンサムな姿と、まっすぐで思いやりのある性格によって、すぐにあらゆる美少女たちを虜にした。そして子龍自身も女の子たちからキスやハグをされることを楽しんでいたのだ。そう、城主様に出会うまでは。城主様と共に多くのことを経験した後、子龍は初めて、自分の魂の半分を補ってくれるような特別な人がいることを知った。そのときから彼女は、強さや弱さとか、外見とか、そういったこととは関係なく、この人は男性で、自分は女性であり、ただ一緒にいるだけで人生は完全になるのだと理解した。\n\n【その二】\n城主様の側に来てから、子龍はずっと複雑な気持ちを抱えていた。他の女の子ともイチャイチャしたりしたい気持ちは、もしかしたら間違っているのかもしれないとも思い始めたが、自分にとって一番大切な人にどんな態度で向き合えばいいのかわからなかった。そのせいで子龍は、城主様が近づいてきたときに何度もパニックに陥った。しかし、ここには可愛い美少女たちがあまりにも多いので、すぐにそんなことを考える余裕はなくなった。まるで世界中の美少女がここに集まっているように思えるほどだ！どんな性格も、どんなタイプも、どんなスタイルも全て揃っている！彼女たちのほとんどは子龍とくっつくことを避けていたが、一緒に出かけたり、一緒に戦ったりしていればボディータッチは避けられない。戦いの最中が最も密接して協力するチャンスが多いため、子龍は大事な仕事さえ忘れるほど毎日を楽しんでいた！子龍は、城主様と二人きりになったときだけ、少しは百合心を抑えた方がいいかと悩んだ。\n\n【その三】\n主君様！危ない！\n\n主君様を傷つけたいなら、まずはこの槍を超えてみせな。\n\n主君様、少し休んでくれ。ここからは僕に任せて。\n\n彼女たちも一緒に行くの？やった！みんな美少女じゃないか！\n\nそれなら......ひひひ......問題ない、彼女たちをしっかり守るから！\n\n僕の後ろに隠れて、もっとギュッとくっついてもいいよ！\n\nわぉ！この感触、この柔らかさ、なんて完璧なおっぱいなんだ！至福だ～！では、もう一度...\n\nこんな大きさ、肩こりが辛かったんじゃないか？ちょうど肩こりを和らげるツボをいくつか知ってるんだ。ここと、ここと、ここ。今夜、部屋に行ってマッサージしてあげようか？\n\n隠れなくて大丈夫だよ～、こんな雑魚ども、あっという間にやっつけるから。ぎゅーの邪魔はさせないぞ～。\n\nぎゅーして損することなんて何もないし、気持ちよくなるんだよ～。\n\nおい！そこの男、彼女には指一本触れさせないぞ！\n\nラブラブタイムを邪魔したなー！許せない！この槍をくらえ！\n\nふぅ～もう大丈夫だ！さ、またハグの続きをしよう！"
+    "story": "【その一】\n子龍は幼い頃から美しい師匠に武術を習って育ち、無双の槍の腕を磨いていた。そのせいで次第に男女の概念が希薄になり、女の子とくっつく方を好むようになった。義侠心に厚い大人に成長し、弱い者を助け、悪人にいじめられている女の子を助けることもしばしばあった。子龍は、その力強くハンサムな姿と、まっすぐで思いやりのある性格によって、すぐにあらゆる美少女たちを虜にした。そして子龍自身も女の子たちからキスやハグをされることを楽しんでいたのだ。そう、城主様に出会うまでは。城主様と共に多くのことを経験した後、子龍は初めて、自分の魂の半分を補ってくれるような特別な人がいることを知った。そのときから彼女は、強さや弱さとか、外見とか、そういったこととは関係なく、この人は男性で、自分は女性であり、ただ一緒にいるだけで人生は完全になるのだと理解した。\n\n【その二】\n城主様の側に来てから、子龍はずっと複雑な気持ちを抱えていた。他の女の子ともイチャイチャしたりしたい気持ちは、もしかしたら間違っているのかもしれないとも思い始めたが、自分にとって一番大切な人にどんな態度で向き合えばいいのかわからなかった。そのせいで子龍は、城主様が近づいてきたときに何度もパニックに陥った。しかし、ここには可愛い美少女たちがあまりにも多いので、すぐにそんなことを考える余裕はなくなった。まるで世界中の美少女がここに集まっているように思えるほどだ！どんな性格も、どんなタイプも、どんなスタイルも全て揃っている！彼女たちのほとんどは子龍とくっつくことを避けていたが、一緒に出かけたり、一緒に戦ったりしていればボディータッチは避けられない。戦いの最中が最も密接して協力するチャンスが多いため、子龍は大事な仕事さえ忘れるほど毎日を楽しんでいた！子龍は、城主様と二人きりになったときだけ、少しは百合心を抑えた方がいいかと悩んだ。\n\n【その三】\n主君様！危ない！\n\n主君様を傷つけたいなら、まずはこの槍を超えてみせな。\n\n主君様、少し休んでくれ。ここからは僕に任せて。\n\n彼女たちも一緒に行くの？やった！みんな美少女じゃないか！\n\nそれなら......ひひひ......問題ない、彼女たちをしっかり守るから！\n\n僕の後ろに隠れて、もっとギュッとくっついてもいいよ！\n\nわぉ！この感触、この柔らかさ、なんて完璧なおっぱいなんだ！至福だ～！では、もう一度...\n\nこんな大きさ、肩こりが辛かったんじゃないか？ちょうど肩こりを和らげるツボをいくつか知ってるんだ。ここと、ここと、ここ。今夜、部屋に行ってマッサージしてあげようか？\n\n隠れなくて大丈夫だよ～、こんな雑魚ども、あっという間にやっつけるから。ぎゅーの邪魔はさせないぞ～。\n\nぎゅーして損することなんて何もないし、気持ちよくなるんだよ～。\n\nおい！そこの男、彼女には指一本触れさせないぞ！\n\nラブラブタイムを邪魔したなー！許せない！この槍をくらえ！\n\nふぅ～もう大丈夫だ！さ、またハグの続きをしよう！",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_長宗我部元親",
@@ -3008,8 +8659,45 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "雪系統の力将キャラ。初期ランクUR。"
+      "tierRank": "T1",
+      "summary": "雪系統の力将キャラ。初期ランクUR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T1",
+          "comment": "元親は、現在唯一の禁療キャラであり、主にマーリンに対抗する役割を果たします。彼女のスキルは全体にダメージを与え、奥義の反撃をすることで無限の可能性があります。黒血侵食、コントロール、様々なバフもあり、彼女は高いポテンシャルを持っています。しかし、彼女の致命的な欠点は、防御力が低く、前衛に配置するとすぐに倒されてしまうことです。そのため、彼女は後衛の貴重な位置を確保する必要があります。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/208/%E5%85%83%E8%A6%AA.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-05-17",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12851681308.html",
+          "tier": null,
+          "summary": "雪系統の力将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T1 に選出",
+          "reason": "元親は、現在唯一の禁療キャラであり、主にマーリンに対抗する役割を果たします。彼女のスキルは全体にダメージを与え、奥義の反撃をすることで無限の可能性があります。黒..."
+        },
+        {
+          "date": "2024-05-17",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12851681308.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12851681308.html",
@@ -3044,7 +8732,86 @@ window.GIRLWARS_DATA = [
       "奥義2": "お前たち、喜べ！これはめったに見られないパフォーマンスだ！",
       "死亡": "そんな、どうやら私もツイてなかったみたいだ"
     },
-    "story": "【その一】\n長宗我部元親は幼い頃から体が弱く、顔色が青白かったため近所の子供たちによく笑われ、「姫若子」と呼ばれていた。彼女の両親もまた、幼い彼女の臆病さに悩んでいた。ある日、彼女は家の本棚で偶然航海に関する絵本を見つけ、勇敢な船乗りたちに惹かれた。しかし、彼女が本のような勇敢な船乗りになりたいと言うと、「臆病な姫若子が波に乗れるわけがない」とみんなに笑われてしまった。叔父だけが彼女を応援し、彼女と一緒に海辺の小屋の中に小さな船板を作ってくれた。出航の日はちょうど大嵐に見舞われ、弱気な姫若子が残酷な海に打たれて泣きながら家に帰ってくるのを見ようと、町中の人が見物に来た。パドルを握った元親がその小さなボートに乗り込むと、ヤジの声がボートをひっくり返しそうなほどに大きくなった。急に怖くなった元親だったが、出発前に叔父が「目を帆と一直線にして、そして死ぬことを恐れずに突き進めばいい」と言ったことをふと思い出した。そして、彼女は勇気を出して突き進んだ。みんなは彼女の海と戦う姿に圧倒され、「姫若子」と呼ぶ人はもう誰もいなくなった。\n\n【その二】\n航海から帰ってきた長宗我部元親はますます海に夢中になった。長年の努力を経て、彼女はついに自分の船を買い、航路で宝探しをする賞金稼ぎになった。彼女は宝探しの才能があり、たとえどんなに欠けた海図であっても、海図が導く方向を見つけることができる。彼女は広い海を、まるで家の応接間のように往復していた。すぐに彼女は一躍有名になり、宝探し界での人気者になった。そして、メリー号の乗船券は闇市でも超高値で取引された。なんといっても、費やしたお金の倍以上の価値のお宝を見つけてきた優秀な姉御なのだ。しかし、本人の貯蓄はそれほど増えていない。彼女は、「海で生活しているのは明日もわからないような人ばかりだから、儲けた金を積んだままかびを生やしているくらいなら、いっそ楽しんだほうがいい」という。それに、財宝を嵐のように使い散らすのは彼女の大好きな娯楽の一つだ。\n\n【その三】\n「おお、来たか。さあ、一緒に稼ごうじゃないか。」\n\n「こう見えても、私には案外商人の素質があるかもしれないぞ？この商売はきっと儲かる！」\n\n「ほら、嘘じゃないだろう。利益がっぽりだ！」\n\n「貯蓄？そんな必要があるのか？お金は使うために稼ぐんだろう？黄金が散らばっている姿を美しいと思わないか？」\n\n「よしよし。そんな苦い顔をしないで、こっちのかわいいバカどもと暴れてみろ！お金なんてすぐに戻ってくるぞ！」\n\n「美酒！海！」\n\n「うっぷ…暴れすぎて、飲みすぎた。膝を貸してくれ。」"
+    "story": "【その一】\n長宗我部元親は幼い頃から体が弱く、顔色が青白かったため近所の子供たちによく笑われ、「姫若子」と呼ばれていた。彼女の両親もまた、幼い彼女の臆病さに悩んでいた。ある日、彼女は家の本棚で偶然航海に関する絵本を見つけ、勇敢な船乗りたちに惹かれた。しかし、彼女が本のような勇敢な船乗りになりたいと言うと、「臆病な姫若子が波に乗れるわけがない」とみんなに笑われてしまった。叔父だけが彼女を応援し、彼女と一緒に海辺の小屋の中に小さな船板を作ってくれた。出航の日はちょうど大嵐に見舞われ、弱気な姫若子が残酷な海に打たれて泣きながら家に帰ってくるのを見ようと、町中の人が見物に来た。パドルを握った元親がその小さなボートに乗り込むと、ヤジの声がボートをひっくり返しそうなほどに大きくなった。急に怖くなった元親だったが、出発前に叔父が「目を帆と一直線にして、そして死ぬことを恐れずに突き進めばいい」と言ったことをふと思い出した。そして、彼女は勇気を出して突き進んだ。みんなは彼女の海と戦う姿に圧倒され、「姫若子」と呼ぶ人はもう誰もいなくなった。\n\n【その二】\n航海から帰ってきた長宗我部元親はますます海に夢中になった。長年の努力を経て、彼女はついに自分の船を買い、航路で宝探しをする賞金稼ぎになった。彼女は宝探しの才能があり、たとえどんなに欠けた海図であっても、海図が導く方向を見つけることができる。彼女は広い海を、まるで家の応接間のように往復していた。すぐに彼女は一躍有名になり、宝探し界での人気者になった。そして、メリー号の乗船券は闇市でも超高値で取引された。なんといっても、費やしたお金の倍以上の価値のお宝を見つけてきた優秀な姉御なのだ。しかし、本人の貯蓄はそれほど増えていない。彼女は、「海で生活しているのは明日もわからないような人ばかりだから、儲けた金を積んだままかびを生やしているくらいなら、いっそ楽しんだほうがいい」という。それに、財宝を嵐のように使い散らすのは彼女の大好きな娯楽の一つだ。\n\n【その三】\n「おお、来たか。さあ、一緒に稼ごうじゃないか。」\n\n「こう見えても、私には案外商人の素質があるかもしれないぞ？この商売はきっと儲かる！」\n\n「ほら、嘘じゃないだろう。利益がっぽりだ！」\n\n「貯蓄？そんな必要があるのか？お金は使うために稼ぐんだろう？黄金が散らばっている姿を美しいと思わないか？」\n\n「よしよし。そんな苦い顔をしないで、こっちのかわいいバカどもと暴れてみろ！お金なんてすぐに戻ってくるぞ！」\n\n「美酒！海！」\n\n「うっぷ…暴れすぎて、飲みすぎた。膝を貸してくれ。」",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_巴御前",
@@ -3080,7 +8847,7 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
+      "tierRank": "T0",
       "summary": "風系統の猛将キャラ。初期ランクUR。",
       "summaryBullets": [
         "自己バフ、被ダメ時に自己回復＋反撃持ち",
@@ -3089,6 +8856,57 @@ window.GIRLWARS_DATA = [
         "多くの敵に行動不能デバフを付与、しかも高確率",
         "奥義発動時、味方の全デバフ解除・味方の奥義誘発",
         "被ダメや与ダメでHP回復"
+      ],
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T0",
+          "comment": "巴御前は、もう一つのT0キャラであり、ゲームの代表的存在です。彼女は1ターン目で後衛のダメージ軽減、高強度の反撃、そして奥義のコントロール解除などの能力によりチームメンバーに追加の奥義を発動させるので、とても強力なキャラとされています。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/202/%E5%B7%B4.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-05-25",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12852286730.html",
+          "tier": null,
+          "summary": "風系統の猛将キャラ。初期ランクUR。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-ursentomoe",
+          "bullets": [
+            "自己バフ、被ダメ時に自己回復＋反撃持ち",
+            "敵味方に戦意回復速度のバフデバフ、死亡後も継続",
+            "後列隊長技で1ターン後列の被ダメ完全カット",
+            "多くの敵に行動不能デバフを付与、しかも高確率",
+            "奥義発動時、味方の全デバフ解除・味方の奥義誘発",
+            "被ダメや与ダメでHP回復"
+          ],
+          "gems": []
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T0 に選出",
+          "reason": "巴御前は、もう一つのT0キャラであり、ゲームの代表的存在です。彼女は1ターン目で後衛のダメージ軽減、高強度の反撃、そして奥義のコントロール解除などの能力によりチ..."
+        },
+        {
+          "date": "2024-05-25",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12852286730.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
       ]
     },
     "sourceInfo": {
@@ -3125,7 +8943,86 @@ window.GIRLWARS_DATA = [
       "奥義2": "夜空、花火、焼鳥、私たちの思い出、今咲きます！",
       "死亡": "お腹が、空いた…"
     },
-    "story": "【その一】\n巴御前は強大な武士だったが、その身分の外では彼女は立派だった……まあ、奇抜な料理人とも言える。巴御前は美食家で、美食を研究するのも好きだが、伝統的な料理人とは異なり、普段はぼんやりしているように見えるこの少女は、食の道の中でいつも天馬行空の理解を持っている。唐辛子にマシュマロ、ゼリーにおにぎり、カレーとスイカなど、何の関係もないように見えるさまざまな食材を組み合わせることが好きで、これらの常人の目には地獄料理レベルの組み合わせだが、巴御前が作ると意外に奇抜で美しい味が融合しており、これも彼女が自分の料理の手法に自信を持っている理由だ。もちろん、成功もあれば失敗もあり、巴御前は朽ちて生気になっておいしい怪味料理を生み出すことが多いのが、たまに失敗することもある。それがどんな味なのかというと……少なくとも食べたことがある人は、1ヶ月間はどんな料理を見ても吐き気を禁じ得ない。\n\n【その二】\n巴御前は作るだけでなく、食べることもできる！彼女は清州城で開催された多城連合大食い大会で、他の城から出てきた大食いたちを病院に運ぶまで食わせてしまい、司会者があまりの衝撃に驚いている中で微笑みながら「おかわり！」と言い、「大食いキラー」と呼ばれた。それにより、複数の町のバイキングにブラックリストに入れられることとなった。巴御前の大食いといえば、清州城に城主の護衛として来る前、巴御前はずっと荒野で武芸の修行をしながら、料理になる食材を探していたという逸話がある。ある日、巴御前はある山の中でかぐわしい香りを放つ奇異なキノコを発見し、登って摘もうとしたが急に山が揺れ、その「山の斜面」は巨大な魔物の背中だった！そして巴御前はうっかり魔物に腹の中に飲み込まれてしまった。しかし驚くことに、1ヶ月後、巴御前は魔物の口から這い出てき、その魔物は飢え死にしていた。このエピソードを巴御前から聞いたという人がいるが、巴御前はすぐに否定し、そのキノコが実は臭いことを示した。\n\n【その三】\nグーおなかすいた！ああ、昨日は調子に乗って、最後の貯金も使ってしまったな。がんばって！巴御前！いい一日は仕事探しから！\n\nふん！ちょっと食べ過ぎだけじゃないですか。やっている仕事も人より多いのに。憎らしい腹黒いボスですね！\n\nえっ？ご馳走するんじゃないのですか？どうして町をでるのですか？\n\nあぁ、城外に住んでいるからですね。お家までいくのですか？これは恥ずかしいですね。はははっ、早く行きましょう！\n\n山賊？販売？はい、はい…あのう、ご飯はいつですか？おじさん。\n\nえーと、英雄って。ただご馳走されただけなんです。それから、急に狂った彼らを倒しただけ…それ以外は知らないですよ？\n\n山賊退治の報酬？私にくれるのですか？はい！またいいものを食べられます！"
+    "story": "【その一】\n巴御前は強大な武士だったが、その身分の外では彼女は立派だった……まあ、奇抜な料理人とも言える。巴御前は美食家で、美食を研究するのも好きだが、伝統的な料理人とは異なり、普段はぼんやりしているように見えるこの少女は、食の道の中でいつも天馬行空の理解を持っている。唐辛子にマシュマロ、ゼリーにおにぎり、カレーとスイカなど、何の関係もないように見えるさまざまな食材を組み合わせることが好きで、これらの常人の目には地獄料理レベルの組み合わせだが、巴御前が作ると意外に奇抜で美しい味が融合しており、これも彼女が自分の料理の手法に自信を持っている理由だ。もちろん、成功もあれば失敗もあり、巴御前は朽ちて生気になっておいしい怪味料理を生み出すことが多いのが、たまに失敗することもある。それがどんな味なのかというと……少なくとも食べたことがある人は、1ヶ月間はどんな料理を見ても吐き気を禁じ得ない。\n\n【その二】\n巴御前は作るだけでなく、食べることもできる！彼女は清州城で開催された多城連合大食い大会で、他の城から出てきた大食いたちを病院に運ぶまで食わせてしまい、司会者があまりの衝撃に驚いている中で微笑みながら「おかわり！」と言い、「大食いキラー」と呼ばれた。それにより、複数の町のバイキングにブラックリストに入れられることとなった。巴御前の大食いといえば、清州城に城主の護衛として来る前、巴御前はずっと荒野で武芸の修行をしながら、料理になる食材を探していたという逸話がある。ある日、巴御前はある山の中でかぐわしい香りを放つ奇異なキノコを発見し、登って摘もうとしたが急に山が揺れ、その「山の斜面」は巨大な魔物の背中だった！そして巴御前はうっかり魔物に腹の中に飲み込まれてしまった。しかし驚くことに、1ヶ月後、巴御前は魔物の口から這い出てき、その魔物は飢え死にしていた。このエピソードを巴御前から聞いたという人がいるが、巴御前はすぐに否定し、そのキノコが実は臭いことを示した。\n\n【その三】\nグーおなかすいた！ああ、昨日は調子に乗って、最後の貯金も使ってしまったな。がんばって！巴御前！いい一日は仕事探しから！\n\nふん！ちょっと食べ過ぎだけじゃないですか。やっている仕事も人より多いのに。憎らしい腹黒いボスですね！\n\nえっ？ご馳走するんじゃないのですか？どうして町をでるのですか？\n\nあぁ、城外に住んでいるからですね。お家までいくのですか？これは恥ずかしいですね。はははっ、早く行きましょう！\n\n山賊？販売？はい、はい…あのう、ご飯はいつですか？おじさん。\n\nえーと、英雄って。ただご馳走されただけなんです。それから、急に狂った彼らを倒しただけ…それ以外は知らないですよ？\n\n山賊退治の報酬？私にくれるのですか？はい！またいいものを食べられます！",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_馬超",
@@ -3161,15 +9058,110 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "花系統の猛将キャラ。初期ランクUR。"
+      "tierRank": "T2",
+      "summary": "花系統の猛将キャラ。初期ランクUR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T2",
+          "comment": "強い復活封鎖能力を持っているが、自身の火力不足問題という欠点があり、意外とそんなに強くないかもしれません。また、コントロールされやすいのも一つの問題である。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/227/%E9%A6%AC%E8%B6%85.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-08-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12862100548.html",
+          "tier": null,
+          "summary": "花系統の猛将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T2 に選出",
+          "reason": "強い復活封鎖能力を持っているが、自身の火力不足問題という欠点があり、意外とそんなに強くないかもしれません。また、コントロールされやすいのも一つの問題である。"
+        },
+        {
+          "date": "2024-08-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12862100548.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12862100548.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-08-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_ブリュンヒルド",
@@ -3205,15 +9197,131 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "月系統の智将キャラ。初期ランクUR。"
+      "tierRank": "T1",
+      "summary": "月系統の智将キャラ。初期ランクUR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T1",
+          "comment": "ブリュンヒルドは、智将として力将より固く、全てのスキルが防御に特化しており、攻撃力の減少、HPの上限の増加、全体のコントロール解除など、盾としての役割を完璧に果たします。彼女は簡単なサポートキャラとしても、完全に育成しても優れたパフォーマンスを発揮します。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/214/%E3%83%96%E3%83%AA%E3%83%A5%E3%83%B3.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-05-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12852535699.html",
+          "tier": null,
+          "summary": "月系統の智将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T1 に選出",
+          "reason": "ブリュンヒルドは、智将として力将より固く、全てのスキルが防御に特化しており、攻撃力の減少、HPの上限の増加、全体のコントロール解除など、盾としての役割を完璧に果..."
+        },
+        {
+          "date": "2024-05-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12852535699.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12852535699.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-05-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_マーリン",
@@ -3249,8 +9357,45 @@ window.GIRLWARS_DATA = [
       }
     },
     "evaluation": {
-      "tierRank": null,
-      "summary": "風系統の智将キャラ。初期ランクSSR。"
+      "tierRank": "T1",
+      "summary": "風系統の智将キャラ。初期ランクSSR。",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T1",
+          "comment": "以前は治療の存在があまり重要視されていませんでしたが、URマーリンの登場により、その価値が証明されました。マーリンの回復力は驚異的で、高レベルの戦闘では数十億の回復量を誇ります。彼女が生きている限り、どんな状況でも戦いを有利に進めることができます。そのため、マーリンは後衛の位置を巴御前と共に確保しています。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/213/%E3%83%9E%E3%83%BC%E3%83%AA%E3%83%B3.png"
+        },
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-04-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12849196643.html",
+          "tier": null,
+          "summary": "風系統の智将キャラ。初期ランクSSR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": true
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T1 に選出",
+          "reason": "以前は治療の存在があまり重要視されていませんでしたが、URマーリンの登場により、その価値が証明されました。マーリンの回復力は驚異的で、高レベルの戦闘では数十億の..."
+        },
+        {
+          "date": "2024-04-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12849196643.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12849196643.html",
@@ -3285,7 +9430,58 @@ window.GIRLWARS_DATA = [
       "奥義2": "かかってこい！私の魔法...ご覧あれ！",
       "死亡": "魔法...使えなくなっちゃう..."
     },
-    "story": "【その一】\n俗に魅魔と呼ばれる、いたずら好きで半人半悪魔のロリっ娘。強力な魔法を持っているが、過剰に使用すると悪魔の半身に支配される危険がある。そのため彼女は、毎日他人の目を気にせず魔法を好き勝手に乱用しているように見えて、実は自分なりの方法でその人間性を維持しているのだ。城主様を自分のものにしたいと思っており、最初の好奇心からだんだんと依存心に変わってきている。もしも魔力が暴走したら、彼女を救えるのは城主様だけだ。\n\n【その二】\n城主様の城下町に住み始めたマーリンだが、はじめはあまり馴染めなかった。いつもどこかに隠れ、城主様を誘惑しようとし、それ以外の人のことには興味がない様子だった。しかし、おそらく城には変人が多すぎて、誰もマーリンを変わった人間だとは思わなかった。そのため、どこに隠れても誰かに見つけられ、一緒に遊んだり、いたずらをしたり、魔法を研究したり、武道を磨いたりした。マーリンの日々は充実していき、徐々にみんなと親しくなっていった。なんといっても、毎日の衣食住の世話を誰かがしてくれる生活は素晴らしい！もちろん、部屋の掃除や食後の片付けなどの仕事は自分でやるべきだが、マーリンは一度もやらなかった。何かうまくいかないことがあると、彼女は近くの誰かに魔法をかけてやってもらうのだ。ちなみに、被害者はいつも城主様だ。\n\n【その三】\nある日、マーリンが城主様の戦いに協力していた時、魔龍王が彼女の体内に潜む悪魔の半身を見つけてしまった。魔龍王は魔女に扮した邪龍姫を派遣して地下から城内に潜入させ、マーリンと偶然出会ったふりをさせた。マーリンは邪龍姫に騙され、同じような存在だと思い込み、彼女と仲良くなってしまった。そして、自分の魔法が飛躍的に向上していることに喜びを感じていたが、彼女は気付いていなかったのだ。自分の中の悪魔の力が目覚め、無意識のうちに城の人々に悪意のある呪いをかけてしまっていることに。城下町は崩壊寸前となっていたが、邪龍姫とその配下たちが城に攻め込んでくるまで、マーリンはずっと城主様を自分のものにすることしか考えていなかった。幸いにも、城主様が真実の愛の力でマーリンを目覚めさせ、邪龍姫を撃退して城を守ることができた。それからマーリンはいつもの様子に戻り、毎日魔法を乱用している。だが、彼女が身に宿る悪魔の力と戦っていることを城主様以外は誰も知らない。"
+    "story": "【その一】\n俗に魅魔と呼ばれる、いたずら好きで半人半悪魔のロリっ娘。強力な魔法を持っているが、過剰に使用すると悪魔の半身に支配される危険がある。そのため彼女は、毎日他人の目を気にせず魔法を好き勝手に乱用しているように見えて、実は自分なりの方法でその人間性を維持しているのだ。城主様を自分のものにしたいと思っており、最初の好奇心からだんだんと依存心に変わってきている。もしも魔力が暴走したら、彼女を救えるのは城主様だけだ。\n\n【その二】\n城主様の城下町に住み始めたマーリンだが、はじめはあまり馴染めなかった。いつもどこかに隠れ、城主様を誘惑しようとし、それ以外の人のことには興味がない様子だった。しかし、おそらく城には変人が多すぎて、誰もマーリンを変わった人間だとは思わなかった。そのため、どこに隠れても誰かに見つけられ、一緒に遊んだり、いたずらをしたり、魔法を研究したり、武道を磨いたりした。マーリンの日々は充実していき、徐々にみんなと親しくなっていった。なんといっても、毎日の衣食住の世話を誰かがしてくれる生活は素晴らしい！もちろん、部屋の掃除や食後の片付けなどの仕事は自分でやるべきだが、マーリンは一度もやらなかった。何かうまくいかないことがあると、彼女は近くの誰かに魔法をかけてやってもらうのだ。ちなみに、被害者はいつも城主様だ。\n\n【その三】\nある日、マーリンが城主様の戦いに協力していた時、魔龍王が彼女の体内に潜む悪魔の半身を見つけてしまった。魔龍王は魔女に扮した邪龍姫を派遣して地下から城内に潜入させ、マーリンと偶然出会ったふりをさせた。マーリンは邪龍姫に騙され、同じような存在だと思い込み、彼女と仲良くなってしまった。そして、自分の魔法が飛躍的に向上していることに喜びを感じていたが、彼女は気付いていなかったのだ。自分の中の悪魔の力が目覚め、無意識のうちに城の人々に悪意のある呪いをかけてしまっていることに。城下町は崩壊寸前となっていたが、邪龍姫とその配下たちが城に攻め込んでくるまで、マーリンはずっと城主様を自分のものにすることしか考えていなかった。幸いにも、城主様が真実の愛の力でマーリンを目覚めさせ、邪龍姫を撃退して城を守ることができた。それからマーリンはいつもの様子に戻り、毎日魔法を乱用している。だが、彼女が身に宿る悪魔の力と戦っていることを城主様以外は誰も知らない。",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_メフィスト",
@@ -3322,14 +9518,108 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "月系統の智将キャラ。初期ランクUR。"
+      "summary": "月系統の智将キャラ。初期ランクUR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-11-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12875370247.html",
+          "tier": null,
+          "summary": "月系統の智将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-11-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12875370247.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12875370247.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-11-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_雪女",
@@ -3366,14 +9656,115 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "雪系統の智将キャラ。初期ランクUR。"
+      "summary": "雪系統の智将キャラ。初期ランクUR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-07-04",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12858265974.html",
+          "tier": null,
+          "summary": "雪系統の智将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-07-04",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12858265974.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12858265974.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-07-04",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_李白",
@@ -3407,14 +9798,108 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "月系統の猛将キャラ。初期ランクUR。"
+      "summary": "月系統の猛将キャラ。初期ランクUR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2025-03-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12890427603.html",
+          "tier": null,
+          "summary": "月系統の猛将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2025-03-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12890427603.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12890427603.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2025-03-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_劉備",
@@ -3451,14 +9936,101 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "月系統の力将キャラ。初期ランクUR。"
+      "summary": "月系統の力将キャラ。初期ランクUR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-09-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12865954353.html",
+          "tier": null,
+          "summary": "月系統の力将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-09-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12865954353.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12865954353.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-09-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "dmg_share",
+        "name": "被ダメ分配",
+        "icon": "🛡️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_呂布",
@@ -3495,14 +10067,108 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "雪系統の力将キャラ。初期ランクSSR。"
+      "summary": "雪系統の力将キャラ。初期ランクSSR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-10-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12871622220.html",
+          "tier": null,
+          "summary": "雪系統の力将キャラ。初期ランクSSR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-10-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12871622220.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12871622220.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-10-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "dmg_share",
+        "name": "被ダメ分配",
+        "icon": "🛡️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_クーフーリン",
@@ -3539,14 +10205,108 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "風系統の猛将キャラ。初期ランクUR。"
+      "summary": "風系統の猛将キャラ。初期ランクUR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-09-21",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12868015635.html",
+          "tier": null,
+          "summary": "風系統の猛将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-09-21",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12868015635.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12868015635.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-09-21",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_ネロ・クラウディウス",
@@ -3583,14 +10343,59 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "風系統の力将キャラ。初期ランクUR。"
+      "summary": "風系統の力将キャラ。初期ランクUR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-12-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12877039196.html",
+          "tier": null,
+          "summary": "風系統の力将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-12-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12877039196.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12877039196.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-12-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_ヘラクレス",
@@ -3627,14 +10432,101 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "雪系統の猛将キャラ。初期ランクUR。"
+      "summary": "雪系統の猛将キャラ。初期ランクUR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-11-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12873495126.html",
+          "tier": null,
+          "summary": "雪系統の猛将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-11-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12873495126.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12873495126.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-11-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "rimuru_ur_卑弥呼",
@@ -3671,14 +10563,101 @@ window.GIRLWARS_DATA = [
     },
     "evaluation": {
       "tierRank": null,
-      "summary": "花系統の智将キャラ。初期ランクUR。"
+      "summary": "花系統の智将キャラ。初期ランクUR。",
+      "sources": {
+        "rimuru": {
+          "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
+          "date": "2024-10-05",
+          "url": "https://ameblo.jp/hetarerimuru/entry-12869642941.html",
+          "tier": null,
+          "summary": "花系統の智将キャラ。初期ランクUR。"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-10-05",
+          "sourceName": "へたれリムルブログ",
+          "sourceUrl": "https://ameblo.jp/hetarerimuru/entry-12869642941.html",
+          "change": "URキャラ性能評価・スキル詳細掲載",
+          "reason": "UR環境におけるスキル構成と運用の評価"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://ameblo.jp/hetarerimuru/entry-12869642941.html",
       "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
       "updatedAt": "2024-10-05",
       "isOutdated": false
-    }
+    },
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": true,
+        "fromEval": false
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": true,
+        "fromEval": false
+      }
+    ]
   },
   {
     "id": "wiki_115",
@@ -3720,7 +10699,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "ダメ分担、復活暴走",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/115.html",
@@ -3728,7 +10713,23 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "あれくさんどろす"
+    "ruby": "あれくさんどろす",
+    "tags": [
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "dmg_share",
+        "name": "被ダメ分配",
+        "icon": "🛡️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_72",
@@ -3770,7 +10771,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "聖靈佑佐、戰場靈魂",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/72.html",
@@ -3778,7 +10785,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "あーさーおう"
+    "ruby": "あーさーおう",
+    "tags": []
   },
   {
     "id": "wiki_81",
@@ -3818,9 +10826,32 @@ window.GIRLWARS_DATA = [
     "story": "【その一】\nエカテリーナの国では、国を指揮いる人は、全国で唯一魔法が使える“女王様”である。女王様が無くなるたびに、大吹雪が降る、そして、その大吹雪の中に、必ず新たな女王様が誕生する。そのため、誕生して白い結晶で出来た雪花が静かに赤ちゃんであるエカテリーナの側で留まった時点から、彼女の女王様の身分が確認された。\n\n通常ならば、女王様を長らく輔佐していた補佐官は、新たな女王様を見つけた後、彼女を王宮へ送らせるべきだが。エカテリーナはただ遠い町に置かされていた。でも彼女は故郷の様にこの町を愛していた。そこで、いつも町の子供と一緒に、外で遊び騒ぎいた。言動等に気を使わなくてもいいし、魔法を制限する事も必要ない。人々は彼女の事を女王様と呼び、優しく、親切に接した。そのため、町での生活はとても幸せだった。\n\n時々彼女も噂を耳にする：ここ数十年、全ての女王様は20歳以上生きることが出来なかった；この時の補佐官は女王様を従わず、常に女王様の名目で民衆を圧迫し、戦争を起こしていた…\n\n【その二】\nエカテリーナは王宮へ連れて行かれた、でも彼女はむしろ補佐官の傀儡と囚人に過ぎなかった、大半は、王宮の奥に閉じ込められていた、他の時間は、補佐官の思う通りに命令を出し、彼のために民衆の心を引き寄せた。しかも摂政王までならせ、でないと昔一緒に生活してきた平民を殺すと脅かした。\n\nエカテリーナは一度耐えた。ある日、摂政王は一つの秘密を漏らしたーー前の女王様は皆彼に殺されたんだと、幼い子供こそが操りやすいからだ。怒りの下、エカテリーナは吹雪で王宮を封鎖し、一人逃げ出していた。でも魔法の消耗で、遠くへ逃げられなかった。\n\nエカテリーナが混乱に陥ろうとする時、彼女は村人に拾われた。でも、彼女はどう助けを求めれば良いのか全く分からなかった。震える彼女を見た村人が、彼女が酒が飲める年になったことを確認出来てから、少し酒を飲ませた。\n\nそれからの話は少し伝説っぽいのだが。アルコールの作用で、エカテリーナは摂政王の暴行を訴えた。人々は彼女の演説によって怒り、自発で軍隊を結集し、王宮へ突入し摂政王を追い払った。エカテリーナと共に残酷な法律を廃止した。\n\n最終的に、女王様とその民は、皆自由を手にした。\n\n【その三】\n町での生活は…私が過ごした、最も楽しい時間だ…\n\nだが王宮へと連れて行かれた後、最も印象深い…悪夢となった…\n\n町の皆が、色んな酷い目に遭う夢を見て…いつも夢からふっと覚める…でも夢の恐怖、苦痛は…いつも私を付き纏い…追い払えない…増して、どんどん重くなっていく…\n\nあぁ、いや…そうじゃない…本当に苦しみを齎したのは、実は私を操っていたあいつなんだ…\n\n……\n\nあははははっ、だから、ウォッカに甘酒は一番よ！大好き！ウォッカ最高！へへへ～\n\nわ、悪い奴はも、もういないよ！皆な、もう心配しなくても良いのよ！私、ゲッーー私は、私はいつも皆を守るから！皆な、どうぞ自由に生きて！法律なし！ルールなし！縛られず！全部ないない！へへへへへ～ゲッーー\n\nあははっ、自由に！自由に！乾杯！",
     "skills": null,
     "evaluation": {
-      "tierRank": null,
+      "tierRank": "T3",
       "summary": "氷の女王、全体凍結",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "PVEではまだ一定の活躍を見せることがあります。登場に奥義を発動でき、復活後も再び奥義を発動できます。星7までの育成を推奨し、URへの昇格をおすすめします。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/221/%E3%82%A8%E3%82%AB%E3%83%86%E3%83%AA%E3%83%BC%E3%83%8A.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "PVEではまだ一定の活躍を見せることがあります。登場に奥義を発動でき、復活後も再び奥義を発動できます。星7までの育成を推奨し、URへの昇格をおすすめします。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/81.html",
@@ -3828,7 +10859,16 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "えかてりーな"
+    "ruby": "えかてりーな",
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_85",
@@ -3865,7 +10905,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "敵軍弱体、絶技増加",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/85.html",
@@ -3873,7 +10919,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "えりざべす"
+    "ruby": "えりざべす",
+    "tags": []
   },
   {
     "id": "wiki_113",
@@ -3915,7 +10962,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "会心バフ、後列キラー",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/113.html",
@@ -3923,7 +10976,16 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "おきたそうじ"
+    "ruby": "おきたそうじ",
+    "tags": [
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_103",
@@ -3960,7 +11022,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "最強火力、一騎当千",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/103.html",
@@ -3968,7 +11036,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "おだのぶなが"
+    "ruby": "おだのぶなが",
+    "tags": []
   },
   {
     "id": "wiki_71",
@@ -4010,7 +11079,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T3",
       "summary": "攻撃力削減能力と死亡時の攻撃力削減。パッシブで相手のダメージを低下させ、死亡後も倒した敵にデバフを付与します。最低でも星6までの育成を推奨します。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/219/%E3%82%AB%E3%82%A8%E3%82%B5%E3%83%AB.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/219/%E3%82%AB%E3%82%A8%E3%82%B5%E3%83%AB.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "攻撃力削減能力と死亡時の攻撃力削減。パッシブで相手のダメージを低下させ、死亡後も倒した敵にデバフを付与します。最低でも星6までの育成を推奨します。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/219/%E3%82%AB%E3%82%A8%E3%82%B5%E3%83%AB.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "攻撃力削減能力と死亡時の攻撃力削減。パッシブで相手のダメージを低下させ、死亡後も倒した敵にデバフを付与します。最低でも星6までの育成を推奨します。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/71.html",
@@ -4018,7 +11110,23 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "かえさる"
+    "ruby": "かえさる",
+    "tags": [
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_76",
@@ -4060,7 +11168,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T3",
       "summary": "ダメージ増加のサポートキャラ。バフ効果は非常に強力で、奥義を発動するとバフ効果も強くなります。星7までの育成を推奨します。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/211/%E9%96%A2%E7%BE%BD.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/211/%E9%96%A2%E7%BE%BD.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "ダメージ増加のサポートキャラ。バフ効果は非常に強力で、奥義を発動するとバフ効果も強くなります。星7までの育成を推奨します。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/211/%E9%96%A2%E7%BE%BD.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "ダメージ増加のサポートキャラ。バフ効果は非常に強力で、奥義を発動するとバフ効果も強くなります。星7までの育成を推奨します。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/76.html",
@@ -4068,7 +11199,16 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "かんう"
+    "ruby": "かんう",
+    "tags": [
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_89",
@@ -4110,7 +11250,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "暴力ダメージ、超強力デバフ",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/89.html",
@@ -4118,7 +11264,23 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "くれおぱとら"
+    "ruby": "くれおぱとら",
+    "tags": [
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_93",
@@ -4160,7 +11322,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "リアルダメージ、吸血攻撃",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/93.html",
@@ -4168,7 +11336,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "こばやかわひであき"
+    "ruby": "こばやかわひであき",
+    "tags": []
   },
   {
     "id": "wiki_92",
@@ -4210,7 +11379,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "戦意回復、味方復活",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/92.html",
@@ -4218,7 +11393,23 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "こんすたんてぃのす"
+    "ruby": "こんすたんてぃのす",
+    "tags": [
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_90",
@@ -4260,7 +11451,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "戦意制御、治療剋星",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/90.html",
@@ -4268,7 +11465,16 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "さいとうきちょう"
+    "ruby": "さいとうきちょう",
+    "tags": [
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_114",
@@ -4308,7 +11514,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "弱点印記、単体制御",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/114.html",
@@ -4316,7 +11528,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "さかもとりょうま"
+    "ruby": "さかもとりょうま",
+    "tags": []
   },
   {
     "id": "wiki_104",
@@ -4353,7 +11566,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T2",
       "summary": "真田幸村は、全体攻撃を持つキャラの中でも特に優れており、仲間の戦意を回復させる能力を持っています。彼女は前衛としても一定の役割を果たします。しかし、初心者には他のURキャラの方が良い選択肢となる場合があります。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/207/%E5%B9%B8%E6%9D%91.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/207/%E5%B9%B8%E6%9D%91.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T2",
+          "comment": "真田幸村は、全体攻撃を持つキャラの中でも特に優れており、仲間の戦意を回復させる能力を持っています。彼女は前衛としても一定の役割を果たします。しかし、初心者には他のURキャラの方が良い選択肢となる場合があります。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/207/%E5%B9%B8%E6%9D%91.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T2 に選出",
+          "reason": "真田幸村は、全体攻撃を持つキャラの中でも特に優れており、仲間の戦意を回復させる能力を持っています。彼女は前衛としても一定の役割を果たします。しかし、初心者には他..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/104.html",
@@ -4361,7 +11597,23 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "さなだゆきむら"
+    "ruby": "さなだゆきむら",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_94",
@@ -4403,7 +11655,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T0",
       "summary": "URサンタは登場以来、その強いコントロール効果により、敵が行動するたびに凍結される可能性が高く、最強のコントロールキャラとして、特に趙子龍を抑え込む重要なキャラクターです。サンタは強力ですが、強力なコントロールサポートとして決着をつける力はありません。彼女の一対一の戦いは、主にHPの決算優位によって勝利します。そのため、初心者にはサンタを最初のターゲットにすることはお勧めしません。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/218/%E3%82%B5%E3%83%B3%E3%82%BF.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/218/%E3%82%B5%E3%83%B3%E3%82%BF.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T0",
+          "comment": "URサンタは登場以来、その強いコントロール効果により、敵が行動するたびに凍結される可能性が高く、最強のコントロールキャラとして、特に趙子龍を抑え込む重要なキャラクターです。サンタは強力ですが、強力なコントロールサポートとして決着をつける力はありません。彼女の一対一の戦いは、主にHPの決算優位によって勝利します。そのため、初心者にはサンタを最初のターゲットにすることはお勧めしません。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/218/%E3%82%B5%E3%83%B3%E3%82%BF.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T0 に選出",
+          "reason": "URサンタは登場以来、その強いコントロール効果により、敵が行動するたびに凍結される可能性が高く、最強のコントロールキャラとして、特に趙子龍を抑え込む重要なキャラ..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/94.html",
@@ -4411,7 +11686,23 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "さんた"
+    "ruby": "さんた",
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_97",
@@ -4453,7 +11744,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "始皇の炎、回復剋星",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/97.html",
@@ -4461,7 +11758,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "しこうてい"
+    "ruby": "しこうてい",
+    "tags": []
   },
   {
     "id": "wiki_99",
@@ -4503,7 +11801,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "戦意吸収、守護祝福",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/99.html",
@@ -4511,7 +11815,16 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "しずかごぜん"
+    "ruby": "しずかごぜん",
+    "tags": [
+      {
+        "id": "rage_drain",
+        "name": "戦意減少",
+        "icon": "🔻",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_86",
@@ -4553,7 +11866,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "業火焚天、治療剋星",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/86.html",
@@ -4561,7 +11880,16 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "しゅうゆ"
+    "ruby": "しゅうゆ",
+    "tags": [
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_82",
@@ -4598,7 +11926,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "風雨召喚、石兵八陣",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/82.html",
@@ -4606,7 +11940,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "しょかつこうめい"
+    "ruby": "しょかつこうめい",
+    "tags": []
   },
   {
     "id": "wiki_80",
@@ -4646,9 +11981,32 @@ window.GIRLWARS_DATA = [
     "story": "【その一】\nジャンヌは元々普通の村娘だったが、異界の救世主が現れて魔龍姫を退治したという噂が広まったあとに突然、自分が神の啓示を受けたと宣言した。彼女は村の人々に、自分が世界を救う聖女であり、神と大天使ミカエルの導きで世界中の悪魔を退治すると伝えたが、誰もが彼女の言葉を冗談だと思っていた。また彼女は日々、神の福音を熱心に広めていたが、あらゆる神々が身を引いた時代において、人々は彼女の言葉を真剣に受け取らなかった。それでも彼女は諦めず、自分の信念を広め続けた。彼女は、神の福音が世界の隅々まで行き渡る日が来れば、欲望から生まれる悪魔たちも消え去るだろうと信じていた。\n\n【その二】\n忙しい日々の中でも、ジャンヌはいつも時間を割いては近隣の町々に出向き、異世界の救世主が遭遇した新しい物語を聞こうとした。神の啓示、勇気、救済に関する話は何度聞いても飽きることはなく、彼女は救世主を自分の目標とし、その偉大な人物の足跡を追いかけ、世界の悪を一掃することを願っていた。彼女は、自分はあのすでに素晴らしい偉業を成し遂げて世間から賞賛されている救世主と比べると、まだまだ大きな隔たりがある思っていた。しかし、彼に関する話を聞くだけで無限の力が沸き起こり、未来に対する迷いも少なくなるのだった。\n\n【その三】\nちょっと待ってください！もしよろしければ、偉大な神についてお話しさせてください！え、男の神か、女の神か、ですか？それは…ああ、どうか行かないでください！\n\nふう…今日の漁はなかなか順調でした！この数日間でためた分と、老人ホームへ寄付した分を合わせると、ええと…計算計算…やった！救世主様の話を一つ聞くには十分です！\n\nえっ、ミカエル様に会いたいのですか？それは…ミカエル様は他人があまり好きではないのです。\n\nふふ、この間のトレーニングで力が上がったみたいです！救世主様にもっと近づけたでしょうか…？\n\n人々が神への信仰を失っていることが、心に悪魔が入り込む余地を作っています。悪魔を根絶するためには、神の福音を世界の隅々まで広める必要があるのです！",
     "skills": null,
     "evaluation": {
-      "tierRank": null,
+      "tierRank": "T3",
       "summary": "猛系支援　目標禁錮",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "先陣での攻撃力低下効果を発動させるサポートキャラ。パッシブで相手のダメージを低下させる能力を持ち、倒されても復活することができます。復活後に奥義を発動できれば、相手をコントロールできます。星7までの育成を推奨します。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/217/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%8C.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "先陣での攻撃力低下効果を発動させるサポートキャラ。パッシブで相手のダメージを低下させる能力を持ち、倒されても復活することができます。復活後に奥義を発動できれば、..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/80.html",
@@ -4656,7 +12014,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "じゃんぬだるく"
+    "ruby": "じゃんぬだるく",
+    "tags": []
   },
   {
     "id": "wiki_73",
@@ -4698,7 +12057,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "割合ダメージ、敵軍減員",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/73.html",
@@ -4706,7 +12071,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "じんぎすかん"
+    "ruby": "じんぎすかん",
+    "tags": []
   },
   {
     "id": "wiki_63",
@@ -4743,7 +12109,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "竜殺し、黒竜衝撃",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/63.html",
@@ -4751,7 +12123,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "じーくふりーと"
+    "ruby": "じーくふりーと",
+    "tags": []
   },
   {
     "id": "wiki_70",
@@ -4793,7 +12166,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "金剛不動、堅城鉄壁",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/70.html",
@@ -4801,7 +12180,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "たいらのきよもり"
+    "ruby": "たいらのきよもり",
+    "tags": []
   },
   {
     "id": "wiki_64",
@@ -4838,7 +12218,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "甲斐の虎、難攻不落",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/64.html",
@@ -4846,7 +12232,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "たけだしんげん"
+    "ruby": "たけだしんげん",
+    "tags": []
   },
   {
     "id": "wiki_98",
@@ -4888,7 +12275,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "天才策士、攻防兼備",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/98.html",
@@ -4896,7 +12289,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "たけなかはんべえ"
+    "ruby": "たけなかはんべえ",
+    "tags": []
   },
   {
     "id": "wiki_108",
@@ -4938,7 +12332,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T2",
       "summary": "伊達政宗は強力な性能を持ち、特に低レベルの戦闘では圧倒的な力を発揮します。しかし、彼女には後衛の位置を奪われやすいなどの致命的な欠点があります。初心者には低レベルの戦闘での使用を推奨しますが、過度に依存しないよう注意が必要です。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/204/%E6%94%BF%E5%AE%97.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/204/%E6%94%BF%E5%AE%97.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T2",
+          "comment": "伊達政宗は強力な性能を持ち、特に低レベルの戦闘では圧倒的な力を発揮します。しかし、彼女には後衛の位置を奪われやすいなどの致命的な欠点があります。初心者には低レベルの戦闘での使用を推奨しますが、過度に依存しないよう注意が必要です。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/204/%E6%94%BF%E5%AE%97.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T2 に選出",
+          "reason": "伊達政宗は強力な性能を持ち、特に低レベルの戦闘では圧倒的な力を発揮します。しかし、彼女には後衛の位置を奪われやすいなどの致命的な欠点があります。初心者には低レベ..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/108.html",
@@ -4946,7 +12363,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "だてまさむね"
+    "ruby": "だてまさむね",
+    "tags": []
   },
   {
     "id": "wiki_106",
@@ -4983,7 +12401,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T3",
       "summary": "サンタの登場以降、その強さを失い、現在はPVEでしか役立たないキャラとなっています。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/199/%E8%B6%99%E5%AD%90%E9%BE%8D.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/199/%E8%B6%99%E5%AD%90%E9%BE%8D.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "サンタの登場以降、その強さを失い、現在はPVEでしか役立たないキャラとなっています。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/199/%E8%B6%99%E5%AD%90%E9%BE%8D.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "サンタの登場以降、その強さを失い、現在はPVEでしか役立たないキャラとなっています。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/106.html",
@@ -4991,7 +12432,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "ちょうしりゅう"
+    "ruby": "ちょうしりゅう",
+    "tags": []
   },
   {
     "id": "wiki_95",
@@ -5033,7 +12475,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T3",
       "summary": "星６のパッシブで強い生存能力を持ち、PVEで活躍中。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/200/%E8%B2%82%E8%9D%89.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/200/%E8%B2%82%E8%9D%89.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "星６のパッシブで強い生存能力を持ち、PVEで活躍中。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/200/%E8%B2%82%E8%9D%89.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "星６のパッシブで強い生存能力を持ち、PVEで活躍中。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/95.html",
@@ -5041,7 +12506,23 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "ちょうせん"
+    "ruby": "ちょうせん",
+    "tags": [
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_119",
@@ -5083,7 +12564,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "戦意強襲、奥義反撃",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/119.html",
@@ -5091,7 +12578,16 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "ちょうひ"
+    "ruby": "ちょうひ",
+    "tags": [
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_67",
@@ -5128,7 +12624,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "制御抵抗、不滅之身",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/67.html",
@@ -5136,7 +12638,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "とくがわいえやす"
+    "ruby": "とくがわいえやす",
+    "tags": []
   },
   {
     "id": "wiki_74",
@@ -5178,7 +12681,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "暴力型タンク、確率瞬殺",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/74.html",
@@ -5186,7 +12695,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "とよとみひでよし"
+    "ruby": "とよとみひでよし",
+    "tags": []
   },
   {
     "id": "wiki_84",
@@ -5223,7 +12733,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "会心デバフ、デバフ解除",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/84.html",
@@ -5231,7 +12747,30 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "なぽれおん"
+    "ruby": "なぽれおん",
+    "tags": [
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_35",
@@ -5268,7 +12807,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T3",
       "summary": "メインストーリーで星7まで育成できます。奥義は敵全体の防御力と会心強度耐性を下げ、味方後衛に20%の増傷バフをつけます。欠点は、奥義が二段構成であり、サンタに凍結されやすい点です。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/225/%E5%AF%A7%E3%80%85.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/225/%E5%AF%A7%E3%80%85.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "メインストーリーで星7まで育成できます。奥義は敵全体の防御力と会心強度耐性を下げ、味方後衛に20%の増傷バフをつけます。欠点は、奥義が二段構成であり、サンタに凍結されやすい点です。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/225/%E5%AF%A7%E3%80%85.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "メインストーリーで星7まで育成できます。奥義は敵全体の防御力と会心強度耐性を下げ、味方後衛に20%の増傷バフをつけます。欠点は、奥義が二段構成であり、サンタに凍..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/35.html",
@@ -5276,7 +12838,30 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "ねね"
+    "ruby": "ねね",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_111",
@@ -5318,7 +12903,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "連続キル、無限奥義",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/111.html",
@@ -5326,7 +12917,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "はっとりはんぞう"
+    "ruby": "はっとりはんぞう",
+    "tags": []
   },
   {
     "id": "wiki_66",
@@ -5362,7 +12954,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "噴霧攻撃、鉄血宰相",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/66.html",
@@ -5370,7 +12968,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "びすまるく"
+    "ruby": "びすまるく",
+    "tags": []
   },
   {
     "id": "wiki_79",
@@ -5412,7 +13011,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T3",
       "summary": "復活能力を持つサポートキャラ。倒した敵にデバフを付与でき、復活後も再度奥義を発動できます。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/215/%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B1%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/215/%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B1%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "復活能力を持つサポートキャラ。倒した敵にデバフを付与でき、復活後も再度奥義を発動できます。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/215/%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B1%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "復活能力を持つサポートキャラ。倒した敵にデバフを付与でき、復活後も再度奥義を発動できます。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/79.html",
@@ -5420,7 +13042,37 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "ふらんけんしゅたいん"
+    "ruby": "ふらんけんしゅたいん",
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_105",
@@ -5457,7 +13109,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "全軍突撃、ローマ皇帝",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/105.html",
@@ -5465,7 +13123,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "ふりーどりひ"
+    "ruby": "ふりーどりひ",
+    "tags": []
   },
   {
     "id": "wiki_78",
@@ -5507,7 +13166,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "目標弱化、強靭不死",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/78.html",
@@ -5515,7 +13180,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "べおうるふ"
+    "ruby": "べおうるふ",
+    "tags": []
   },
   {
     "id": "wiki_107",
@@ -5552,7 +13218,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "花実兼備、底力無双",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/107.html",
@@ -5560,7 +13232,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "ほんだただかつ"
+    "ruby": "ほんだただかつ",
+    "tags": []
   },
   {
     "id": "wiki_88",
@@ -5602,7 +13275,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T1",
       "summary": "以前は治療の存在があまり重要視されていませんでしたが、URマーリンの登場により、その価値が証明されました。マーリンの回復力は驚異的で、高レベルの戦闘では数十億の回復量を誇ります。彼女が生きている限り、どんな状況でも戦いを有利に進めることができます。そのため、マーリンは後衛の位置を巴御前と共に確保しています。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/213/%E3%83%9E%E3%83%BC%E3%83%AA%E3%83%B3.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/213/%E3%83%9E%E3%83%BC%E3%83%AA%E3%83%B3.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T1",
+          "comment": "以前は治療の存在があまり重要視されていませんでしたが、URマーリンの登場により、その価値が証明されました。マーリンの回復力は驚異的で、高レベルの戦闘では数十億の回復量を誇ります。彼女が生きている限り、どんな状況でも戦いを有利に進めることができます。そのため、マーリンは後衛の位置を巴御前と共に確保しています。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/213/%E3%83%9E%E3%83%BC%E3%83%AA%E3%83%B3.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T1 に選出",
+          "reason": "以前は治療の存在があまり重要視されていませんでしたが、URマーリンの登場により、その価値が証明されました。マーリンの回復力は驚異的で、高レベルの戦闘では数十億の..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/88.html",
@@ -5610,7 +13306,30 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "まーりん"
+    "ruby": "まーりん",
+    "tags": [
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_87",
@@ -5647,7 +13366,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "チーム中核、後列減傷",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/87.html",
@@ -5655,7 +13380,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "みなもとのよしつね"
+    "ruby": "みなもとのよしつね",
+    "tags": []
   },
   {
     "id": "wiki_117",
@@ -5698,7 +13424,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "二天一流、豪剣の瑕",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/117.html",
@@ -5706,7 +13438,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "みやもとむさし"
+    "ruby": "みやもとむさし",
+    "tags": []
   },
   {
     "id": "wiki_100",
@@ -5748,7 +13481,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "新星エネ、単体強攻",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/100.html",
@@ -5756,7 +13495,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "めでぃあ"
+    "ruby": "めでぃあ",
+    "tags": []
   },
   {
     "id": "wiki_65",
@@ -5792,7 +13532,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "ダメ反射回復、戦意制御",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/65.html",
@@ -5800,7 +13546,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "もうりもとなり"
+    "ruby": "もうりもとなり",
+    "tags": []
   },
   {
     "id": "wiki_68",
@@ -5842,7 +13589,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "チーム中核、前列強化",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/68.html",
@@ -5850,7 +13603,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "もーどれっど"
+    "ruby": "もーどれっど",
+    "tags": []
   },
   {
     "id": "wiki_75",
@@ -5892,7 +13646,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "強力斬殺、無双武神",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/75.html",
@@ -5900,7 +13660,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "りょふ"
+    "ruby": "りょふ",
+    "tags": []
   },
   {
     "id": "wiki_112",
@@ -5938,7 +13699,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "強力制御、冷酷追撃",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/112.html",
@@ -5946,7 +13713,16 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "れおにだすいっせい"
+    "ruby": "れおにだすいっせい",
+    "tags": [
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_83",
@@ -5983,7 +13759,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "越後の龍、戦意制御",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/83.html",
@@ -5991,7 +13773,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": ""
+    "ruby": "",
+    "tags": []
   },
   {
     "id": "wiki_77",
@@ -6033,7 +13816,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "影の鎧、鉄壁反撃",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/77.html",
@@ -6041,7 +13830,16 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": ""
+    "ruby": "",
+    "tags": [
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_102",
@@ -6078,7 +13876,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "敵軍弱体、絶技増加",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/102.html",
@@ -6086,7 +13890,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": ""
+    "ruby": "",
+    "tags": []
   },
   {
     "id": "wiki_118",
@@ -6128,7 +13933,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "終盤王者、覇道底力",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/118.html",
@@ -6136,7 +13947,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": ""
+    "ruby": "",
+    "tags": []
   },
   {
     "id": "wiki_110",
@@ -6178,7 +13990,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "全面壓制、天佛之印",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/110.html",
@@ -6186,7 +14004,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": ""
+    "ruby": "",
+    "tags": []
   },
   {
     "id": "wiki_116",
@@ -6228,7 +14047,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T3",
       "summary": "バフとコントロール解除のサポートキャラ（星７推奨）。奥義を発動すると後衛の攻撃力を増加させます。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/205/%E5%AE%97%E8%8C%82.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/205/%E5%AE%97%E8%8C%82.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "バフとコントロール解除のサポートキャラ（星７推奨）。奥義を発動すると後衛の攻撃力を増加させます。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/205/%E5%AE%97%E8%8C%82.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "バフとコントロール解除のサポートキャラ（星７推奨）。奥義を発動すると後衛の攻撃力を増加させます。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/116.html",
@@ -6236,7 +14078,23 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": ""
+    "ruby": "",
+    "tags": [
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_109",
@@ -6278,7 +14136,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T3",
       "summary": "隊長技で、後衛を攻撃した際に相手を麻痺できるバフをつけます。特に趙子龍に対して有効です。星6までの育成を推奨し、曹操より前に配置して隊長技を発動させましょう。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/224/%E8%AA%BE%E5%8D%83%E4%BB%A3.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/224/%E8%AA%BE%E5%8D%83%E4%BB%A3.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "隊長技で、後衛を攻撃した際に相手を麻痺できるバフをつけます。特に趙子龍に対して有効です。星6までの育成を推奨し、曹操より前に配置して隊長技を発動させましょう。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/224/%E8%AA%BE%E5%8D%83%E4%BB%A3.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "隊長技で、後衛を攻撃した際に相手を麻痺できるバフをつけます。特に趙子龍に対して有効です。星6までの育成を推奨し、曹操より前に配置して隊長技を発動させましょう。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/109.html",
@@ -6286,7 +14167,23 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": ""
+    "ruby": "",
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_69",
@@ -6328,7 +14225,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "雷神降誕、群制御",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/69.html",
@@ -6336,7 +14239,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": ""
+    "ruby": "",
+    "tags": []
   },
   {
     "id": "wiki_41",
@@ -6374,7 +14278,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "PVEではまだ一定の活躍を見せることがあります。登場に奥義を発動でき、復活後も再び奥義を発動できます。星7までの育成を推奨し、URへの昇格をおすすめします。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/221/%E3%82%A8%E3%82%AB%E3%83%86%E3%83%AA%E3%83%BC%E3%83%8A.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "PVEではまだ一定の活躍を見せることがあります。登場に奥義を発動でき、復活後も再び奥義を発動できます。星7までの育成を推奨し、URへの昇格をおすすめします。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/41.html",
@@ -6382,7 +14309,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "えかてりーな"
+    "ruby": "えかてりーな",
+    "tags": []
   },
   {
     "id": "wiki_62",
@@ -6425,7 +14353,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/62.html",
@@ -6433,7 +14367,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "おだのぶなが"
+    "ruby": "おだのぶなが",
+    "tags": []
   },
   {
     "id": "wiki_55",
@@ -6473,7 +14408,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T3",
       "summary": "攻撃力削減能力と死亡時の攻撃力削減。パッシブで相手のダメージを低下させ、死亡後も倒した敵にデバフを付与します。最低でも星6までの育成を推奨します。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/219/%E3%82%AB%E3%82%A8%E3%82%B5%E3%83%AB.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/219/%E3%82%AB%E3%82%A8%E3%82%B5%E3%83%AB.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "攻撃力削減能力と死亡時の攻撃力削減。パッシブで相手のダメージを低下させ、死亡後も倒した敵にデバフを付与します。最低でも星6までの育成を推奨します。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/219/%E3%82%AB%E3%82%A8%E3%82%B5%E3%83%AB.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "攻撃力削減能力と死亡時の攻撃力削減。パッシブで相手のダメージを低下させ、死亡後も倒した敵にデバフを付与します。最低でも星6までの育成を推奨します。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/55.html",
@@ -6481,7 +14439,23 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "かえさる"
+    "ruby": "かえさる",
+    "tags": [
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_101",
@@ -6521,7 +14495,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T3",
       "summary": "ダメージ増加のサポートキャラ。バフ効果は非常に強力で、奥義を発動するとバフ効果も強くなります。星7までの育成を推奨します。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/211/%E9%96%A2%E7%BE%BD.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/211/%E9%96%A2%E7%BE%BD.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "ダメージ増加のサポートキャラ。バフ効果は非常に強力で、奥義を発動するとバフ効果も強くなります。星7までの育成を推奨します。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/211/%E9%96%A2%E7%BE%BD.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "ダメージ増加のサポートキャラ。バフ効果は非常に強力で、奥義を発動するとバフ効果も強くなります。星7までの育成を推奨します。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/101.html",
@@ -6529,7 +14526,16 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "かんう"
+    "ruby": "かんう",
+    "tags": [
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_44",
@@ -6568,7 +14574,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/44.html",
@@ -6576,7 +14588,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "こばやかわひであき"
+    "ruby": "こばやかわひであき",
+    "tags": []
   },
   {
     "id": "wiki_54",
@@ -6616,7 +14629,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/54.html",
@@ -6624,7 +14643,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "こんすたんてぃのす"
+    "ruby": "こんすたんてぃのす",
+    "tags": []
   },
   {
     "id": "wiki_48",
@@ -6668,7 +14688,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/48.html",
@@ -6676,7 +14702,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "さいとうきちょう"
+    "ruby": "さいとうきちょう",
+    "tags": []
   },
   {
     "id": "wiki_38",
@@ -6717,7 +14744,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T2",
       "summary": "真田幸村は、全体攻撃を持つキャラの中でも特に優れており、仲間の戦意を回復させる能力を持っています。彼女は前衛としても一定の役割を果たします。しかし、初心者には他のURキャラの方が良い選択肢となる場合があります。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/207/%E5%B9%B8%E6%9D%91.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/207/%E5%B9%B8%E6%9D%91.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T2",
+          "comment": "真田幸村は、全体攻撃を持つキャラの中でも特に優れており、仲間の戦意を回復させる能力を持っています。彼女は前衛としても一定の役割を果たします。しかし、初心者には他のURキャラの方が良い選択肢となる場合があります。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/207/%E5%B9%B8%E6%9D%91.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T2 に選出",
+          "reason": "真田幸村は、全体攻撃を持つキャラの中でも特に優れており、仲間の戦意を回復させる能力を持っています。彼女は前衛としても一定の役割を果たします。しかし、初心者には他..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/38.html",
@@ -6725,7 +14775,23 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "さなだゆきむら"
+    "ruby": "さなだゆきむら",
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "rage_gain",
+        "name": "戦意回復",
+        "icon": "⚡",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_43",
@@ -6764,7 +14830,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T0",
       "summary": "URサンタは登場以来、その強いコントロール効果により、敵が行動するたびに凍結される可能性が高く、最強のコントロールキャラとして、特に趙子龍を抑え込む重要なキャラクターです。サンタは強力ですが、強力なコントロールサポートとして決着をつける力はありません。彼女の一対一の戦いは、主にHPの決算優位によって勝利します。そのため、初心者にはサンタを最初のターゲットにすることはお勧めしません。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/218/%E3%82%B5%E3%83%B3%E3%82%BF.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/218/%E3%82%B5%E3%83%B3%E3%82%BF.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T0",
+          "comment": "URサンタは登場以来、その強いコントロール効果により、敵が行動するたびに凍結される可能性が高く、最強のコントロールキャラとして、特に趙子龍を抑え込む重要なキャラクターです。サンタは強力ですが、強力なコントロールサポートとして決着をつける力はありません。彼女の一対一の戦いは、主にHPの決算優位によって勝利します。そのため、初心者にはサンタを最初のターゲットにすることはお勧めしません。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/218/%E3%82%B5%E3%83%B3%E3%82%BF.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T0 に選出",
+          "reason": "URサンタは登場以来、その強いコントロール効果により、敵が行動するたびに凍結される可能性が高く、最強のコントロールキャラとして、特に趙子龍を抑え込む重要なキャラ..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/43.html",
@@ -6772,7 +14861,16 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "さんた"
+    "ruby": "さんた",
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_60",
@@ -6809,7 +14907,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/60.html",
@@ -6817,7 +14921,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "しゅうゆ"
+    "ruby": "しゅうゆ",
+    "tags": []
   },
   {
     "id": "wiki_36",
@@ -6866,7 +14971,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/36.html",
@@ -6874,7 +14985,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "しょかつこうめい"
+    "ruby": "しょかつこうめい",
+    "tags": []
   },
   {
     "id": "wiki_46",
@@ -6915,7 +15027,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/46.html",
@@ -6923,7 +15041,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "じーくふりーと"
+    "ruby": "じーくふりーと",
+    "tags": []
   },
   {
     "id": "wiki_47",
@@ -6963,7 +15082,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/47.html",
@@ -6971,7 +15096,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "たいらのきよもり"
+    "ruby": "たいらのきよもり",
+    "tags": []
   },
   {
     "id": "wiki_39",
@@ -7008,7 +15134,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T3",
       "summary": "サンタの登場以降、その強さを失い、現在はPVEでしか役立たないキャラとなっています。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/199/%E8%B6%99%E5%AD%90%E9%BE%8D.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/199/%E8%B6%99%E5%AD%90%E9%BE%8D.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "サンタの登場以降、その強さを失い、現在はPVEでしか役立たないキャラとなっています。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/199/%E8%B6%99%E5%AD%90%E9%BE%8D.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "サンタの登場以降、その強さを失い、現在はPVEでしか役立たないキャラとなっています。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/39.html",
@@ -7016,7 +15165,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "ちょうしりゅう"
+    "ruby": "ちょうしりゅう",
+    "tags": []
   },
   {
     "id": "wiki_58",
@@ -7055,7 +15205,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/58.html",
@@ -7063,7 +15219,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "とくがわいえやす"
+    "ruby": "とくがわいえやす",
+    "tags": []
   },
   {
     "id": "wiki_57",
@@ -7106,7 +15263,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/57.html",
@@ -7114,7 +15277,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "はっとりはんぞう"
+    "ruby": "はっとりはんぞう",
+    "tags": []
   },
   {
     "id": "wiki_59",
@@ -7141,7 +15305,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/59.html",
@@ -7149,7 +15319,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "ほんだただかつ"
+    "ruby": "ほんだただかつ",
+    "tags": []
   },
   {
     "id": "wiki_50",
@@ -7186,7 +15357,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T1",
       "summary": "以前は治療の存在があまり重要視されていませんでしたが、URマーリンの登場により、その価値が証明されました。マーリンの回復力は驚異的で、高レベルの戦闘では数十億の回復量を誇ります。彼女が生きている限り、どんな状況でも戦いを有利に進めることができます。そのため、マーリンは後衛の位置を巴御前と共に確保しています。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/213/%E3%83%9E%E3%83%BC%E3%83%AA%E3%83%B3.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/213/%E3%83%9E%E3%83%BC%E3%83%AA%E3%83%B3.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T1",
+          "comment": "以前は治療の存在があまり重要視されていませんでしたが、URマーリンの登場により、その価値が証明されました。マーリンの回復力は驚異的で、高レベルの戦闘では数十億の回復量を誇ります。彼女が生きている限り、どんな状況でも戦いを有利に進めることができます。そのため、マーリンは後衛の位置を巴御前と共に確保しています。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/213/%E3%83%9E%E3%83%BC%E3%83%AA%E3%83%B3.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T1 に選出",
+          "reason": "以前は治療の存在があまり重要視されていませんでしたが、URマーリンの登場により、その価値が証明されました。マーリンの回復力は驚異的で、高レベルの戦闘では数十億の..."
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/50.html",
@@ -7194,7 +15388,16 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "まーりん"
+    "ruby": "まーりん",
+    "tags": [
+      {
+        "id": "team_heal",
+        "name": "味方回復",
+        "icon": "🌿",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   },
   {
     "id": "wiki_40",
@@ -7238,7 +15441,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/40.html",
@@ -7246,7 +15455,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "みなもとのよしつね"
+    "ruby": "みなもとのよしつね",
+    "tags": []
   },
   {
     "id": "wiki_51",
@@ -7286,7 +15496,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/51.html",
@@ -7294,7 +15510,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": "もうりもとなり"
+    "ruby": "もうりもとなり",
+    "tags": []
   },
   {
     "id": "wiki_42",
@@ -7332,7 +15549,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/42.html",
@@ -7340,7 +15563,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": ""
+    "ruby": "",
+    "tags": []
   },
   {
     "id": "wiki_45",
@@ -7381,7 +15605,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/45.html",
@@ -7389,7 +15619,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": ""
+    "ruby": "",
+    "tags": []
   },
   {
     "id": "wiki_49",
@@ -7428,7 +15659,13 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "",
-      "iconUrl": null
+      "iconUrl": null,
+      "sources": {},
+      "flags": {
+        "onlyOutdated2024": false,
+        "hasMultiSources": false
+      },
+      "history": []
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/49.html",
@@ -7436,7 +15673,8 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": ""
+    "ruby": "",
+    "tags": []
   },
   {
     "id": "wiki_53",
@@ -7477,7 +15715,30 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T3",
       "summary": "隊長技で、後衛を攻撃した際に相手を麻痺できるバフをつけます。特に趙子龍に対して有効です。星6までの育成を推奨し、曹操より前に配置して隊長技を発動させましょう。",
-      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/224/%E8%AA%BE%E5%8D%83%E4%BB%A3.png"
+      "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/224/%E8%AA%BE%E5%8D%83%E4%BB%A3.png",
+      "sources": {
+        "atwiki": {
+          "sourceName": "少女ウォーズ@wiki Tier表",
+          "date": "2024-08-15",
+          "url": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "tier": "T3",
+          "comment": "隊長技で、後衛を攻撃した際に相手を麻痺できるバフをつけます。特に趙子龍に対して有効です。星6までの育成を推奨し、曹操より前に配置して隊長技を発動させましょう。",
+          "iconUrl": "https://img.atwiki.jp/girlwars/attach/135/224/%E8%AA%BE%E5%8D%83%E4%BB%A3.png"
+        }
+      },
+      "flags": {
+        "onlyOutdated2024": true,
+        "hasMultiSources": false
+      },
+      "history": [
+        {
+          "date": "2024-08-15",
+          "sourceName": "少女ウォーズ@wiki",
+          "sourceUrl": "https://w.atwiki.jp/girlwars/pages/135.html",
+          "change": "2024年PVP環境Tier T3 に選出",
+          "reason": "隊長技で、後衛を攻撃した際に相手を麻痺できるバフをつけます。特に趙子龍に対して有効です。星6までの育成を推奨し、曹操より前に配置して隊長技を発動させましょう。"
+        }
+      ]
     },
     "sourceInfo": {
       "primaryUrl": "https://w.atwiki.jp/girlwars/pages/53.html",
@@ -7485,6 +15746,22 @@ window.GIRLWARS_DATA = [
       "updatedAt": "2024-08-15",
       "isOutdated": true
     },
-    "ruby": ""
+    "ruby": "",
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ]
   }
 ];

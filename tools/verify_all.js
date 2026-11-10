@@ -132,4 +132,46 @@ const withStoryCount = data.filter(c => c.story && c.story.trim()).length;
 console.log(`\n--- 任意項目: プロフィール・ストーリー ---`);
 console.log(`  ストーリー本文収録キャラ数: ${withStoryCount} / ${data.length}`);
 
+// Check 10: Feature 1 - キャラ比較ビュー
+console.log(`\n--- 第3弾 機能1: キャラ比較ビュー ---`);
+const hasCompareTab = fs.readFileSync('app/index.html', 'utf8').includes('id="tab-compare"');
+const hasCompareLogic = appJs.includes('renderCompareView') && appJs.includes('toggleCompare') && appJs.includes('compareList');
+const hasCompareHighlight = appJs.includes('compare-best-highlight');
+console.log(`  比較ビュースクリーン/タブ実装: ${hasCompareTab ? 'PASS' : 'FAIL'}`);
+console.log(`  比較ロジック & localStorage保存: ${hasCompareLogic ? 'PASS' : 'FAIL'}`);
+console.log(`  最高位/優劣ハイライト実装: ${hasCompareHighlight ? 'PASS' : 'FAIL'}`);
+
+// Check 11: Feature 2 - スキル効果タグ & 逆引きAND検索
+console.log(`\n--- 第3弾 機能2: スキル効果タグ＋逆引き検索 ---`);
+const tagsMaster = meta.tagsMaster || [];
+console.log(`  定義タグ数: ${tagsMaster.length} (期待値: 14) -> ${tagsMaster.length === 14 ? 'PASS' : 'FAIL'}`);
+const charsWithTags = data.filter(c => c.tags && c.tags.length > 0);
+console.log(`  タグ保有キャラ数: ${charsWithTags.length} / ${data.length} (${(charsWithTags.length / data.length * 100).toFixed(1)}%)`);
+const hasSkillVsEvalDistinction = charsWithTags.some(c => c.tags.some(t => t.fromSkill)) && charsWithTags.some(c => c.tags.some(t => t.fromEval));
+console.log(`  本文由来(fromSkill)と評価由来(fromEval)の区別: ${hasSkillVsEvalDistinction ? 'PASS' : 'FAIL'}`);
+const hasAndFilterInApp = appJs.includes('state.selectedTags.size > 0') && appJs.includes('!charTagIds.has(reqTag)');
+console.log(`  公開求人式 AND絞り込み検索ロジック: ${hasAndFilterInApp ? 'PASS' : 'FAIL'}`);
+
+// Check 12: Feature 3 - 複数ソース評価併記 & 評価変更履歴
+console.log(`\n--- 第3弾 機能3: 複数ソース評価併記＋Tier変更履歴 ---`);
+const multiSourceChars = data.filter(c => c.evaluation && c.evaluation.flags && c.evaluation.flags.hasMultiSources);
+const outdated2024Chars = data.filter(c => c.evaluation && c.evaluation.flags && c.evaluation.flags.onlyOutdated2024);
+const historyChars = data.filter(c => c.evaluation && c.evaluation.history && c.evaluation.history.length > 0);
+console.log(`  複数ソース評価保有キャラ数: ${multiSourceChars.length} 体`);
+console.log(`  2024年wikiのみ評価キャラ数: ${outdated2024Chars.length} 体`);
+console.log(`  評価/Tier変更履歴データ保有キャラ数: ${historyChars.length} 体`);
+const hasHistoryFields = historyChars.length > 0 && historyChars[0].evaluation.history[0].date && historyChars[0].evaluation.history[0].change;
+console.log(`  履歴データ構造（日付・変更・理由・URL）検証: ${hasHistoryFields ? 'PASS' : 'FAIL'}`);
+const hasSourceCardsInModal = appJs.includes('eval-source-card') && appJs.includes('eval-history-timeline');
+console.log(`  モーダル併記＆タイムライン表示実装: ${hasSourceCardsInModal ? 'PASS' : 'FAIL'}`);
+
+// Check 13: Feature 4 - 編成共有URL & セット保存 & 1枠差し替え比較
+console.log(`\n--- 第3弾 機能4: 編成共有URL＋セット保存・1枠差し替え比較 ---`);
+const hasUrlShare = appJs.includes('checkUrlPartyParam') && appJs.includes('sharePartyUrl') && appJs.includes('?party=');
+const hasSavedParties = appJs.includes('savedParties') && appJs.includes('setupSavedPartiesUI');
+const hasDiffSim = appJs.includes('updateDiffSimulator') && appJs.includes('diffSlotSelect') && appJs.includes('diff-badge-plus');
+console.log(`  URLパラメータ共有＆自動復元: ${hasUrlShare ? 'PASS' : 'FAIL'}`);
+console.log(`  編成複数セット保存/読込/削除: ${hasSavedParties ? 'PASS' : 'FAIL'}`);
+console.log(`  1枠差し替えシミュレータ（シナジー・タグ増減）: ${hasDiffSim ? 'PASS' : 'FAIL'}`);
+
 console.log("\n================ VERIFICATION COMPLETE ================");

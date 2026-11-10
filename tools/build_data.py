@@ -95,6 +95,145 @@ RUBY_MAP = {
     'ローラン': 'ろーらん',
 }
 
+TAG_DEFINITIONS = [
+    {'id': 'aoe', 'name': '全体攻撃', 'icon': '💥', 'desc': '敵全体または全員への範囲ダメージ', 'pattern': r'全体攻撃|敵全体|すべての敵|敵全員'},
+    {'id': 'control', 'name': '行動不能付与', 'icon': '❄️', 'desc': '眩暈、凍結、沈黙、石化、麻痺等の行動制限', 'pattern': r'行動不能|眩暈|凍結|石化|麻痺|沈黙|封印|足止め'},
+    {'id': 'rage_gain', 'name': '戦意回復', 'icon': '⚡', 'desc': '自身または味方の戦意（ゲージ）回復・獲得', 'pattern': r'戦意.*?(?:回復|獲得|アップ|上昇|\+\s*\d+|満タン)'},
+    {'id': 'rage_drain', 'name': '戦意減少', 'icon': '🔻', 'desc': '敵の戦意減少、低下、吸収効果', 'pattern': r'戦意.*?(?:減少|低下|吸収|削|ダウン|減らす)'},
+    {'id': 'revive', 'name': '復活/死亡回避', 'icon': '🕊️', 'desc': '致死ダメージ無効化、死亡回避、HP復活', 'pattern': r'復活|致死.*?死亡せず|致命.*?回避|一回死亡を回避|致死.*?耐え|死亡回避'},
+    {'id': 'self_heal', 'name': '自己回復', 'icon': '💖', 'desc': '自身のHP回復、持続リジェネ', 'pattern': r'自身.*?HP.*?回復|HP.*?回復.*?自身|自身のHPを|HPを持続回復'},
+    {'id': 'team_heal', 'name': '味方回復', 'icon': '🌿', 'desc': '味方全体または周囲の味方HP治療', 'pattern': r'味方.*?HP.*?回復|周囲の味方.*?回復|全体のHP.*?回復|治療|味方のHP'},
+    {'id': 'dmg_share', 'name': '被ダメ分配', 'icon': '🛡️', 'desc': '味方の被ダメージ分担、肩代わり', 'pattern': r'ダメ分担|被ダメージの分配|ダメージ.*?分担|ダメージ.*?分配|肩代わり'},
+    {'id': 'debuff', 'name': 'デバフ付与', 'icon': '💀', 'desc': '敵への烙印、重傷、禁療、黒血侵食、防御低下等', 'pattern': r'デバフ|烙印|重傷|禁療|黒血侵食|呪い|減傷.*?低下|脆弱|防御力.*?低下'},
+    {'id': 'cleanse', 'name': 'デバフ解除/免疫', 'icon': '✨', 'desc': '弱体・行動不能効果の解除または免疫', 'pattern': r'デバフ.*?解除|デバフ.*?免疫|コントロール.*?解除|状態異常.*?無効|免疫'},
+    {'id': 'counter', 'name': '追撃/反撃', 'icon': '⚔️', 'desc': '敵の行動時や被弾時の自動反撃・追撃', 'pattern': r'追撃|反撃|カウンター'},
+    {'id': 'anti_followup', 'name': '追撃阻止', 'icon': '🛑', 'desc': '敵の追撃行動を高確率で阻止・中断', 'pattern': r'追撃.*?阻止|追撃.*?防'},
+    {'id': 'ignore_def', 'name': '防御無視/貫通', 'icon': '🎯', 'desc': '敵の防御力またはダメージ軽減の無視・貫通', 'pattern': r'防御.*?無視|減傷.*?無視|防御無視|軽減無視'},
+    {'id': 'buff', 'name': 'バフ付与/自己強化', 'icon': '⭐', 'desc': '攻撃力、会心、増傷等の味方または自己強化', 'pattern': r'攻撃力.*?(?:上昇|アップ|増加)|会心.*?(?:上昇|アップ)|与ダメ.*?(?:上昇|アップ)|増傷.*?(?:上昇|アップ)|バフ'}
+]
+
+def extract_char_tags(c):
+    skill_text_parts = []
+    if c.get('skills'):
+        for k in ['normal', 'passive', 'ultimate']:
+            sk = c['skills'].get(k)
+            if sk and isinstance(sk, dict) and sk.get('text'):
+                skill_text_parts.append(sk['text'])
+        if c['skills'].get('evolution'):
+            for ek in ['fire', 'ice']:
+                for evo in c['skills']['evolution'].get(ek, []):
+                    skill_text_parts.append(evo)
+    skill_full_text = "\n".join(skill_text_parts)
+
+    eval_text_parts = []
+    if c.get('evaluation'):
+        if c['evaluation'].get('summary'):
+            eval_text_parts.append(c['evaluation']['summary'])
+        for b in c['evaluation'].get('summaryBullets', []):
+            eval_text_parts.append(b)
+    if c.get('role'):
+        eval_text_parts.append(c['role'])
+    eval_full_text = "\n".join(eval_text_parts)
+
+    tags = []
+    for r in TAG_DEFINITIONS:
+        m_skill = re.search(r['pattern'], skill_full_text)
+        m_eval = re.search(r['pattern'], eval_full_text)
+        if m_skill or m_eval:
+            tags.append({
+                'id': r['id'],
+                'name': r['name'],
+                'icon': r['icon'],
+                'fromSkill': bool(m_skill),
+                'fromEval': bool(m_eval and not m_skill)
+            })
+    return tags
+
+def enrich_evaluation_sources(c, tier_table, kokomato_info=None):
+    eval_obj = c.setdefault('evaluation', {})
+    name = c['name']
+    
+    # 1. Atwiki Tier evaluation
+    norm_name = {'エカテリーナ': 'エカチェリーナ', 'ジャンヌ・ダルク': 'ジャンヌ'}.get(name, name)
+    tier_entry = tier_table.get(norm_name) or tier_table.get(name)
+    
+    atwiki_source = None
+    if tier_entry:
+        atwiki_source = {
+            'sourceName': '少女ウォーズ@wiki Tier表',
+            'date': '2024-08-15',
+            'url': 'https://w.atwiki.jp/girlwars/pages/135.html',
+            'tier': tier_entry.get('tier'),
+            'comment': tier_entry.get('comment', ''),
+            'iconUrl': tier_entry.get('iconUrl')
+        }
+        # If character doesn't have tierRank yet, set from atwiki tier
+        if not eval_obj.get('tierRank') and c.get('rarity') in ['UR', 'SSR']:
+            eval_obj['tierRank'] = tier_entry.get('tier')
+
+    # 2. Rimuru evaluation
+    rimuru_source = None
+    if c.get('sourceInfo', {}).get('sourceName') == 'へたれゲームプレイヤーリムルの日記と攻略情報':
+        rimuru_source = {
+            'sourceName': 'へたれゲームプレイヤーリムルの日記と攻略情報',
+            'date': c['sourceInfo'].get('updatedAt', '2026-11-05'),
+            'url': c['sourceInfo'].get('primaryUrl', ''),
+            'tier': None, # Rimuru does not provide letter tier
+            'summary': eval_obj.get('summary', '')
+        }
+
+    # 3. Kokomato evaluation
+    kokomato_source = None
+    if kokomato_info or eval_obj.get('summaryBullets') or eval_obj.get('recommendedGems'):
+        kokomato_source = {
+            'sourceName': 'マトメバコ！ (kokomatoblog.com)',
+            'date': '2026-11-09',
+            'url': kokomato_info.get('url', 'https://kokomatoblog.com/') if kokomato_info else 'https://kokomatoblog.com/',
+            'bullets': eval_obj.get('summaryBullets', []),
+            'gems': eval_obj.get('recommendedGems', [])
+        }
+
+    sources = {}
+    if atwiki_source: sources['atwiki'] = atwiki_source
+    if rimuru_source: sources['rimuru'] = rimuru_source
+    if kokomato_source: sources['kokomato'] = kokomato_source
+    eval_obj['sources'] = sources
+
+    # Flags
+    eval_obj['flags'] = {
+        'onlyOutdated2024': bool(atwiki_source and not rimuru_source and not kokomato_source),
+        'hasMultiSources': len(sources) >= 2
+    }
+
+    # History
+    history = []
+    if atwiki_source:
+        history.append({
+            'date': '2024-08-15',
+            'sourceName': '少女ウォーズ@wiki',
+            'sourceUrl': atwiki_source['url'],
+            'change': f"2024年PVP環境Tier {atwiki_source['tier']} に選出",
+            'reason': atwiki_source['comment'][:80] + ('...' if len(atwiki_source['comment']) > 80 else '')
+        })
+    if rimuru_source:
+        if c.get('rarity') == 'UR閃':
+            history.append({
+                'date': rimuru_source['date'],
+                'sourceName': 'へたれリムルブログ',
+                'sourceUrl': rimuru_source['url'],
+                'change': 'UR閃への昇格・最新性能評価',
+                'reason': (rimuru_source['summary'][:80] + '...') if rimuru_source.get('summary') else '最新UR閃性能解説'
+            })
+        elif c.get('rarity') == 'UR':
+            history.append({
+                'date': rimuru_source['date'],
+                'sourceName': 'へたれリムルブログ',
+                'sourceUrl': rimuru_source['url'],
+                'change': 'URキャラ性能評価・スキル詳細掲載',
+                'reason': 'UR環境におけるスキル構成と運用の評価'
+            })
+    eval_obj['history'] = history
+
 def build_all():
     print("================ BUILDING GIRLWARS MASTER DATA ================")
     
@@ -105,9 +244,6 @@ def build_all():
     kokomato_map = fetch_kokomato_articles()
     
     # 2. Integrate and merge characters
-    # Priority for entries:
-    # A character can have multiple rarities (e.g. UR and UR閃, or SSR and UR)
-    # Each rarity version is an independent entity: name + rarity as unique key
     merged_map = {}
 
     # (A) Add Rimuru UR/UR閃 characters (2026 High freshness)
@@ -117,7 +253,6 @@ def build_all():
         key = f"{name}_{rarity}"
         
         # Check kokomato enrichments
-        # Match name in kokomato
         k_info = None
         for kname, kd in kokomato_map.items():
             if kname in name or name in kname:
@@ -138,7 +273,7 @@ def build_all():
         if not c.get('ruby'):
             c['ruby'] = RUBY_MAP.get(name, '')
 
-        merged_map[key] = c
+        merged_map[key] = (c, k_info)
 
     # (B) Add atwiki characters (SSR, UR, 花嫁)
     for w in wiki_chars:
@@ -148,7 +283,7 @@ def build_all():
 
         # If already exists in rimuru with high freshness, enrich CV, dialogues, story
         if key in merged_map:
-            existing = merged_map[key]
+            existing, k_info = merged_map[key]
             if not existing.get('cv') and w.get('cv'):
                 existing['cv'] = w['cv']
             if not existing.get('role') and w.get('role'):
@@ -159,14 +294,19 @@ def build_all():
                 existing['illustCredit'] = w['illustCredit']
             if w.get('dialogues'):
                 existing['dialogues'] = w['dialogues']
-            if w.get('story'):
+            if w.get('story') and not existing.get('story'):
                 existing['story'] = w['story']
         else:
             # New entity from wiki
             w['ruby'] = RUBY_MAP.get(name, '')
-            merged_map[key] = w
+            merged_map[key] = (w, None)
 
-    final_list = list(merged_map.values())
+    # 3. Post-process characters: enrich tags and multi-source evaluations
+    final_list = []
+    for (c, k_info) in merged_map.values():
+        enrich_evaluation_sources(c, tier_table, k_info)
+        c['tags'] = extract_char_tags(c)
+        final_list.append(c)
 
     # Sort characters: UR閃 -> UR -> SSR -> 花嫁 -> その他, then ruby alphabetical
     rarity_order = {'UR閃': 1, 'UR': 2, 'SSR': 3, '花嫁': 4, 'SR': 5}
@@ -208,6 +348,7 @@ def build_all():
 
     with_skills = sum(1 for c in final_list if has_actual_skill_text(c))
     with_illust = sum(1 for c in final_list if c.get('illustUrl'))
+    with_tags = sum(1 for c in final_list if c.get('tags') and len(c['tags']) > 0)
 
     print(f"\n[BUILD] Total integrated characters: {total_count}")
     print(f"  UR閃: {ur_sen_count}")
@@ -216,6 +357,10 @@ def build_all():
     print(f"  花嫁: {bride_count}")
     print(f"  With full skill texts: {with_skills}")
     print(f"  With illustrations:    {with_illust}")
+    print(f"  With effect tags:      {with_tags}")
+
+    # Metadata tag list without regex pattern
+    tags_master = [{'id': r['id'], 'name': r['name'], 'icon': r['icon'], 'desc': r['desc']} for r in TAG_DEFINITIONS]
 
     # Output app/data.js
     data_js_path = os.path.join(APP_DIR, 'data.js')
@@ -238,7 +383,9 @@ window.GIRLWARS_METADATA = {{
   ssrCount: {ssr_count},
   brideCount: {bride_count},
   withSkillsCount: {with_skills},
-  withIllustCount: {with_illust}
+  withIllustCount: {with_illust},
+  withTagsCount: {with_tags},
+  tagsMaster: {json.dumps(tags_master, ensure_ascii=False, indent=2)}
 }};
 
 window.GIRLWARS_DATA = {json.dumps(final_list, ensure_ascii=False, indent=2)};

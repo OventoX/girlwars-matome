@@ -37,6 +37,9 @@
       <button class="tab-btn" data-tab="party">
         <span class="tab-icon">⚔️</span> 部隊編成シミュレータ (<span id="party-count-badge">0/12</span>)
       </button>
+      <button class="tab-btn" data-tab="compare">
+        <span class="tab-icon">⚖️</span> キャラ比較 (<span id="compare-count-badge">0/4</span>)
+      </button>
       <button class="tab-btn" data-tab="tier">
         <span class="tab-icon">🏆</span> Tier表・評価ランキング
       </button>
@@ -119,6 +122,17 @@
         </div>
       </div>
 
+      <!-- Filters Row 3: Skill Effect Tags (公開求人スタイル AND検索) -->
+      <div class="filters-group" style="flex-direction: column; align-items: flex-start; gap: 6px; padding-top: 4px; border-top: 1px dashed rgba(255,255,255,0.08);">
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+          <span class="filter-label" style="font-size: 0.8rem;">🏷️ スキル効果タグ（AND絞り込み・複数選択可）:</span>
+          <button id="clear-tags-btn" class="btn-text" style="font-size: 0.78rem;">タグ全解除</button>
+        </div>
+        <div class="filter-chips" id="filter-tags" style="flex-wrap: wrap; gap: 6px;">
+          <!-- Dynamically generated via app.js -->
+        </div>
+      </div>
+
       <!-- Active Filters Summary & View Switcher -->
       <div class="filter-status-bar">
         <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
@@ -181,6 +195,7 @@
           <p class="party-desc">先発6枠（前列3・後列3）＋後発控え6枠の最大12人部隊を編成し、タイプ・属性シナジーをリアルタイム分析します。</p>
         </div>
         <div class="party-actions">
+          <button id="btn-share-party-url" class="btn-secondary" style="background: rgba(16, 185, 129, 0.2); border-color: #10b981; color: #10b981;">🔗 共有リンクをコピー</button>
           <button id="btn-export-party" class="btn-secondary">📋 編成テキストをコピー</button>
           <button id="btn-import-party" class="btn-secondary">📥 テキストから反映</button>
           <button id="btn-clear-party" class="btn-danger">🗑️ 部隊クリア</button>
@@ -274,6 +289,66 @@
             <div class="slot-content" id="slot-11"></div>
           </div>
         </div>
+      </div>
+
+      <!-- Feature 4: Saved Parties & 1-Slot Replacement Diff Simulator -->
+      <div class="party-tools-panel">
+        <div class="saved-parties-box">
+          <h3 class="section-subtitle" style="margin-bottom: 8px;">💾 編成セット管理（複数保存・切替）</h3>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+            <input type="text" id="input-party-name" placeholder="編成名（例: メイン風速攻）" style="padding: 7px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: var(--bg-surface-2); color: #fff; font-size: 0.85rem; min-width: 180px;">
+            <button id="btn-save-current-party" class="btn-secondary">現在の部隊を保存</button>
+            <select id="select-saved-parties" class="sort-dropdown" style="max-width: 240px;">
+              <option value="">-- 保存済み編成を選択 --</option>
+            </select>
+            <button id="btn-load-saved-party" class="btn-secondary">読込</button>
+            <button id="btn-delete-saved-party" class="btn-text" style="color: var(--accent-rose);">削除</button>
+          </div>
+        </div>
+
+        <div class="party-diff-box" style="margin-top: 24px; padding-top: 18px; border-top: 1px dashed rgba(255,255,255,0.1);">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+            <h3 class="section-subtitle" style="margin-bottom: 0;">🔄 1枠差し替え比較シミュレータ</h3>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">※属性バランス・効果タグの増減差分を自動分析</span>
+          </div>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 6px 0 12px;">指定した枠のキャラを別のキャラに変更した場合のシナジー比率や効果タグの増減をシミュレーションします。</p>
+          <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+            <label style="font-size: 0.85rem;">対象枠:
+              <select id="diff-slot-select" class="sort-dropdown" style="margin-left: 6px;">
+                <!-- Slots 1 to 12 dynamically -->
+              </select>
+            </label>
+            <label style="font-size: 0.85rem;">差替候補キャラ:
+              <select id="diff-char-select" class="sort-dropdown" style="max-width: 240px; margin-left: 6px;">
+                <!-- Characters dynamically -->
+              </select>
+            </label>
+          </div>
+          <div id="diff-result-panel" style="margin-top: 12px;">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 1: Tab: Character Comparison View -->
+  <section class="tab-content" id="tab-compare">
+    <div class="compare-view-container">
+      <div class="compare-header-bar">
+        <div>
+          <h2>⚖️ キャラクター比較ビュー</h2>
+          <p class="compare-desc" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">一覧や詳細から2〜4体を選択し、ステータス属性・スキル要点・超進化・効果タグ・評価を横並び比較できます。</p>
+        </div>
+        <div class="compare-actions">
+          <button id="btn-compare-preset-ursen" class="btn-secondary">UR閃主力アタッカー比較</button>
+          <button id="btn-compare-preset-support" class="btn-secondary">PVPサポーター比較</button>
+          <button id="btn-clear-compare" class="btn-danger">🗑️ 比較枠クリア</button>
+        </div>
+      </div>
+
+      <div id="compare-content-area">
+        <!-- Rendered dynamically via app.js -->
       </div>
     </div>
   </section>
