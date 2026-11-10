@@ -32,9 +32,11 @@ def parse_strengths_map():
         # Find strength summary text
         summary_lines = []
         for l in lines[1:]:
-            if any(k in l for k in ['名前：', '行のキャラ', '目次', '終わりに', 'タイプ：', '初期ランク：']):
+            if any(k in l for k in ['名前：', '行のキャラ', '目次', '終わりに']):
                 break
-            if len(l) > 15:
+            if any(k in l for k in ['タイプ：', '初期ランク：', '系統：']):
+                continue
+            if len(l) > 10:
                 summary_lines.append(l)
         summary = "\n".join(summary_lines[:3])
         strengths[clean_name] = summary
@@ -42,15 +44,36 @@ def parse_strengths_map():
     print(f"[RIMURU] Parsed {len(strengths)} strengths entries.")
     return strengths
 
+def extract_section(text, start_kw, end_kws):
+    pattern = rf'(?:^|\n)\s*{re.escape(start_kw)}\s*\n(.*?)(?=(?:^|\n)\s*(?:{"|".join(map(re.escape, end_kws))})|\Z)'
+    for m in re.finditer(pattern, text, re.DOTALL):
+        sec = m.group(1).strip()
+        lines = [l.strip() for l in sec.split('\n') if l.strip()]
+        if len(lines) >= 2 and len(sec) > 15:
+            return {'name': lines[0], 'text': '\n'.join(lines[1:])}
+    return None
+
 def parse_char_detail(url):
     html = fetch_html(url)
     soup = parse_soup(html)
     if not soup:
-        return {}, None
+        return {}, None, None
+
+    # Extract article publication/modification date from JSON-LD
+    art_date = None
+    for s in soup.find_all('script', type='application/ld+json'):
+        try:
+            d = json.loads(s.string)
+            if 'dateModified' in d:
+                art_date = d['dateModified'][:10]
+            elif 'datePublished' in d:
+                art_date = d['datePublished'][:10]
+        except:
+            pass
 
     body = soup.find('article') or soup.find(class_=re.compile(r'skin-entryBody|entryBody|articleBody'))
     if not body:
-        return {}, None
+        return {}, None, art_date
 
     # Extract image
     illust_url = None
@@ -69,32 +92,32 @@ def parse_char_detail(url):
         'evolution': {'fire': [], 'ice': []}
     }
 
-    # Split by major headings: スキル, パッシブ, 奥義
-    def extract_section(start_kw, next_kws):
-        m = re.search(rf'{start_kw}\s*\n(.*?)(?={"|".join(next_kws)}|$)', text, re.DOTALL)
-        if m:
-            sec_text = m.group(1).strip()
-            # First non-empty line may be the skill name
-            lines = [l.strip() for l in sec_text.split('\n') if l.strip()]
-            if lines:
-                s_name = lines[0]
-                s_effect = "\n".join(lines[1:])
-                return {'name': s_name, 'text': s_effect}
-        return None
+    skills['normal'] = extract_section(text, 'スキル', ['パッシブ', '奥義', '火炎', '超進化', 'まとめ'])
+    skills['passive'] = extract_section(text, 'パッシブ', ['スキル', '奥義', '火炎', '超進化', 'まとめ'])
+    skills['ultimate'] = extract_section(text, '奥義', ['火炎', '氷魂', '閃超進化', '超進化', 'まとめ', '終わりに'])
 
-    skills['normal'] = extract_section('スキル', ['パッシブ', '奥義', '火炎', '超進化', 'まとめ'])
-    skills['passive'] = extract_section('パッシブ', ['スキル', '奥義', '火炎', '超進化', 'まとめ'])
-    skills['ultimate'] = extract_section('奥義', ['火炎', '氷魂', '閃超進化', '超進化', 'まとめ', '終わりに'])
+    # Evolution levels: only non-empty entries (no empty "Lv1: ")
+    for lv, digits, label in [(1, '[1１]', 'Lv1'), (2, '[2２]', 'Lv2'), (3, '[3３]', 'Lv3')]:
+        pattern = rf'火炎[LＬ][vｖ]{digits}\s*\n(.*?)(?=火炎[LＬ]|氷魂|閃超進化|超進化|まとめ|終わりに|\Z)'
+        for m in re.finditer(pattern, text, re.DOTALL):
+            txt = m.group(1).strip()
+            lines = [l.strip() for l in txt.split('\n') if l.strip()]
+            if lines and len(" ".join(lines)) > 15:
+                content = "\n".join(lines)
+                skills['evolution']['fire'].append(f"{label}: {content}")
+                break
 
-    # Evolution levels
-    fire_lv1 = re.search(r'火炎L?v?１\s*\n(.*?)(?=火炎L?v?２|氷魂|閃超進化|まとめ|$)', text, re.DOTALL)
-    fire_lv2 = re.search(r'火炎L?v?２\s*\n(.*?)(?=火炎L?v?３|氷魂|閃超進化|まとめ|$)', text, re.DOTALL)
-    fire_lv3 = re.search(r'火炎L?v?３\s*\n(.*?)(?=氷魂|閃超進化|まとめ|$)', text, re.DOTALL)
-    if fire_lv1: skills['evolution']['fire'].append("Lv1: " + fire_lv1.group(1).strip()[:200])
-    if fire_lv2: skills['evolution']['fire'].append("Lv2: " + fire_lv2.group(1).strip()[:200])
-    if fire_lv3: skills['evolution']['fire'].append("Lv3: " + fire_lv3.group(1).strip()[:200])
+    for lv, digits, label in [(1, '[1１]', 'Lv1'), (2, '[2２]', 'Lv2')]:
+        pattern = rf'氷魂[LＬ][vｖ]{digits}\s*\n(.*?)(?=氷魂[LＬ]|火炎[LＬ]|閃超進化|超進化|まとめ|終わりに|\Z)'
+        for m in re.finditer(pattern, text, re.DOTALL):
+            txt = m.group(1).strip()
+            lines = [l.strip() for l in txt.split('\n') if l.strip()]
+            if lines and len(" ".join(lines)) > 15:
+                content = "\n".join(lines)
+                skills['evolution']['ice'].append(f"{label}: {content}")
+                break
 
-    return skills, illust_url
+    return skills, illust_url, art_date
 
 def fetch_rimuru_catalog():
     strengths_map = parse_strengths_map()
@@ -143,14 +166,14 @@ def fetch_rimuru_catalog():
         detail_url = link_map_sen.get(clean_name)
         skills = None
         illust_url = None
+        art_date = None
 
         if detail_url:
-            print(f"  Fetching details for UR閃 {clean_name} ({detail_url})...")
-            skills, detail_img = parse_char_detail(detail_url)
+            skills, detail_img, art_date = parse_char_detail(detail_url)
             illust_url = detail_img
-            time.sleep(0.05)
+            time.sleep(0.02)
 
-        summary_text = strengths_map.get(clean_name, f"{system}系統の{ctype}将キャラ。")
+        summary_text = strengths_map.get(clean_name)
 
         char_entries.append({
             'id': f"rimuru_ursen_{clean_name}",
@@ -165,13 +188,13 @@ def fetch_rimuru_catalog():
             'illustCredit': 'へたれゲームプレイヤーリムル (ameblo)',
             'skills': skills,
             'evaluation': {
-                'tierRank': 'UR閃',
+                'tierRank': None,  # No Tier ranking in Rimuru UR閃 entries; do not fake with 'UR閃'
                 'summary': summary_text
             },
             'sourceInfo': {
                 'primaryUrl': detail_url or RIMURU_UR_SEN_SUMMARY,
                 'sourceName': 'へたれゲームプレイヤーリムルの日記と攻略情報',
-                'updatedAt': '2026-11-05',
+                'updatedAt': art_date or '2026-11-05',
                 'isOutdated': False
             }
         })
@@ -218,12 +241,12 @@ def fetch_rimuru_catalog():
         detail_url = link_map_ur.get(clean_name)
         skills = None
         illust_url = None
+        art_date = None
 
         if detail_url:
-            print(f"  Fetching details for UR {clean_name} ({detail_url})...")
-            skills, detail_img = parse_char_detail(detail_url)
+            skills, detail_img, art_date = parse_char_detail(detail_url)
             illust_url = detail_img
-            time.sleep(0.05)
+            time.sleep(0.02)
 
         char_entries.append({
             'id': f"rimuru_ur_{clean_name}",
@@ -238,13 +261,13 @@ def fetch_rimuru_catalog():
             'illustCredit': 'へたれゲームプレイヤーリムル (ameblo)',
             'skills': skills,
             'evaluation': {
-                'tierRank': 'UR',
+                'tierRank': None,  # No Tier ranking in Rimuru UR entries; do not fake with 'UR'
                 'summary': f"{system}系統の{ctype}将キャラ。初期ランク{init_rank}。"
             },
             'sourceInfo': {
                 'primaryUrl': detail_url or RIMURU_UR_SUMMARY,
                 'sourceName': 'へたれゲームプレイヤーリムルの日記と攻略情報',
-                'updatedAt': '2025-03-21',
+                'updatedAt': art_date or '2025-03-21',
                 'isOutdated': False
             }
         })
@@ -257,4 +280,4 @@ if __name__ == '__main__':
     out_path = os.path.join(os.path.dirname(__file__), 'rimuru_chars.json')
     with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(chars, f, ensure_ascii=False, indent=2)
-    print(f"Saved {len(chars)} UR閃 characters to {out_path}")
+    print(f"Saved {len(chars)} UR/UR閃 characters to {out_path}")

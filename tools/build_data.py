@@ -177,13 +177,36 @@ def build_all():
 
     final_list.sort(key=sort_key)
 
-    # Calculate statistics
+    # Validate that all records have unique IDs
+    seen_ids = set()
+    dup_ids = []
+    for c in final_list:
+        cid = c.get('id')
+        if not cid:
+            raise ValueError(f"[ERROR] Character {c.get('name')} is missing ID!")
+        if cid in seen_ids:
+            dup_ids.append(cid)
+        seen_ids.add(cid)
+    if dup_ids:
+        raise ValueError(f"[ERROR] Duplicate ID violation! Duplicate IDs detected: {dup_ids}")
+
+    # Calculate statistics based on strict actual content
     total_count = len(final_list)
     ur_sen_count = sum(1 for c in final_list if c.get('rarity') == 'UR閃')
     ur_count = sum(1 for c in final_list if c.get('rarity') == 'UR')
     ssr_count = sum(1 for c in final_list if c.get('rarity') == 'SSR')
     bride_count = sum(1 for c in final_list if c.get('rarity') == '花嫁')
-    with_skills = sum(1 for c in final_list if c.get('skills'))
+    
+    def has_actual_skill_text(c):
+        if not c.get('skills'):
+            return False
+        for k in ['normal', 'passive', 'ultimate']:
+            sk = c['skills'].get(k)
+            if sk and isinstance(sk, dict) and sk.get('text') and sk['text'].strip():
+                return True
+        return False
+
+    with_skills = sum(1 for c in final_list if has_actual_skill_text(c))
     with_illust = sum(1 for c in final_list if c.get('illustUrl'))
 
     print(f"\n[BUILD] Total integrated characters: {total_count}")

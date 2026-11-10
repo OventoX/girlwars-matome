@@ -84,26 +84,59 @@
     synergyMoonCount: document.getElementById('synergy-moon-count')
   };
 
-  // Load persistent state
+  // Load persistent state (with invalid / collision ID purge)
   function loadPersistedState() {
     try {
+      const allChars = window.GIRLWARS_DATA || [];
+      const validIdSet = new Set(allChars.map(c => c.id));
+
       const favRaw = localStorage.getItem(STORAGE_KEYS.FAVORITES);
       if (favRaw) {
-        state.favorites = new Set(JSON.parse(favRaw));
+        const rawList = JSON.parse(favRaw);
+        if (Array.isArray(rawList)) {
+          state.favorites = new Set(rawList.filter(id => validIdSet.has(id)));
+        }
       }
       const partyRaw = localStorage.getItem(STORAGE_KEYS.PARTY);
       if (partyRaw) {
         const parsed = JSON.parse(partyRaw);
         if (Array.isArray(parsed) && parsed.length === 12) {
-          state.party = parsed;
+          state.party = parsed.map(id => (id && validIdSet.has(id) ? id : null));
         }
       }
       const savedView = localStorage.getItem(STORAGE_KEYS.VIEW_MODE);
       if (savedView && ['card', 'table', 'gallery'].includes(savedView)) {
         state.viewMode = savedView;
       }
+      // Re-save cleaned state so invalid IDs are wiped from storage
+      savePersistedState();
     } catch (e) {
       console.warn('Could not read from localStorage:', e);
+    }
+  }
+
+  // Format freshness badge based on updated date
+  function formatFreshnessBadge(updatedAt, inlineStyle = '') {
+    const styleAttr = inlineStyle ? ` style="${inlineStyle}"` : '';
+    if (!updatedAt) {
+      return `<span class="badge-freshness badge-outdated"${styleAttr}>未確認</span>`;
+    }
+    const d = new Date(updatedAt);
+    if (isNaN(d.getTime())) {
+      return `<span class="badge-freshness badge-outdated"${styleAttr}>${escapeHtml(updatedAt)}</span>`;
+    }
+    const y = d.getFullYear();
+    const m = d.getMonth() + 1;
+    const now = new Date();
+    const diffMonths = (now.getFullYear() - y) * 12 + (now.getMonth() + 1 - m);
+
+    if (diffMonths <= 6 && diffMonths >= 0) {
+      return `<span class="badge-freshness badge-fresh"${styleAttr}>🟢 最新</span>`;
+    } else if (y >= 2025) {
+      const mm = m < 10 ? '0' + m : m;
+      return `<span class="badge-freshness badge-recent"${styleAttr}>🔵 ${y}.${mm}</span>`;
+    } else {
+      return `<span class="badge-freshness badge-outdated"${styleAttr}>⚠️ '${String(y).slice(-2)}情報</span>`;
     }
   }
 
@@ -460,13 +493,14 @@
       }
 
       // Freshness
-      const isFresh = c.sourceInfo && !c.sourceInfo.isOutdated;
-      const freshHtml = isFresh
-        ? `<span class="badge-freshness badge-fresh" style="position:static;">🟢 最新</span>`
-        : `<span class="badge-freshness badge-outdated" style="position:static;">⚠️ '24</span>`;
+      const freshHtml = formatFreshnessBadge(c.sourceInfo && c.sourceInfo.updatedAt, 'position:static;');
 
       // Skill status
-      const hasSkills = Boolean(c.skills && (c.skills.normal || c.skills.passive || c.skills.ultimate));
+      const hasSkills = Boolean(c.skills && (
+        (c.skills.normal && c.skills.normal.text && c.skills.normal.text.trim()) ||
+        (c.skills.passive && c.skills.passive.text && c.skills.passive.text.trim()) ||
+        (c.skills.ultimate && c.skills.ultimate.text && c.skills.ultimate.text.trim())
+      ));
       const skillBadge = hasSkills
         ? `<span style="color:#10b981; font-weight:bold; font-size:0.75rem;">✔ 全文あり</span>`
         : `<span style="color:#64748b; font-size:0.75rem;">- 未記載</span>`;
@@ -476,22 +510,22 @@
 
       tr.innerHTML = `
         <td>
-          ${c.illustUrl ? `<img class="table-char-thumb" src="${c.illustUrl}" alt="${c.name}" loading="lazy">` : `<div class="table-char-thumb" style="display:flex;align-items:center;justify-content:center;color:#64748b;">⚔️</div>`}
+          ${c.illustUrl ? `<img class="table-char-thumb" src="${escapeHtml(c.illustUrl)}" alt="${escapeHtml(c.name)}" loading="lazy" onerror="this.onerror=null; this.outerHTML='<div class=\\'table-char-thumb\\' style=\\'display:flex;align-items:center;justify-content:center;color:#64748b;font-size:0.9rem;\\'>⚔️</div>';">` : `<div class="table-char-thumb" style="display:flex;align-items:center;justify-content:center;color:#64748b;">⚔️</div>`}
         </td>
         <td>
           <div class="table-char-name-col">
-            ${c.ruby ? `<span class="table-char-ruby">${c.ruby}</span>` : ''}
-            <span class="table-char-name">${c.name}</span>
+            ${c.ruby ? `<span class="table-char-ruby">${escapeHtml(c.ruby)}</span>` : ''}
+            <span class="table-char-name">${escapeHtml(c.name)}</span>
           </div>
         </td>
-        <td><span class="badge-rarity ${rClass}" style="font-size:0.75rem; padding:2px 6px;">${c.rarity}</span></td>
-        <td><span class="badge-tag ${tClass}">${c.type}将</span></td>
+        <td><span class="badge-rarity ${rClass}" style="font-size:0.75rem; padding:2px 6px;">${escapeHtml(c.rarity)}</span></td>
+        <td><span class="badge-tag ${tClass}">${escapeHtml(c.type)}将</span></td>
         <td>${sysHtml}</td>
         <td><div class="table-role-snippet">${escapeHtml(roleSnippet)}</div></td>
         <td>${skillBadge}</td>
         <td>${freshHtml}</td>
         <td onclick="event.stopPropagation();">
-          <button class="btn-card-quick btn-card-fav ${isFav ? 'active' : ''}" data-char-id="${c.id}" style="padding:2px 6px;" title="お気に入り">
+          <button class="btn-card-quick btn-card-fav ${isFav ? 'active' : ''}" data-char-id="${escapeHtml(c.id)}" style="padding:2px 6px;" title="お気に入り">
             ${isFav ? '★' : '☆'}
           </button>
         </td>
@@ -566,15 +600,12 @@
       }
 
       // Freshness
-      const isFresh = c.sourceInfo && !c.sourceInfo.isOutdated;
-      const freshBadgeHtml = isFresh
-        ? `<span class="badge-freshness badge-fresh">🟢 最新</span>`
-        : `<span class="badge-freshness badge-outdated">⚠️ '24情報</span>`;
+      const freshBadgeHtml = formatFreshnessBadge(c.sourceInfo && c.sourceInfo.updatedAt);
 
       // Tier tag
       let tierHtml = '';
       if (c.evaluation && c.evaluation.tierRank) {
-        tierHtml = `<span class="badge-tier-tag">${c.evaluation.tierRank}</span>`;
+        tierHtml = `<span class="badge-tier-tag">${escapeHtml(c.evaluation.tierRank)}</span>`;
       }
 
       // Favorite state
@@ -586,15 +617,15 @@
         visualHtml = `
           <div class="card-visual">
             <div class="card-badges-top">
-              <span class="badge-rarity ${rClass}">${c.rarity}</span>
+              <span class="badge-rarity ${rClass}">${escapeHtml(c.rarity)}</span>
             </div>
             ${freshBadgeHtml}
-            <img class="card-img" src="${c.illustUrl}" alt="${c.name}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'card-placeholder\\'><span>⚔️</span><span>イラスト準備中</span></div>';">
+            <img class="card-img" src="${escapeHtml(c.illustUrl)}" alt="${escapeHtml(c.name)}" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'card-placeholder\\'><span>⚔️</span><span>イラスト準備中</span></div>';">
             <div class="card-actions-quick" onclick="event.stopPropagation();">
-              <button class="btn-card-quick btn-card-fav ${isFav ? 'active' : ''}" data-char-id="${c.id}" title="お気に入り登録">
+              <button class="btn-card-quick btn-card-fav ${isFav ? 'active' : ''}" data-char-id="${escapeHtml(c.id)}" title="お気に入り登録">
                 ${isFav ? '★' : '☆'}
               </button>
-              <button class="btn-card-quick btn-card-add-party" data-char-id="${c.id}" title="部隊に編成">
+              <button class="btn-card-quick btn-card-add-party" data-char-id="${escapeHtml(c.id)}" title="部隊に編成">
                 ＋編成
               </button>
             </div>
@@ -604,7 +635,7 @@
         visualHtml = `
           <div class="card-visual">
             <div class="card-badges-top">
-              <span class="badge-rarity ${rClass}">${c.rarity}</span>
+              <span class="badge-rarity ${rClass}">${escapeHtml(c.rarity)}</span>
             </div>
             ${freshBadgeHtml}
             <div class="card-placeholder">
@@ -612,10 +643,10 @@
               <span>イラスト準備中</span>
             </div>
             <div class="card-actions-quick" onclick="event.stopPropagation();">
-              <button class="btn-card-quick btn-card-fav ${isFav ? 'active' : ''}" data-char-id="${c.id}" title="お気に入り登録">
+              <button class="btn-card-quick btn-card-fav ${isFav ? 'active' : ''}" data-char-id="${escapeHtml(c.id)}" title="お気に入り登録">
                 ${isFav ? '★' : '☆'}
               </button>
-              <button class="btn-card-quick btn-card-add-party" data-char-id="${c.id}" title="部隊に編成">
+              <button class="btn-card-quick btn-card-add-party" data-char-id="${escapeHtml(c.id)}" title="部隊に編成">
                 ＋編成
               </button>
             </div>
@@ -629,18 +660,18 @@
         ${visualHtml}
         <div class="card-body">
           <div class="card-meta-row">
-            <span class="badge-tag ${tClass}">${c.type}将</span>
+            <span class="badge-tag ${tClass}">${escapeHtml(c.type)}将</span>
             ${sysHtml}
             ${tierHtml}
           </div>
           <div class="card-name-group">
-            ${c.ruby ? `<span class="card-ruby">${c.ruby}</span>` : ''}
-            <div class="card-name">${c.name}</div>
+            ${c.ruby ? `<span class="card-ruby">${escapeHtml(c.ruby)}</span>` : ''}
+            <div class="card-name">${escapeHtml(c.name)}</div>
           </div>
           ${roleSnippet ? `<div class="card-role-snippet">${escapeHtml(roleSnippet)}</div>` : ''}
           <div class="card-footer">
-            <span>${c.sourceInfo ? c.sourceInfo.sourceName : '出典明記'}</span>
-            <span>${c.sourceInfo ? c.sourceInfo.updatedAt : ''}</span>
+            <span>${escapeHtml(c.sourceInfo ? c.sourceInfo.sourceName : '出典明記')}</span>
+            <span>${escapeHtml(c.sourceInfo ? c.sourceInfo.updatedAt : '')}</span>
           </div>
         </div>
       `;
@@ -743,14 +774,14 @@
         else if (c.type === '猛') tClass = 'tag-brave';
 
         targetSlot.innerHTML = `
-          ${c.illustUrl ? `<img class="slot-char-avatar" src="${c.illustUrl}" alt="${c.name}">` : `<div class="slot-char-avatar" style="display:flex;align-items:center;justify-content:center;color:#64748b;">⚔️</div>`}
+          ${c.illustUrl ? `<img class="slot-char-avatar" src="${escapeHtml(c.illustUrl)}" alt="${escapeHtml(c.name)}" onerror="this.onerror=null; this.outerHTML='<div class=\\'slot-char-avatar\\' style=\\'display:flex;align-items:center;justify-content:center;color:#64748b;\\'>⚔️</div>';">` : `<div class="slot-char-avatar" style="display:flex;align-items:center;justify-content:center;color:#64748b;">⚔️</div>`}
           <div class="slot-char-info">
             <div style="display:flex; gap: 4px; align-items: center;">
-              <span class="badge-rarity badge-${c.rarity === 'UR閃' ? 'ur-sen' : c.rarity.toLowerCase()}" style="font-size: 0.65rem; padding: 1px 5px;">${c.rarity}</span>
-              <span class="badge-tag ${tClass}" style="font-size: 0.65rem; padding: 0 4px;">${c.type}</span>
-              ${c.system ? `<span class="badge-tag tag-sys-${c.system === '風' ? 'wind' : c.system === '花' ? 'flower' : c.system === '雪' ? 'snow' : 'moon'}" style="font-size: 0.65rem; padding: 0 4px;">${c.system}</span>` : ''}
+              <span class="badge-rarity badge-${c.rarity === 'UR閃' ? 'ur-sen' : c.rarity.toLowerCase()}" style="font-size: 0.65rem; padding: 1px 5px;">${escapeHtml(c.rarity)}</span>
+              <span class="badge-tag ${tClass}" style="font-size: 0.65rem; padding: 0 4px;">${escapeHtml(c.type)}</span>
+              ${c.system ? `<span class="badge-tag tag-sys-${c.system === '風' ? 'wind' : c.system === '花' ? 'flower' : c.system === '雪' ? 'snow' : 'moon'}" style="font-size: 0.65rem; padding: 0 4px;">${escapeHtml(c.system)}</span>` : ''}
             </div>
-            <div class="slot-char-name">${c.name}</div>
+            <div class="slot-char-name">${escapeHtml(c.name)}</div>
           </div>
           <button class="slot-remove-btn" data-slot="${i}" title="部隊から外す">×</button>
         `;
@@ -853,9 +884,10 @@
 
     let warningBoxHtml = '';
     if (c.sourceInfo && c.sourceInfo.isOutdated) {
+      const yearStr = c.sourceInfo.updatedAt ? c.sourceInfo.updatedAt.slice(0, 4) + '年' : '2024年';
       warningBoxHtml = `
         <div class="modal-warning-box">
-          ⚠️ <strong>2024年時点の情報です</strong>: このデータは2024年8月15日時点のwiki情報を元に作成されています。現在のゲーム内仕様・スキル性能・Tier環境とは異なっている場合があります。
+          ⚠️ <strong>${escapeHtml(yearStr)}時点の情報です</strong>: このデータは${escapeHtml(c.sourceInfo.updatedAt || '2024年')}時点のwiki情報を元に作成されています。現在のゲーム内仕様・スキル性能・Tier環境とは異なっている場合があります。
         </div>
       `;
     }
@@ -864,9 +896,9 @@
     if (c.illustUrl) {
       visualHtml = `
         <div class="modal-header-visual">
-          <img class="modal-big-img" src="${c.illustUrl}" alt="${c.name}">
+          <img class="modal-big-img" src="${escapeHtml(c.illustUrl)}" alt="${escapeHtml(c.name)}" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'modal-big-placeholder\\'><span>⚔️</span><span>イラスト取得不可または準備中</span></div>';">
           <div class="modal-visual-credit">
-            イラスト出典: <a href="${c.sourceInfo ? c.sourceInfo.primaryUrl : '#'}" target="_blank" rel="noopener">${c.illustCredit || c.illustSource || '公式スチル'}</a>
+            イラスト出典: <a href="${escapeHtml(c.sourceInfo ? c.sourceInfo.primaryUrl : '#')}" target="_blank" rel="noopener">${escapeHtml(c.illustCredit || c.illustSource || '公式スチル')}</a>
           </div>
         </div>
       `;
@@ -974,7 +1006,7 @@
         <div class="modal-section">
           <div class="modal-section-title">📊 評価・強みメモ</div>
           <div class="eval-box">
-            ${c.evaluation.tierRank ? `<div style="font-size: 0.88rem; font-weight: 700; color: #fbbf24; margin-bottom: 6px;">Tier評価: ${c.evaluation.tierRank}</div>` : ''}
+            ${c.evaluation.tierRank ? `<div style="font-size: 0.88rem; font-weight: 700; color: #fbbf24; margin-bottom: 6px;">Tier評価: ${escapeHtml(c.evaluation.tierRank)}</div>` : ''}
             ${c.evaluation.summary ? `<div class="eval-summary-text">${escapeHtml(c.evaluation.summary)}</div>` : ''}
             ${bulletsHtml}
             ${gemsHtml}
@@ -1017,16 +1049,16 @@
       <div class="modal-content-inner">
         <div class="modal-title-row">
           <div class="modal-char-names">
-            ${c.ruby ? `<span class="modal-char-ruby">${c.ruby}</span>` : ''}
-            <h2 class="modal-char-name">${c.name}</h2>
+            ${c.ruby ? `<span class="modal-char-ruby">${escapeHtml(c.ruby)}</span>` : ''}
+            <h2 class="modal-char-name">${escapeHtml(c.name)}</h2>
           </div>
           <div class="modal-attributes">
-            <span class="badge-rarity ${rClass}" style="font-size: 0.88rem; padding: 4px 10px;">${c.rarity}</span>
-            <span class="badge-tag ${tClass}" style="font-size: 0.84rem; padding: 4px 10px;">${c.type}将</span>
-            ${c.system ? `<span class="badge-tag tag-sys-${c.system === '風' ? 'wind' : c.system === '花' ? 'flower' : c.system === '雪' ? 'snow' : 'moon'}" style="font-size: 0.84rem; padding: 4px 10px;">${c.system}系統</span>` : ''}
-            ${c.initialRarity ? `<span class="meta-badge">初期: ${c.initialRarity}</span>` : ''}
-            ${c.cv ? `<span class="meta-badge">CV: ${c.cv}</span>` : ''}
-            ${c.role ? `<span class="meta-badge">定位: ${c.role}</span>` : ''}
+            <span class="badge-rarity ${rClass}" style="font-size: 0.88rem; padding: 4px 10px;">${escapeHtml(c.rarity)}</span>
+            <span class="badge-tag ${tClass}" style="font-size: 0.84rem; padding: 4px 10px;">${escapeHtml(c.type)}将</span>
+            ${c.system ? `<span class="badge-tag tag-sys-${c.system === '風' ? 'wind' : c.system === '花' ? 'flower' : c.system === '雪' ? 'snow' : 'moon'}" style="font-size: 0.84rem; padding: 4px 10px;">${escapeHtml(c.system)}系統</span>` : ''}
+            ${c.initialRarity ? `<span class="meta-badge">初期: ${escapeHtml(c.initialRarity)}</span>` : ''}
+            ${c.cv ? `<span class="meta-badge">CV: ${escapeHtml(c.cv)}</span>` : ''}
+            ${c.role ? `<span class="meta-badge">定位: ${escapeHtml(c.role)}</span>` : ''}
           </div>
         </div>
 
@@ -1038,15 +1070,15 @@
 
         <div class="modal-source-footer">
           <div>
-            <strong>一次情報出典:</strong> ${c.sourceInfo ? c.sourceInfo.sourceName : '公式/wiki'}
-            （最終更新: ${c.sourceInfo ? c.sourceInfo.updatedAt : '不明'}）
+            <strong>一次情報出典:</strong> ${escapeHtml(c.sourceInfo ? c.sourceInfo.sourceName : '公式/wiki')}
+            （最終更新: ${escapeHtml(c.sourceInfo ? c.sourceInfo.updatedAt : '不明')}）
           </div>
           <div style="display: flex; gap: 8px;">
             <button id="modal-btn-add-party" class="btn-secondary" style="background: var(--accent-rose); color: #fff; border-color: var(--accent-rose);">
               ＋ 部隊に編成
             </button>
             ${c.sourceInfo && c.sourceInfo.primaryUrl ? `
-              <a href="${c.sourceInfo.primaryUrl}" target="_blank" rel="noopener noreferrer" class="btn-open-source">
+              <a href="${escapeHtml(c.sourceInfo.primaryUrl)}" target="_blank" rel="noopener noreferrer" class="btn-open-source">
                 出典元の記事を見る ↗
               </a>
             ` : ''}
@@ -1101,14 +1133,15 @@
       let itemsHtml = '';
       if (items.length > 0) {
         itemsHtml = items.map(item => {
-          const matchedChar = allChars.find(c => c.name === item.name || c.name.includes(item.name));
+          const normName = { 'エカチェリーナ': 'エカテリーナ', 'ジャンヌ': 'ジャンヌ・ダルク' }[item.name] || item.name;
+          const matchedChar = allChars.find(c => c.name === normName || c.name === item.name);
           const iconSrc = item.iconUrl || (matchedChar && matchedChar.illustUrl) || '';
 
           return `
-            <div class="tier-item-card" style="cursor: pointer;" onclick="window.__openCharByName('${escapeHtml(item.name)}')">
-              ${iconSrc ? `<img class="tier-item-icon" src="${iconSrc}" alt="${item.name}" loading="lazy">` : `<div class="tier-item-icon" style="display:flex;align-items:center;justify-content:center;color:#64748b;">⚔️</div>`}
+            <div class="tier-item-card" data-char-name="${escapeHtml(item.name)}" style="cursor: pointer;">
+              ${iconSrc ? `<img class="tier-item-icon" src="${escapeHtml(iconSrc)}" alt="${escapeHtml(item.name)}" loading="lazy" onerror="this.onerror=null; this.outerHTML='<div class=\\'tier-item-icon\\' style=\\'display:flex;align-items:center;justify-content:center;color:#64748b;\\'>⚔️</div>';">` : `<div class="tier-item-icon" style="display:flex;align-items:center;justify-content:center;color:#64748b;">⚔️</div>`}
               <div class="tier-item-info">
-                <div class="tier-item-name">${item.fullName || item.name}</div>
+                <div class="tier-item-name">${escapeHtml(item.fullName || item.name)}</div>
                 <div class="tier-item-comment">${escapeHtml(item.comment || '')}</div>
               </div>
             </div>
@@ -1128,6 +1161,21 @@
         </div>
       `;
 
+      // Event delegation for tier item card click
+      groupEl.addEventListener('click', (e) => {
+        const card = e.target.closest('.tier-item-card');
+        if (!card) return;
+        const rawName = card.dataset.charName;
+        if (!rawName) return;
+        const normName = { 'エカチェリーナ': 'エカテリーナ', 'ジャンヌ': 'ジャンヌ・ダルク' }[rawName] || rawName;
+        const matched = allChars.find(c => c.name === normName || c.name === rawName);
+        if (matched) {
+          openModal(matched);
+        } else {
+          alert(`「${rawName}」の個別キャラデータは未収録です（2024年wiki Tier表のみ記載）。`);
+        }
+      });
+
       el.atwikiTierGroups.appendChild(groupEl);
     });
 
@@ -1144,19 +1192,22 @@
         if (c.type === '智') tClass = 'tag-wisdom';
         else if (c.type === '猛') tClass = 'tag-brave';
 
+        const freshBadge = formatFreshnessBadge(c.sourceInfo && c.sourceInfo.updatedAt);
+        const summaryText = (c.evaluation && c.evaluation.summary) ? c.evaluation.summary : '評価・強み情報は未取得';
+
         item.innerHTML = `
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
             <div style="display: flex; align-items: center; gap: 8px;">
               <span class="badge-rarity badge-ur-sen">UR閃</span>
-              <span class="badge-tag ${tClass}">${c.type}将</span>
-              ${c.system ? `<span class="badge-tag tag-sys-${c.system === '風' ? 'wind' : c.system === '花' ? 'flower' : c.system === '雪' ? 'snow' : 'moon'}">${c.system}</span>` : ''}
-              <strong style="font-size: 1.1rem; color: #fff;">${c.name}</strong>
-              ${c.ruby ? `<span style="font-size: 0.75rem; color: var(--text-muted);">（${c.ruby}）</span>` : ''}
+              <span class="badge-tag ${tClass}">${escapeHtml(c.type)}将</span>
+              ${c.system ? `<span class="badge-tag tag-sys-${c.system === '風' ? 'wind' : c.system === '花' ? 'flower' : c.system === '雪' ? 'snow' : 'moon'}">${escapeHtml(c.system)}</span>` : ''}
+              <strong style="font-size: 1.1rem; color: #fff;">${escapeHtml(c.name)}</strong>
+              ${c.ruby ? `<span style="font-size: 0.75rem; color: var(--text-muted);">（${escapeHtml(c.ruby)}）</span>` : ''}
             </div>
-            <span class="badge-freshness badge-fresh">🟢 2026最新</span>
+            ${freshBadge}
           </div>
           <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; white-space: pre-wrap;">
-            ${escapeHtml((c.evaluation && c.evaluation.summary) || '最新のUR閃キャラクター。詳細モーダルでスキル全文を確認できます。')}
+            ${escapeHtml(summaryText)}
           </div>
         `;
 
@@ -1166,12 +1217,15 @@
     }
   }
 
-  // Global helper for Tier card click
+  // Global helper for Tier card click (safe fallback)
   window.__openCharByName = function(name) {
     const allChars = window.GIRLWARS_DATA || [];
-    const matched = allChars.find(c => c.name === name || c.name.includes(name) || name.includes(c.name));
+    const normName = { 'エカチェリーナ': 'エカテリーナ', 'ジャンヌ': 'ジャンヌ・ダルク' }[name] || name;
+    const matched = allChars.find(c => c.name === normName || c.name === name);
     if (matched) {
       openModal(matched);
+    } else {
+      alert(`「${name}」の個別キャラデータは未収録です（2024年wiki Tier表のみ記載）。`);
     }
   };
 

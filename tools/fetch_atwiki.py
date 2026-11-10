@@ -117,6 +117,13 @@ def fetch_atwiki_characters():
         if not body:
             continue
 
+        # Extract page updated date
+        # e.g. 最終更新：2024年05月20日 19:30
+        page_updated_at = '2024-08-15'
+        m_date = re.search(r'最終更新：(\d{4})年(\d{2})月(\d{2})日', c_html)
+        if m_date:
+            page_updated_at = f"{m_date.group(1)}-{m_date.group(2)}-{m_date.group(3)}"
+
         # Basic fields from table 0
         ctype = "力" # default fallback
         role = ""
@@ -162,19 +169,35 @@ def fetch_atwiki_characters():
                     if k and v and k != 'セリフ':
                         dialogues[k] = v
 
-        # Profile / Story text
+        # Profile / Story text (from その一 / その二 / その三 or paragraphs)
         story_paras = []
-        for p in body.find_all('p'):
-            t = p.text.strip()
-            if len(t) > 30 and 'セリフ' not in t and 'レア' not in t:
-                story_paras.append(t)
+        for ul in body.find_all('ul'):
+            if re.search(r'その[一二三四五]', ul.text):
+                sib = ul.find_next_sibling()
+                if sib and sib.name == 'div':
+                    txt = sib.text.strip()
+                    if len(txt) > 20:
+                        sec_label = ul.text.replace('|', '').strip()
+                        story_paras.append(f"【{sec_label}】\n{txt}")
+
+        if not story_paras:
+            for p in body.find_all('p'):
+                t = p.text.strip()
+                if len(t) > 30 and 'セリフ' not in t and 'レア' not in t:
+                    story_paras.append(t)
+
         story_text = "\n\n".join(story_paras[:3])
 
         # Tier matching
         tier_info = tier_map.get(clean_name, {})
 
+        # Unique ID based on atwiki page number (e.g. wiki_115)
+        m_pid = re.search(r'/pages/(\d+)\.html', page_url)
+        page_id = m_pid.group(1) if m_pid else re.sub(r'[^a-zA-Z0-9]', '_', clean_name)
+        char_id = f"wiki_{page_id}"
+
         char_data = {
-            'id': f"wiki_{re.sub(r'[^a-zA-Z0-9]', '_', clean_name)}",
+            'id': char_id,
             'name': clean_name,
             'title': title,
             'rarity': rarity,
@@ -195,12 +218,12 @@ def fetch_atwiki_characters():
             'sourceInfo': {
                 'primaryUrl': page_url,
                 'sourceName': '少女ウォーズ@wiki',
-                'updatedAt': '2024-08-15',
+                'updatedAt': page_updated_at,
                 'isOutdated': True
             }
         }
         char_list.append(char_data)
-        time.sleep(0.05) # Polite delay
+        time.sleep(0.02)
 
     print(f"[ATWIKI] Successfully parsed {len(char_list)} characters.")
     return char_list

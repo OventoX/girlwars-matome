@@ -464,6 +464,11 @@ body {
   color: #fff;
 }
 
+.badge-recent {
+  background: rgba(59, 130, 246, 0.9);
+  color: #fff;
+}
+
 .badge-outdated {
   background: rgba(245, 158, 11, 0.9);
   color: #000;
@@ -617,6 +622,23 @@ body {
   max-height: 380px;
   object-fit: contain;
   background: #000;
+}
+
+.modal-big-placeholder {
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--bg-surface-2);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.modal-big-placeholder span:first-child {
+  font-size: 2.4rem;
 }
 
 .modal-visual-credit {
