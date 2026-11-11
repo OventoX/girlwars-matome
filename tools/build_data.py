@@ -254,8 +254,17 @@ def build_all():
         
         # Check kokomato enrichments
         k_info = None
-        for kname, kd in kokomato_map.items():
-            if kname in name or name in kname:
+        for k_key, kd in kokomato_map.items():
+            if k_key == '__special_wedinggentei__':
+                continue
+            if kd.get('is_bride') and rarity != '花嫁':
+                continue
+            if kd.get('is_ursen') and rarity != 'UR閃':
+                continue
+            kname = kd.get('cname') or k_key
+            c_clean = name.replace('・', '')
+            k_clean = kname.replace('・', '')
+            if kname in name or name in kname or c_clean in k_clean or k_clean in c_clean:
                 k_info = kd
                 break
 
@@ -301,11 +310,59 @@ def build_all():
             w['ruby'] = RUBY_MAP.get(name, '')
             merged_map[key] = (w, None)
 
-    # 3. Post-process characters: enrich tags and multi-source evaluations
+    # 3. Post-process characters: enrich tags, multi-source evaluations, and state-variant illustrations
     final_list = []
+    weding_gentei = kokomato_map.get('__special_wedinggentei__', {})
+
     for (c, k_info) in merged_map.values():
         enrich_evaluation_sources(c, tier_table, k_info)
         c['tags'] = extract_char_tags(c)
+
+        # Build images array with state variants
+        images = []
+        if c.get('illustUrl'):
+            images.append({
+                'label': '通常',
+                'url': c['illustUrl'],
+                'source': c.get('illustSource') or '少女ウォーズ@wiki',
+                'credit': c.get('illustCredit') or '公式スチル'
+            })
+
+        # Enrich UR閃 state variants from kokomato
+        if c.get('rarity') == 'UR閃' and k_info and k_info.get('variants'):
+            k_vars = k_info['variants']
+            if len(k_vars) >= 2:
+                images = k_vars
+            elif len(k_vars) == 1:
+                if k_vars[0]['label'] == '下着姿':
+                    if not images:
+                        images = [{'label': '通常', 'url': k_vars[0]['url'], 'source': k_vars[0]['source'], 'credit': k_vars[0]['credit']}]
+                    else:
+                        images.append(k_vars[0])
+                else:
+                    images = k_vars
+
+        # Enrich bride Arthur (wiki_42) limited costume from kokomato sw-wedinggentei
+        if c.get('id') == 'wiki_42' and weding_gentei.get('arthur_bride_limited'):
+            images.append({
+                'label': '限定衣装',
+                'url': weding_gentei['arthur_bride_limited'],
+                'source': 'マトメバコ！',
+                'credit': 'マトメバコ！ (kokomatoblog.com) / 公式スチル'
+            })
+
+        # Synchronize representative illustration with images[0]
+        if images:
+            c['images'] = images
+            c['illustUrl'] = images[0]['url']
+            c['illustSource'] = images[0]['source']
+            c['illustCredit'] = images[0]['credit']
+        else:
+            c['images'] = []
+            c['illustUrl'] = None
+            c['illustSource'] = None
+            c['illustCredit'] = None
+
         final_list.append(c)
 
     # Sort characters: UR閃 -> UR -> SSR -> 花嫁 -> その他, then ruby alphabetical
@@ -349,15 +406,23 @@ def build_all():
     with_skills = sum(1 for c in final_list if has_actual_skill_text(c))
     with_illust = sum(1 for c in final_list if c.get('illustUrl'))
     with_tags = sum(1 for c in final_list if c.get('tags') and len(c['tags']) > 0)
+    with_variants = sum(1 for c in final_list if c.get('images') and len(c['images']) > 1)
+    total_images = sum(len(c.get('images', [])) for c in final_list)
+    bride_with_variants = sum(1 for c in final_list if c.get('rarity') == '花嫁' and c.get('images') and len(c['images']) > 1)
+    bride_total_images = sum(len(c.get('images', [])) for c in final_list if c.get('rarity') == '花嫁')
 
     print(f"\n[BUILD] Total integrated characters: {total_count}")
     print(f"  UR閃: {ur_sen_count}")
     print(f"  UR:   {ur_count}")
     print(f"  SSR:  {ssr_count}")
     print(f"  花嫁: {bride_count}")
-    print(f"  With full skill texts: {with_skills}")
-    print(f"  With illustrations:    {with_illust}")
-    print(f"  With effect tags:      {with_tags}")
+    print(f"  With full skill texts:  {with_skills}")
+    print(f"  With illustrations:     {with_illust}")
+    print(f"  With effect tags:       {with_tags}")
+    print(f"  With state variants:    {with_variants}")
+    print(f"  Total variant images:   {total_images}")
+    print(f"  Bride with variants:    {bride_with_variants}")
+    print(f"  Bride total images:     {bride_total_images}")
 
     # Metadata tag list without regex pattern
     tags_master = [{'id': r['id'], 'name': r['name'], 'icon': r['icon'], 'desc': r['desc']} for r in TAG_DEFINITIONS]
@@ -385,6 +450,10 @@ window.GIRLWARS_METADATA = {{
   withSkillsCount: {with_skills},
   withIllustCount: {with_illust},
   withTagsCount: {with_tags},
+  withVariantsCount: {with_variants},
+  totalImagesCount: {total_images},
+  brideWithVariantsCount: {bride_with_variants},
+  brideTotalImagesCount: {bride_total_images},
   tagsMaster: {json.dumps(tags_master, ensure_ascii=False, indent=2)}
 }};
 

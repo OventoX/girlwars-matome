@@ -1,6 +1,6 @@
 /**
  * 少女ウォーズ キャラクター統合データベース (GirlWars Character Database)
- * Generated: 2026-11-10 09:48
+ * Generated: 2026-11-11 09:25
  * Total characters: 151 (UR閃: 39, UR: 33, SSR: 55, 花嫁: 24)
  * 
  * 厳格な著作権・出典明記ルールに基づき生成されています。
@@ -9,7 +9,7 @@
  */
 
 window.GIRLWARS_METADATA = {
-  generatedAt: "2026-11-10 09:48",
+  generatedAt: "2026-11-11 09:25",
   totalCount: 151,
   urSenCount: 39,
   urCount: 33,
@@ -18,6 +18,10 @@ window.GIRLWARS_METADATA = {
   withSkillsCount: 72,
   withIllustCount: 151,
   withTagsCount: 100,
+  withVariantsCount: 22,
+  totalImagesCount: 173,
+  brideWithVariantsCount: 1,
+  brideTotalImagesCount: 25,
   tagsMaster: [
   {
     "id": "aoe",
@@ -253,6 +257,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20251104/17/hetarerimuru/da/d6/j/o0857038615709318436.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -263,9 +275,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "雪",
     "initialRarity": "UR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20240602/12/hetarerimuru/b4/5c/p/o0836047515446427382.png?cax=1280-720&caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/08/少女ウォーズのUR閃アストルフォ立ち絵.png",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "接近射撃・高速",
@@ -294,6 +306,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 アストルフォは、条件が揃えば致命ダメージを最大３回まで回避しHPと戦意を回復できる点、月面レールガンによる敵の防御と減傷を無視した高威力の攻撃がとにかく強力なキャラです。\nまた、スキル攻撃によって敵の戦意吸収や自身のHPを回復できるバフの付与などができる点、通常攻撃がアルガリア砲に変化する点、戦術阻害ユニットを付与された敵の攻撃が前列のみの対象になる点、ヒポグリフ・ブースターによって受ける追加ダメージを５０％減少させつつスキル攻撃を３０％の確率で回避できる点などもとても強力です。",
+      "summaryBullets": [
+        "前列にいるだけで味方被ダメを肩代わり",
+        "閃超進化レベル1以上が前提",
+        "復活できないが、死亡回避が3回できる",
+        "スキルでオートヒール獲得",
+        "敵に前列を狙わせるデバフ付与",
+        "スタック溜めで防御・減傷無視の大ダメージ発動"
+      ],
       "sources": {
         "atwiki": {
           "sourceName": "少女ウォーズ@wiki Tier表",
@@ -309,6 +329,20 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12976000971.html",
           "tier": null,
           "summary": "UR閃 アストルフォは、条件が揃えば致命ダメージを最大３回まで回避しHPと戦意を回復できる点、月面レールガンによる敵の防御と減傷を無視した高威力の攻撃がとにかく強力なキャラです。\nまた、スキル攻撃によって敵の戦意吸収や自身のHPを回復できるバフの付与などができる点、通常攻撃がアルガリア砲に変化する点、戦術阻害ユニットを付与された敵の攻撃が前列のみの対象になる点、ヒポグリフ・ブースターによって受ける追加ダメージを５０％減少させつつスキル攻撃を３０％の確率で回避できる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-ursasutorufo",
+          "bullets": [
+            "前列にいるだけで味方被ダメを肩代わり",
+            "閃超進化レベル1以上が前提",
+            "復活できないが、死亡回避が3回できる",
+            "スキルでオートヒール獲得",
+            "敵に前列を狙わせるデバフ付与",
+            "スタック溜めで防御・減傷無視の大ダメージ発動"
+          ],
+          "gems": []
         }
       },
       "flags": {
@@ -382,6 +416,13 @@ window.GIRLWARS_DATA = [
         "fromEval": false
       },
       {
+        "id": "dmg_share",
+        "name": "被ダメ分配",
+        "icon": "🛡️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
         "id": "debuff",
         "name": "デバフ付与",
         "icon": "💀",
@@ -415,6 +456,20 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/08/少女ウォーズのUR閃アストルフォ立ち絵.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/08/少女ウォーズのUR閃アストルフォ下着姿-1024x576.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -579,6 +634,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240512/18/hetarerimuru/e4/bd/p/o1103045315437868199.png?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -728,6 +791,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240531/11/hetarerimuru/ac/bb/j/o0834041415445573454.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -738,7 +809,7 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "月",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズのオジマンディアスの評価とスキル性能-1.png",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズのオジマンディアスの立ち絵.png",
     "illustSource": "マトメバコ！",
     "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
@@ -877,6 +948,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズのオジマンディアスの立ち絵.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズのオジマンディアスの下着姿-e1789628125933.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -887,9 +972,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "月",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260120/22/hetarerimuru/c2/f3/j/o0887039915742954649.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/01/少女ウォーズのオデュッセウスの立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "機転ー鎌刃乱舞",
@@ -918,6 +1003,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 オデュッセウスは、自身のHP減少によって最大で回避率が５０％まで上がる点、木馬戦術効果によって敵２名の奥義とスキルを封じつつ強靭を下げれる点、２回まで生命極限によってHPが２０％以下になるダメージを無効化し治療削減効果を受けずにHPを回復し戦意も回復できる点がとにかく強力なキャラです。\nまた、否決の槍による追撃／反撃／回避不能効果と減傷ダウンの効果、味方ターン開始時に自身の黒血浸食効果を癒やしつつシールドを付与できる点、切裂効果によって対象が行動するたびにダメージを与えれる点、戦意を回復する手段を複数持っている点などもとても強力です。",
+      "summaryBullets": [
+        "回避阻止持ちで回避する敵に特攻",
+        "戦闘開始時にバフ、ターン開始時にシールド",
+        "固定ダメージを与えるデバフ付与",
+        "奥義で敵の減傷50%無視しつつ、減傷・防御を下げる",
+        "スタックが溜まると生命極限獲得（最大で3回）",
+        "HP50%以下になるとHP量に応じて回避率アップ"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -925,11 +1018,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12953802687.html",
           "tier": null,
           "summary": "UR閃 オデュッセウスは、自身のHP減少によって最大で回避率が５０％まで上がる点、木馬戦術効果によって敵２名の奥義とスキルを封じつつ強靭を下げれる点、２回まで生命極限によってHPが２０％以下になるダメージを無効化し治療削減効果を受けずにHPを回復し戦意も回復できる点がとにかく強力なキャラです。\nまた、否決の槍による追撃／反撃／回避不能効果と減傷ダウンの効果、味方ターン開始時に自身の黒血浸食効果を癒やしつつシールドを付与できる点、切裂効果によって対象が行動するたびにダメージを与えれる点、戦意を回復する手段を複数持っている点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-od",
+          "bullets": [
+            "回避阻止持ちで回避する敵に特攻",
+            "戦闘開始時にバフ、ターン開始時にシールド",
+            "固定ダメージを与えるデバフ付与",
+            "奥義で敵の減傷50%無視しつつ、減傷・防御を下げる",
+            "スタックが溜まると生命極限獲得（最大で3回）",
+            "HP50%以下になるとHP量に応じて回避率アップ"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -1011,6 +1118,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/01/少女ウォーズのオデュッセウスの立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/01/少女ウォーズのオデュッセウスの下着-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -1021,9 +1142,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "風",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260504/11/hetarerimuru/3b/9a/j/o0781050415778336144.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/05/少女ウォーズのオベロン立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "静寂ー蝶光滅却",
@@ -1052,6 +1173,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 オベロンは、攻撃又はスキルの後に発動することができる双生幽蝶による回復と攻撃、超奥義時に敵に黒血浸食を与えつつ味方の黒血浸食を癒し体力を回復できる点がとにかく強力なキャラです。\nまた、生長の層数が変化するたび敵に様々な効果を与えれる点、命隙の淵による黒血浸食効果、奥義攻撃で敵を倒した場合にオベロンがすぐに戦意を１０００点回復できる点、一度死亡を回避し自身のHPと戦意を回復しつつ味方全体の戦意を回復できる点などもとても強力です。",
+      "summaryBullets": [
+        "敵に光なき琥珀をばら撒き、それによって黒血侵食を付与し続ける",
+        "生長の効果で敵からのバフ解除を無効化",
+        "生長の層数が変化すると敵にデバフばら撒き",
+        "敵の被回復効果を減少",
+        "黒血侵食持ちの減傷ダウン",
+        "攻撃・スキル時に、生長の層数分だけ攻撃か回復"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -1059,11 +1188,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12964746197.html",
           "tier": null,
           "summary": "UR閃 オベロンは、攻撃又はスキルの後に発動することができる双生幽蝶による回復と攻撃、超奥義時に敵に黒血浸食を与えつつ味方の黒血浸食を癒し体力を回復できる点がとにかく強力なキャラです。\nまた、生長の層数が変化するたび敵に様々な効果を与えれる点、命隙の淵による黒血浸食効果、奥義攻撃で敵を倒した場合にオベロンがすぐに戦意を１０００点回復できる点、一度死亡を回避し自身のHPと戦意を回復しつつ味方全体の戦意を回復できる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-oberon",
+          "bullets": [
+            "敵に光なき琥珀をばら撒き、それによって黒血侵食を付与し続ける",
+            "生長の効果で敵からのバフ解除を無効化",
+            "生長の層数が変化すると敵にデバフばら撒き",
+            "敵の被回復効果を減少",
+            "黒血侵食持ちの減傷ダウン",
+            "攻撃・スキル時に、生長の層数分だけ攻撃か回復"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -1151,6 +1294,20 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/05/少女ウォーズのオベロン立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/05/少女ウォーズのオベロン下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -1300,6 +1457,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250904/18/hetarerimuru/a9/68/j/o0965051515666061571.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -1310,9 +1475,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "花",
     "initialRarity": "SSR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20240530/11/hetarerimuru/50/d0/j/o1042043715445191295.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/02/少女ウォーズのUR閃カエサル立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "無謀配達・疾風",
@@ -1341,6 +1506,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 カエサルは、敵全体の攻撃を２５％ダウンさせるパッシブ、混乱効果で敵が与えたダメージを１ターンの間中そのまま反射することができる点、奥義で敵の最大HPを大きく減少させられる点がとにかく強力なキャラです。\nまた、ダメージを受けるたびに防御が上がる点、「来た、見た、届けた」効果により受けたコントロール効果を反射し戦意を回復できる点、カエサルを退場させた時に敵に強力なデバフを与える点、１回死亡を回避しHPと戦意を大きく回復できる点などもとても強力です。",
+      "summaryBullets": [
+        "生きているだけで敵全体の攻撃力ダウン",
+        "被ダメごとに防御力アップ",
+        "スキルで敵にデバフ、行動不能を付与し、自己回復もできる",
+        "奥義は大ダメージかつ固定ダメージを与え、戦意も吸収",
+        "25％の回避を獲得",
+        "味方タイプによって自分にバフ"
+      ],
       "sources": {
         "atwiki": {
           "sourceName": "少女ウォーズ@wiki Tier表",
@@ -1356,6 +1529,20 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12957037100.html",
           "tier": null,
           "summary": "UR閃 カエサルは、敵全体の攻撃を２５％ダウンさせるパッシブ、混乱効果で敵が与えたダメージを１ターンの間中そのまま反射することができる点、奥義で敵の最大HPを大きく減少させられる点がとにかく強力なキャラです。\nまた、ダメージを受けるたびに防御が上がる点、「来た、見た、届けた」効果により受けたコントロール効果を反射し戦意を回復できる点、カエサルを退場させた時に敵に強力なデバフを与える点、１回死亡を回避しHPと戦意を大きく回復できる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-ursenkaesaru",
+          "bullets": [
+            "生きているだけで敵全体の攻撃力ダウン",
+            "被ダメごとに防御力アップ",
+            "スキルで敵にデバフ、行動不能を付与し、自己回復もできる",
+            "奥義は大ダメージかつ固定ダメージを与え、戦意も吸収",
+            "25％の回避を獲得",
+            "味方タイプによって自分にバフ"
+          ],
+          "gems": []
         }
       },
       "flags": {
@@ -1456,6 +1643,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/02/少女ウォーズのUR閃カエサル立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/02/少女ウォーズのUR閃カエサル下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -1466,9 +1667,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "花",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260803/13/hetarerimuru/7d/32/j/o0787060515808695439.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/08/少女ウォーズの果心居士立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "刈り取る・鮮血の誘い",
@@ -1497,6 +1698,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 果心居士は、HP吸収率が最大７０％上がる点、一度復活できるだけでなく最大２回までHPを大きく回復することができる点がとにかく強力なキャラです。\nまた、奥義時に敵３名のHPを吸収できる点、条件を満たすと果心居士の攻撃が必ず会心攻撃になる点、登場及び復活後の最初のターンにコントロール効果を無効化しつつ奥義の威力を上げれる点、緋色の罠によってバフと確率で相手の行動阻害できる点などもとても強力です。",
+      "summaryBullets": [
+        "味方がHP吸収したらエナジーが貯まる",
+        "自分がHP吸収してもエナジーが貯まる",
+        "エナジー量に応じて追加ダメ",
+        "HP35％以下になるとエナジー全消費して回復",
+        "奥義でデバフ付与し、デバフ持ちが攻撃してくるときに確率でスキル追撃（HP吸収もできる）",
+        "火炎・閃超進化で火力バフ・デバフ付与・HP吸収力アップ"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -1504,11 +1713,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12974523066.html",
           "tier": null,
           "summary": "UR閃 果心居士は、HP吸収率が最大７０％上がる点、一度復活できるだけでなく最大２回までHPを大きく回復することができる点がとにかく強力なキャラです。\nまた、奥義時に敵３名のHPを吸収できる点、条件を満たすと果心居士の攻撃が必ず会心攻撃になる点、登場及び復活後の最初のターンにコントロール効果を無効化しつつ奥義の威力を上げれる点、緋色の罠によってバフと確率で相手の行動阻害できる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-kasinnokji",
+          "bullets": [
+            "味方がHP吸収したらエナジーが貯まる",
+            "自分がHP吸収してもエナジーが貯まる",
+            "エナジー量に応じて追加ダメ",
+            "HP35％以下になるとエナジー全消費して回復",
+            "奥義でデバフ付与し、デバフ持ちが攻撃してくるときに確率でスキル追撃（HP吸収もできる）",
+            "火炎・閃超進化で火力バフ・デバフ付与・HP吸収力アップ"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -1589,6 +1812,20 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/08/少女ウォーズの果心居士立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/08/少女ウォーズの果心居士の下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -1731,6 +1968,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250604/10/hetarerimuru/6b/87/j/o0652066115609307728.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -1872,6 +2117,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240528/09/hetarerimuru/eb/30/j/o1679075615444348732.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -2022,6 +2275,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240717/13/hetarerimuru/94/3f/j/o0656068415464142409.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -2149,6 +2410,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20251003/13/hetarerimuru/9c/fd/j/o0809047215688839917.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -2159,9 +2428,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "花",
     "initialRarity": "SSR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20240523/12/hetarerimuru/4c/1a/j/o1510067915442309778.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/04/少女ウォーズのUR閃真田幸村立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "破浪ー狩猟閃撃",
@@ -2190,6 +2459,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 真田幸村は、敵の行動（追撃を含む）を止めつつダメージを与える身動き不能効果、通常攻撃が普通の魚猟銃に強化される点がとにかく強力なキャラです。\nまた、奥義や超奥義時に少数の敵にかなりのダメージを与えれる点、パッシブなどで回避率や回避阻止率を大きく上げることができる点、自身と味方の奥義回転率を上げれる点、戦闘不能時に１回復活しつつデバフをばら撒ける点などもとても強力です。",
+      "summaryBullets": [
+        "攻撃・スキル攻撃時に確率で固定ダメージデバフ付与",
+        "頻繁に自分や味方の戦意回復",
+        "被ダメ時、反撃しつつ烈火エネルギー獲得",
+        "HP50％未満の味方を烈火エネルギー消費で回復",
+        "独自スタック消費で全デバフ解除",
+        "閃超進化まで育成で性能が大きく変わる"
+      ],
       "sources": {
         "atwiki": {
           "sourceName": "少女ウォーズ@wiki Tier表",
@@ -2205,6 +2482,20 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12963368905.html",
           "tier": null,
           "summary": "UR閃 真田幸村は、敵の行動（追撃を含む）を止めつつダメージを与える身動き不能効果、通常攻撃が普通の魚猟銃に強化される点がとにかく強力なキャラです。\nまた、奥義や超奥義時に少数の敵にかなりのダメージを与えれる点、パッシブなどで回避率や回避阻止率を大きく上げることができる点、自身と味方の奥義回転率を上げれる点、戦闘不能時に１回復活しつつデバフをばら撒ける点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-ursenyukimura",
+          "bullets": [
+            "攻撃・スキル攻撃時に確率で固定ダメージデバフ付与",
+            "頻繁に自分や味方の戦意回復",
+            "被ダメ時、反撃しつつ烈火エネルギー獲得",
+            "HP50％未満の味方を烈火エネルギー消費で回復",
+            "独自スタック消費で全デバフ解除",
+            "閃超進化まで育成で性能が大きく変わる"
+          ],
+          "gems": []
         }
       },
       "flags": {
@@ -2305,6 +2596,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/04/少女ウォーズのUR閃真田幸村立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/04/少女ウォーズのUR閃真田幸村下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -2315,9 +2620,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "月",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260204/18/hetarerimuru/1e/cb/j/o0853038315747778206.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/02/少女ウォーズの三蔵法師立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "慈ー金法呪",
@@ -2346,6 +2651,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 三蔵法師は、即心即仏によって回復量削減の影響を受けずにHPを回復できスキル追撃もできる点、ダメージの無効化と反射、行動不能付与、味方全体のHP回復ができる法相金身がとにかく強力なキャラです。\nまた、死亡を一度回避しHPと戦意を回復して即心即仏効果を獲得できる点、紅顔禍によって味方を守りつつ減傷を上げ戦意を回復できる点、味方のHPを回復する手段を複数持ってる点、自身は黒血浸食効果の影響を受けない点などもとても強力です。",
+      "summaryBullets": [
+        "味方HPが減ったら一定値まで戻す＋回復",
+        "敵全体に攻撃しつつ味方回復",
+        "黒血侵食を回復しつつ耐久力アップ",
+        "敵全体に攻撃しつつデバフ付与し、攻撃完全無効化",
+        "デバフ免疫やバフ解除免疫でステータスを高く保つ",
+        "味方HPが低い時、自分が攻撃を受けて戦意回復"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -2353,11 +2666,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12955391999.html",
           "tier": null,
           "summary": "UR閃 三蔵法師は、即心即仏によって回復量削減の影響を受けずにHPを回復できスキル追撃もできる点、ダメージの無効化と反射、行動不能付与、味方全体のHP回復ができる法相金身がとにかく強力なキャラです。\nまた、死亡を一度回避しHPと戦意を回復して即心即仏効果を獲得できる点、紅顔禍によって味方を守りつつ減傷を上げ戦意を回復できる点、味方のHPを回復する手段を複数持ってる点、自身は黒血浸食効果の影響を受けない点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-sanzou",
+          "bullets": [
+            "味方HPが減ったら一定値まで戻す＋回復",
+            "敵全体に攻撃しつつ味方回復",
+            "黒血侵食を回復しつつ耐久力アップ",
+            "敵全体に攻撃しつつデバフ付与し、攻撃完全無効化",
+            "デバフ免疫やバフ解除免疫でステータスを高く保つ",
+            "味方HPが低い時、自分が攻撃を受けて戦意回復"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -2446,6 +2773,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/02/少女ウォーズの三蔵法師立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/02/少女ウォーズの三蔵法師下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -2456,9 +2797,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "花",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズの花嫁スカアハがエロい！ヒント一覧.png",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "https://stat.ameba.jp/user_images/20251204/17/hetarerimuru/65/fe/j/o0861067415726497824.jpg?caw=800",
+    "illustSource": "へたれリムルブログ",
+    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
     "skills": {
       "normal": {
         "name": "戮ー悪霊纏い",
@@ -2487,11 +2828,6 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 スカアハは、味方に強力なバフをかけつつ被ダメージを２０％カットできる影の領域の効果、HPが２０％以下になる際にダメージを無効化し治療削減を受けずにHPを回復しスキル追撃もできる点がとにかく強力なキャラです\nまた、敵キャラのHPが半分以下になる時スキルで追撃できる点、味方ターン開始時にルーン効果を全て獲得し影狩り効果を１層獲得できる点、深淵の注視効果によって敵の戦意回復速度を下げスキル攻撃を封じれる点、敵のターン終了時等に発動する悪霊呪縛によるダメージを与えれる点などもとても強力です。",
-      "summaryBullets": [
-        "脱衣前のヒントまとめ",
-        "脱衣後のヒントまとめ",
-        "限定衣装のヒントまとめ"
-      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -2499,22 +2835,11 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12948657188.html",
           "tier": null,
           "summary": "UR閃 スカアハは、味方に強力なバフをかけつつ被ダメージを２０％カットできる影の領域の効果、HPが２０％以下になる際にダメージを無効化し治療削減を受けずにHPを回復しスキル追撃もできる点がとにかく強力なキャラです\nまた、敵キャラのHPが半分以下になる時スキルで追撃できる点、味方ターン開始時にルーン効果を全て獲得し影狩り効果を１層獲得できる点、深淵の注視効果によって敵の戦意回復速度を下げスキル攻撃を封じれる点、敵のターン終了時等に発動する悪霊呪縛によるダメージを与えれる点などもとても強力です。"
-        },
-        "kokomato": {
-          "sourceName": "マトメバコ！ (kokomatoblog.com)",
-          "date": "2026-11-09",
-          "url": "https://kokomatoblog.com/sw-sukaahawed",
-          "bullets": [
-            "脱衣前のヒントまとめ",
-            "脱衣後のヒントまとめ",
-            "限定衣装のヒントまとめ"
-          ],
-          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": true
+        "hasMultiSources": false
       },
       "history": [
         {
@@ -2589,6 +2914,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20251204/17/hetarerimuru/65/fe/j/o0861067415726497824.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -2599,9 +2932,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "月",
     "initialRarity": "UR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20240524/17/hetarerimuru/36/c5/p/o0727046815442813164.png?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/06/少女ウォーズのUR閃ソロモンの立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "ダブルリフト・トランプ催眠",
@@ -2630,6 +2963,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 ソロモンは、奥義時に敵と味方のバフとデバフ（コントロール含む）を入れ替えることができる点、２回復活できてHPと戦意を大きく回復しつつ悪夢のエネルギーを９層獲得できる点がとにかく強力なキャラです。\nまた、複数の方法で強力なデバフである甘い夢を付与できる点、条件はあるが戦意の消耗なしで奥義で反撃できる点、ハプニングによって次回の敵の被ダメを上げ高い確率で集中攻撃できる点、自身や味方の戦意回復手段を持っている点などもとても強力です。",
+      "summaryBullets": [
+        "スキル・奥義反撃持ち",
+        "味方の戦意回復・敵からの戦意吸収",
+        "甘い夢付与での睡眠＋与ダメ大幅低下付与",
+        "攻撃範囲が列単位の代わりにデバフ付与率高め",
+        "引き付けによる被ダメ減らし・敵の同士討ちが強力",
+        "2度の復活効果アリ"
+      ],
       "sources": {
         "atwiki": {
           "sourceName": "少女ウォーズ@wiki Tier表",
@@ -2645,6 +2986,20 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12970042614.html",
           "tier": null,
           "summary": "UR閃 ソロモンは、奥義時に敵と味方のバフとデバフ（コントロール含む）を入れ替えることができる点、２回復活できてHPと戦意を大きく回復しつつ悪夢のエネルギーを９層獲得できる点がとにかく強力なキャラです。\nまた、複数の方法で強力なデバフである甘い夢を付与できる点、条件はあるが戦意の消耗なしで奥義で反撃できる点、ハプニングによって次回の敵の被ダメを上げ高い確率で集中攻撃できる点、自身や味方の戦意回復手段を持っている点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-ursensoromon",
+          "bullets": [
+            "スキル・奥義反撃持ち",
+            "味方の戦意回復・敵からの戦意吸収",
+            "甘い夢付与での睡眠＋与ダメ大幅低下付与",
+            "攻撃範囲が列単位の代わりにデバフ付与率高め",
+            "引き付けによる被ダメ減らし・敵の同士討ちが強力",
+            "2度の復活効果アリ"
+          ],
+          "gems": []
         }
       },
       "flags": {
@@ -2744,6 +3099,20 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/06/少女ウォーズのUR閃ソロモンの立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/06/少女ウォーズのUR閃ソロモンの下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -2900,6 +3269,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250504/12/hetarerimuru/a3/00/j/o0698065615585669608.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -3042,6 +3419,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240620/19/hetarerimuru/6d/55/j/o0664067615453883454.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -3183,6 +3568,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240509/18/hetarerimuru/0b/46/j/o1549069715436576199.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -3343,6 +3736,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240510/18/hetarerimuru/69/05/j/o1673075315436980157.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -3353,9 +3754,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "風",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260304/12/hetarerimuru/55/e7/j/o0827068015757109778.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/03/少女ウォーズの塚原卜伝の立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "刃に触れー残心",
@@ -3384,6 +3785,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 塚原卜伝は、パッシブで回避率が上がり敵の追撃や反撃を受ける際にはさらに回避率が上がる点、死の線による強靭ダウンの効果と追加ダメージの発生と生命極限無効化がとにかく強力なキャラです。\nまた、目標に隙が付与されていた場合に自身や味方が様々なステータスを一部無視して攻撃できる点、味方ターンの開始時にランダムなバフをいくつか取得できる点、真・一の太刀による回避と免疫不能の攻撃、死亡を１度回避し体力と戦意を大きく回復しつつ敵に死の線を付与できる点などもとても強力です。",
+      "summaryBullets": [
+        "敵に隙をスタックさせるとステータス無視できる",
+        "HP割合が低い敵・隙スタックが多い敵を優先して攻撃",
+        "敵の強靭ステータスを下げる",
+        "敵の生命極限を無効化（1回のみ）",
+        "自己バフが溜まると全消費して強力な一撃",
+        "閃超進化レベル1で味方もステータス無視できるようになる"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -3391,11 +3800,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12958379189.html",
           "tier": null,
           "summary": "UR閃 塚原卜伝は、パッシブで回避率が上がり敵の追撃や反撃を受ける際にはさらに回避率が上がる点、死の線による強靭ダウンの効果と追加ダメージの発生と生命極限無効化がとにかく強力なキャラです。\nまた、目標に隙が付与されていた場合に自身や味方が様々なステータスを一部無視して攻撃できる点、味方ターンの開始時にランダムなバフをいくつか取得できる点、真・一の太刀による回避と免疫不能の攻撃、死亡を１度回避し体力と戦意を大きく回復しつつ敵に死の線を付与できる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-bokuden",
+          "bullets": [
+            "敵に隙をスタックさせるとステータス無視できる",
+            "HP割合が低い敵・隙スタックが多い敵を優先して攻撃",
+            "敵の強靭ステータスを下げる",
+            "敵の生命極限を無効化（1回のみ）",
+            "自己バフが溜まると全消費して強力な一撃",
+            "閃超進化レベル1で味方もステータス無視できるようになる"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -3470,6 +3893,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/03/少女ウォーズの塚原卜伝の立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/03/少女ウォーズの塚原卜伝の下着-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -3480,9 +3917,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "雪",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260902/15/hetarerimuru/1c/e9/j/o0940042315818242467.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズの董卓立ち絵.png",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "無秩序な殺意・斬首",
@@ -3511,6 +3948,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 董卓は、轟く・チェーンソーマニアによるシールド無視の効果と戦意が５００点未満にならない点、苦痛ドレイン効果による致命ダメージの無効化とコントロール付与無効化とダメージを回復に転換する効果がとにかく強力なキャラです。\nまた、董卓と同じ位置にいる敵キャラが自ら行動した際にスキルによる追撃を発動できる点、他の味方キャラが行動するたびに董卓が戦意を回復できる点、裂創による強靭ダウンの効果とチェーンソー斬裂ダメージの起爆、奥義で敵単体を攻撃しながら周囲の敵にもダメージを与えつつチェーンソーマニア状態なることができる点などもとても強力です。",
+      "summaryBullets": [
+        "同じ位置の敵を優先的に狙う",
+        "強力な単体攻撃と持続ダメを与える",
+        "戦意回復速度が高い",
+        "目標に耐久力ダウン、自分に火力バフ",
+        "死亡せずに被ダメを回復に変換（2回まで）",
+        "味方全体に強力なバフ付与"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -3518,11 +3963,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12977447486.html",
           "tier": null,
           "summary": "UR閃 董卓は、轟く・チェーンソーマニアによるシールド無視の効果と戦意が５００点未満にならない点、苦痛ドレイン効果による致命ダメージの無効化とコントロール付与無効化とダメージを回復に転換する効果がとにかく強力なキャラです。\nまた、董卓と同じ位置にいる敵キャラが自ら行動した際にスキルによる追撃を発動できる点、他の味方キャラが行動するたびに董卓が戦意を回復できる点、裂創による強靭ダウンの効果とチェーンソー斬裂ダメージの起爆、奥義で敵単体を攻撃しながら周囲の敵にもダメージを与えつつチェーンソーマニア状態なることができる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-toutaku",
+          "bullets": [
+            "同じ位置の敵を優先的に狙う",
+            "強力な単体攻撃と持続ダメを与える",
+            "戦意回復速度が高い",
+            "目標に耐久力ダウン、自分に火力バフ",
+            "死亡せずに被ダメを回復に変換（2回まで）",
+            "味方全体に強力なバフ付与"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -3604,6 +4063,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズの董卓立ち絵.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズの董卓下着姿.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -3614,7 +4087,7 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "風",
     "initialRarity": "UR",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのUR閃・巴御前の評価とスキル性能.png",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのUR閃巴御前の立ち絵.png",
     "illustSource": "マトメバコ！",
     "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
@@ -3782,6 +4255,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのUR閃巴御前の立ち絵.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのUR閃巴御前の下着姿.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -3792,9 +4279,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "雪",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260104/22/hetarerimuru/b4/c9/j/o0897040315737622667.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/01/少女ウォーズの源頼光立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "誅殺・神便鬼毒酒",
@@ -3823,6 +4310,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 源頼光は、鬼の力があれば２度死亡を回避しHPと戦意を回復し鬼神の一撃によって攻撃できる点、様々なタイミングで発動する鬼神の一撃が減傷無視や戦意吸収などできる点がとにかく強力なキャラです。\nまた、鬼の力があれば自身だけでなく味方のコントロール効果も解除できる点、スキル発動後にHPと戦意を回復しながら高い確率で鬼神の一撃を発動できる点、大江山の契り効果によって攻防のステータスを大きく上げつつシールドを付与できる点、属性転換により相性不利のダメージを軽減し有利なタイプに変化できる点などもとても強力です。",
+      "summaryBullets": [
+        "属性相性を強制的に有利にできる",
+        "後方の味方にシールド付与・相性無視",
+        "敵の会心率を下げつつ、固定ダメージ付与のデバフ持ち",
+        "スキルで敵全体にデバフ付与",
+        "単体高火力奥義でスタック数に応じて追撃",
+        "スタック数に応じて自動コントロール解除・復活アリ"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -3830,11 +4325,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12952194298.html",
           "tier": null,
           "summary": "UR閃 源頼光は、鬼の力があれば２度死亡を回避しHPと戦意を回復し鬼神の一撃によって攻撃できる点、様々なタイミングで発動する鬼神の一撃が減傷無視や戦意吸収などできる点がとにかく強力なキャラです。\nまた、鬼の力があれば自身だけでなく味方のコントロール効果も解除できる点、スキル発動後にHPと戦意を回復しながら高い確率で鬼神の一撃を発動できる点、大江山の契り効果によって攻防のステータスを大きく上げつつシールドを付与できる点、属性転換により相性不利のダメージを軽減し有利なタイプに変化できる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-yorimitu",
+          "bullets": [
+            "属性相性を強制的に有利にできる",
+            "後方の味方にシールド付与・相性無視",
+            "敵の会心率を下げつつ、固定ダメージ付与のデバフ持ち",
+            "スキルで敵全体にデバフ付与",
+            "単体高火力奥義でスタック数に応じて追撃",
+            "スタック数に応じて自動コントロール解除・復活アリ"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -3882,6 +4391,13 @@ window.GIRLWARS_DATA = [
         "fromEval": false
       },
       {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
         "id": "self_heal",
         "name": "自己回復",
         "icon": "💖",
@@ -3896,11 +4412,25 @@ window.GIRLWARS_DATA = [
         "fromEval": false
       },
       {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
         "id": "cleanse",
         "name": "デバフ解除/免疫",
         "icon": "✨",
         "fromSkill": true,
         "fromEval": false
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": false,
+        "fromEval": true
       },
       {
         "id": "ignore_def",
@@ -3916,6 +4446,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/01/少女ウォーズの源頼光立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/01/少女ウォーズの源頼光の下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -3926,7 +4470,7 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "花",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/11/少女ウォーズのメイヴの評価とスキル性能-1.png",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/11/少女ウォーズのメイヴの立ち絵.png",
     "illustSource": "マトメバコ！",
     "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
@@ -4079,6 +4623,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/11/少女ウォーズのメイヴの立ち絵.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/11/少女ウォーズのメイヴの下着姿.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -4227,6 +4785,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250921/08/hetarerimuru/e9/b8/j/o0939042315678454622.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -4237,9 +4803,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "花",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260519/13/hetarerimuru/ad/89/j/o0922041515783942168.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/05/少女ウォーズの柳生十兵衛の下着姿-1024x576.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "影追い・飛燕斬り",
@@ -4268,6 +4834,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 柳生十兵衛は、見合い・見切るによって治療削減効果を受けずに最大４回までHPを大きく回復できる点、ずれた時空による特殊効果無効化と５０％ダメージカット及び目標変更効果がとにかく強力なキャラです。\nまた、切り跡効果により様々なタイミングで追加ダメージと減少ダウンを与えれる点、鏡花の盾によるシールド効果とダメージ反射、登場時や敵が行動した後に月の抄によって柳生十兵衛や味方に様々な効果を付与できる点、奥義時に非目標へ複数回ダメージを与えれる点などもとても強力です。",
+      "summaryBullets": [
+        "ブロック率が50％以下にならない",
+        "ブロックする度に自己回復・敵にデバフ",
+        "自己回復バフが一定数以下で耐久力アップ、一定以上で火力アップ",
+        "敵にデバフ付与・味方にバフ付与",
+        "敵タイプに応じてバフ獲得",
+        "復活はないが、HP20％以下で自己回復（最大4回）"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -4275,11 +4849,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12966519256.html",
           "tier": null,
           "summary": "UR閃 柳生十兵衛は、見合い・見切るによって治療削減効果を受けずに最大４回までHPを大きく回復できる点、ずれた時空による特殊効果無効化と５０％ダメージカット及び目標変更効果がとにかく強力なキャラです。\nまた、切り跡効果により様々なタイミングで追加ダメージと減少ダウンを与えれる点、鏡花の盾によるシールド効果とダメージ反射、登場時や敵が行動した後に月の抄によって柳生十兵衛や味方に様々な効果を付与できる点、奥義時に非目標へ複数回ダメージを与えれる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-yagyujyubee",
+          "bullets": [
+            "ブロック率が50％以下にならない",
+            "ブロックする度に自己回復・敵にデバフ",
+            "自己回復バフが一定数以下で耐久力アップ、一定以上で火力アップ",
+            "敵にデバフ付与・味方にバフ付与",
+            "敵タイプに応じてバフ獲得",
+            "復活はないが、HP20％以下で自己回復（最大4回）"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -4311,6 +4899,13 @@ window.GIRLWARS_DATA = [
         "icon": "🔻",
         "fromSkill": true,
         "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
       },
       {
         "id": "self_heal",
@@ -4354,6 +4949,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/05/少女ウォーズの柳生十兵衛の下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/05/少女ウォーズの柳生十兵衛の下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -4364,9 +4973,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "風",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260720/10/hetarerimuru/b0/76/j/o0927041715804237764.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/07/少女ウォーズのヤマトタケルの立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "水火繚乱・相殺",
@@ -4395,6 +5004,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 ヤマトタケルは、ダメージを最大HPの３０％分受けるたびにHPを回復しスキル追撃を行う点、神剣解放状態の効果（戦意回復、攻撃範囲拡大、死亡しない）がとにかく強力なキャラです。\nまた、超奥義時に様々な効果（シールド解除、ブロック不可、回避不可など）を与えることができる点、前列の敵キャラからによる攻撃を受ける際に最終ダメージを５０％低下させ戦意を回復し剣の身構えもためることができる点、迎え火と清水という状態によって様々な恩恵を受けることができる点、攻撃時に相手のブロックや回避に耐性がある点などもとても強力です。",
+      "summaryBullets": [
+        "ブロック無視・回避阻止持ち",
+        "残りHP量に応じてバフデバフを付与",
+        "登場時・スキル攻撃時・敵後列からの被ダメ時にバフ獲得",
+        "バフ1層消費で被ダメ無効化・自動回復・スキル追撃",
+        "累計バフ10層獲得で超バフを獲得",
+        "復活効果はないが、超バフ時は死亡しない"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -4402,11 +5019,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12972973345.html",
           "tier": null,
           "summary": "UR閃 ヤマトタケルは、ダメージを最大HPの３０％分受けるたびにHPを回復しスキル追撃を行う点、神剣解放状態の効果（戦意回復、攻撃範囲拡大、死亡しない）がとにかく強力なキャラです。\nまた、超奥義時に様々な効果（シールド解除、ブロック不可、回避不可など）を与えることができる点、前列の敵キャラからによる攻撃を受ける際に最終ダメージを５０％低下させ戦意を回復し剣の身構えもためることができる点、迎え火と清水という状態によって様々な恩恵を受けることができる点、攻撃時に相手のブロックや回避に耐性がある点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-yamatotakeru",
+          "bullets": [
+            "ブロック無視・回避阻止持ち",
+            "残りHP量に応じてバフデバフを付与",
+            "登場時・スキル攻撃時・敵後列からの被ダメ時にバフ獲得",
+            "バフ1層消費で被ダメ無効化・自動回復・スキル追撃",
+            "累計バフ10層獲得で超バフを獲得",
+            "復活効果はないが、超バフ時は死亡しない"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -4431,6 +5062,13 @@ window.GIRLWARS_DATA = [
         "icon": "⚡",
         "fromSkill": true,
         "fromEval": false
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
       },
       {
         "id": "self_heal",
@@ -4474,6 +5112,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/07/少女ウォーズのヤマトタケルの立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/07/少女ウォーズのヤマトタケルの下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -4484,9 +5136,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "月",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260704/18/hetarerimuru/ce/56/j/o1025063215799299440.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/07/少女ウォーズのリチャードの立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "枯れ果て・氷鱗のバレイ",
@@ -4515,6 +5167,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 リチャードは、超奥義時に確定で敵２名を行動不能にできる点、強化された粉雪のベールが回避率を２５％も上げるとともに毎ターン味方全体にダモクレスの氷を付与できる点がとにかく強力なキャラです。\nまた、氷結の鎧によってスキルダメージを１回無効化できて戦意削減を無効化できる点、リチャードが氷結の鎧を持っている場合追加で敵の増傷を低下させターゲットを自身に変更する点、ダモクレスの氷を消耗又は解除されるたびに減傷と会心抵抗率を永続的に上昇させる点、死亡を１度回避しHPと戦意を大きく回復させつつダモクレスの氷を獲得できる点などもとても強力です。",
+      "summaryBullets": [
+        "戦場にいるだけで回避率アップ・デバフ無効化",
+        "ダモクレスの氷：被ダメ時に固定ダメを与える",
+        "ダモクレスの氷消費する度にバフ付与",
+        "氷結の鎧：ダモクレスの氷10層消費でスキルダメージ無効化",
+        "氷結の鎧がリチャードにある場合、攻撃者の増傷大幅ダウン＋強制的にリチャードに攻撃させる",
+        "超奥義では敵2体を強制的に行動不可に"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -4522,11 +5182,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12971465121.html",
           "tier": null,
           "summary": "UR閃 リチャードは、超奥義時に確定で敵２名を行動不能にできる点、強化された粉雪のベールが回避率を２５％も上げるとともに毎ターン味方全体にダモクレスの氷を付与できる点がとにかく強力なキャラです。\nまた、氷結の鎧によってスキルダメージを１回無効化できて戦意削減を無効化できる点、リチャードが氷結の鎧を持っている場合追加で敵の増傷を低下させターゲットを自身に変更する点、ダモクレスの氷を消耗又は解除されるたびに減傷と会心抵抗率を永続的に上昇させる点、死亡を１度回避しHPと戦意を大きく回復させつつダモクレスの氷を獲得できる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-rityad",
+          "bullets": [
+            "戦場にいるだけで回避率アップ・デバフ無効化",
+            "ダモクレスの氷：被ダメ時に固定ダメを与える",
+            "ダモクレスの氷消費する度にバフ付与",
+            "氷結の鎧：ダモクレスの氷10層消費でスキルダメージ無効化",
+            "氷結の鎧がリチャードにある場合、攻撃者の増傷大幅ダウン＋強制的にリチャードに攻撃させる",
+            "超奥義では敵2体を強制的に行動不可に"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -4615,6 +5289,20 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/07/少女ウォーズのリチャードの立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/07/少女ウォーズのリチャードの下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
+      }
     ]
   },
   {
@@ -4625,9 +5313,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "雪",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260603/12/hetarerimuru/f5/dd/j/o0812051915789059679.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/06/少女ウォーズの劉邦の立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "点将・勝は弧ならず",
@@ -4656,6 +5344,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 劉邦は、劉邦が奥義／超奥義を２回発動するごとに奥義で１回追撃できる点、超奥義時に条件を満たせば敵全体を５０％の確率で眩暈にできる点がとにかく強力なキャラです。\nまた、奥義が全体攻撃で威力が高い点、斬蛇によって防御力と減傷を一部無視できる点、複数の方法でバフの無効化や解除とコピーができる点、死亡を一度回避しデバフを全て解除してHPと戦意を大きく回復できる点などもとても強力です。",
+      "summaryBullets": [
+        "戦意50回復ごとに天命獲得",
+        "天命自体にバフがあり、攻撃力・確率追加ダメ付与",
+        "味方に項羽がいれば吸血率アップ",
+        "敵全体攻撃＋ダメージを出す敵に追加ダメ＋バフ奪取",
+        "バフ獲得で自己回復、バフ消去で戦意回復＋追加ダメ",
+        "敵の防御・減傷を大幅無視"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -4663,11 +5359,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12968001512.html",
           "tier": null,
           "summary": "UR閃 劉邦は、劉邦が奥義／超奥義を２回発動するごとに奥義で１回追撃できる点、超奥義時に条件を満たせば敵全体を５０％の確率で眩暈にできる点がとにかく強力なキャラです。\nまた、奥義が全体攻撃で威力が高い点、斬蛇によって防御力と減傷を一部無視できる点、複数の方法でバフの無効化や解除とコピーができる点、死亡を一度回避しデバフを全て解除してHPと戦意を大きく回復できる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-ryuuhou",
+          "bullets": [
+            "戦意50回復ごとに天命獲得",
+            "天命自体にバフがあり、攻撃力・確率追加ダメ付与",
+            "味方に項羽がいれば吸血率アップ",
+            "敵全体攻撃＋ダメージを出す敵に追加ダメ＋バフ奪取",
+            "バフ獲得で自己回復、バフ消去で戦意回復＋追加ダメ",
+            "敵の防御・減傷を大幅無視"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -4748,6 +5458,20 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/06/少女ウォーズの劉邦の立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/06/少女ウォーズの劉邦の下着-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -4890,6 +5614,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20251120/18/hetarerimuru/bf/dd/j/o0963043315721256700.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -4900,7 +5632,7 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "風",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのローランの評価とスキル性能-1.png",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのローラン立ち絵.png",
     "illustSource": "マトメバコ！",
     "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
@@ -5038,6 +5770,20 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのローラン立ち絵.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのローラン下着姿.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -5194,6 +5940,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250720/17/hetarerimuru/84/36/j/o0960043215637372853.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -5335,6 +6089,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250804/12/hetarerimuru/56/92/j/o0652066615645745841.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -5345,9 +6107,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "雪",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260404/19/hetarerimuru/92/41/j/o0801036015767864229.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/04/少女ウォーズのハンニバルの立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "疎離の環・疑心",
@@ -5376,6 +6138,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 ハンニバル・バルカは、脆弱な同盟により追加ダメージが発生する点、警戒効果によるダメージカットやシールド効果などがとにかく強力なキャラです。\nまた、背信の盟約により行動するごとに他のキャラにダメージをばら撒く点、味方が消費した警戒が５層に達するたび奥義で追撃できる点、スキル攻撃後に条件を満たした時スキル追撃を行える点、前列隊長技により自軍を有利に３ターンの間できる点、死亡を１度回避しHPと戦意を回復しつつ奥義を撃つことができる点などもとても強力です。",
+      "summaryBullets": [
+        "ターン開始時、敵に耐久力デバフ付与",
+        "スキルでも耐久力デバフ付与",
+        "奥義でも耐久力デバフ付与",
+        "自分と味方1体に被ダメ軽減バフ付与（自分はダメ半減）",
+        "被ダメ軽減は毎ターン確率付与・自分、同列の味方には確定付与",
+        "HP30％以上なら後列の被ダメを被ダメ分担"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -5383,11 +6153,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12961825379.html",
           "tier": null,
           "summary": "UR閃 ハンニバル・バルカは、脆弱な同盟により追加ダメージが発生する点、警戒効果によるダメージカットやシールド効果などがとにかく強力なキャラです。\nまた、背信の盟約により行動するごとに他のキャラにダメージをばら撒く点、味方が消費した警戒が５層に達するたび奥義で追撃できる点、スキル攻撃後に条件を満たした時スキル追撃を行える点、前列隊長技により自軍を有利に３ターンの間できる点、死亡を１度回避しHPと戦意を回復しつつ奥義を撃つことができる点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-hannibal",
+          "bullets": [
+            "ターン開始時、敵に耐久力デバフ付与",
+            "スキルでも耐久力デバフ付与",
+            "奥義でも耐久力デバフ付与",
+            "自分と味方1体に被ダメ軽減バフ付与（自分はダメ半減）",
+            "被ダメ軽減は毎ターン確率付与・自分、同列の味方には確定付与",
+            "HP30％以上なら後列の被ダメを被ダメ分担"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -5475,6 +6259,20 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/04/少女ウォーズのハンニバルの立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/04/少女ウォーズのハンニバルの下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -5631,6 +6429,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250704/19/hetarerimuru/4d/88/j/o0957043115628516055.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -5641,9 +6447,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "花",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20260320/12/hetarerimuru/25/d9/j/o0962043315762382751.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/03/少女ウォーズのモーガンの立ち絵.jpg",
+    "illustSource": "マトメバコ！",
+    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
     "skills": {
       "normal": {
         "name": "カラスの仮面ー迷乱",
@@ -5672,6 +6478,14 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": null,
       "summary": "UR閃 モーガンは、奥義時に複数の敵に行動不能とデバフ効果をばら撒ける可能性がある点、自身はコントロール効果を無効化しコントロール効果を受けた際にはHPと戦意を少し回復できる点がとにかく強力なキャラです。\nまた、敵ターンの開始時にコントロール無効化効果が付いたシールドを味方１名に張れる点、認知幻象によりデバフ効果の解除を妨害しバフ効果を解除できる点、死亡を１度回避しHPと戦意を大きく回復できる点、自身は戦意減少／吸収効果を受けない点などもとても強力です。",
+      "summaryBullets": [
+        "HPが低い味方にコントロール効果無効のシールド付与",
+        "敵が攻撃するたびにコントロール率アップ",
+        "敵全体に攻撃しつつ、デバフ解除をバフ解除に置き換える効果付与",
+        "敵全体に攻撃しつつ、確率で行動不能・ステータスダウンのデバフ",
+        "敵の与ダメが多いキャラに確率でステータスダウン・スキルや奥義禁止付与",
+        "戦意減少・コントロール効果を無効化"
+      ],
       "sources": {
         "rimuru": {
           "sourceName": "へたれゲームプレイヤーリムルの日記と攻略情報",
@@ -5679,11 +6493,25 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12960102720.html",
           "tier": null,
           "summary": "UR閃 モーガンは、奥義時に複数の敵に行動不能とデバフ効果をばら撒ける可能性がある点、自身はコントロール効果を無効化しコントロール効果を受けた際にはHPと戦意を少し回復できる点がとにかく強力なキャラです。\nまた、敵ターンの開始時にコントロール無効化効果が付いたシールドを味方１名に張れる点、認知幻象によりデバフ効果の解除を妨害しバフ効果を解除できる点、死亡を１度回避しHPと戦意を大きく回復できる点、自身は戦意減少／吸収効果を受けない点などもとても強力です。"
+        },
+        "kokomato": {
+          "sourceName": "マトメバコ！ (kokomatoblog.com)",
+          "date": "2026-11-09",
+          "url": "https://kokomatoblog.com/sw-mogan",
+          "bullets": [
+            "HPが低い味方にコントロール効果無効のシールド付与",
+            "敵が攻撃するたびにコントロール率アップ",
+            "敵全体に攻撃しつつ、デバフ解除をバフ解除に置き換える効果付与",
+            "敵全体に攻撃しつつ、確率で行動不能・ステータスダウンのデバフ",
+            "敵の与ダメが多いキャラに確率でステータスダウン・スキルや奥義禁止付与",
+            "戦意減少・コントロール効果を無効化"
+          ],
+          "gems": []
         }
       },
       "flags": {
         "onlyOutdated2024": false,
-        "hasMultiSources": false
+        "hasMultiSources": true
       },
       "history": [
         {
@@ -5778,6 +6606,20 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/03/少女ウォーズのモーガンの立ち絵.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/03/少女ウォーズのモーガン下着姿-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -5895,6 +6737,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250304/18/hetarerimuru/3c/1c/j/o0666068415550927362.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -6062,6 +6912,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240602/12/hetarerimuru/b4/5c/p/o0836047515446427382.png?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -6251,6 +7109,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240501/15/hetarerimuru/03/fe/p/o0662040115432924125.png?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -6432,6 +7298,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240512/18/hetarerimuru/e4/bd/p/o1103045315437868199.png?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -6592,6 +7466,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250618/10/hetarerimuru/f6/97/j/o0920041415618875034.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -6708,6 +7590,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20241219/13/hetarerimuru/c7/49/j/o0822050315523226573.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -6875,6 +7765,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20260219/12/hetarerimuru/77/d3/j/o0894061415752600344.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -7057,6 +7955,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250519/13/hetarerimuru/62/41/j/o0808036415598551315.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -7210,6 +8116,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240717/13/hetarerimuru/94/3f/j/o0656068415464142409.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -7355,6 +8269,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250102/17/hetarerimuru/7f/58/j/o1006058815528737284.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -7478,6 +8400,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250205/08/hetarerimuru/e2/5e/j/o1020058315540805884.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -7603,6 +8533,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240819/13/hetarerimuru/f2/95/j/o1009070615476588136.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -7726,6 +8664,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250218/13/hetarerimuru/9f/11/j/o0922057315545614305.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -7857,6 +8803,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250120/15/hetarerimuru/c1/5b/j/o0824037115535225150.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -8032,6 +8986,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240523/12/hetarerimuru/4c/1a/j/o1510067915442309778.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -8184,6 +9146,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240507/14/hetarerimuru/5a/ce/j/o0849054915435680286.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -8359,6 +9329,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240524/17/hetarerimuru/36/c5/p/o0727046815442813164.png?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -8462,6 +9440,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20251019/12/hetarerimuru/d0/b1/j/o0799036015699154330.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -8622,6 +9608,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250420/22/hetarerimuru/6e/04/j/o0764041715571678867.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -8811,6 +9805,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250404/12/hetarerimuru/1b/04/j/o0652066815562273714.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -8821,9 +9823,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "風",
     "initialRarity": "UR",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのUR閃・巴御前の評価とスキル性能.png",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "https://stat.ameba.jp/user_images/20240515/13/hetarerimuru/95/ea/j/o1663074815439023423.jpg?caw=800",
+    "illustSource": "へたれリムルブログ",
+    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
     "skills": {
       "normal": {
         "name": "カラフルー流星乱舞～束",
@@ -8849,14 +9851,6 @@ window.GIRLWARS_DATA = [
     "evaluation": {
       "tierRank": "T0",
       "summary": "風系統の猛将キャラ。初期ランクUR。",
-      "summaryBullets": [
-        "自己バフ、被ダメ時に自己回復＋反撃持ち",
-        "敵味方に戦意回復速度のバフデバフ、死亡後も継続",
-        "後列隊長技で1ターン後列の被ダメ完全カット",
-        "多くの敵に行動不能デバフを付与、しかも高確率",
-        "奥義発動時、味方の全デバフ解除・味方の奥義誘発",
-        "被ダメや与ダメでHP回復"
-      ],
       "sources": {
         "atwiki": {
           "sourceName": "少女ウォーズ@wiki Tier表",
@@ -8872,20 +9866,6 @@ window.GIRLWARS_DATA = [
           "url": "https://ameblo.jp/hetarerimuru/entry-12852286730.html",
           "tier": null,
           "summary": "風系統の猛将キャラ。初期ランクUR。"
-        },
-        "kokomato": {
-          "sourceName": "マトメバコ！ (kokomatoblog.com)",
-          "date": "2026-11-09",
-          "url": "https://kokomatoblog.com/sw-ursentomoe",
-          "bullets": [
-            "自己バフ、被ダメ時に自己回復＋反撃持ち",
-            "敵味方に戦意回復速度のバフデバフ、死亡後も継続",
-            "後列隊長技で1ターン後列の被ダメ完全カット",
-            "多くの敵に行動不能デバフを付与、しかも高確率",
-            "奥義発動時、味方の全デバフ解除・味方の奥義誘発",
-            "被ダメや与ダメでHP回復"
-          ],
-          "gems": []
         }
       },
       "flags": {
@@ -9021,6 +10001,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240515/13/hetarerimuru/95/ea/j/o1663074815439023423.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -9160,6 +10148,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240801/18/hetarerimuru/c0/98/j/o0656067715469890299.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -9321,6 +10317,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240518/09/hetarerimuru/ad/da/j/o1536069115440132221.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -9481,6 +10485,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240421/09/hetarerimuru/6a/4c/p/o1078043615428556101.png?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -9618,6 +10630,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20241117/18/hetarerimuru/92/73/j/o0661048815511129576.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -9764,6 +10784,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240701/17/hetarerimuru/08/c0/j/o0651066215458158287.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -9899,6 +10927,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20250320/18/hetarerimuru/a5/88/j/o0830057315556648337.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -10029,6 +11065,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240904/16/hetarerimuru/b9/22/j/o0657067515482488256.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -10168,6 +11212,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20241018/18/hetarerimuru/c8/34/j/o1037046715499434510.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -10306,6 +11358,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20240918/13/hetarerimuru/1d/77/j/o0641063715487737087.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -10394,6 +11454,14 @@ window.GIRLWARS_DATA = [
         "icon": "⚔️",
         "fromSkill": true,
         "fromEval": false
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20241204/09/hetarerimuru/78/c0/j/o0936054215517537992.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
       }
     ]
   },
@@ -10526,6 +11594,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20241104/10/hetarerimuru/c2/fd/j/o1023046115505913749.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -10657,6 +11733,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": true,
         "fromEval": false
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://stat.ameba.jp/user_images/20241005/10/hetarerimuru/53/c8/j/o1588071515494221509.jpg?caw=800",
+        "source": "へたれリムルブログ",
+        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      }
     ]
   },
   {
@@ -10729,6 +11813,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMTkz/MDAxNjg4MDI1MDIyOTM5.ewLL9MG4ZgXh_ic8utN39qyqE4o-ocp3wgZNQZhcZAQg.2PoAiwNLUouuxlMseNcymYWp0DPNOs6ZNFrQSEHydPUg.JPEG/%EC%95%8C%EB%A0%89%EC%82%B0%EB%8D%94.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -10786,7 +11878,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "あーさーおう",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMTI4/MDAxNjg4MDIxOTk4MDU1.idfdY79ZpQLx3-O_4gBtIB1u6D9m9ExEsFca6aS6ZWcg.i0URUcmT7KHSh5VtN1ml642jX-_rh81KHnCCJkkC5-0g.JPEG/%EC%95%84%EC%84%9C%EC%99%95.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_81",
@@ -10868,6 +11968,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMjMy/MDAxNjg0OTA3MjI5ODEz.0eeb0r_z-rnOUpb-XEJhNovKf-rvgSKxvcnne0Ogclcg.-TidClqvNFGxMOGGs4M-Q5uKovmLphpGlHo7vAtHO2Ag.PNG/%EC%98%88%EC%B9%B4%ED%85%8C%EB%A6%AC%EB%82%98.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -10920,7 +12028,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "えりざべす",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMjQw/MDAxNjg0OTA2NjQyMjUw.HktOCZTg6_Iz-14qtX7qi0honb0ZVO-slDPxpMqtj9Ig.xaiJyqx6V-6H5Mmkr1zYIVccgDeD1LNM8Ou4uxndDPEg.JPEG/%EC%97%98%EB%A6%AC%EC%9E%90%EB%B2%A0%EC%8A%A4.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_113",
@@ -10985,6 +12101,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfNjIg/MDAxNjg4MDIyNDI1Mzg5.wV4XMmSOWLaa5ejivVH1lufE-NnUjg9TbK0pTkRUN8wg.ln993OmCM8RAQq7B7f6Ok2k-wRZnLohfyNIcqPVy6tQg.PNG/%EC%98%A4%ED%82%A4%ED%83%80%EC%86%8C%EC%A7%80.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -11037,7 +12161,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "おだのぶなが",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfOTkg/MDAxNjg0OTA2NzM3NjQ2.5LG8h7GUBaih2ve0UW_VtIrkgxCjKtthhnp0ENsEdp8g.qRDzK59kImIqNvcNFPP-UJMG2cIxfxdvCdFJedSvjhQg.JPEG/%EC%98%A4%EB%8B%A4_%EB%85%B8%EB%B6%80%EB%82%98%EA%B0%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_71",
@@ -11126,6 +12258,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjVfOTgg/MDAxNjg0OTkzMjg0ODE4.rSBo0VNs0-sFZpWJCo5MOLJkdYZFPrD1KPahE8gQIuIg.0baPVtHomBZuU9k9Y7E3YWQXPkhqEU_Q1ITxpraw0nAg.JPEG/%EC%B9%B4%EC%9D%B4%EC%82%AC%EB%A5%B4.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -11208,6 +12348,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMjQw/MDAxNjg4MDI0NzI0NTcz.s6k3oJdqc4cQSEOLWGabVour8aZwx-BlQqeXlBs7t90g.XXHWM-IKAdQdlm96qldcL0oe0rmzVMOg2V_13foRxqcg.JPEG/%EA%B4%80%EC%9A%B0.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -11280,6 +12428,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMjQ5/MDAxNjg4MDIzNDczOTAx.A8Hm7pJ_qtAF9F23yNLQaZe94I6Ex6Fgm8U3-vcnXdwg.RA0_-OC_KCzBPNYTLBabYsXM6TZ6ujPcacuVLfFYwXcg.JPEG/%ED%81%B4%EB%A0%88%EC%98%A4%ED%8C%8C%ED%8A%B8%EB%9D%BC.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -11337,7 +12493,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "こばやかわひであき",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMTkg/MDAxNjg4MDI0MDgzMjMy.sMlZ-8c9vjV5zLoR2MOXEnSnqE1BttpKlK8v-jgcVIEg.12hI0tNJHrbLfqkgyRTHoqac_wCgA8xbSQ-bbfBIWZkg.JPEG/%ED%9E%88%EB%8D%B0%EC%95%84%ED%82%A4.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_92",
@@ -11409,6 +12573,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMjU2/MDAxNjg4MDIzMjkzODA0.61IOIVrVr4cPz_Hfos_EJ9i0eKtjVZz7lJVMeniSHx0g.0uTuhB6nzxiSCZwnpIkcRA5gKvhKEnPBxhQx2JwBR3cg.JPEG/%EC%BD%98%EC%8A%A8%ED%83%84%ED%8B%B4.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -11474,6 +12646,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjdfMTgw/MDAxNjg3ODQ3Mjk5NjQ1.jrgEQS3l-pMLGJjOn2vZ2GFAuhKK3zXiOMpWwlz_YM0g.3ZFqI4Gze9PSIZT5qVKAiKlJd-9MZNz9rhC5dNe0wXQg.JPEG/%EC%82%AC%EC%9D%B4%ED%86%A0%EA%B8%B0%EC%B5%B8.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -11529,7 +12709,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "さかもとりょうま",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfNTAg/MDAxNjg4MDIyMTczNjM5.tnT9DR8zvSLq5dVHPUr-OkTtiVpnFIxnSufJCDv074Ug.mgTN4Al-CTq6nP0NJOb6b8HkHFkJ4Yg2L4XByIxu18Ig.JPEG/%EB%A3%8C%EB%A7%88.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_104",
@@ -11612,6 +12800,14 @@ window.GIRLWARS_DATA = [
         "icon": "⚡",
         "fromSkill": false,
         "fromEval": true
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://img.atwiki.jp/girlwars/attach/104/9/%E7%9C%9F%E7%94%B0%E5%B9%B8%E6%9D%91%20.png",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
       }
     ]
   },
@@ -11702,6 +12898,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfODkg/MDAxNjg4MDIzMDIzNTMy.Rx5-PmWcG_0g_obiMmhJqLIdHkK-MmTinkkbtfCTbUIg.wpnkvOJBoalWoRZrqZnbdSNwSs2heajqVhmdm1RQK5og.JPEG/%EC%82%B0%ED%83%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -11759,7 +12963,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "しこうてい",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMjk2/MDAxNjg4MDI2ODA3NTQ1.7L7mU3FRdS_huMYwZCI5Ahz9f7qOcpZJmwMMSYfQjxEg.RWsg6ApPOH_bhcorJN45Vo67bbisMkx3JkpnKljlGMog.JPEG/%EC%A7%84%EC%8B%9C%ED%99%A9.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_99",
@@ -11823,6 +13035,14 @@ window.GIRLWARS_DATA = [
         "icon": "🔻",
         "fromSkill": false,
         "fromEval": true
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEwMTJfMjEx/MDAxNjk3MDk0NzQ3Mjk2.nWr3CXlXM55_Em4mwS0uq0dVXGSvV-6lwkk0Zi7vPhwg.vUc84-wlgV7YUWhFvFqkL90d8msYQHe1Y1lusRqCe3Yg.JPEG/%EC%8B%9C%EC%A6%88%EC%B9%B4%EA%B3%A0%EC%A0%A0.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
       }
     ]
   },
@@ -11889,6 +13109,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMjM0/MDAxNjg0OTA5NTM4MDE0.u0gDLVCjRB8cYDAlughJ17DUQ-VMbyUFqtbGjOdlO0Qg.-fOdPnsAJeFz-Gx5JHBCcwXMqNGToud-PFUr-yAF4x0g.JPEG/%EC%A3%BC%EC%9C%A0.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -11941,7 +13169,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "しょかつこうめい",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfOTEg/MDAxNjg0OTA4OTc4OTU0.uS8eYSeRUGjvIZTcbHhtnc0NGVYVsChxDOqrOG6qAJ0g.DdSQTR3JPwENwGnKt4ezRuKq4YXRFPmVbgYptLM7gTEg.PNG/%EC%A0%9C%EA%B0%88%EA%B3%B5%EB%AA%85.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_80",
@@ -12015,7 +13251,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "じゃんぬだるく",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA5MThfMTk5/MDAxNjk1MDE0MTUwOTI3.jfJfw47xK3ZcnbQMWza1wkQVCaI788UUXFX9mD7S6NAg.tqshhOnDRI7J5itjS69ldjXAQiNIDFCjZlN6N_gbp88g.PNG/%EC%9E%94%EB%8B%A4%EB%A5%B4%ED%81%AC.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_73",
@@ -12072,7 +13316,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "じんぎすかん",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfNzQg/MDAxNjg4MDI0NTgyODI5.IcHkkusxR62Q5ah8lXx6ssdN6uL8EBsk4l9-9rfxO8Yg.m_wXRffjbzV9DDfbrNeO6OL5H073YmWxYI5NGfX2n60g.JPEG/%EC%A7%95%EA%B8%B0%EC%8A%A4%EC%B9%B8.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_63",
@@ -12124,7 +13376,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "じーくふりーと",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMTUz/MDAxNjg0OTA5ODQ0NjAw.G4X59Cll3z0nzG6GcKk9CytYvSN_3Oi0sLCJyvpPXSYg.XURd0vqL_LmYkSpOuLWrq5t78TYsfnWlEWP5rI3-f40g.JPEG/%EC%A7%80%ED%81%AC%ED%94%84%EB%A6%AC%ED%8A%B8_.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_70",
@@ -12181,7 +13441,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "たいらのきよもり",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjVfMjIg/MDAxNjg0OTkzMzYxODQx.qdWAnx5Od5bukMppKlkUOAuNA26Ke06gHOVTQGVYOmQg.lILFiOPH_ppfQ9rAt-p-mc3V9l8Qo3fTRaXhidMCuakg.JPEG/%ED%82%A4%EC%9A%94%EB%AA%A8%EB%A6%AC.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_64",
@@ -12233,7 +13501,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "たけだしんげん",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMjYz/MDAxNjg0OTA3NzcwMjU5.pOiQGiJpRCNl9tnm45lVlOwztEMRxaZTbxN-rEXVN2Mg.Nc38US4VP7z1qJrxos5pAgEuWyf10LTxSwSPNLi6wnwg.PNG/%EC%8B%A0%EA%B2%90.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_98",
@@ -12290,7 +13566,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "たけなかはんべえ",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA5MDFfNTMg/MDAxNjkzNTQ3MTA3OTAz.npuIabuEIxC0_OKaHTEb_UC-LXVYNHIMeB7IZ3SPT5Qg.ZOxQKB0cqXn7xJ5YdRLhAmmlwbp6m2AT3PKyg7EziTcg.JPEG/%ED%95%9C%EB%B2%A0%EC%97%90.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_108",
@@ -12364,7 +13648,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "だてまさむね",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMjA1/MDAxNjg0OTA3NjM0MTQx.EkLp500GUNfVATiMqoWMDo_Jrwb8sFcOxXAr_6nCE-Ag._dbY6809jyaEv5t9t1-DGrT3aijg_aL-TtmDCU1yYsMg.JPEG/%EB%A7%88%EC%82%AC%EB%AC%B4%EB%84%A4.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_106",
@@ -12433,7 +13725,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "ちょうしりゅう",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMTg2/MDAxNjg0OTA5MDc0OTYx.VitQHNUBht83KNhnb4RQR0RTgxm9zT1ZBzHmFSqxykog.7eS_x3UkI8C-sNbMK5srhPp4-CrDU-U9UAJe6yPfiwMg.JPEG/%EC%A1%B0%EC%9E%90%EB%A3%A1.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_95",
@@ -12522,6 +13822,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMjk2/MDAxNjg4MDIyODUxNzE0.LGXM51q3GbukQ_GNsZ4st9cq0knvcNA6S7IT_9DJmvog.PJWAeSGEas_A8sXIAMxxYG9L8FkufuyUPSMriTa_4RUg.PNG/%EC%B4%88%EC%84%A0.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -12587,6 +13895,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzExMjRfMTkx/MDAxNzAwODIwNzk2NDMw.GG1g7Oim1E65srJviCHBoZv9HoD0QdyK6ldG6av3uxUg.gQpttyUnu8_wopgTTqGYl9F_DB-AmD8C7dv-bZzZkQ0g.JPEG/%EC%9E%A5%EB%B9%84.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -12639,7 +13955,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "とくがわいえやす",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfNzQg/MDAxNjg0OTA4NzM2NzIy.l0tNcJ3d0wGWH2ZztzpW6IArBXIviYpP56-0ZXneGTAg.UUzlcLPbY7z9hA16y0UyXgUDfNwwkQHDEnt_A0aV2HEg.JPEG/%EC%9D%B4%EC%97%90%EC%95%BC%EC%8A%A4.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_74",
@@ -12696,7 +14020,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "とよとみひでよし",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMjUz/MDAxNjg4MDI0ODcyNzEy.fLoKBilTmsJS6oYcAk3sGcluMZyn8QFUM5S7s2MeJu0g.8pgb3ZeIMyUz271Bc-RmRcN6izUJ8uVdHnfH_EOnXs8g.JPEG/%ED%9E%88%EB%8D%B0%EC%9A%94%EC%8B%9C.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_84",
@@ -12769,6 +14101,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": false,
         "fromEval": true
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMjk1/MDAxNjg0OTA2OTQ2OTI0.qVBtepUiNJuYTj_8QFgzoCh4B-QlCmitmDlq3KvtA2og.4f1YbYOxBDIcUdeav-xjXAJ7QKZ2Allw9AC4zntzlcwg.PNG/%EB%82%98%ED%8F%B4%EB%A0%88%EC%98%B9.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
       }
     ]
   },
@@ -12861,6 +14201,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyNDA0MThfMjIy/MDAxNzEzNDIxNzEwMTk0.y6HEbbgnhjpOqtVa0b2xLAeyqKp7UjQAEaVQdX92-bkg.5tvJTE31n30eqL1HIMplvlar_DUw8WOTDvShfDn_BSEg.JPEG/%EB%A7%81%EB%A7%81-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -12918,7 +14266,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "はっとりはんぞう",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMjg0/MDAxNjg4MDIzNzgxNjMw._n7OEmXVSHWVSRnLqqV6iV6iF3aBUXg3lGG2jefiDxkg.1GP34zM71_PszYwyFv9iDWnx2In5pNcpNRr0Sh8EKIcg.PNG/%ED%95%9C%EC%A1%B0.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_66",
@@ -12969,7 +14325,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "びすまるく",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfNzIg/MDAxNjg0ODk3NTczNjQz.LsbpzqU4KRwRtLIpYBqq5asgBe4IW4fe97pJzzB6zAsg.hwKtyMFDB-itXPz47RVP2NtE41Z3ram3OBpC7fqx-uIg.PNG/%EB%B9%84%EC%8A%A4%EB%A7%88%EB%A5%B4%ED%81%AC.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_79",
@@ -13072,6 +14436,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA4MTZfOTgg/MDAxNjkyMTY4MzM4OTEw.fvWMLFr7UM9UGIAAvsqSZUtb1STm5FI_Y3mFoPJKqm0g.baZ6lLPRDg72VMhig74O3IEghe5XDTY3uUBqlKHoTUwg.JPEG/%ED%94%84%EB%9E%91%EC%BC%84%EC%8A%88%ED%83%80%EC%9D%B8.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -13124,7 +14496,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "ふりーどりひ",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://img.atwiki.jp/girlwars/attach/105/10/%E3%83%95%E3%83%AA%E3%83%BC%E3%83%89%E3%83%AA%E3%83%92.jpg",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_78",
@@ -13181,7 +14561,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "べおうるふ",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA3MTRfOCAg/MDAxNjg5MzIyNjAzNTQ5.fWgp4FfWAJ1ePB8yPXvr5pzIDp4yhOlIWhIinDhL8CMg.-ILxeR7nlZfTpwyLOLhK2GXZxUiggN1BIpFH41SRT-0g.JPEG/%EB%B2%A0%EC%96%B4%EC%9A%B8%ED%94%84.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_107",
@@ -13233,7 +14621,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "ほんだただかつ",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMzgg/MDAxNjg0OTA5ODIzNzM4.0c73ZT7bLX7vQIxm8ePCwHuXJVBLRGsZetWVBw8cW-Eg.QTab5_GbpaSJbYzoh7mieobiJflNxi84MvQjp-5VCFsg.JPEG/%ED%98%BC%EB%8B%A4%ED%83%80%EB%8B%A4%EC%B9%B4%EC%B8%A0.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_88",
@@ -13329,6 +14725,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjdfMTA5/MDAxNjg3ODQ3NTk1NDA3.s3-MCd6GUrUF1EEoQVIAsClhsv24Hyht1EIGMnPV95sg.VngwS-LFc7oHMPbdJX81T_HFJXOyCrw_EJFVc8fgTOsg.JPEG/%EB%A9%94%EC%9D%B4%EB%A6%B0.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -13381,7 +14785,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "みなもとのよしつね",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfNCAg/MDAxNjg0OTA3NTQ1NDM5.o6UhiW7NAJJIs8xx1kp3WLzZlwJuVrWmzRFZ9dSlvBYg.KL6qZ1rTiUePp-agrPt5SyCunFWy9E8qtS-_xr4YFt0g.JPEG/%EC%9A%94%EC%8B%9C%EC%B8%A0%EB%84%A4.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_117",
@@ -13439,7 +14851,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "みやもとむさし",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA3MDNfOTEg/MDAxNjg4MzY1MzgzOTYx.NIRAoI4gpO9ycpNdCwyGgVDG0UNx1CNsyzKv8rNGhggg.uxo295jyauiACN8w0dNVNuvBqYQVXutkMtAEgH7a3T4g.JPEG/%EB%AC%B4%EC%82%AC%EC%8B%9C.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_100",
@@ -13496,7 +14916,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "めでぃあ",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzExMjRfMTQg/MDAxNzAwODIwOTMzODc1.22OH9v9kqtPLtyGnmVmEf1dW0_GQ026rAyzMQX-tBzIg.IrwtblFL3Mxx6QDt_MX1aTNoNAgtN5lE7QrC9AiTwvAg.JPEG/%EB%A9%94%EB%8D%B0%EC%9D%B4%EC%95%84.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_65",
@@ -13547,7 +14975,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "もうりもとなり",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMTk0/MDAxNjg0OTA4ODY4NDEx.NZUOIVdF28A3v5ZmmjJlAXiK419zDAmHivHDSc8yIqgg.wweEpWVli9-bD5C1YsF-GSBQ7dC4tGib-aT7pTHyKAcg.JPEG/%EB%AA%A8%EB%A6%AC%EB%AA%A8%ED%86%A0%EB%82%98%EB%A6%AC.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_68",
@@ -13604,7 +15040,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "もーどれっど",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfOTMg/MDAxNjg0OTA3Mjk0OTgx.few0_NbiPZ-hh_eM0t4jU1-yAJzcw6rDEOcW06tO3OUg.dlvJCB2VfoAidJ8BydDWzQkbunGFzzGAkGVpFwlLwNwg.JPEG/%EB%AA%A8%EB%93%9C%EB%A0%88%EB%93%9C.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_75",
@@ -13661,7 +15105,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "りょふ",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMTQ0/MDAxNjg4MDIyNjUzNDk0.QpvG1-w7C8MyHX5tF5wbr_lfH9VT117_jNz_Bm6DlcIg.mtW-SgKnca14YjnilgU21gLhs83U0cQYO_DbbsCUVicg.JPEG/%EC%97%AC%ED%8F%AC.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_112",
@@ -13722,6 +15174,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMTU3/MDAxNjg0OTA3OTg1NjYy.XPHK7q5Y_MM5PYjVvV7SHbGMipwGK13ZxKoI8SRsXN8g.Nss_P9VwY5sUxDZ-0FBWKDJz6Bu99uXPZ7quE0YHXiAg.JPEG/%EB%A0%88%EC%98%A4%EB%8B%88%EB%8B%A4%EC%8A%A4.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -13774,7 +15234,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMTIx/MDAxNjg0OTA2ODU4MDU4.9QrTK7hCkCouH1kKaJSzGwUoolUU4hRdVEC-8TmfgZ4g.P-5K_M84Y1hzdnh5C27X_25WBJm0hAlkMJbwCVv9EoUg.PNG/%EA%B2%90%EC%8B%A0.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_77",
@@ -13839,6 +15307,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMjUx/MDAxNjg4MDI1MjE1OTk4.CcXOBCR82V69JTates8mOuSgoRMRQBMKfvkBGY0-h1wg.j2SW6Ead4RL4Bdss30Putj8i31Nx5KB18Br5gRFGJGQg.JPEG/%EC%82%AC%EC%82%AC%ED%82%A4%EC%BD%94%EC%A7%80%EB%A1%9C.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -13891,7 +15367,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://img.atwiki.jp/girlwars/attach/102/8/%E6%98%8E%E6%99%BA%E5%85%89%E7%A7%80%20.png",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_118",
@@ -13948,7 +15432,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA4MDFfMTg0/MDAxNjkwODY5NzYzNjUw.6RBp2blYABpzgyaDAqJv8ctiqCg4o5-TCvq6SXgIIz0g.ZgKjIsXKurBVATHJx2CknsUvTZLbifogohw1Tbb4I54g.JPEG/%EC%A1%B0%EC%A1%B0.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_110",
@@ -14005,7 +15497,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMjUg/MDAxNjg4MDIyNTQzMzI3.Ap_2bPro_ThUGTHvucXzTvRi0FdPvAh_ILmHnBygaI8g.N9aw-Q9qZfc_nt_6rUR5w5xA-mWg5keF5H2vJcdAAOEg.PNG/%EB%B2%A4%EC%BC%80%EC%9D%B4.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_116",
@@ -14093,6 +15593,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": false,
         "fromEval": true
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA3MzFfNjkg/MDAxNjkwNzg0NjI1NjM5.dXt0_Px82oErpzFMy8OsRZE2WtETAIeHPWARj1RYpX8g.u0eU-STMf76HbT3wO7pX-SNR19JGy0Gzt49a4Q7ShQsg.JPEG/%EB%8B%A4%EC%B9%98%EB%B0%94%EB%82%98%EB%AC%B4%EB%84%A4%EC%8B%9C%EA%B2%8C.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
       }
     ]
   },
@@ -14183,6 +15691,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfNjEg/MDAxNjg0OTA3MDI4MjMz.9Eo_39wWpT6Xq4hKrAyCfVuThyBlQtsnM9laHwgF6ewg.KzxNYrEbN1PEjpjUFHhxeS2ga6KF3WLVeFtmFNKj_2Yg.JPEG/%EB%8B%A4%EC%B9%98%EB%B0%94%EB%82%98_%EA%B8%B4%EC%B9%98%EC%9A%94.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -14240,7 +15756,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMjg5/MDAxNjg0OTA3MTA1MzUx.41Hw37VRALFrgBOlifyCbzf_VnJvBubbjEdmekliTtMg.68o7FTGbjD8YeqiekDhuoy6kWQ-ANiBxoklQAouNqMIg.JPEG/%EB%8B%A4%EC%B9%98%EB%B0%94%EB%82%98_%EB%8F%84%EC%84%B8%EC%B8%A0.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_41",
@@ -14310,7 +15834,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "えかてりーな",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjdfMTcx/MDAxNzAzNjYyNzk0MjI1.N4GSce33vQqpAX5YmFzWrX4y2Q_oupIpface7IWGCFsg.d5IXA7NnPpGgpLl-V_MuHRpIwmcxzXpdJasNUGdsVI4g.PNG/%EC%98%88%EC%B9%B4%ED%85%8C%EB%A6%AC%EB%82%98-%EC%8B%A0%EB%B6%80.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_62",
@@ -14368,7 +15900,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "おだのぶなが",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMTcx/MDAxNzAzNzQ3Nzk1ODU3.CTx3xyQAsa1fW3Q9w__a4ywUnh3yM1yfVV76c5F0VV4g.vRtBpv2FbWLZlEhZ6gLu6VcL3CSCQbr7db_PGfU5L34g.JPEG/%EC%98%A4%EB%8B%A4%EB%85%B8%EB%B6%80%EB%82%98%EA%B0%80-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_55",
@@ -14455,6 +15995,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMjQ2/MDAxNzAzNzQ4NDIyOTgz.nqS4R9lfYL-5kJeurdwFxsJpsZMYW_TDoOavhKpo71Ag.5q-KLlrC2kKTYFi7A2j4l31MGHusW7N9G83fgAvwBeYg.PNG/%EC%B9%B4%EC%9D%B4%EC%82%AC%EB%A5%B4-%EC%8B%A0%EB%B6%80.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -14535,6 +16083,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://img.atwiki.jp/girlwars/attach/101/7/%E9%96%A2%E7%BE%BD.jpg",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -14545,7 +16101,7 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "role": "",
     "cv": "青山ゆり華",
-    "illustUrl": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMjMg/MDAxNzAzNzQ4NjMwOTc0.grujpelrH9639blyu_OIuwaDE_bODPbUIDS5A_18aswg.VyNQ1X7dN8zszCa0x0gHGSfKKH4h-Iczy_26ql1_tVkg.JPEG/%EC%9D%B4%EC%97%90%EC%95%BC%EC%8A%A4-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+    "illustUrl": "https://nng-phinf.pstatic.net/MjAyNDAyMDFfNzkg/MDAxNzA2NzgxMzU2NDU4.DEfkF8STnLMBlfDZMMrGcvPkIRkbwiX0Bs1q588MGx4g.VOHzYng429NThTjJz88C1-SLq90LIXFeNjeAxUuwC40g.JPEG/%ED%9E%88%EB%8D%B0%EC%95%84%ED%82%A4-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
     "illustSource": "少女ウォーズ@wiki",
     "illustCredit": "少女ウォーズ@wiki / 公式スチル",
     "dialogues": {
@@ -14589,7 +16145,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "こばやかわひであき",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyNDAyMDFfNzkg/MDAxNzA2NzgxMzU2NDU4.DEfkF8STnLMBlfDZMMrGcvPkIRkbwiX0Bs1q588MGx4g.VOHzYng429NThTjJz88C1-SLq90LIXFeNjeAxUuwC40g.JPEG/%ED%9E%88%EB%8D%B0%EC%95%84%ED%82%A4-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_54",
@@ -14644,7 +16208,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "こんすたんてぃのす",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMjM3/MDAxNzAzNzQ4NDM3OTUx.J4bw-eEoSur_TanKHb7-i2KrfV1P5ANLl5dw6zXvNRUg.mI0Wn5qNTK4uOkCahMGjYnYUtMXts0Bs7FY_FA2hbIQg.JPEG/%EC%BD%98%EC%8A%A4%ED%83%84%ED%8B%B4-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_48",
@@ -14703,7 +16275,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "さいとうきちょう",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMTk0/MDAxNzAzNzQ5MjY1NDkz.jB1srYohjtJLZVdG8vV_2vyDJH5OzmTADsEZBfb5Siog.cG96JDn8USeuOS4IzM3cQjmrMaQ50Aa77Zx4S2zA-Qog.JPEG/%EC%82%AC%EC%9D%B4%ED%86%A0%EA%B8%B0%EC%B5%B8-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_38",
@@ -14791,6 +16371,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfNCAg/MDAxNzAzNzQ4MDgzMzgy.7F64_h2agyWCXDe6-yHlz8beuitW94oDANRUT-IgURUg.PX5gVVpuEnQlKxX1OfRK2j53e4LhJhKiV8OBnGzADi8g.JPEG/%EC%82%AC%EB%82%98%EB%8B%A4%EC%9C%A0%ED%82%A4%EB%AC%B4%EB%9D%BC-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -14870,6 +16458,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyNDAxMDJfMTQ0/MDAxNzA0MTkyNTcwNTUy.3HAOIC5_umCQIsN3Li-QEwdDu7GgZbIc5em2hfPpCAwg.2rtUwFF4goHjJo-zPIlDR3XESgg3fH8hmz0It2arLekg.JPEG/%EC%82%B0%ED%83%80-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -14922,7 +16518,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "しゅうゆ",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMTkz/MDAxNzAzNzQ3ODk2MTkx.5cebDW-MVDqX4bhZrMdIImS5-I2oyEsJnqkO7FecahMg.OgipX-r2hUgp1lGk6YgNY1tU9KZAIDdU7sKFmszEtG4g.JPEG/%EC%A3%BC%EC%9C%A0-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_36",
@@ -14986,7 +16590,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "しょかつこうめい",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMjIw/MDAxNzAzNzQ5NDg0NTQy.jGGUjW4z7mLL_s2t52FElL1LnnVTzEu4socmsYdR4mog.yA_femCUTASVl3RIEhLvam_8nftjzzQiiCE863EUt-wg.PNG/%EC%A0%9C%EA%B0%88%EA%B3%B5%EB%AA%85-%EC%8B%A0%EB%B6%80.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_46",
@@ -15042,7 +16654,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "じーくふりーと",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMTUx/MDAxNzAzNzQ4MDEwMDAw.iGa2Po4iSqstxXT0oyL_pJXZFuVc_ymwCCQzdiFh1m8g.rzYQmWXBxyZOJm16K6rXh7Kzc6d8CEPtWhIqNQdh7rMg.JPEG/%EC%A7%80%ED%81%AC%ED%94%84%EB%A6%AC%ED%8A%B8-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_47",
@@ -15097,7 +16717,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "たいらのきよもり",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMjAz/MDAxNzAzNzQ4MTU0MzI3.cBJORRiIjZc8EE2XNfxxdoGEHPJFpCJ_SkkDGGHZ5jwg.7K7J_GL8dQxuF3t0HJO2bV9aA2TUN0kYZBfhHLYA784g.JPEG/%ED%82%A4%EC%9A%94%EB%AA%A8%EB%A6%AC-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_39",
@@ -15166,7 +16794,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "ちょうしりゅう",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMjg5/MDAxNzAzNzQ2ODk2NTg1.Mfs34QtyZ5ZanejsouYpLIjbHn3WxHCsonNHKsRDQAIg.ssmA-WDrhUEfK8SBCyFPqhg86iEgRw-X4ddxMbs5ndIg.JPEG/%EC%A1%B0%EC%9E%90%EB%A3%A1-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_58",
@@ -15176,7 +16812,7 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "role": "",
     "cv": "Nanoha",
-    "illustUrl": "https://nng-phinf.pstatic.net/MjAyNDAyMDFfNzkg/MDAxNzA2NzgxMzU2NDU4.DEfkF8STnLMBlfDZMMrGcvPkIRkbwiX0Bs1q588MGx4g.VOHzYng429NThTjJz88C1-SLq90LIXFeNjeAxUuwC40g.JPEG/%ED%9E%88%EB%8D%B0%EC%95%84%ED%82%A4-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+    "illustUrl": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMjMg/MDAxNzAzNzQ4NjMwOTc0.grujpelrH9639blyu_OIuwaDE_bODPbUIDS5A_18aswg.VyNQ1X7dN8zszCa0x0gHGSfKKH4h-Iczy_26ql1_tVkg.JPEG/%EC%9D%B4%EC%97%90%EC%95%BC%EC%8A%A4-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
     "illustSource": "少女ウォーズ@wiki",
     "illustCredit": "少女ウォーズ@wiki / 公式スチル",
     "dialogues": {
@@ -15220,7 +16856,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "とくがわいえやす",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMjMg/MDAxNzAzNzQ4NjMwOTc0.grujpelrH9639blyu_OIuwaDE_bODPbUIDS5A_18aswg.VyNQ1X7dN8zszCa0x0gHGSfKKH4h-Iczy_26ql1_tVkg.JPEG/%EC%9D%B4%EC%97%90%EC%95%BC%EC%8A%A4-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_57",
@@ -15278,7 +16922,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "はっとりはんぞう",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMjA0/MDAxNzAzNzQ5NTE0NDA4.s6om80YFyAFNWUA1j-Zg8aUh_kETnNRWQfxYOsA1WKkg.JYeC7Mho5_7ERs-VurcLK7J6PyBBUQD0CsHMhZ5e5jkg.JPEG/%ED%95%AB%ED%86%A0%EB%A6%AC%ED%95%9C%EC%A1%B0-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_59",
@@ -15320,7 +16972,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "ほんだただかつ",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMzAw/MDAxNzAzNzQ5Njc5NzY5.oSXVgCtmOORi8A576aj0L7rfwAzEpF2X8qiEnW2kyI8g.N8au8v0IDL8_4x2w0KAEbfhzTVwMVVVAxnKq2l8ZhCwg.JPEG/%ED%98%BC%EB%8B%A4%ED%83%80%EB%8B%A4%EC%B9%B4%EC%B8%A0-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_50",
@@ -15397,6 +17057,14 @@ window.GIRLWARS_DATA = [
         "fromSkill": false,
         "fromEval": true
       }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMTM4/MDAxNzAzNzQ3OTc3MDk5.LVPOBKxwPPJMZpcVyVD7nGlPJHj6Pr9QfAH9tA6BvvEg.wSWmGDbSwlp3MZHsS_5-P84EQ43FfU5YFdaIVR1Fupwg.JPEG/%EB%A9%94%EC%9D%B4%EB%A6%B0-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
     ]
   },
   {
@@ -15456,7 +17124,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "みなもとのよしつね",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMTA3/MDAxNzAzNzQ3NzIxMTQ4.ALTenDax4bnIkJCr-T3i1y9rRH-YBVp0FxEQxlVPzYsg.0OoVcnWgZx_pTh2rKwqXpSTBznVVOWJeBdW8uLgIN84g.PNG/%EC%9A%94%EC%8B%9C%EC%B8%A0%EB%84%A4-%EC%8B%A0%EB%B6%80.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_51",
@@ -15511,7 +17187,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "もうりもとなり",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfODUg/MDAxNzAzNzQ5NjQyODUz.fpVA3ji7BzYMUxZOTRe0yoXz8SmxDwWJmgQ9GastKLEg.cOW3nig7lr7kZrKzRbVRg_34QNiXEiRy10sLMU-Vu2wg.PNG/%EB%AA%A8%EB%A6%AC%EB%AA%A8%ED%86%A0%EB%82%98%EB%A6%AC-%EC%8B%A0%EB%B6%80.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_42",
@@ -15564,7 +17248,21 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMTM4/MDAxNzAzNzQ5NzUyNzIw.Q7OWUNjGA5bJ67byigDjRJoBwV8pPHQzxQLAiYID4ycg.xNUWlKy_-vhhmJAq_tEokipte1DrXUX4YwWqyVYyFEUg.JPEG/%EC%95%84%EC%84%9C%EC%99%95-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      },
+      {
+        "label": "限定衣装",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズの花嫁アーサー.png",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_45",
@@ -15620,7 +17318,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMjg4/MDAxNzAzNzQ5MzA1NDY4.5HQRM3jlxFx1aGELOW6n9Hm1pNyBKgWO3t4SlqqlHc8g.xD2VyiW51rFRRZm7-S-V_jkywhjyPxUIlRRRSYsLBCgg.JPEG/%EC%9A%B0%EC%97%90%EC%8A%A4%EA%B8%B0%EA%B2%90%EC%8B%A0-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_49",
@@ -15674,7 +17380,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "",
-    "tags": []
+    "tags": [],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMTcw/MDAxNzAzNzQ4NTQwOTY0.P3gmZC5qGHx5tDBrqF7JNz7WzMCsj9zUvoqk2lDruz4g.TX4Wl76tJ9gRAOZ_JXGf8SVz-2SKrXg-KK6p99wnOIAg.JPEG/%EB%AF%B8%EC%B8%A0%ED%9E%88%EB%8D%B0-%EC%8B%A0%EB%B6%80.jpg?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
+      }
+    ]
   },
   {
     "id": "wiki_53",
@@ -15761,6 +17475,14 @@ window.GIRLWARS_DATA = [
         "icon": "⭐",
         "fromSkill": false,
         "fromEval": true
+      }
+    ],
+    "images": [
+      {
+        "label": "通常",
+        "url": "https://nng-phinf.pstatic.net/MjAyMzEyMjhfMTkg/MDAxNzAzNzQ4NzE0NzIx.sAZy0u3p8NZybwHjLf8FJx_ykYYfC1AwgHgBSrIQyAUg.jdVTPrZxJFOQPSGO3NDjOUsPMAWcOMgboe_Tx2QQI_Eg.PNG/%EA%B8%B4%EC%B9%98%EC%9A%94-%EC%8B%A0%EB%B6%80.png?type=w1678",
+        "source": "少女ウォーズ@wiki",
+        "credit": "少女ウォーズ@wiki / 公式スチル"
       }
     ]
   }

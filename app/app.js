@@ -258,7 +258,7 @@
     const meta = window.GIRLWARS_METADATA || {};
     const count = meta.totalCount || (window.GIRLWARS_DATA || []).length;
     if (el.metaBadge) {
-      el.metaBadge.textContent = `全 ${count} 体収録 (スキル全文: ${meta.withSkillsCount || 72}体)`;
+      el.metaBadge.textContent = `全 ${count} 体収録 (スキル全文: ${meta.withSkillsCount || 72}体 / 状態別ギャラリー: ${meta.withVariantsCount || 22}体)`;
     }
     if (el.totalCharCount) {
       el.totalCharCount.textContent = count;
@@ -811,10 +811,14 @@
       // Visual / Illustration
       let visualHtml = '';
       if (c.illustUrl) {
+        const variantCountBadge = (c.images && c.images.length > 1)
+          ? `<span class="badge-variant-count" title="状態別イラスト ${c.images.length}枚">📷 ${c.images.length}枚</span>`
+          : '';
         visualHtml = `
           <div class="card-visual">
             <div class="card-badges-top">
               <span class="badge-rarity ${rClass}">${escapeHtml(c.rarity)}</span>
+              ${variantCountBadge}
             </div>
             ${freshBadgeHtml}
             <img class="card-img" src="${escapeHtml(c.illustUrl)}" alt="${escapeHtml(c.name)}" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'card-placeholder\\'><span>⚔️</span><span>イラスト準備中</span></div>';">
@@ -1607,15 +1611,40 @@
       `;
     }
 
+    // Feature 4: Illustration / State-variant Gallery
     let visualHtml = '';
-    if (c.illustUrl) {
+    const images = (c.images && c.images.length > 0) ? c.images : (c.illustUrl ? [{
+      label: '通常',
+      url: c.illustUrl,
+      source: c.illustSource || '少女ウォーズ@wiki',
+      credit: c.illustCredit || c.illustSource || '公式スチル'
+    }] : []);
+
+    if (images.length > 0) {
+      const initialImg = images[0];
+      const hasMultiple = images.length > 1;
+
       visualHtml = `
         <div class="modal-header-visual">
-          <img class="modal-big-img" src="${escapeHtml(c.illustUrl)}" alt="${escapeHtml(c.name)}" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'modal-big-placeholder\\'><span>⚔️</span><span>イラスト取得不可または準備中</span></div>';">
-          <div class="modal-visual-credit">
-            イラスト出典: <a href="${escapeHtml(c.sourceInfo ? c.sourceInfo.primaryUrl : '#')}" target="_blank" rel="noopener">${escapeHtml(c.illustCredit || c.illustSource || '公式スチル')}</a>
+          <div id="modal-gallery-badge" class="modal-visual-state-badge">
+            🖼️ ${escapeHtml(initialImg.label || '通常')}
+          </div>
+          <img id="modal-gallery-main-img" class="modal-big-img" src="${escapeHtml(initialImg.url)}" alt="${escapeHtml(c.name)} (${escapeHtml(initialImg.label || '通常')})" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'modal-big-placeholder\\'><span>⚔️</span><span>イラスト取得不可または準備中</span></div>';">
+          <div id="modal-gallery-credit" class="modal-visual-credit">
+            【${escapeHtml(initialImg.label || '通常')}】 出典: <a href="${escapeHtml(c.sourceInfo ? c.sourceInfo.primaryUrl : '#')}" target="_blank" rel="noopener">${escapeHtml(initialImg.credit || initialImg.source || '公式スチル')}</a>
           </div>
         </div>
+        ${hasMultiple ? `
+          <div class="modal-gallery-controls" role="tablist" aria-label="状態別イラスト切替">
+            <span class="modal-gallery-title">状態切替 (${images.length}枚):</span>
+            ${images.map((img, idx) => `
+              <button class="modal-gallery-tab ${idx === 0 ? 'active' : ''}" data-img-idx="${idx}" type="button" role="tab" aria-selected="${idx === 0 ? 'true' : 'false'}">
+                <img class="modal-gallery-tab-thumb" src="${escapeHtml(img.url)}" alt="${escapeHtml(img.label)}" onerror="this.style.display='none';">
+                <span>${escapeHtml(img.label)}</span>
+              </button>
+            `).join('')}
+          </div>
+        ` : ''}
       `;
     }
 
@@ -1930,6 +1959,42 @@
     if (modalAddPartyBtn) {
       modalAddPartyBtn.addEventListener('click', () => {
         addCharacterToParty(c);
+      });
+    }
+
+    // Gallery Tabs Interaction
+    const galleryTabs = el.modalBody.querySelectorAll('.modal-gallery-tab');
+    if (galleryTabs.length > 0) {
+      galleryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const idx = parseInt(tab.getAttribute('data-img-idx'), 10);
+          const targetImg = images[idx];
+          if (!targetImg) return;
+
+          galleryTabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+
+          const mainImg = el.modalBody.querySelector('#modal-gallery-main-img');
+          const badge = el.modalBody.querySelector('#modal-gallery-badge');
+          const credit = el.modalBody.querySelector('#modal-gallery-credit');
+          if (mainImg) {
+            mainImg.src = targetImg.url;
+            mainImg.alt = `${c.name} (${targetImg.label || '通常'})`;
+          }
+          if (badge) {
+            badge.innerHTML = `🖼️ ${escapeHtml(targetImg.label || '通常')}`;
+          }
+          if (credit) {
+            const sourceUrl = (c.sourceInfo && c.sourceInfo.sources && c.sourceInfo.sources[targetImg.source])
+              ? c.sourceInfo.sources[targetImg.source].url
+              : (c.sourceInfo ? c.sourceInfo.primaryUrl : '#');
+            credit.innerHTML = `【${escapeHtml(targetImg.label || '通常')}】 出典: <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(targetImg.credit || targetImg.source || '公式スチル')}</a>`;
+          }
+        });
       });
     }
 

@@ -174,4 +174,57 @@ console.log(`  URLパラメータ共有＆自動復元: ${hasUrlShare ? 'PASS' :
 console.log(`  編成複数セット保存/読込/削除: ${hasSavedParties ? 'PASS' : 'FAIL'}`);
 console.log(`  1枠差し替えシミュレータ（シナジー・タグ増減）: ${hasDiffSim ? 'PASS' : 'FAIL'}`);
 
+// Check 14: 第4弾 - 花嫁イラスト点検 & 状態別イラスト収録 & ギャラリー表示
+console.log(`\n--- 第4弾: 花嫁イラスト点検 & 状態別イラスト収録 & ギャラリー表示 ---`);
+const brides = data.filter(c => c.rarity === '花嫁');
+console.log(`  花嫁キャラ総数: ${brides.length} 体 (期待値: 24) -> ${brides.length === 24 ? 'PASS' : 'FAIL'}`);
+
+// Check bride images swap fix (wiki_44 Kobayakawa vs wiki_58 Tokugawa)
+const kobayakawa = data.find(c => c.id === 'wiki_44');
+const tokugawa = data.find(c => c.id === 'wiki_58');
+const kobayakawaCorrect = kobayakawa && kobayakawa.illustUrl && kobayakawa.illustUrl.includes('%ED%9E%88%EB%8D%B0%EC%95%84%ED%82%A4'); // 히데아키
+const tokugawaCorrect = tokugawa && tokugawa.illustUrl && tokugawa.illustUrl.includes('%EC%9D%B4%EC%97%90%EC%95%BC%EC%8A%A4'); // 이에야스
+console.log(`  小早川秀秋(wiki_44)の画像正常化 (ヒデアキ): ${kobayakawaCorrect ? 'PASS' : 'FAIL'}`);
+console.log(`  徳川家康(wiki_58)の画像正常化 (イエヤス): ${tokugawaCorrect ? 'PASS' : 'FAIL'}`);
+
+// Check images array synchronization
+let allImagesSynced = true;
+let totalImages = 0;
+let charsWithMultiple = 0;
+data.forEach(c => {
+  if (!Array.isArray(c.images)) {
+    allImagesSynced = false;
+    return;
+  }
+  totalImages += c.images.length;
+  if (c.images.length > 1) {
+    charsWithMultiple++;
+  }
+  if (c.images.length > 0) {
+    if (c.images[0].url !== c.illustUrl || c.images[0].source !== c.illustSource || c.images[0].credit !== c.illustCredit) {
+      allImagesSynced = false;
+    }
+  } else if (c.illustUrl !== null) {
+    allImagesSynced = false;
+  }
+});
+
+console.log(`  全キャラ images 配列存在 & 代表画像(images[0])完全同期: ${allImagesSynced ? 'PASS' : 'FAIL'}`);
+console.log(`  状態別イラスト保有キャラ数 (>1枚): ${charsWithMultiple} 体 (メタ: ${meta.withVariantsCount}) -> ${charsWithMultiple === meta.withVariantsCount ? 'PASS' : 'FAIL'}`);
+console.log(`  収録画像総数: ${totalImages} 枚 (メタ: ${meta.totalImagesCount}) -> ${totalImages === meta.totalImagesCount ? 'PASS' : 'FAIL'}`);
+
+// Bride Arthur check
+const arthur = data.find(c => c.id === 'wiki_42');
+const arthurHasVariants = arthur && arthur.images && arthur.images.length === 2 && arthur.images[1].label === '限定衣装';
+console.log(`  花嫁アーサー(wiki_42)の限定衣装差分収録: ${arthurHasVariants ? 'PASS' : 'FAIL'}`);
+
+// Gallery UI check in app.js & style.css
+const hasGalleryMarkup = appJs.includes('modal-gallery-controls') && appJs.includes('modal-gallery-tab');
+const hasGalleryLogic = appJs.includes('modal-gallery-main-img') && appJs.includes('modal-gallery-badge') && appJs.includes('modal-gallery-credit');
+const styleCss = fs.readFileSync('app/style.css', 'utf8');
+const hasGalleryStyles = styleCss.includes('.modal-gallery-controls') && styleCss.includes('.modal-gallery-tab');
+console.log(`  詳細モーダル ギャラリーマークアップ実装: ${hasGalleryMarkup ? 'PASS' : 'FAIL'}`);
+console.log(`  詳細モーダル 状態切替インタラクション実装: ${hasGalleryLogic ? 'PASS' : 'FAIL'}`);
+console.log(`  ギャラリースタイル定義 (style.css): ${hasGalleryStyles ? 'PASS' : 'FAIL'}`);
+
 console.log("\n================ VERIFICATION COMPLETE ================");

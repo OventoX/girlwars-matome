@@ -159,6 +159,17 @@ def fetch_atwiki_characters():
                     illust_url = src
                     break
 
+        # Unique ID based on atwiki page number (e.g. wiki_115)
+        m_pid = re.search(r'/pages/(\d+)\.html', page_url)
+        page_id = m_pid.group(1) if m_pid else re.sub(r'[^a-zA-Z0-9]', '_', clean_name)
+        char_id = f"wiki_{page_id}"
+
+        # Fix atwiki editor swap: page 44 (小早川秀秋) had Ieyasu image, page 58 (徳川家康) had Hideaki image
+        if page_id == '44':
+            illust_url = 'https://nng-phinf.pstatic.net/MjAyNDAyMDFfNzkg/MDAxNzA2NzgxMzU2NDU4.DEfkF8STnLMBlfDZMMrGcvPkIRkbwiX0Bs1q588MGx4g.VOHzYng429NThTjJz88C1-SLq90LIXFeNjeAxUuwC40g.JPEG/%ED%9E%88%EB%8D%B0%EC%95%84%ED%82%A4-%EC%8B%A0%EB%B6%80.jpg?type=w1678'
+        elif page_id == '58':
+            illust_url = 'https://nng-phinf.pstatic.net/MjAyMzEyMjhfMjMg/MDAxNzAzNzQ4NjMwOTc0.grujpelrH9639blyu_OIuwaDE_bODPbUIDS5A_18aswg.VyNQ1X7dN8zszCa0x0gHGSfKKH4h-Iczy_26ql1_tVkg.JPEG/%EC%9D%B4%EC%97%90%EC%95%BC%EC%8A%A4-%EC%8B%A0%EB%B6%80.jpg?type=w1678'
+
         # Dialogue lines (Table 1 if exists)
         dialogues = {}
         if len(tables) > 1:
@@ -190,11 +201,6 @@ def fetch_atwiki_characters():
 
         # Tier matching
         tier_info = tier_map.get(clean_name, {})
-
-        # Unique ID based on atwiki page number (e.g. wiki_115)
-        m_pid = re.search(r'/pages/(\d+)\.html', page_url)
-        page_id = m_pid.group(1) if m_pid else re.sub(r'[^a-zA-Z0-9]', '_', clean_name)
-        char_id = f"wiki_{page_id}"
 
         char_data = {
             'id': char_id,

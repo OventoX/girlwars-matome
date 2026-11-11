@@ -657,6 +657,93 @@ body {
   text-decoration: underline;
 }
 
+/* Gallery State Switcher */
+.modal-visual-state-badge {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  color: #f8fafc;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.modal-gallery-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--bg-surface-2);
+  border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.modal-gallery-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.modal-gallery-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modal-gallery-tab:hover {
+  background: rgba(225, 29, 72, 0.12);
+  border-color: var(--accent-rose);
+  color: #fff;
+}
+
+.modal-gallery-tab.active {
+  background: var(--accent-rose);
+  border-color: var(--accent-rose);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(225, 29, 72, 0.35);
+}
+
+.modal-gallery-tab-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #1e293b;
+}
+
+.badge-variant-count {
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #38bdf8;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  backdrop-filter: blur(2px);
+}
+
 .modal-content-inner {
   padding: 24px;
   display: flex;
