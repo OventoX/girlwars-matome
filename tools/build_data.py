@@ -5,6 +5,7 @@ import datetime
 from fetch_atwiki import fetch_atwiki_characters, fetch_atwiki_tier
 from fetch_rimuru import fetch_rimuru_catalog
 from fetch_kokomato import fetch_kokomato_articles
+from fetch_kokomato_brides import fetch_kokomato_brides, fetch_kokomato_bride_extras
 
 APP_DIR = os.path.join(os.path.dirname(__file__), '..', 'app')
 os.makedirs(APP_DIR, exist_ok=True)
@@ -93,6 +94,27 @@ RUBY_MAP = {
     'レオニダス1世': 'れおにだすいっせい',
     'ロームルス': 'ろーむるす',
     'ローラン': 'ろーらん',
+    'アウグストゥス': 'あうぐすとぅす',
+    '石田三成': 'いしだみつなり',
+    '稲姫': 'いなひめ',
+    'クーフーリン': 'くーふーりん',
+    '佐々木小次郎': 'ささきこじろう',
+    '坂田金時': 'さかたきんとき',
+    'セミラミス': 'せみらみす',
+    '曹操': 'そうそう',
+    '立花宗茂': 'たちばなむねしげ',
+    '立花道雪': 'たちばなどうせつ',
+    'ダヴィンチ': 'だゔぃんち',
+    'ダンテ': 'だんて',
+    'ネロ': 'ねろ',
+    '八百比丘尼': 'やおびくに',
+    '卑弥呼': 'ひみこ',
+    'ヘラクレス': 'へらくれす',
+    'ペルセウス': 'ぺるせうす',
+    '源頼光': 'みなもとのよりみつ',
+    'ランスロット': 'らんすろっと',
+    '玉藻前': 'たまものまえ',
+    '黄忠': 'こうちゅう',
 }
 
 TAG_DEFINITIONS = [
@@ -310,6 +332,28 @@ def build_all():
             w['ruby'] = RUBY_MAP.get(name, '')
             merged_map[key] = (w, None)
 
+    # (C) Add kokomato bride characters and collect extras (hints & state variants)
+    bride_extras = fetch_kokomato_bride_extras()
+    kokomato_brides = fetch_kokomato_brides()
+
+    for kb in kokomato_brides:
+        name = kb['name']
+        key = f"{name}_花嫁"
+        kb['ruby'] = RUBY_MAP.get(name, '')
+        merged_map[key] = (kb, None)
+
+    # Attach hints to all brides and mark extra images
+    for key, (c, k_info) in merged_map.items():
+        if c.get('rarity') == '花嫁':
+            name = c.get('name')
+            extra = bride_extras.get(name)
+            if extra:
+                if extra.get('hints') and not c.get('hints'):
+                    c['hints'] = extra['hints']
+                raw_imgs = extra.get('raw_imgs', [])
+                if len(raw_imgs) >= 2:
+                    c['_kokomato_extra_imgs'] = raw_imgs
+
     # 3. Post-process characters: enrich tags, multi-source evaluations, and state-variant illustrations
     final_list = []
     weding_gentei = kokomato_map.get('__special_wedinggentei__', {})
@@ -320,7 +364,9 @@ def build_all():
 
         # Build images array with state variants
         images = []
-        if c.get('illustUrl'):
+        if c.get('images'):
+            images = list(c['images'])
+        elif c.get('illustUrl'):
             images.append({
                 'label': '通常',
                 'url': c['illustUrl'],
@@ -350,6 +396,19 @@ def build_all():
                 'source': 'マトメバコ！',
                 'credit': 'マトメバコ！ (kokomatoblog.com) / 公式スチル'
             })
+
+        # Enrich bride state variants from kokomato extras if only 1 image
+        if c.get('rarity') == '花嫁' and c.get('_kokomato_extra_imgs'):
+            extra_imgs = c.pop('_kokomato_extra_imgs')
+            if len(images) == 1 and len(extra_imgs) >= 2:
+                images.append({
+                    'label': '脱衣後',
+                    'url': extra_imgs[1],
+                    'source': 'マトメバコ！ (kokomatoblog)',
+                    'credit': 'マトメバコ！ / ゲーム内スチル'
+                })
+        elif c.get('_kokomato_extra_imgs'):
+            c.pop('_kokomato_extra_imgs', None)
 
         # Synchronize representative illustration with images[0]
         if images:

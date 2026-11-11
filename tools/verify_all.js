@@ -106,10 +106,10 @@ console.log(`  data-char-name 属性実装: ${hasDataCharName} -> ${hasDataCharN
 // Check 8: README Accuracy
 const readme = fs.readFileSync('README.md', 'utf8');
 const dataJsSize = fs.statSync('app/data.js').size;
-const readmeMatchesCount = readme.includes('151体');
+const readmeMatchesCount = readme.includes('215体');
 console.log(`\n--- 修正8: README 記載整合性 ---`);
 console.log(`  実測 data.js サイズ: ${dataJsSize} bytes (~${(dataJsSize/1024/1024).toFixed(1)}MB)`);
-console.log(`  README に 151体 の明記あり: ${readmeMatchesCount ? 'PASS' : 'FAIL'}`);
+console.log(`  README に 215体 の明記あり: ${readmeMatchesCount ? 'PASS' : 'FAIL'}`);
 
 // Check 9: Tier Table Missing & Normalization
 const tierEntries = Object.keys(tier.atwiki2024);
@@ -177,7 +177,7 @@ console.log(`  1枠差し替えシミュレータ（シナジー・タグ増減�
 // Check 14: 第4弾 - 花嫁イラスト点検 & 状態別イラスト収録 & ギャラリー表示
 console.log(`\n--- 第4弾: 花嫁イラスト点検 & 状態別イラスト収録 & ギャラリー表示 ---`);
 const brides = data.filter(c => c.rarity === '花嫁');
-console.log(`  花嫁キャラ総数: ${brides.length} 体 (期待値: 24) -> ${brides.length === 24 ? 'PASS' : 'FAIL'}`);
+console.log(`  花嫁キャラ総数: ${brides.length} 体 (期待値: 89) -> ${brides.length === 89 ? 'PASS' : 'FAIL'}`);
 
 // Check bride images swap fix (wiki_44 Kobayakawa vs wiki_58 Tokugawa)
 const kobayakawa = data.find(c => c.id === 'wiki_44');
@@ -226,5 +226,25 @@ const hasGalleryStyles = styleCss.includes('.modal-gallery-controls') && styleCs
 console.log(`  詳細モーダル ギャラリーマークアップ実装: ${hasGalleryMarkup ? 'PASS' : 'FAIL'}`);
 console.log(`  詳細モーダル 状態切替インタラクション実装: ${hasGalleryLogic ? 'PASS' : 'FAIL'}`);
 console.log(`  ギャラリースタイル定義 (style.css): ${hasGalleryStyles ? 'PASS' : 'FAIL'}`);
+
+// Check 15: 第5弾 - 花嫁キャラ全数洗い出し・追加収録 & 解放ヒント収録 & 捏造なし検証
+console.log(`\n--- 第5弾: 花嫁キャラ全数洗い出し・追加収録 & 解放ヒント収録 & 捏造なし検証 ---`);
+const brideWithHints = brides.filter(b => b.hints && b.hints.length > 0);
+console.log(`  花嫁解放ヒント保有数: ${brideWithHints.length} / ${brides.length} (${(brideWithHints.length/brides.length*100).toFixed(1)}%) -> ${brideWithHints.length === brides.length ? 'PASS' : 'FAIL'}`);
+
+const bridesWithFabricatedSkills = brides.filter(b => b.skills !== null);
+console.log(`  花嫁スキル捏造なし (全件 skills === null 厳守): ${bridesWithFabricatedSkills.length === 0 ? 'PASS' : 'FAIL'}`);
+
+const bridesWithSource = brides.filter(b => b.sourceInfo && b.sourceInfo.primaryUrl && b.sourceInfo.sourceName);
+console.log(`  花嫁出典情報(sourceInfo & primaryUrl)保有: ${bridesWithSource.length} / ${brides.length} -> ${bridesWithSource.length === brides.length ? 'PASS' : 'FAIL'}`);
+
+const atwikiBrides = brides.filter(b => b.id.startsWith('wiki_'));
+const kokomatoBrides = brides.filter(b => b.id.startsWith('kokomato_wed_'));
+console.log(`  atwiki由来花嫁数: ${atwikiBrides.length} 体 (期待値: 28) -> ${atwikiBrides.length === 28 ? 'PASS' : 'FAIL'}`);
+console.log(`  kokomatoblog由来花嫁数: ${kokomatoBrides.length} 体 (期待値: 61) -> ${kokomatoBrides.length === 61 ? 'PASS' : 'FAIL'}`);
+console.log(`  合計花嫁数: ${atwikiBrides.length + kokomatoBrides.length} 体 (期待値: 89) -> ${atwikiBrides.length + kokomatoBrides.length === 89 ? 'PASS' : 'FAIL'}`);
+
+const hasHintsInModal = appJs.includes('hintsHtml') && appJs.includes('花嫁衣装・セリフ解放ヒント');
+console.log(`  詳細モーダルでの解放ヒントUI実装: ${hasHintsInModal ? 'PASS' : 'FAIL'}`);
 
 console.log("\n================ VERIFICATION COMPLETE ================");

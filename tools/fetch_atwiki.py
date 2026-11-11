@@ -98,19 +98,30 @@ def fetch_atwiki_characters():
     print(f"[ATWIKI] Scraping {len(unique)} candidate character pages...")
     for page_url, title in unique.items():
         # Identify rarity and clean name
-        rarity = "SSR"
-        if title.startswith("UR/") or title.startswith("UR"):
-            rarity = "UR"
-        elif title.startswith("花嫁/"):
-            rarity = "花嫁"
-
-        clean_name = re.sub(r'^(SSR/SSR|UR/UR|SSR|UR|花嫁/)\s*', '', title).strip()
-        if not clean_name:
-            continue
-
         c_html = fetch_html(page_url)
         c_soup = parse_soup(c_html)
         if not c_soup:
+            continue
+
+        # Check actual page title from soup for accurate rarity & clean name
+        page_title = c_soup.title.string if c_soup.title else title
+        page_title = page_title.replace(' - 少女ウォーズ @ ウィキ | girlwars - atwiki（アットウィキ）', '').strip()
+
+        rarity = "SSR"
+        if "花嫁/" in page_title or title.startswith("花嫁/"):
+            rarity = "花嫁"
+            clean_name = re.sub(r'^.*?花嫁/\s*', '', page_title).strip()
+            title = f"花嫁/{clean_name}"
+        elif "UR/" in page_title or title.startswith("UR/") or title.startswith("UR"):
+            rarity = "UR"
+            clean_name = re.sub(r'^(UR/UR|UR/|UR)\s*', '', page_title).strip()
+        elif "SSR/" in page_title or title.startswith("SSR/") or title.startswith("SSR"):
+            rarity = "SSR"
+            clean_name = re.sub(r'^(SSR/SSR|SSR/|SSR)\s*', '', page_title).strip()
+        else:
+            clean_name = re.sub(r'^(SSR/SSR|UR/UR|SSR|UR|花嫁/)\s*', '', title).strip()
+
+        if not clean_name:
             continue
 
         body = c_soup.find(id='wikibody')

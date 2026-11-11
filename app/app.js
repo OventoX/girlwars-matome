@@ -692,7 +692,7 @@
           </div>
         </td>
         <td><span class="badge-rarity ${rClass}" style="font-size:0.75rem; padding:2px 6px;">${escapeHtml(c.rarity)}</span></td>
-        <td><span class="badge-tag ${tClass}">${escapeHtml(c.type)}将</span></td>
+        <td>${c.type ? `<span class="badge-tag ${tClass}">${escapeHtml(c.type)}将</span>` : '<span style="color:var(--text-muted);">-</span>'}</td>
         <td>${sysHtml}</td>
         <td><div class="table-role-snippet">${escapeHtml(roleSnippet)}</div></td>
         <td>${skillBadge}</td>
@@ -885,7 +885,7 @@
         ${visualHtml}
         <div class="card-body">
           <div class="card-meta-row">
-            <span class="badge-tag ${tClass}">${escapeHtml(c.type)}将</span>
+            ${c.type ? `<span class="badge-tag ${tClass}">${escapeHtml(c.type)}将</span>` : ''}
             ${sysHtml}
             ${tierHtml}
             ${flagHtml}
@@ -1097,7 +1097,7 @@
                 let tClass = 'tag-power';
                 if (c.type === '智') tClass = 'tag-wisdom';
                 else if (c.type === '猛') tClass = 'tag-brave';
-                return `<td style="text-align: center;"><span class="badge-tag ${tClass}">${escapeHtml(c.type)}将</span></td>`;
+                return `<td style="text-align: center;">${c.type ? `<span class="badge-tag ${tClass}">${escapeHtml(c.type)}将</span>` : '<span style="color:var(--text-muted);">-</span>'}</td>`;
               }).join('')}
             </tr>
 
@@ -1882,6 +1882,24 @@
       `;
     }
 
+    let hintsHtml = '';
+    if (c.hints && c.hints.length) {
+      const hItems = c.hints.map(h => `
+        <li style="font-size: 0.82rem; margin-bottom: 4px; color: var(--text-secondary); line-height: 1.5;">${escapeHtml(h)}</li>
+      `).join('');
+
+      hintsHtml = `
+        <div class="modal-section">
+          <div class="modal-section-title">💡 花嫁衣装・セリフ解放ヒント（マトメバコ！調べ）</div>
+          <div style="max-height: 200px; overflow-y: auto; padding: 10px 14px; background: rgba(236, 72, 153, 0.08); border: 1px solid rgba(236, 72, 153, 0.2); border-radius: var(--radius-md);">
+            <ul style="margin: 0; padding-left: 20px;">
+              ${hItems}
+            </ul>
+          </div>
+        </div>
+      `;
+    }
+
     let storyHtml = '';
     if (c.story) {
       storyHtml = `
@@ -1904,7 +1922,7 @@
           </div>
           <div class="modal-attributes">
             <span class="badge-rarity ${rClass}" style="font-size: 0.88rem; padding: 4px 10px;">${escapeHtml(c.rarity)}</span>
-            <span class="badge-tag ${tClass}" style="font-size: 0.84rem; padding: 4px 10px;">${escapeHtml(c.type)}将</span>
+            ${c.type ? `<span class="badge-tag ${tClass}" style="font-size: 0.84rem; padding: 4px 10px;">${escapeHtml(c.type)}将</span>` : ''}
             ${c.system ? `<span class="badge-tag tag-sys-${c.system === '風' ? 'wind' : c.system === '花' ? 'flower' : c.system === '雪' ? 'snow' : 'moon'}" style="font-size: 0.84rem; padding: 4px 10px;">${escapeHtml(c.system)}系統</span>` : ''}
             ${c.initialRarity ? `<span class="meta-badge">初期: ${escapeHtml(c.initialRarity)}</span>` : ''}
             ${c.cv ? `<span class="meta-badge">CV: ${escapeHtml(c.cv)}</span>` : ''}
@@ -1918,6 +1936,7 @@
         ${historyHtml}
         ${evalHtml}
         ${skillsHtml}
+        ${hintsHtml}
         ${dialogueHtml}
         ${storyHtml}
 
@@ -2103,7 +2122,7 @@
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
             <div style="display: flex; align-items: center; gap: 8px;">
               <span class="badge-rarity badge-ur-sen">UR閃</span>
-              <span class="badge-tag ${tClass}">${escapeHtml(c.type)}将</span>
+              ${c.type ? `<span class="badge-tag ${tClass}">${escapeHtml(c.type)}将</span>` : ''}
               ${c.system ? `<span class="badge-tag tag-sys-${c.system === '風' ? 'wind' : c.system === '花' ? 'flower' : c.system === '雪' ? 'snow' : 'moon'}">${escapeHtml(c.system)}</span>` : ''}
               <strong style="font-size: 1.1rem; color: #fff;">${escapeHtml(c.name)}</strong>
               ${c.ruby ? `<span style="font-size: 0.75rem; color: var(--text-muted);">（${escapeHtml(c.ruby)}）</span>` : ''}
