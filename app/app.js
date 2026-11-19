@@ -2004,7 +2004,7 @@
 
     // Gallery Tabs Interaction & Lightbox Sync
     let currentGalleryIdx = 0;
-    const galleryTabs = el.modalBody.querySelectorAll('.modal-gallery-tab');
+    const galleryTabs = el.modalContent.querySelectorAll('.modal-gallery-tab');
 
     function selectModalImage(idx) {
       const targetImg = images[idx];
@@ -2017,9 +2017,9 @@
         t.setAttribute('aria-selected', isMatch ? 'true' : 'false');
       });
 
-      const mainImg = el.modalBody.querySelector('#modal-gallery-main-img');
-      const badge = el.modalBody.querySelector('#modal-gallery-badge');
-      const credit = el.modalBody.querySelector('#modal-gallery-credit');
+      const mainImg = el.modalContent.querySelector('#modal-gallery-main-img');
+      const badge = el.modalContent.querySelector('#modal-gallery-badge');
+      const credit = el.modalContent.querySelector('#modal-gallery-credit');
       if (mainImg) {
         mainImg.src = targetImg.url;
         mainImg.alt = `${c.name} (${targetImg.label || '通常'})`;
@@ -2045,8 +2045,8 @@
     }
 
     // Lightbox trigger on main image or zoom badge
-    const mainImgEl = el.modalBody.querySelector('#modal-gallery-main-img');
-    const zoomHintBtn = el.modalBody.querySelector('#modal-zoom-hint-btn');
+    const mainImgEl = el.modalContent.querySelector('#modal-gallery-main-img');
+    const zoomHintBtn = el.modalContent.querySelector('#modal-zoom-hint-btn');
     if (mainImgEl && images.length > 0) {
       mainImgEl.addEventListener('click', () => {
         openLightbox(images, currentGalleryIdx, c.name, selectModalImage);
