@@ -1671,21 +1671,26 @@
       credit: c.illustCredit || c.illustSource || '公式スチル'
     }] : []);
 
+    const seenUrls = new Set(ownImages.map(img => img.url).filter(Boolean));
     const rarityRank = { 'UR閃': 1, 'UR': 2, 'SSR': 3, '花嫁': 4 };
     const allChars = window.GIRLWARS_DATA || [];
     const others = allChars
       .filter(other => other.name === c.name && other.id !== c.id && other.rarity !== c.rarity && other.illustUrl)
       .sort((a, b) => (rarityRank[a.rarity] || 99) - (rarityRank[b.rarity] || 99));
 
-    const otherImages = others.map(other => {
+    const otherImages = [];
+    others.forEach(other => {
       const firstImg = (other.images && other.images.length > 0) ? other.images[0] : null;
-      return {
+      const targetUrl = firstImg ? firstImg.url : other.illustUrl;
+      if (!targetUrl || seenUrls.has(targetUrl)) return;
+      seenUrls.add(targetUrl);
+      otherImages.push({
         label: `${other.rarity}（別レアリティ）`,
-        url: firstImg ? firstImg.url : other.illustUrl,
+        url: targetUrl,
         source: (firstImg && firstImg.source) || other.illustSource || '公式/wiki',
         credit: (firstImg && firstImg.credit) || other.illustCredit || other.illustSource || '公式スチル',
         sourceUrl: other.sourceInfo ? other.sourceInfo.primaryUrl : '#'
-      };
+      });
     });
 
     return [...ownImages, ...otherImages];
