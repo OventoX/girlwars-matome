@@ -2007,18 +2007,18 @@
     const modalNavHtml = `
       <div class="modal-nav-bar">
         <button type="button" id="modal-prev-char-btn" class="modal-nav-btn" ${hasPrevChar ? '' : 'disabled'} title="${prevChar ? escapeHtml(prevChar.name) : ''}">
-          ◀ 前へ${prevChar ? ` (${escapeHtml(prevChar.name)})` : ''}
+          ◀ 前のキャラ
         </button>
         <span class="modal-nav-counter">${navPosText}</span>
         <button type="button" id="modal-next-char-btn" class="modal-nav-btn" ${hasNextChar ? '' : 'disabled'} title="${nextChar ? escapeHtml(nextChar.name) : ''}">
-          ${nextChar ? `(${escapeHtml(nextChar.name)}) ` : ''}次へ ▶
+          次のキャラ ▶
         </button>
       </div>
     `;
 
     el.modalContent.innerHTML = `
-      ${modalNavHtml}
       ${visualHtml}
+      ${modalNavHtml}
       <div class="modal-content-inner">
         <div class="modal-title-row">
           <div class="modal-char-names">
@@ -2276,6 +2276,7 @@
       nextBtn.title = hasNextChar ? `次のキャラ (${state.activeDetailList[state.activeDetailIndex + 1].name})` : '';
     }
 
+    const hasMultiple = lightboxState.images.length > 1;
     if (thumbsEl) {
       if (hasMultiple) {
         thumbsEl.style.display = 'flex';
