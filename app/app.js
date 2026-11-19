@@ -500,6 +500,16 @@
           navigateCharacterInModalAndLightbox(1);
           return;
         }
+        if (!isInputFocused && e.key === 'ArrowUp') {
+          e.preventDefault();
+          stepLightbox(-1);
+          return;
+        }
+        if (!isInputFocused && e.key === 'ArrowDown') {
+          e.preventDefault();
+          stepLightbox(1);
+          return;
+        }
         return;
       }
 
@@ -2231,6 +2241,16 @@
     const lb = document.getElementById('image-lightbox');
     if (lb && lb.style.display !== 'none') {
       lb.style.display = 'none';
+    }
+  }
+
+  function stepLightbox(delta) {
+    const len = lightboxState.images.length;
+    if (len <= 1) return;
+    lightboxState.currentIndex = (lightboxState.currentIndex + delta + len) % len;
+    renderLightboxImage();
+    if (lightboxState.onSync) {
+      lightboxState.onSync(lightboxState.currentIndex);
     }
   }
 
