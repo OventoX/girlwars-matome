@@ -1,5 +1,5 @@
 // Service Worker for 少女ウォーズ キャラまとめ表 (Offline Support)
-const CACHE_NAME = 'girlwars-matome-v1';
+const CACHE_NAME = 'girlwars-matome-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -29,14 +29,32 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  // Stale-while-revalidate for local assets, cache-first for images
-  const url = new URL(event.request.url);
   if (event.request.method !== 'GET') return;
+  const url = new URL(event.request.url);
 
+  // Same-origin app files: Network-first (fallback to cache when offline)
+  if (url.origin === self.location.origin) {
+    event.respondWith(
+      fetch(event.request).then(networkResponse => {
+        if (networkResponse && networkResponse.ok) {
+          const resClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(event.request, resClone);
+          });
+        }
+        return networkResponse;
+      }).catch(() => {
+        return caches.match(event.request);
+      })
+    );
+    return;
+  }
+
+  // External origins (character illustrations, etc.): Cache-first / Stale-while-revalidate
   event.respondWith(
     caches.match(event.request).then(cached => {
       const fetchPromise = fetch(event.request).then(networkResponse => {
-        if (networkResponse && networkResponse.status === 200) {
+        if (networkResponse && (networkResponse.status === 200 || networkResponse.type === 'opaque')) {
           const resClone = networkResponse.clone();
           caches.open(CACHE_NAME).then(cache => {
             cache.put(event.request, resClone);
