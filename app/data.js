@@ -18,8 +18,8 @@ window.GIRLWARS_METADATA = {
   withSkillsCount: 72,
   withIllustCount: 215,
   withTagsCount: 125,
-  withVariantsCount: 108,
-  totalImagesCount: 323,
+  withVariantsCount: 124,
+  totalImagesCount: 339,
   brideWithVariantsCount: 87,
   brideTotalImagesCount: 176,
   tagsMaster: [
@@ -264,6 +264,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20251104/17/hetarerimuru/da/d6/j/o0857038615709318436.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/11/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E8%8A%A6%E5%B1%8B%E9%81%93%E6%BA%80%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -641,6 +647,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20240512/18/hetarerimuru/e4/bd/p/o1103045315437868199.png?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/12/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BAUR%E9%96%83%E5%AE%89%E5%80%8D%E6%99%B4%E6%98%8E%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -798,6 +810,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20240531/11/hetarerimuru/ac/bb/j/o0834041415445573454.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/06/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AEUR%E9%96%83%E3%82%A8%E3%82%AB%E3%83%86%E3%83%AA%E3%83%BC%E3%83%8A%E3%81%AE%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -1464,6 +1482,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250904/18/hetarerimuru/a9/68/j/o0965051515666061571.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/09/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E3%82%AA%E3%83%AA%E3%82%AA%E3%83%B3%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -1975,6 +1999,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250604/10/hetarerimuru/6b/87/j/o0652066115609307728.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/06/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E4%B8%8A%E6%B3%89%E4%BF%A1%E7%B6%B1%E3%81%AE%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -2282,6 +2312,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20240717/13/hetarerimuru/94/3f/j/o0656068415464142409.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/08/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E3%82%AC%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%B3%E3%81%AE%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -2417,6 +2453,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20251003/13/hetarerimuru/9c/fd/j/o0809047215688839917.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/10/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E9%A0%85%E7%BE%BD%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -2921,6 +2963,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20251204/17/hetarerimuru/65/fe/j/o0861067415726497824.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/12/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%82%B9%E3%82%AB%E3%82%A2%E3%83%8F%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -3276,6 +3324,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250504/12/hetarerimuru/a3/00/j/o0698065615585669608.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/05/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E7%8E%89%E8%97%BB%E5%89%8D%E3%81%AE%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -3426,6 +3480,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20240620/19/hetarerimuru/6d/55/j/o0664067615453883454.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/10/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AEUR%E9%96%83%E3%83%BB%E4%BC%8A%E9%81%94%E6%94%BF%E5%AE%97%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -3589,6 +3649,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250720/17/hetarerimuru/84/36/j/o0960043215637372853.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/07/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E3%83%80%E3%83%B3%E3%83%86%E3%81%AE%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -3906,6 +3972,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20240510/18/hetarerimuru/69/05/j/o1673075315436980157.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/04/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AEUR%E9%96%83%E9%95%B7%E5%AE%97%E6%88%91%E9%83%A8%E5%85%83%E8%A6%AA%E3%81%AE%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -4594,6 +4666,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250704/19/hetarerimuru/4d/88/j/o0957043115628516055.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/07/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E3%83%9A%E3%83%AB%E3%82%BB%E3%82%A6%E3%82%B9%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -5118,6 +5196,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250921/08/hetarerimuru/e9/b8/j/o0939042315678454622.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/09/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E5%85%AB%E7%99%BE%E6%AF%94%E4%B8%98%E5%B0%BC%E3%81%AE%E4%B8%8B%E7%9D%80-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -5947,6 +6031,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20251120/18/hetarerimuru/bf/dd/j/o0963043315721256700.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/11/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E3%83%AD%E3%83%BC%E3%83%A0%E3%83%AB%E3%82%B9%E4%B8%8B%E7%9D%80-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },
@@ -6259,6 +6349,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250804/12/hetarerimuru/56/92/j/o0652066615645745841.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "下着姿",
+        "url": "https://kokomatoblog.com/wp-content/uploads/2025/08/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E3%83%80%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%81%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
+        "source": "マトメバコ！",
+        "credit": "マトメバコ！ (kokomatoblog.com)"
       }
     ]
   },

@@ -1663,16 +1663,39 @@
     return true;
   }
 
+  function buildModalGalleryImages(c) {
+    const ownImages = (c.images && c.images.length > 0) ? c.images.map(img => ({ ...img })) : (c.illustUrl ? [{
+      label: '通常',
+      url: c.illustUrl,
+      source: c.illustSource || '少女ウォーズ@wiki',
+      credit: c.illustCredit || c.illustSource || '公式スチル'
+    }] : []);
+
+    const rarityRank = { 'UR閃': 1, 'UR': 2, 'SSR': 3, '花嫁': 4 };
+    const allChars = window.GIRLWARS_DATA || [];
+    const others = allChars
+      .filter(other => other.name === c.name && other.id !== c.id && other.rarity !== c.rarity && other.illustUrl)
+      .sort((a, b) => (rarityRank[a.rarity] || 99) - (rarityRank[b.rarity] || 99));
+
+    const otherImages = others.map(other => {
+      const firstImg = (other.images && other.images.length > 0) ? other.images[0] : null;
+      return {
+        label: `${other.rarity}（別レアリティ）`,
+        url: firstImg ? firstImg.url : other.illustUrl,
+        source: (firstImg && firstImg.source) || other.illustSource || '公式/wiki',
+        credit: (firstImg && firstImg.credit) || other.illustCredit || other.illustSource || '公式スチル',
+        sourceUrl: other.sourceInfo ? other.sourceInfo.primaryUrl : '#'
+      };
+    });
+
+    return [...ownImages, ...otherImages];
+  }
+
   function navigateCharacterInModalAndLightbox(delta) {
     if (!navigateDetailModal(delta)) return;
     const nextChar = state.selectedChar;
     if (!nextChar) return;
-    const nextImages = (nextChar.images && nextChar.images.length > 0) ? nextChar.images : (nextChar.illustUrl ? [{
-      label: '通常',
-      url: nextChar.illustUrl,
-      source: nextChar.illustSource || '少女ウォーズ@wiki',
-      credit: nextChar.illustCredit || nextChar.illustSource || '公式スチル'
-    }] : []);
+    const nextImages = buildModalGalleryImages(nextChar);
     if (nextImages.length > 0) {
       openLightbox(nextImages, 0, nextChar.name, state.currentModalSyncFn);
     } else {
@@ -1702,14 +1725,9 @@
       `;
     }
 
-    // Feature 4: Illustration / State-variant Gallery
+    // Feature 4: Illustration / State-variant Gallery (including cross-rarity normal illustrations)
     let visualHtml = '';
-    const images = (c.images && c.images.length > 0) ? c.images : (c.illustUrl ? [{
-      label: '通常',
-      url: c.illustUrl,
-      source: c.illustSource || '少女ウォーズ@wiki',
-      credit: c.illustCredit || c.illustSource || '公式スチル'
-    }] : []);
+    const images = buildModalGalleryImages(c);
 
     if (images.length > 0) {
       const initialImg = images[0];
@@ -2122,9 +2140,11 @@
         badge.innerHTML = `🖼️ ${escapeHtml(targetImg.label || '通常')}`;
       }
       if (credit) {
-        const sourceUrl = (c.sourceInfo && c.sourceInfo.sources && c.sourceInfo.sources[targetImg.source])
-          ? c.sourceInfo.sources[targetImg.source].url
-          : (c.sourceInfo ? c.sourceInfo.primaryUrl : '#');
+        const sourceUrl = targetImg.sourceUrl
+          ? targetImg.sourceUrl
+          : ((c.sourceInfo && c.sourceInfo.sources && c.sourceInfo.sources[targetImg.source])
+            ? c.sourceInfo.sources[targetImg.source].url
+            : (c.sourceInfo ? c.sourceInfo.primaryUrl : '#'));
         credit.innerHTML = `【${escapeHtml(targetImg.label || '通常')}】 出典: <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(targetImg.credit || targetImg.source || '公式スチル')}</a>`;
       }
     }
