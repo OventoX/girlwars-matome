@@ -2202,3 +2202,69 @@ h2, h3,
     font-size: 1.6rem;
   }
 }
+
+/* ================= 第9弾: Modal Prev/Next Navigation ================= */
+.modal-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(11, 12, 24, 0.85);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.modal-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--accent-gold-light);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  max-width: 42%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modal-nav-btn:hover:not(:disabled),
+.modal-nav-btn:active:not(:disabled) {
+  background: rgba(219, 39, 119, 0.8);
+  border-color: var(--accent-gold-light);
+  color: #fff;
+}
+
+.modal-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--text-muted);
+}
+
+.modal-nav-counter {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.lightbox-nav-btn:disabled {
+  opacity: 0.22;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .modal-nav-bar {
+    padding: 8px 12px;
+  }
+  .modal-nav-btn {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+  }
+}

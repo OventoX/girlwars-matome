@@ -19,6 +19,9 @@
     viewMode: 'card', // 'card', 'table', 'gallery'
     tierSubView: 'atwiki',
     selectedChar: null,
+    activeDetailList: [],
+    activeDetailIndex: -1,
+    currentModalSyncFn: null,
     
     // Tag filter (Set of tag IDs)
     selectedTags: new Set(),
@@ -477,23 +480,44 @@
     setupLightboxEvents();
 
     window.addEventListener('keydown', e => {
+      const activeEl = document.activeElement;
+      const activeTag = activeEl ? activeEl.tagName : '';
+      const isInputFocused = ['INPUT', 'TEXTAREA', 'SELECT'].includes(activeTag) || (activeEl && activeEl.isContentEditable);
+
       const lb = document.getElementById('image-lightbox');
       if (lb && lb.style.display !== 'none') {
         if (e.key === 'Escape') {
           closeLightbox();
           return;
         }
-        if (e.key === 'ArrowLeft') {
-          stepLightbox(-1);
+        if (!isInputFocused && e.key === 'ArrowLeft') {
+          e.preventDefault();
+          navigateCharacterInModalAndLightbox(-1);
           return;
         }
-        if (e.key === 'ArrowRight') {
-          stepLightbox(1);
+        if (!isInputFocused && e.key === 'ArrowRight') {
+          e.preventDefault();
+          navigateCharacterInModalAndLightbox(1);
           return;
         }
+        return;
       }
-      if (e.key === 'Escape' && el.charModal.style.display !== 'none') {
-        closeModal();
+
+      if (el.charModal && el.charModal.style.display !== 'none') {
+        if (e.key === 'Escape') {
+          closeModal();
+          return;
+        }
+        if (!isInputFocused && e.key === 'ArrowLeft') {
+          e.preventDefault();
+          navigateDetailModal(-1);
+          return;
+        }
+        if (!isInputFocused && e.key === 'ArrowRight') {
+          e.preventDefault();
+          navigateDetailModal(1);
+          return;
+        }
       }
     });
   }
@@ -1608,6 +1632,45 @@
 
   // Open Modal
   function openModal(c) {
+    const list = getFilteredCharacters();
+    const idx = list.findIndex(item => item.id === c.id);
+    if (idx !== -1) {
+      state.activeDetailList = list;
+      state.activeDetailIndex = idx;
+    } else {
+      state.activeDetailList = [c];
+      state.activeDetailIndex = 0;
+    }
+    renderModalContent(c);
+  }
+
+  function navigateDetailModal(delta) {
+    if (!state.activeDetailList || state.activeDetailList.length <= 1) return false;
+    const nextIdx = state.activeDetailIndex + delta;
+    if (nextIdx < 0 || nextIdx >= state.activeDetailList.length) return false;
+    state.activeDetailIndex = nextIdx;
+    renderModalContent(state.activeDetailList[nextIdx]);
+    return true;
+  }
+
+  function navigateCharacterInModalAndLightbox(delta) {
+    if (!navigateDetailModal(delta)) return;
+    const nextChar = state.selectedChar;
+    if (!nextChar) return;
+    const nextImages = (nextChar.images && nextChar.images.length > 0) ? nextChar.images : (nextChar.illustUrl ? [{
+      label: '通常',
+      url: nextChar.illustUrl,
+      source: nextChar.illustSource || '少女ウォーズ@wiki',
+      credit: nextChar.illustCredit || nextChar.illustSource || '公式スチル'
+    }] : []);
+    if (nextImages.length > 0) {
+      openLightbox(nextImages, 0, nextChar.name, state.currentModalSyncFn);
+    } else {
+      closeLightbox();
+    }
+  }
+
+  function renderModalContent(c) {
     state.selectedChar = c;
 
     let rClass = 'badge-ssr';
@@ -1933,7 +1996,28 @@
 
     const isCompModal = state.compareList.includes(c.id);
 
+    const hasPrevChar = state.activeDetailIndex > 0;
+    const hasNextChar = state.activeDetailIndex >= 0 && state.activeDetailIndex < state.activeDetailList.length - 1;
+    const prevChar = hasPrevChar ? state.activeDetailList[state.activeDetailIndex - 1] : null;
+    const nextChar = hasNextChar ? state.activeDetailList[state.activeDetailIndex + 1] : null;
+    const navPosText = state.activeDetailList.length > 0
+      ? `${state.activeDetailIndex + 1} / ${state.activeDetailList.length}`
+      : '1 / 1';
+
+    const modalNavHtml = `
+      <div class="modal-nav-bar">
+        <button type="button" id="modal-prev-char-btn" class="modal-nav-btn" ${hasPrevChar ? '' : 'disabled'} title="${prevChar ? escapeHtml(prevChar.name) : ''}">
+          ◀ 前へ${prevChar ? ` (${escapeHtml(prevChar.name)})` : ''}
+        </button>
+        <span class="modal-nav-counter">${navPosText}</span>
+        <button type="button" id="modal-next-char-btn" class="modal-nav-btn" ${hasNextChar ? '' : 'disabled'} title="${nextChar ? escapeHtml(nextChar.name) : ''}">
+          ${nextChar ? `(${escapeHtml(nextChar.name)}) ` : ''}次へ ▶
+        </button>
+      </div>
+    `;
+
     el.modalContent.innerHTML = `
+      ${modalNavHtml}
       ${visualHtml}
       <div class="modal-content-inner">
         <div class="modal-title-row">
@@ -2044,6 +2128,18 @@
       });
     }
 
+    state.currentModalSyncFn = selectModalImage;
+
+    // Modal prev/next character buttons
+    const prevCharBtn = el.modalContent.querySelector('#modal-prev-char-btn');
+    const nextCharBtn = el.modalContent.querySelector('#modal-next-char-btn');
+    if (prevCharBtn) {
+      prevCharBtn.addEventListener('click', () => navigateDetailModal(-1));
+    }
+    if (nextCharBtn) {
+      nextCharBtn.addEventListener('click', () => navigateDetailModal(1));
+    }
+
     // Lightbox trigger on main image or zoom badge
     const mainImgEl = el.modalContent.querySelector('#modal-gallery-main-img');
     const zoomHintBtn = el.modalContent.querySelector('#modal-zoom-hint-btn');
@@ -2060,6 +2156,8 @@
     }
 
     el.charModal.style.display = 'flex';
+    const dialogEl = el.charModal.querySelector('.modal-dialog');
+    if (dialogEl) dialogEl.scrollTop = 0;
     document.body.style.overflow = 'hidden';
   }
 
@@ -2088,8 +2186,8 @@
     if (!lb) return;
 
     if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
-    if (prevBtn) prevBtn.addEventListener('click', e => { e.stopPropagation(); stepLightbox(-1); });
-    if (nextBtn) nextBtn.addEventListener('click', e => { e.stopPropagation(); stepLightbox(1); });
+    if (prevBtn) prevBtn.addEventListener('click', e => { e.stopPropagation(); navigateCharacterInModalAndLightbox(-1); });
+    if (nextBtn) nextBtn.addEventListener('click', e => { e.stopPropagation(); navigateCharacterInModalAndLightbox(1); });
 
     // Close when tapping background/stage outside the image
     lb.addEventListener('click', e => {
@@ -2098,7 +2196,7 @@
       }
     });
 
-    // Touch swipe support for mobile
+    // Touch swipe support for mobile: navigate prev/next character
     if (stage) {
       stage.addEventListener('touchstart', e => {
         if (e.touches && e.touches.length === 1) {
@@ -2109,8 +2207,8 @@
         if (!lightboxState.touchStartX || !e.changedTouches || e.changedTouches.length === 0) return;
         const dx = e.changedTouches[0].clientX - lightboxState.touchStartX;
         lightboxState.touchStartX = 0;
-        if (Math.abs(dx) > 45 && lightboxState.images.length > 1) {
-          stepLightbox(dx < 0 ? 1 : -1);
+        if (Math.abs(dx) > 45) {
+          navigateCharacterInModalAndLightbox(dx < 0 ? 1 : -1);
         }
       }, { passive: true });
     }
@@ -2136,16 +2234,6 @@
     }
   }
 
-  function stepLightbox(delta) {
-    const len = lightboxState.images.length;
-    if (len <= 1) return;
-    lightboxState.currentIndex = (lightboxState.currentIndex + delta + len) % len;
-    renderLightboxImage();
-    if (lightboxState.onSync) {
-      lightboxState.onSync(lightboxState.currentIndex);
-    }
-  }
-
   function renderLightboxImage() {
     const imgObj = lightboxState.images[lightboxState.currentIndex];
     if (!imgObj) return;
@@ -2162,7 +2250,10 @@
       lbImg.alt = `${lightboxState.charName} (${imgObj.label || '通常'})`;
     }
     if (titleEl) {
-      titleEl.textContent = lightboxState.charName;
+      const posStr = state.activeDetailList.length > 1
+        ? ` (${state.activeDetailIndex + 1}/${state.activeDetailList.length})`
+        : '';
+      titleEl.textContent = `${lightboxState.charName}${posStr}`;
     }
     if (badgeEl) {
       const idxText = lightboxState.images.length > 1
@@ -2171,9 +2262,19 @@
       badgeEl.textContent = `${imgObj.label || '通常'}${idxText}`;
     }
 
-    const hasMultiple = lightboxState.images.length > 1;
-    if (prevBtn) prevBtn.style.display = hasMultiple ? 'flex' : 'none';
-    if (nextBtn) nextBtn.style.display = hasMultiple ? 'flex' : 'none';
+    const hasPrevChar = state.activeDetailIndex > 0;
+    const hasNextChar = state.activeDetailIndex >= 0 && state.activeDetailIndex < state.activeDetailList.length - 1;
+    const showCharNav = state.activeDetailList.length > 1;
+    if (prevBtn) {
+      prevBtn.style.display = showCharNav ? 'flex' : 'none';
+      prevBtn.disabled = !hasPrevChar;
+      prevBtn.title = hasPrevChar ? `前のキャラ (${state.activeDetailList[state.activeDetailIndex - 1].name})` : '';
+    }
+    if (nextBtn) {
+      nextBtn.style.display = showCharNav ? 'flex' : 'none';
+      nextBtn.disabled = !hasNextChar;
+      nextBtn.title = hasNextChar ? `次のキャラ (${state.activeDetailList[state.activeDetailIndex + 1].name})` : '';
+    }
 
     if (thumbsEl) {
       if (hasMultiple) {
