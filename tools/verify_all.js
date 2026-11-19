@@ -247,4 +247,22 @@ console.log(`  合計花嫁数: ${atwikiBrides.length + kokomatoBrides.length} �
 const hasHintsInModal = appJs.includes('hintsHtml') && appJs.includes('花嫁衣装・セリフ解放ヒント');
 console.log(`  詳細モーダルでの解放ヒントUI実装: ${hasHintsInModal ? 'PASS' : 'FAIL'}`);
 
+// Check 16: 第6弾 - 評価文・タグの収録拡充検証
+console.log(`\n--- 第6弾: 評価文・タグの収録拡充検証 ---`);
+const withEvalSummary = data.filter(c => c.evaluation && c.evaluation.summary && c.evaluation.summary.trim());
+const emptyEvalSummary = data.filter(c => !c.evaluation || !c.evaluation.summary || !c.evaluation.summary.trim());
+const emptyTags = data.filter(c => !c.tags || c.tags.length === 0);
+const validTagIds = new Set(tagsMaster.map(t => t.id));
+let allTagsValidStructure = true;
+data.forEach(c => {
+  (c.tags || []).forEach(t => {
+    if (!validTagIds.has(t.id) || typeof t.fromSkill !== 'boolean' || typeof t.fromEval !== 'boolean') {
+      allTagsValidStructure = false;
+    }
+  });
+});
+console.log(`  評価文(evaluation.summary)保有件数: ${withEvalSummary.length} / ${data.length} (空欄: ${emptyEvalSummary.length} 件) -> ${withEvalSummary.length === 151 ? 'PASS' : 'FAIL'}`);
+console.log(`  タグ保有件数: ${charsWithTags.length} / ${data.length} (空欄: ${emptyTags.length} 件, メタ: ${meta.withTagsCount}) -> ${charsWithTags.length === 125 && charsWithTags.length === meta.withTagsCount ? 'PASS' : 'FAIL'}`);
+console.log(`  全タグが既存14分類・fromSkill/fromEval準拠: ${allTagsValidStructure ? 'PASS' : 'FAIL'}`);
+
 console.log("\n================ VERIFICATION COMPLETE ================");

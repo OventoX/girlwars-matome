@@ -17,7 +17,7 @@ window.GIRLWARS_METADATA = {
   brideCount: 89,
   withSkillsCount: 72,
   withIllustCount: 215,
-  withTagsCount: 100,
+  withTagsCount: 125,
   withVariantsCount: 108,
   totalImagesCount: 323,
   brideWithVariantsCount: 87,
@@ -11993,7 +11993,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "えりざべす",
-    "tags": [],
+    "tags": [
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -12458,7 +12466,22 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "こばやかわひであき",
-    "tags": [],
+    "tags": [
+      {
+        "id": "ignore_def",
+        "name": "防御無視/貫通",
+        "icon": "🎯",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -12676,7 +12699,22 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "さかもとりょうま",
-    "tags": [],
+    "tags": [
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -13003,7 +13041,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "しこうてい",
-    "tags": [],
+    "tags": [
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -13291,7 +13337,22 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "じゃんぬだるく",
-    "tags": [],
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -13736,7 +13797,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "たちばなどうせつ",
-    "tags": [],
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -14222,7 +14291,22 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "とくがわいえやす",
-    "tags": [],
+    "tags": [
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -14729,7 +14813,22 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "べおうるふ",
-    "tags": [],
+    "tags": [
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -14953,7 +15052,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "みなもとのよしつね",
-    "tags": [],
+    "tags": [
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -15142,7 +15249,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "もうりもとなり",
-    "tags": [],
+    "tags": [
+      {
+        "id": "self_heal",
+        "name": "自己回復",
+        "icon": "💖",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -15207,7 +15322,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "もーどれっど",
-    "tags": [],
+    "tags": [
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -15465,7 +15588,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": true
     },
     "ruby": "",
-    "tags": [],
+    "tags": [
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -15832,7 +15963,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "アストルフォは、その強力な性能で特に「激情モード」が際立っています。彼女は防御力が高く、強力な攻撃力を持ち、仲間と協力することで全体奥義を連発できます。しかし、激情モードは一度限りで、死亡すると再び激情状態に入ることができません。そのため、マーリンのようなキャラと組み合わせることを推奨します。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -15865,7 +15996,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": false
     },
     "ruby": "あすとるふぉ",
-    "tags": [],
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -15926,7 +16065,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "アッティラは、特に後衛で強力なコントロール力を発揮します。しかし、先発に配置されないとその力を発揮できないため、あまり推奨できかねます。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -15959,7 +16098,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": false
     },
     "ruby": "あってぃら",
-    "tags": [],
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -16010,7 +16157,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "先発の後衛に配置する必要があるため、その位置に競合が多く、現在はPVEでの利用が主です。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -16253,7 +16400,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "死亡時にランダムでキャラにバフを付与。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -16286,7 +16433,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": false
     },
     "ruby": "いなひめ",
-    "tags": [],
+    "tags": [
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -16337,7 +16492,7 @@ window.GIRLWARS_DATA = [
     "skills": null,
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "PVEではまだ一定の活躍を見せることがあります。登場に奥義を発動でき、復活後も再び奥義を発動できます。星7までの育成を推奨し、URへの昇格をおすすめします。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -16378,7 +16533,15 @@ window.GIRLWARS_DATA = [
       "頭を撫でる",
       "胸の紐を3回引っ張ると脱衣状態になり、ほとんど見えてしまうウェディングドレス姿を堪能できる。"
     ],
-    "tags": [],
+    "tags": [
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -17051,7 +17214,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "カール大帝は、特に一対一の戦いに強く、他のキャラに対しても優れたパフォーマンスを発揮します。彼女は3ターンの不死能力を持ち、他のキャラと組み合わせることで強力なコンボを実現できます。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -17084,7 +17247,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": false
     },
     "ruby": "かーるたいてい",
-    "tags": [],
+    "tags": [
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -17146,7 +17317,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "聖なる盾が存在する限り、全能の盾と称するキャラ、コントロール能力と火力もそこそこあります。どのキャラと組み合わせてもいい性能があるので好評です。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -17179,7 +17350,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": false
     },
     "ruby": "がうぇいん",
-    "tags": [],
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -18652,7 +18831,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "先陣での攻撃力低下効果を発動させるサポートキャラ。パッシブで相手のダメージを低下させる能力を持ち、倒されても復活することができます。復活後に奥義を発動できれば、相手をコントロールできます。星7までの育成を推奨します。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -18685,7 +18864,29 @@ window.GIRLWARS_DATA = [
       "isOutdated": false
     },
     "ruby": "じゃんぬだるく",
-    "tags": [],
+    "tags": [
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -19142,7 +19343,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "ソロモンはPVPでの使用がほとんど見られず、復活を頼りにした戦術が主な用途です。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -19175,7 +19376,15 @@ window.GIRLWARS_DATA = [
       "isOutdated": false
     },
     "ruby": "そろもん",
-    "tags": [],
+    "tags": [
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -19547,7 +19756,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "バフとコントロール解除のサポートキャラ（星７推奨）。奥義を発動すると後衛の攻撃力を増加させます。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -19580,7 +19789,22 @@ window.GIRLWARS_DATA = [
       "isOutdated": false
     },
     "ruby": "たちばなむねしげ",
-    "tags": [],
+    "tags": [
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -19709,7 +19933,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "伊達政宗は強力な性能を持ち、特に低レベルの戦闘では圧倒的な力を発揮します。しかし、彼女には後衛の位置を奪われやすいなどの致命的な欠点があります。初心者には低レベルの戦闘での使用を推奨しますが、過度に依存しないよう注意が必要です。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -20064,7 +20288,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "星６のパッシブで強い生存能力を持ち、PVEで活躍中。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -20152,7 +20376,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "元親は、現在唯一の禁療キャラであり、主にマーリンに対抗する役割を果たします。彼女のスキルは全体にダメージを与え、奥義の反撃をすることで無限の可能性があります。黒血侵食、コントロール、様々なバフもあり、彼女は高いポテンシャルを持っています。しかし、彼女の致命的な欠点は、防御力が低く、前衛に配置するとすぐに倒されてしまうことです。そのため、彼女は後衛の貴重な位置を確保する必要があります。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -20185,7 +20409,43 @@ window.GIRLWARS_DATA = [
       "isOutdated": false
     },
     "ruby": "ちょうそかべもとちか",
-    "tags": [],
+    "tags": [
+      {
+        "id": "aoe",
+        "name": "全体攻撃",
+        "icon": "💥",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "control",
+        "name": "行動不能付与",
+        "icon": "❄️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -20329,7 +20589,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "巴御前は、もう一つのT0キャラであり、ゲームの代表的存在です。彼女は1ターン目で後衛のダメージ軽減、高強度の反撃、そして奥義のコントロール解除などの能力によりチームメンバーに追加の奥義を発動させるので、とても強力なキャラとされています。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -20362,7 +20622,29 @@ window.GIRLWARS_DATA = [
       "isOutdated": false
     },
     "ruby": "ともえごぜん",
-    "tags": [],
+    "tags": [
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "counter",
+        "name": "追撃/反撃",
+        "icon": "⚔️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "buff",
+        "name": "バフ付与/自己強化",
+        "icon": "⭐",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -20797,7 +21079,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "強い復活封鎖能力を持っているが、自身の火力不足問題という欠点があり、意外とそんなに強くないかもしれません。また、コントロールされやすいのも一つの問題である。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -21033,7 +21315,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "復活能力を持つサポートキャラ。倒した敵にデバフを付与でき、復活後も再度奥義を発動できます。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -21066,7 +21348,22 @@ window.GIRLWARS_DATA = [
       "isOutdated": false
     },
     "ruby": "ふらんけんしゅたいん",
-    "tags": [],
+    "tags": [
+      {
+        "id": "revive",
+        "name": "復活/死亡回避",
+        "icon": "🕊️",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
@@ -21198,7 +21495,7 @@ window.GIRLWARS_DATA = [
     ],
     "evaluation": {
       "tierRank": null,
-      "summary": "",
+      "summary": "ブリュンヒルドは、智将として力将より固く、全てのスキルが防御に特化しており、攻撃力の減少、HPの上限の増加、全体のコントロール解除など、盾としての役割を完璧に果たします。彼女は簡単なサポートキャラとしても、完全に育成しても優れたパフォーマンスを発揮します。",
       "iconUrl": null,
       "sources": {
         "atwiki": {
@@ -21231,7 +21528,22 @@ window.GIRLWARS_DATA = [
       "isOutdated": false
     },
     "ruby": "ぶりゅんひるど",
-    "tags": [],
+    "tags": [
+      {
+        "id": "debuff",
+        "name": "デバフ付与",
+        "icon": "💀",
+        "fromSkill": false,
+        "fromEval": true
+      },
+      {
+        "id": "cleanse",
+        "name": "デバフ解除/免疫",
+        "icon": "✨",
+        "fromSkill": false,
+        "fromEval": true
+      }
+    ],
     "images": [
       {
         "label": "通常",
