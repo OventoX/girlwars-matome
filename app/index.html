@@ -437,6 +437,23 @@
     </div>
   </div>
 
+  <!-- Fullscreen Image Lightbox -->
+  <div id="image-lightbox" class="lightbox-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-label="画像拡大表示">
+    <div class="lightbox-topbar">
+      <div class="lightbox-title-group">
+        <span id="lightbox-char-title" class="lightbox-char-title"></span>
+        <span id="lightbox-state-badge" class="lightbox-state-badge"></span>
+      </div>
+      <button id="lightbox-close-btn" class="lightbox-close-btn" type="button" aria-label="閉じる（Esc）">&times;</button>
+    </div>
+    <div id="lightbox-stage" class="lightbox-stage">
+      <button id="lightbox-prev-btn" class="lightbox-nav-btn lightbox-prev-btn" type="button" aria-label="前の画像" style="display: none;">&#8249;</button>
+      <img id="lightbox-img" class="lightbox-img" src="" alt="" onerror="this.onerror=null; this.alt='画像を読み込めませんでした';">
+      <button id="lightbox-next-btn" class="lightbox-nav-btn lightbox-next-btn" type="button" aria-label="次の画像" style="display: none;">&#8250;</button>
+    </div>
+    <div id="lightbox-thumbs" class="lightbox-thumbs" style="display: none;"></div>
+  </div>
+
   <!-- Scripts -->
   <script src="data.js"></script>
   <script src="tier_data.js"></script>

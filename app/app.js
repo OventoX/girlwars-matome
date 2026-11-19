@@ -473,7 +473,25 @@
       if (e.target === el.charModal) closeModal();
     });
 
+    // Lightbox events
+    setupLightboxEvents();
+
     window.addEventListener('keydown', e => {
+      const lb = document.getElementById('image-lightbox');
+      if (lb && lb.style.display !== 'none') {
+        if (e.key === 'Escape') {
+          closeLightbox();
+          return;
+        }
+        if (e.key === 'ArrowLeft') {
+          stepLightbox(-1);
+          return;
+        }
+        if (e.key === 'ArrowRight') {
+          stepLightbox(1);
+          return;
+        }
+      }
       if (e.key === 'Escape' && el.charModal.style.display !== 'none') {
         closeModal();
       }
@@ -1629,10 +1647,13 @@
           <div id="modal-gallery-badge" class="modal-visual-state-badge">
             🖼️ ${escapeHtml(initialImg.label || '通常')}
           </div>
-          <img id="modal-gallery-main-img" class="modal-big-img" src="${escapeHtml(initialImg.url)}" alt="${escapeHtml(c.name)} (${escapeHtml(initialImg.label || '通常')})" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'modal-big-placeholder\\'><span>⚔️</span><span>イラスト取得不可または準備中</span></div>';">
+          <img id="modal-gallery-main-img" class="modal-big-img" src="${escapeHtml(initialImg.url)}" alt="${escapeHtml(c.name)} (${escapeHtml(initialImg.label || '通常')})" title="タップで拡大" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'modal-big-placeholder\\'><span>⚔️</span><span>イラスト取得不可または準備中</span></div>';">
           <div id="modal-gallery-credit" class="modal-visual-credit">
             【${escapeHtml(initialImg.label || '通常')}】 出典: <a href="${escapeHtml(c.sourceInfo ? c.sourceInfo.primaryUrl : '#')}" target="_blank" rel="noopener">${escapeHtml(initialImg.credit || initialImg.source || '公式スチル')}</a>
           </div>
+          <button type="button" id="modal-zoom-hint-btn" class="modal-zoom-badge" aria-label="画像を拡大表示">
+            🔍 タップで拡大
+          </button>
         </div>
         ${hasMultiple ? `
           <div class="modal-gallery-controls" role="tablist" aria-label="状態別イラスト切替">
@@ -1981,39 +2002,60 @@
       });
     }
 
-    // Gallery Tabs Interaction
+    // Gallery Tabs Interaction & Lightbox Sync
+    let currentGalleryIdx = 0;
     const galleryTabs = el.modalBody.querySelectorAll('.modal-gallery-tab');
+
+    function selectModalImage(idx) {
+      const targetImg = images[idx];
+      if (!targetImg) return;
+      currentGalleryIdx = idx;
+
+      galleryTabs.forEach(t => {
+        const isMatch = parseInt(t.getAttribute('data-img-idx'), 10) === idx;
+        t.classList.toggle('active', isMatch);
+        t.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+      });
+
+      const mainImg = el.modalBody.querySelector('#modal-gallery-main-img');
+      const badge = el.modalBody.querySelector('#modal-gallery-badge');
+      const credit = el.modalBody.querySelector('#modal-gallery-credit');
+      if (mainImg) {
+        mainImg.src = targetImg.url;
+        mainImg.alt = `${c.name} (${targetImg.label || '通常'})`;
+      }
+      if (badge) {
+        badge.innerHTML = `🖼️ ${escapeHtml(targetImg.label || '通常')}`;
+      }
+      if (credit) {
+        const sourceUrl = (c.sourceInfo && c.sourceInfo.sources && c.sourceInfo.sources[targetImg.source])
+          ? c.sourceInfo.sources[targetImg.source].url
+          : (c.sourceInfo ? c.sourceInfo.primaryUrl : '#');
+        credit.innerHTML = `【${escapeHtml(targetImg.label || '通常')}】 出典: <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(targetImg.credit || targetImg.source || '公式スチル')}</a>`;
+      }
+    }
+
     if (galleryTabs.length > 0) {
       galleryTabs.forEach(tab => {
         tab.addEventListener('click', () => {
           const idx = parseInt(tab.getAttribute('data-img-idx'), 10);
-          const targetImg = images[idx];
-          if (!targetImg) return;
-
-          galleryTabs.forEach(t => {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', 'false');
-          });
-          tab.classList.add('active');
-          tab.setAttribute('aria-selected', 'true');
-
-          const mainImg = el.modalBody.querySelector('#modal-gallery-main-img');
-          const badge = el.modalBody.querySelector('#modal-gallery-badge');
-          const credit = el.modalBody.querySelector('#modal-gallery-credit');
-          if (mainImg) {
-            mainImg.src = targetImg.url;
-            mainImg.alt = `${c.name} (${targetImg.label || '通常'})`;
-          }
-          if (badge) {
-            badge.innerHTML = `🖼️ ${escapeHtml(targetImg.label || '通常')}`;
-          }
-          if (credit) {
-            const sourceUrl = (c.sourceInfo && c.sourceInfo.sources && c.sourceInfo.sources[targetImg.source])
-              ? c.sourceInfo.sources[targetImg.source].url
-              : (c.sourceInfo ? c.sourceInfo.primaryUrl : '#');
-            credit.innerHTML = `【${escapeHtml(targetImg.label || '通常')}】 出典: <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(targetImg.credit || targetImg.source || '公式スチル')}</a>`;
-          }
+          selectModalImage(idx);
         });
+      });
+    }
+
+    // Lightbox trigger on main image or zoom badge
+    const mainImgEl = el.modalBody.querySelector('#modal-gallery-main-img');
+    const zoomHintBtn = el.modalBody.querySelector('#modal-zoom-hint-btn');
+    if (mainImgEl && images.length > 0) {
+      mainImgEl.addEventListener('click', () => {
+        openLightbox(images, currentGalleryIdx, c.name, selectModalImage);
+      });
+    }
+    if (zoomHintBtn && images.length > 0) {
+      zoomHintBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        openLightbox(images, currentGalleryIdx, c.name, selectModalImage);
       });
     }
 
@@ -2022,9 +2064,142 @@
   }
 
   function closeModal() {
+    closeLightbox();
     el.charModal.style.display = 'none';
     document.body.style.overflow = '';
     state.selectedChar = null;
+  }
+
+  // ================= Fullscreen Image Lightbox =================
+  const lightboxState = {
+    images: [],
+    currentIndex: 0,
+    charName: '',
+    onSync: null,
+    touchStartX: 0
+  };
+
+  function setupLightboxEvents() {
+    const lb = document.getElementById('image-lightbox');
+    const closeBtn = document.getElementById('lightbox-close-btn');
+    const prevBtn = document.getElementById('lightbox-prev-btn');
+    const nextBtn = document.getElementById('lightbox-next-btn');
+    const stage = document.getElementById('lightbox-stage');
+    if (!lb) return;
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (prevBtn) prevBtn.addEventListener('click', e => { e.stopPropagation(); stepLightbox(-1); });
+    if (nextBtn) nextBtn.addEventListener('click', e => { e.stopPropagation(); stepLightbox(1); });
+
+    // Close when tapping background/stage outside the image
+    lb.addEventListener('click', e => {
+      if (e.target === lb || e.target === stage) {
+        closeLightbox();
+      }
+    });
+
+    // Touch swipe support for mobile
+    if (stage) {
+      stage.addEventListener('touchstart', e => {
+        if (e.touches && e.touches.length === 1) {
+          lightboxState.touchStartX = e.touches[0].clientX;
+        }
+      }, { passive: true });
+      stage.addEventListener('touchend', e => {
+        if (!lightboxState.touchStartX || !e.changedTouches || e.changedTouches.length === 0) return;
+        const dx = e.changedTouches[0].clientX - lightboxState.touchStartX;
+        lightboxState.touchStartX = 0;
+        if (Math.abs(dx) > 45 && lightboxState.images.length > 1) {
+          stepLightbox(dx < 0 ? 1 : -1);
+        }
+      }, { passive: true });
+    }
+  }
+
+  function openLightbox(images, startIndex, charName, onSync) {
+    const lb = document.getElementById('image-lightbox');
+    if (!lb || !images || images.length === 0) return;
+
+    lightboxState.images = images;
+    lightboxState.currentIndex = Math.max(0, Math.min(startIndex || 0, images.length - 1));
+    lightboxState.charName = charName || '';
+    lightboxState.onSync = typeof onSync === 'function' ? onSync : null;
+
+    renderLightboxImage();
+    lb.style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    const lb = document.getElementById('image-lightbox');
+    if (lb && lb.style.display !== 'none') {
+      lb.style.display = 'none';
+    }
+  }
+
+  function stepLightbox(delta) {
+    const len = lightboxState.images.length;
+    if (len <= 1) return;
+    lightboxState.currentIndex = (lightboxState.currentIndex + delta + len) % len;
+    renderLightboxImage();
+    if (lightboxState.onSync) {
+      lightboxState.onSync(lightboxState.currentIndex);
+    }
+  }
+
+  function renderLightboxImage() {
+    const imgObj = lightboxState.images[lightboxState.currentIndex];
+    if (!imgObj) return;
+
+    const lbImg = document.getElementById('lightbox-img');
+    const titleEl = document.getElementById('lightbox-char-title');
+    const badgeEl = document.getElementById('lightbox-state-badge');
+    const prevBtn = document.getElementById('lightbox-prev-btn');
+    const nextBtn = document.getElementById('lightbox-next-btn');
+    const thumbsEl = document.getElementById('lightbox-thumbs');
+
+    if (lbImg) {
+      lbImg.src = imgObj.url;
+      lbImg.alt = `${lightboxState.charName} (${imgObj.label || '通常'})`;
+    }
+    if (titleEl) {
+      titleEl.textContent = lightboxState.charName;
+    }
+    if (badgeEl) {
+      const idxText = lightboxState.images.length > 1
+        ? ` (${lightboxState.currentIndex + 1}/${lightboxState.images.length})`
+        : '';
+      badgeEl.textContent = `${imgObj.label || '通常'}${idxText}`;
+    }
+
+    const hasMultiple = lightboxState.images.length > 1;
+    if (prevBtn) prevBtn.style.display = hasMultiple ? 'flex' : 'none';
+    if (nextBtn) nextBtn.style.display = hasMultiple ? 'flex' : 'none';
+
+    if (thumbsEl) {
+      if (hasMultiple) {
+        thumbsEl.style.display = 'flex';
+        thumbsEl.innerHTML = lightboxState.images.map((item, idx) => `
+          <button type="button" class="lightbox-thumb-btn ${idx === lightboxState.currentIndex ? 'active' : ''}" data-lb-idx="${idx}">
+            <img class="lightbox-thumb-img" src="${escapeHtml(item.url)}" alt="${escapeHtml(item.label || '通常')}" onerror="this.style.display='none';">
+            <span>${escapeHtml(item.label || '通常')}</span>
+          </button>
+        `).join('');
+        thumbsEl.querySelectorAll('.lightbox-thumb-btn').forEach(btn => {
+          btn.addEventListener('click', e => {
+            e.stopPropagation();
+            const targetIdx = parseInt(btn.getAttribute('data-lb-idx'), 10);
+            lightboxState.currentIndex = targetIdx;
+            renderLightboxImage();
+            if (lightboxState.onSync) {
+              lightboxState.onSync(targetIdx);
+            }
+          });
+        });
+      } else {
+        thumbsEl.style.display = 'none';
+        thumbsEl.innerHTML = '';
+      }
+    }
   }
 
   // Render Tier View
