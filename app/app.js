@@ -2258,8 +2258,8 @@
     lightboxState.charName = charName || '';
     lightboxState.onSync = typeof onSync === 'function' ? onSync : null;
 
-    renderLightboxImage();
     lb.style.display = 'flex';
+    renderLightboxImage();
   }
 
   function closeLightbox() {
@@ -2342,6 +2342,11 @@
             }
           });
         });
+        const activeThumb = thumbsEl.querySelector('.lightbox-thumb-btn.active');
+        if (activeThumb) {
+          const targetLeft = activeThumb.offsetLeft - (thumbsEl.clientWidth - activeThumb.offsetWidth) / 2;
+          thumbsEl.scrollLeft = Math.max(0, targetLeft);
+        }
       } else {
         thumbsEl.style.display = 'none';
         thumbsEl.innerHTML = '';

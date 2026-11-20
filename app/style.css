@@ -2156,10 +2156,14 @@ h2, h3,
 .lightbox-thumbs {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 8px;
-  padding: 8px 4px 4px;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 12px 4px;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-inline: 12px;
   flex-shrink: 0;
   z-index: 10;
 }
@@ -2167,6 +2171,7 @@ h2, h3,
 .lightbox-thumb-btn {
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
   gap: 6px;
   padding: 4px 10px;
   border-radius: var(--radius-full);
@@ -2177,6 +2182,14 @@ h2, h3,
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
+}
+
+.lightbox-thumb-btn:first-child {
+  margin-left: auto;
+}
+
+.lightbox-thumb-btn:last-child {
+  margin-right: auto;
 }
 
 .lightbox-thumb-btn.active {
