@@ -1,6 +1,6 @@
 /**
  * 少女ウォーズ キャラクター統合データベース (GirlWars Character Database)
- * Generated: 2026-11-11 09:44
+ * Generated: 2026-11-21 00:20
  * Total characters: 215 (UR閃: 39, UR: 33, SSR: 54, 花嫁: 89)
  * 
  * 厳格な著作権・出典明記ルールに基づき生成されています。
@@ -9,7 +9,7 @@
  */
 
 window.GIRLWARS_METADATA = {
-  generatedAt: "2026-11-11 09:44",
+  generatedAt: "2026-11-21 00:20",
   totalCount: 215,
   urSenCount: 39,
   urCount: 33,
@@ -18,8 +18,8 @@ window.GIRLWARS_METADATA = {
   withSkillsCount: 72,
   withIllustCount: 215,
   withTagsCount: 125,
-  withVariantsCount: 132,
-  totalImagesCount: 371,
+  withVariantsCount: 133,
+  totalImagesCount: 372,
   brideWithVariantsCount: 87,
   brideTotalImagesCount: 176,
   tagsMaster: [
@@ -11652,9 +11652,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "月",
     "initialRarity": "UR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20240904/16/hetarerimuru/b9/22/j/o0657067515482488256.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ur_劉備_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "仁愛・理屈責め・覚",
@@ -11777,11 +11777,18 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20240904/16/hetarerimuru/b9/22/j/o0657067515482488256.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ur_劉備_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ur_劉備_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "庶民出身の武道少女。見た目は素朴で親しみやすいが、実は大きな志を抱いている。曹操とはお互いに反発し合うライバル関係にある。"
   },
   {
     "id": "rimuru_ur_呂布",

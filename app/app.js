@@ -2019,10 +2019,13 @@
 
     let storyHtml = '';
     if (c.story) {
+      const storySourceHtml = c.illustSource === '少女ウォーズ公式Discord「UR図鑑」'
+        ? `<div style="margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--text-muted); text-align: right;">紹介文出典：少女ウォーズ公式Discord「UR図鑑」</div>`
+        : '';
       storyHtml = `
         <div class="modal-section">
           <div class="modal-section-title">📜 プロフィール・ストーリー</div>
-          <div style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.7; background: var(--bg-secondary); padding: 14px; border-radius: var(--radius-md); white-space: pre-wrap;">${escapeHtml(c.story)}</div>
+          <div style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.7; background: var(--bg-secondary); padding: 14px; border-radius: var(--radius-md); white-space: pre-wrap;">${escapeHtml(c.story)}${storySourceHtml}</div>
         </div>
       `;
     }
