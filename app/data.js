@@ -18,8 +18,8 @@ window.GIRLWARS_METADATA = {
   withSkillsCount: 72,
   withIllustCount: 215,
   withTagsCount: 125,
-  withVariantsCount: 124,
-  totalImagesCount: 339,
+  withVariantsCount: 132,
+  totalImagesCount: 371,
   brideWithVariantsCount: 87,
   brideTotalImagesCount: 176,
   tagsMaster: [
@@ -281,9 +281,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "雪",
     "initialRarity": "UR",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/08/少女ウォーズのUR閃アストルフォ立ち絵.png",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_アストルフォ_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "接近射撃・高速",
@@ -467,17 +467,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/08/少女ウォーズのUR閃アストルフォ立ち絵.png",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_アストルフォ_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/08/少女ウォーズのUR閃アストルフォ下着姿-1024x576.png",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_アストルフォ_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "本来、世界中で巡回ライブを開催し、実家の王室と立ち向かうアストルフォだが、どこからかも分からない、現代の技術を遥かに越えた究極の戦闘スーツを手に入れた。そのスーツで、アストルフォは甚だしい力を手に入れ、本人曰く、「このスーツは正義のために生まれたメカニックウィング、それを使えるのは正義に身を投じる人のみ」だと言う。本当か嘘か分からないが、アストルフォはロック以外にまた新しい趣味に目覚めたーー悪党退治。"
   },
   {
     "id": "rimuru_ursen_安倍晴明",
@@ -827,9 +834,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "月",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズのオジマンディアスの立ち絵.png",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_オジマンディアス_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "至高・神の代行審判",
@@ -970,17 +977,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズのオジマンディアスの立ち絵.png",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_オジマンディアス_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズのオジマンディアスの下着姿-e1789628125933.png",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_オジマンディアス_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "オジマンディアスは、強大な力と高い誇りを持つファラオであり、神に選ばれし子だ。国家の統治においても、軍を率いた戦いにおいても非凡な才能を発揮した。国に平和が訪れた後は、偉大な建造物の建設に夢中になり、自らの都市を世界でも一流の名都市へと発展させるため、多くの時間と労力を費やした。都市が完成した後、オジマンディアスは大量の観光客や商人が訪れると考えていたが、実際の人の流れは予想を遥かに下回るものだった。不満を抱いたオジマンディアスは、清州城が非常に人気を集めているという噂を聞き、成功の秘訣を学ぶためにそこを訪れることを決意した。"
   },
   {
     "id": "rimuru_ursen_オデュッセウス",
@@ -990,9 +1004,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "月",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/01/少女ウォーズのオデュッセウスの立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_オデュッセウス_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "機転ー鎌刃乱舞",
@@ -1140,17 +1154,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/01/少女ウォーズのオデュッセウスの立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_オデュッセウス_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/01/少女ウォーズのオデュッセウスの下着-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_オデュッセウス_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "オデュッセウスは、傭兵を数多く輩出する地として知られる群島の出身だ。背が高くたくましい傭兵たちの中にいると、彼女は全く目立たない存在だったが、彼女の武器は筋力でも刃物でもなく、千変万化する謀略と計算だ。難攻不落の城であろうと、隙の無い陣形であろうと、彼女の頭脳の前には軽く打ち破られてしまう。オデュッセウスにとっては、この世界に手に入れられないものは存在しない。栄誉であれ、成功であれ、人であれ、彼女はあらゆる手段を尽くして手中に収めるのだ。"
   },
   {
     "id": "rimuru_ursen_オベロン",
@@ -1160,9 +1181,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "風",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/05/少女ウォーズのオベロン立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_オベロン_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "静寂ー蝶光滅却",
@@ -1317,17 +1338,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/05/少女ウォーズのオベロン立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_オベロン_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/05/少女ウォーズのオベロン下着姿-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_オベロン_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "オベロンはほぼこの世界と同時に生まれた、古き生霊と妖精の女王である。そしてアーサーとモーガンも、彼女の娘で、妖精の血を流れている。アーサーとモーガンを始め、人間の勢力がどんどん強くなるとともに、彼女は妖精達を連れて、自分の世界に隠れることにした。しかしながら、娘たちがお互いに憎み、数多くな戦争を引き起こすのを見て、彼女は焦って仕方がない。それでも、今の世界に無頓着のゆえ、彼女は何をするすべもなく、ただ世界を救える、平和をもたらす誰かの出現を待つしかなっかた。"
   },
   {
     "id": "rimuru_ursen_オリオン",
@@ -1499,9 +1527,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "花",
     "initialRarity": "SSR",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/02/少女ウォーズのUR閃カエサル立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_カエサル_main.png",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "無謀配達・疾風",
@@ -1671,17 +1699,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/02/少女ウォーズのUR閃カエサル立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_カエサル_main.png",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/02/少女ウォーズのUR閃カエサル下着姿-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_カエサル_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "かつて、カエサルは一都市の主であり、その強大な武力は四方を震撼させていた。しかし、彼女は功績を誇り、豪華な行列や宴会に溺れ、浪費を重ねた結果、都市の財政は破綻し、すぐに元老院によって追放され、賠償を求められた。行き場を失ったカエサルは清洲城に助けを求めた。清洲城の城主は彼女の借金を肩代わりし、彼女の新たな債権者となった。"
   },
   {
     "id": "rimuru_ursen_果心居士",
@@ -1691,9 +1726,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "花",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/08/少女ウォーズの果心居士立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_果心居士_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "刈り取る・鮮血の誘い",
@@ -1841,17 +1876,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/08/少女ウォーズの果心居士立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_果心居士_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/08/少女ウォーズの果心居士の下着姿-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_果心居士_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "世間で語られる果心居士とは、枯れ葉を黄金に変えたり、絵の中から品物を取り出すことさえできる異能の仙人である。しかし、彼女がそんな奇跡を起こす理由は、上等な酒を一壺手に入れるためだったり、一杯のうまい麺を食べるためだったり、あるいは気に入らない相手を少し困らせるためだったりと、実に他愛もない。貴族や豪商たちからは「仙術は使えても、まったく御しようのない厄介者」と呼ばれ、浪人や侠客たちからは「権威を恐れず世を嘲る反骨の象徴」と称えられた。だが、そうした評判に彼女が耳を貸すことはない。今日もまた、気の向くまま、風の向くまま、人の世を渡り歩いている。"
   },
   {
     "id": "rimuru_ursen_上泉信綱",
@@ -1861,9 +1903,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "風",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20250604/10/hetarerimuru/6b/87/j/o0652066115609307728.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ursen_上泉信綱_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "極・無二剣",
@@ -1996,17 +2038,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20250604/10/hetarerimuru/6b/87/j/o0652066115609307728.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ursen_上泉信綱_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2025/06/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E4%B8%8A%E6%B3%89%E4%BF%A1%E7%B6%B1%E3%81%AE%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_上泉信綱_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "「17歳の剣聖」を自称する少女。代々剣聖の家系に生まれ、やや古風な口調で自らを「信綱」と名乗る。家訓である「何事も極意を求めよ」を信条に、一人旅をしながら剣術の修行に励んでいる。しかし、剣術以外の生活スキルは皆無で、放っておくと餓死しかねないほどのドジっ子剣聖だ。そのためよく「稽古」と称して他人の食料を強奪している。そんな彼女は城主に出会い、勝負を挑むも初めての敗北を喫し、「この人と共に極意を追い求めたい」と考えるようになる。やがて「城主が信綱だけのものになれば、より深く剣の極意を洞察できる」という歪んだ考えを抱くようになり、城主の「正妻」を名乗り始める。しかし「全てに極意を求める」信念と「人妻スキルの無さ」という現実の矛盾によって、城主の日常生活はめちゃくちゃにされていく……"
   },
   {
     "id": "rimuru_ursen_カール大帝",
@@ -2166,9 +2215,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "花",
     "initialRarity": "UR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20240717/13/hetarerimuru/94/3f/j/o0656068415464142409.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ursen_ガウェイン_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "昂揚不滅ー陽",
@@ -2309,17 +2358,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20240717/13/hetarerimuru/94/3f/j/o0656068415464142409.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ursen_ガウェイン_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2025/08/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E3%82%AC%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%B3%E3%81%AE%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_ガウェイン_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "円卓結成当初から仕える最古参の騎士の一人。太陽のように輝く聖剣を携え、日光の加護の下では無敵を誇る。魔物の侵攻に立ち向かうため反乱軍を率い、戦いが終わるその時まで民と国土を守り抜いた、忠義に厚い騎士である。ただし、戦場で見せる狂気じみた猛りと、平時に漂わせる優雅さとの落差はとても激しい。主君の前では愛らしい忠犬であっても、敵を前にすれば牙を剥く狂犬へと変貌するのだ。"
   },
   {
     "id": "rimuru_ursen_項羽",
@@ -2470,9 +2526,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "花",
     "initialRarity": "SSR",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/04/少女ウォーズのUR閃真田幸村立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_真田幸村_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "破浪ー狩猟閃撃",
@@ -2642,17 +2698,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/04/少女ウォーズのUR閃真田幸村立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_真田幸村_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/04/少女ウォーズのUR閃真田幸村下着姿-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_真田幸村_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "紅蓮のように鮮やかな武士の少女。正直で明るく、生来の性格は豁達（かったつ）だ。魔気の影響を受けてからは、自らの内なる殺戮の欲望を無理に抑え込み、精神を常に張りつめさせている。貴重な海辺に行く機会を得たのだから、どうか彼女がしっかりとリラックスし、魔気の影響に打ち勝つことができますように。"
   },
   {
     "id": "rimuru_ursen_三蔵法師",
@@ -2662,9 +2725,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "月",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/02/少女ウォーズの三蔵法師立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_三蔵法師_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "慈ー金法呪",
@@ -2819,17 +2882,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/02/少女ウォーズの三蔵法師立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_三蔵法師_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/02/少女ウォーズの三蔵法師下着姿-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_三蔵法師_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "心を静めて真経を求め、仏法を広める聖僧である彼女は、自分が全身全霊で仏法を求める道に捧げていると信じていた。城主と出会ってから、なぜか奇妙な感情を覚え、次第に純粋とは言えない想いを抱き始める。彼女は、城主こそが真経を得るための「色慾の試練」に違いないと考え、この試練を乗り越えなければ真経は得られないと悟る。そこで、自分が城主のそばにいても平静な心を保てるようになるまで、城主に側に留まるよう求めるのであった。"
   },
   {
     "id": "rimuru_ursen_スカアハ",
@@ -2980,9 +3050,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "月",
     "initialRarity": "UR",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/06/少女ウォーズのUR閃ソロモンの立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_ソロモン_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "ダブルリフト・トランプ催眠",
@@ -3152,17 +3222,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/06/少女ウォーズのUR閃ソロモンの立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_ソロモン_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/06/少女ウォーズのUR閃ソロモンの下着姿-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_ソロモン_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "かつて天才魔術師と呼ばれるソロモンは、ある予言で多額な借金を負いバイト暮らしを続けねばならない未来を目にしてしまい、全てを捨てて山奥に引きこもった。彼女の代名詞とも言える「レメゲトン」も、ただ私欲のため都合よく作られただけだった。しかし魔神たちも万能ではなく、とりわけ料理の腕は壊滅的。やがてソロモンはまともな食事を求めるため、青州城と協力関係を結んだ、だがそれを皮切りに、次第に膨らむ自分の欲望を満たすために、お金を稼ぐ仕事を真剣に考えねばならない。"
   },
   {
     "id": "rimuru_ursen_玉藻前",
@@ -3172,9 +3249,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "雪",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20250504/12/hetarerimuru/a3/00/j/o0698065615585669608.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ursen_玉藻前_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "真・千面妖狐",
@@ -3321,17 +3398,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20250504/12/hetarerimuru/a3/00/j/o0698065615585669608.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ursen_玉藻前_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2025/05/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E7%8E%89%E8%97%BB%E5%89%8D%E3%81%AE%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_玉藻前_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "正体不明、素性不明、行方不明の大妖怪。気まぐれで不思議な性格をしていて、あらゆる宝石を集めることに熱中している。人々からは「宝を盗む妖狐」と見なされているが、本人は意に介さず、「ただ自分のものを回収しているだけ」と主張している。もしかすると、これらの宝石には、彼女の秘密が隠されているのかもしれない……"
   },
   {
     "id": "rimuru_ursen_伊達政宗",
@@ -3341,9 +3425,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "風",
     "initialRarity": "SSR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20240620/19/hetarerimuru/6d/55/j/o0664067615453883454.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ursen_伊達政宗_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "極意ー断罪裁決",
@@ -3477,17 +3561,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20240620/19/hetarerimuru/6d/55/j/o0664067615453883454.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ursen_伊達政宗_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2025/10/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AEUR%E9%96%83%E3%83%BB%E4%BC%8A%E9%81%94%E6%94%BF%E5%AE%97%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_伊達政宗_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "伊達政宗はオッドアイの戦士であり、竜血の勇者（自称）だ。そして世界を救うために生まれし者である。悪魔と天使の力を統べる（自称）とされ、邪悪を払い世界を守っている（自称）のだという。ただ、彼女は旅路を共にする相棒を必要としており（自称）、既にその人物を見出しているらしい。いずれこの清洲城を離れ、浪漫に満ちた冒険の旅（主観）に出る日が来ると信じて、今は静かに時を待っている。"
   },
   {
     "id": "rimuru_ursen_ダンテ",
@@ -3989,9 +4080,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "風",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/03/少女ウォーズの塚原卜伝の立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_塚原卜伝_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "刃に触れー残心",
@@ -4132,17 +4223,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/03/少女ウォーズの塚原卜伝の立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_塚原卜伝_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/03/少女ウォーズの塚原卜伝の下着-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_塚原卜伝_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "塚原卜伝の父は、元々名高い剣聖であった。その家には常に、彼の名声を聞きつけて剣術を学びにくる武士たちが訪れていた。しかし、ある見知らぬ剣客が、「塚原家の剣術など、所詮は表面的なものに過ぎぬ。その父は人目を忍ぶ不正な手段で剣聖の称号を奪ったに過ぎない」と世間に言いふらした。塚原卜伝の父は、家の名誉を守るためにその者に決闘を挑んだが、敗れて無念の死を遂げた。これによって家の名誉は完全に失墜し、剣聖から小物へと堕ちてしまった。父を埋葬した後、塚原卜伝は剣を手にし、父と家伝の剣術の名誉を取り戻すことを誓った。"
   },
   {
     "id": "rimuru_ursen_董卓",
@@ -4152,9 +4250,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "雪",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズの董卓立ち絵.png",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_董卓_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "無秩序な殺意・斬首",
@@ -4302,17 +4400,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズの董卓立ち絵.png",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_董卓_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/09/少女ウォーズの董卓下着姿.png",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_董卓_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "辺境の地に生まれ、幼い頃から殺し合いと略奪の中で生きてきた彼女は、強大な力と類まれな才能を持ち、やがてその地で最も名を知られた豪傑の一人となった。\nけれど、彼女が思っていたほど人々は自分を敬ってはいなかった。むしろ、辺境育ちの無作法な蛮人、殺すことしか能のない賊だと蔑む者さえいた。そんな言葉を聞くうちに、彼女自身も自分が生きる意味に疑問を抱くようになった。だからこそ、自分の存在価値を証明する何かが必要なのだと思うようになった。"
   },
   {
     "id": "rimuru_ursen_巴御前",
@@ -4322,9 +4427,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "風",
     "initialRarity": "UR",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのUR閃巴御前の立ち絵.png",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_巴御前_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "星の光ーマジックスラッシュ",
@@ -4494,17 +4599,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのUR閃巴御前の立ち絵.png",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_巴御前_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのUR閃巴御前の下着姿.png",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_巴御前_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "最近の巴御前といえば、すっかり「宝の地図集め」と「宝探し」にご執心の様子。もっとも、手に入る地図のほとんどは偽物で、見つかる宝も大した価値のない小物ばかり。それでも、巴御前は宝探しの旅から何かしら役に立つものを持ち帰ってくる。そんなこともあって、彼女はすっかり宝探しの虜になっていた。 そして今回、彼女が見つけたのは、なんと願いを叶えてくれるという宝。どうやら、これまで見つけてきた宝とは少し様子が違うようで……。"
   },
   {
     "id": "rimuru_ursen_ペルセウス",
@@ -4683,9 +4795,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "雪",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/01/少女ウォーズの源頼光立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_源頼光_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "誅殺・神便鬼毒酒",
@@ -4854,17 +4966,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/01/少女ウォーズの源頼光立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_源頼光_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/01/少女ウォーズの源頼光の下着姿-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_源頼光_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "源頼光は、人間と妖怪の混血という稀有な存在である。彼女は妖怪の血を引きながら人間の村で暮らし、妖怪の怪力と人間の優しさを併せ持っている。たとえその鋭い角のせいで人々から畏怖されても、守りたいと心に誓った人々のために戦うことをいとわない。"
   },
   {
     "id": "rimuru_ursen_メイヴ",
@@ -4874,9 +4993,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "花",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/11/少女ウォーズのメイヴの立ち絵.png",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_メイヴ_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "獄炎・断命の魔剣",
@@ -5031,17 +5150,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/11/少女ウォーズのメイヴの立ち絵.png",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_メイヴ_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/11/少女ウォーズのメイヴの下着姿.png",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_メイヴ_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "メイヴはコノートの女王だ。強大な魔導書を所持し、その力を駆使して戦えば負け知らず。コノートを豊かで強大な国へと導いてきた。女王は極度に男性を嫌い、自分の周囲に男性がいることすら許さないという噂がある。彼女の傍らには、魔導書によって召喚された漆黒の生ける鎧が常に控えている。護衛であり、召使いでもあるその鎧たちは、近づいてくる男性をことごとく追い払う役目を担っている。だが、メイヴが清洲城を訪れて以来、その噂には少し変化が生じているようで……。"
   },
   {
     "id": "rimuru_ursen_八百比丘尼",
@@ -5546,9 +5672,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "月",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/07/少女ウォーズのリチャードの立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_リチャード_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "枯れ果て・氷鱗のバレイ",
@@ -5703,17 +5829,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/07/少女ウォーズのリチャードの立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_リチャード_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/07/少女ウォーズのリチャードの下着姿-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_リチャード_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "彼女は若くして王となり、己の栄光を求めることに夢中になっていた。宮廷の宴で舞を披露することも、戦場で武勲を立てることも、世に自らの名を知らしめることができるものならば、彼女は何でも挑んだ。しかしその一方で、自らの民への気遣いを忘れ、国を治めるという責務を軽んじていた。そんな彼女が敗北し、捕虜となった時――かつて彼女を称えた盟友たちは皆、彼女のもとを去っていった。それでも彼女を救ったのは、他でもない彼女の臣民たちだった。彼らは力を合わせ、身代金を集め、王を取り戻したのだ。その事実を知った彼女は、深い羞恥と後悔に苛まれた。そして自ら王の座を離れ、流浪の旅へ出ることを決意する。各地を巡りながら、真に王としてあるべき姿とは何かを学ぶために。いつの日か成長した自分自身で故郷へ帰り、支えてくれた臣民たちへ恩を返すために。"
   },
   {
     "id": "rimuru_ursen_劉邦",
@@ -5723,9 +5856,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "雪",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/06/少女ウォーズの劉邦の立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_劉邦_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "点将・勝は弧ならず",
@@ -5873,17 +6006,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/06/少女ウォーズの劉邦の立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_劉邦_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/06/少女ウォーズの劉邦の下着-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_劉邦_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "劉邦はガキの頃から任侠道に歩いてきたが、まともな仕事もせずに酒好きで、それでも妙にカリスマ性が感じる、それに引かれる人も少なくない。並外れの雰囲気に楽観主義者で、細かいことを気にしない、どれだけ失敗が相次いで、危機に落ちたとしても、また立ち向かう勇気がある、おかげで彼女にいい実績をもたらした。帝の子のわりには、子供の心をしっかり保っている、野次馬根性で、一人でこっそり逃げ出すのも楽しんでる。"
   },
   {
     "id": "rimuru_ursen_ロームルス",
@@ -6048,9 +6188,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "風",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのローラン立ち絵.png",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_ローラン_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "暁・聖剣制裁",
@@ -6191,17 +6331,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのローラン立ち絵.png",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_ローラン_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/10/少女ウォーズのローラン下着姿.png",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_ローラン_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "ローランは敬虔なる聖騎士であり、卓越した武技と高潔な人格を兼ね備えている。聖騎士として魔を討ち悪を払うだけでなく、修道女として教会の手伝いをすることも多い。教会が発展していく中で、ローランは自ら進んで布教の役目を担うようになり、各地を巡る旅へと出ることになった。そんな中、彼女は繁栄し多くの人々が暮らす清州城を見つける。しかし、この地には教会らしきものが存在していなかった。そこでローランは清州城の城主に会い、この地に教会を建てる許可を得ようと考えた。もしその城主が高潔な人物であるならば、騎士として仕えることもできると考えていた。"
   },
   {
     "id": "rimuru_ursen_ダ・ヴィンチ",
@@ -6211,9 +6358,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "月",
     "initialRarity": "UR閃",
-    "illustUrl": "https://stat.ameba.jp/user_images/20250804/12/hetarerimuru/56/92/j/o0652066615645745841.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ursen_ダ・ヴィンチ_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "霊ー魔法寄生",
@@ -6346,17 +6493,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20250804/12/hetarerimuru/56/92/j/o0652066615645745841.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ursen_ダ・ヴィンチ_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2025/08/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E3%83%80%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%81%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_ダ・ヴィンチ_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "幼い頃から卓越した知性を発揮し、科学研究や発明に対して独自の鋭い見解を持っている。周囲から惜しみない賞賛と憧れの眼差しを受けてきたため、気位が高く傲慢な性格となってしまった。やがて「俗物」たちとの共同生活に耐えられなくなり、家を出て一人暮らしを始め、科学に没頭する引きこもりとなった。身につける武器や服装、装飾品のすべては彼女が独自に開発したもので、戦闘においても千変万化、予測不能な戦い方をみせる。しかし生活スキルは皆無であり、部屋をめちゃくちゃにすることもあれば、空腹で気を失うことさえある。"
   },
   {
     "id": "rimuru_ursen_ハンニバル・バルカ",
@@ -6366,9 +6520,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "雪",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/04/少女ウォーズのハンニバルの立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_ハンニバル・バルカ_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "疎離の環・疑心",
@@ -6523,17 +6677,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/04/少女ウォーズのハンニバルの立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_ハンニバル・バルカ_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/04/少女ウォーズのハンニバルの下着姿-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_ハンニバル・バルカ_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "父の遺志を継ぎ、胸に掲げた正義を追い求め、凶悪な犯罪者を追う探偵。犯人がどこに逃げ延びようと、遠く離れた地でも必ず追い詰め、目的のためには手段を選ばない。彼女の犯罪者に対する姿勢は断固としており、いかなる悪も決して許さない。そんな彼女が、ある日、清州城主についての調査を依頼される。曰く、清州城主は女性から感情と金を騙し取る詐欺師だという。それを聞いた彼女は、まさにこの“心を盗む賊”を捕まえようと、意気揚々とやって来たのだった。"
   },
   {
     "id": "rimuru_ursen_モーガン",
@@ -6543,9 +6704,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "花",
     "initialRarity": "UR閃",
-    "illustUrl": "https://kokomatoblog.com/wp-content/uploads/2026/03/少女ウォーズのモーガンの立ち絵.jpg",
-    "illustSource": "マトメバコ！",
-    "illustCredit": "マトメバコ！ (kokomatoblog.com) / 公式スチル",
+    "illustUrl": "assets/official/rimuru_ursen_モーガン_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "カラスの仮面ー迷乱",
@@ -6707,17 +6868,24 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://kokomatoblog.com/wp-content/uploads/2026/03/少女ウォーズのモーガンの立ち絵.jpg",
-        "source": "マトメバコ！",
-        "credit": "マトメバコ！ (kokomatoblog.com) / 公式スチル"
+        "url": "assets/official/rimuru_ursen_モーガン_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
       },
       {
         "label": "下着姿",
         "url": "https://kokomatoblog.com/wp-content/uploads/2026/03/少女ウォーズのモーガン下着姿-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ursen_モーガン_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "モーガンは、アーサーの（思い出したくもないが、受け入れざるを得ない）姉である。アーサーとは異なり、この美しい姉は、自らの美貌と頭脳を武器と鎧として選んだ。彼女はこれまでずっと妹を見下してきた。ところがその妹はいつしか人々が話題にする英雄となり、自らの理想郷を築き上げた。一方、モーガンは人々に忘れられ、蔑ろにされる存在となった。嫉妬と無念さに苦しめられた彼女は、妹の全てを奪い取り、「アーサーなど所詳は道化に過ぎず、本当に強いのはその姉であるこの自分だ」ということを皆に証明しようと決意した。"
   },
   {
     "id": "rimuru_ur_アキレウス",
@@ -6727,9 +6895,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "風",
     "initialRarity": "UR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20250304/18/hetarerimuru/3c/1c/j/o0666068415550927362.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ur_アキレウス_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "戦慄の瞳・業火・千刃",
@@ -6838,11 +7006,18 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20250304/18/hetarerimuru/3c/1c/j/o0666068415550927362.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ur_アキレウス_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ur_アキレウス_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "数多くの過酷な戦争を経験しながらも、一度も敗北したことのない強者である。伝説によると彼女は不死の体を持ち、どれほどの傷を負っても再び立ち上がるのだという。故に人々からは尊敬と恐怖の念を抱かれている。幼い頃に三途の川に落ちて死の洗礼を受け、不死の体を得た。しかし、そのとき魂もまた死に浸され、目には万物の死の姿しか映らなくなった。"
   },
   {
     "id": "rimuru_ur_アストルフォ",
@@ -7027,9 +7202,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "雪",
     "initialRarity": "UR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20240501/15/hetarerimuru/03/fe/p/o0662040115432924125.png?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ur_アッティラ_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "真・神の鞭ー颶風",
@@ -7209,9 +7384,15 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20240501/15/hetarerimuru/03/fe/p/o0662040115432924125.png?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ur_アッティラ_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ur_アッティラ_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
     ]
   },
@@ -8034,9 +8215,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "花",
     "initialRarity": "UR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20240717/13/hetarerimuru/94/3f/j/o0656068415464142409.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ur_ガウェイン_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "光の三段突き・覚",
@@ -8181,11 +8362,18 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20240717/13/hetarerimuru/94/3f/j/o0656068415464142409.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ur_ガウェイン_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ur_ガウェイン_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "伝説の、円卓の騎士の初期メンバーの一人である。兵士たちを率いて、民の安全を守るために最後まで魔物と戦っている。太陽の光を浴びて輝く聖剣を持ち、無敵の騎士として名を馳せた。欠点は、戦い方が少々乱暴すぎるところだろう。"
   },
   {
     "id": "rimuru_ur_ギルガメッシュ",
@@ -8348,9 +8536,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "風",
     "initialRarity": "UR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20240918/13/hetarerimuru/1d/77/j/o0641063715487737087.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ur_クーフーリン_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "神羽の舞・刺し穿つ",
@@ -8480,11 +8668,18 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20240918/13/hetarerimuru/1d/77/j/o0641063715487737087.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ur_クーフーリン_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ur_クーフーリン_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "鋭さが際立つ騎士、クーフーリンは、その圧倒的な戦力と高慢な態度で知られている。だが、高みから見下ろすようなその外見とは裏腹に、彼女は心の奥底で、自分を征服できる主、つまり心から従いたくなるような存在を渇望している。彼女は他者に次々と挑み続けることで、自分を打ち負かせる者を探しているのだ。ある時城主に出会い、その卓越した戦術指揮能力に心服し、支配されたいという願望が心の中に芽生えた。しかしその思いは口にすることができず、胸に秘めたままである。"
   },
   {
     "id": "rimuru_ur_黄忠",
@@ -9834,9 +10029,9 @@ window.GIRLWARS_DATA = [
     "type": "力",
     "system": "雪",
     "initialRarity": "UR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20250404/12/hetarerimuru/1b/04/j/o0652066815562273714.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ur_長宗我部元親_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "鯨突ー踏波ー覚",
@@ -10016,9 +10211,15 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20250404/12/hetarerimuru/1b/04/j/o0652066815562273714.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ur_長宗我部元親_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ur_長宗我部元親_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
     ]
   },
@@ -10227,9 +10428,9 @@ window.GIRLWARS_DATA = [
     "type": "猛",
     "system": "花",
     "initialRarity": "UR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20240801/18/hetarerimuru/c0/98/j/o0656067715469890299.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ur_馬超_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "轟雷・雷鳴銀槍舞・絶",
@@ -10360,11 +10561,18 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20240801/18/hetarerimuru/c0/98/j/o0656067715469890299.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ur_馬超_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ur_馬超_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "表面上は学校の秩序を維持する風紀委員だが、実は夜になると魔法戦士に変身し、街を巡って夜の闇に潜む魔物を退治している。武芸に優れ、敵を虐殺することに対して謎の執着を持っている。"
   },
   {
     "id": "rimuru_ur_卑弥呼",
@@ -10988,9 +11196,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "月",
     "initialRarity": "UR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20241117/18/hetarerimuru/92/73/j/o0661048815511129576.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ur_メフィスト_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "憎悪の始まりー断ち切る鋏（読み：たちきるはさみ）",
@@ -11120,11 +11328,18 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20241117/18/hetarerimuru/92/73/j/o0661048815511129576.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ur_メフィスト_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ur_メフィスト_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "天性の美貌を武器に他人を翻弄し、相手の大切なものを奪い去っていく魅力的な詐欺師。城主と出会ったことで、自分が進むべき道を少しずつ理解していくようになったのだ。"
   },
   {
     "id": "rimuru_ur_雪女",
@@ -11134,9 +11349,9 @@ window.GIRLWARS_DATA = [
     "type": "智",
     "system": "雪",
     "initialRarity": "UR",
-    "illustUrl": "https://stat.ameba.jp/user_images/20240701/17/hetarerimuru/08/c0/j/o0651066215458158287.jpg?caw=800",
-    "illustSource": "へたれリムルブログ",
-    "illustCredit": "へたれゲームプレイヤーリムル (ameblo)",
+    "illustUrl": "assets/official/rimuru_ur_雪女_main.jpg",
+    "illustSource": "少女ウォーズ公式Discord「UR図鑑」",
+    "illustCredit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト",
     "skills": {
       "normal": {
         "name": "凍てつく極夜・雲雀殺",
@@ -11273,11 +11488,18 @@ window.GIRLWARS_DATA = [
     "images": [
       {
         "label": "通常",
-        "url": "https://stat.ameba.jp/user_images/20240701/17/hetarerimuru/08/c0/j/o0651066215458158287.jpg?caw=800",
-        "source": "へたれリムルブログ",
-        "credit": "へたれゲームプレイヤーリムル (ameblo)"
+        "url": "assets/official/rimuru_ur_雪女_main.jpg",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式イラスト"
+      },
+      {
+        "label": "公式性能紹介",
+        "url": "assets/official/rimuru_ur_雪女_info.webp",
+        "source": "少女ウォーズ公式Discord「UR図鑑」",
+        "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
       }
-    ]
+    ],
+    "story": "雪女は千年前に封印された大妖怪であり、強力な力を持っている。封印の効力が弱まってきているため、雪女は時折近寄る人を封印の中に引き込んでいる。食ってやると言うが、実際は精力を吸うだけで命を取ることはない。"
   },
   {
     "id": "rimuru_ur_李白",

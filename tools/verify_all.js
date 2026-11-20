@@ -265,4 +265,22 @@ console.log(`  評価文(evaluation.summary)保有件数: ${withEvalSummary.leng
 console.log(`  タグ保有件数: ${charsWithTags.length} / ${data.length} (空欄: ${emptyTags.length} 件, メタ: ${meta.withTagsCount}) -> ${charsWithTags.length === 125 && charsWithTags.length === meta.withTagsCount ? 'PASS' : 'FAIL'}`);
 console.log(`  全タグが既存14分類・fromSkill/fromEval準拠: ${allTagsValidStructure ? 'PASS' : 'FAIL'}`);
 
+// Check 17: 第16弾 - 公式Discord「UR図鑑」画像・性能紹介・紹介文検証
+console.log(`\n--- 第16弾: 公式Discord「UR図鑑」画像・性能紹介・紹介文検証 ---`);
+const officialRefs = [];
+data.forEach(c => {
+  if (c.illustUrl && c.illustUrl.startsWith('assets/official/')) officialRefs.push(c.illustUrl);
+  (c.images || []).forEach(img => {
+    if (img.url && img.url.startsWith('assets/official/')) officialRefs.push(img.url);
+  });
+});
+const uniqueOfficialRefs = [...new Set(officialRefs)];
+const missingOfficialFiles = uniqueOfficialRefs.filter(rel => !fs.existsSync(`app/${rel}`));
+console.log(`  参照されている assets/official/ ファイル数: ${uniqueOfficialRefs.length}, 実在確認: ${uniqueOfficialRefs.length - missingOfficialFiles.length}/${uniqueOfficialRefs.length} -> ${missingOfficialFiles.length === 0 ? 'PASS' : 'FAIL'}`);
+const infoImagesCount = data.reduce((acc, c) => acc + (c.images || []).filter(i => i.label === '公式性能紹介').length, 0);
+console.log(`  公式性能紹介エントリ数: ${infoImagesCount} 件, 収録画像総数: ${totalImages} 件 -> ${totalImages === 371 && infoImagesCount === 32 ? 'PASS' : 'FAIL'}`);
+const ryubiUr = data.find(c => c.id === 'rimuru_ur_劉備');
+const ryubiUntouched = ryubiUr && !ryubiUr.illustUrl.startsWith('assets/official/') && !(ryubiUr.images || []).some(i => i.label === '公式性能紹介');
+console.log(`  ダウンロード失敗(HTTP 404)の rimuru_ur_劉備 が未変更: ${ryubiUntouched ? 'PASS' : 'FAIL'}`);
+
 console.log("\n================ VERIFICATION COMPLETE ================");
