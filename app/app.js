@@ -2007,12 +2007,13 @@
 
       hintsHtml = `
         <div class="modal-section">
-          <div class="modal-section-title">💡 花嫁衣装・セリフ解放ヒント（マトメバコ！調べ）</div>
-          <div style="max-height: 200px; overflow-y: auto; padding: 10px 14px; background: rgba(236, 72, 153, 0.08); border: 1px solid rgba(236, 72, 153, 0.2); border-radius: var(--radius-md);">
+          <div class="modal-section-title">💡 ボイス解放ヒント（花嫁衣装・セリフ解放ヒント）</div>
+          <div style="max-height: 220px; overflow-y: auto; padding: 10px 14px; background: rgba(236, 72, 153, 0.08); border: 1px solid rgba(236, 72, 153, 0.2); border-radius: var(--radius-md);">
             <ul style="margin: 0; padding-left: 20px;">
               ${hItems}
             </ul>
           </div>
+          <div style="margin-top: 6px; font-size: 0.72rem; color: var(--text-muted); text-align: right;">ヒント出典：ココマトブログ「花嫁キャラのヒント一覧」（<a href="https://kokomatoblog.com/shoujyowars-wed" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); text-decoration: underline;">https://kokomatoblog.com/shoujyowars-wed</a>）</div>
         </div>
       `;
     }

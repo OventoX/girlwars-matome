@@ -317,4 +317,48 @@ const zukanOk = zukanIds.every(id => {
 });
 console.log(`  対象18件の「公式イラスト」エントリ＆ファイル実在: ${zukanOk ? 'PASS' : 'FAIL'}`);
 
+// Check 20: 第20弾 - 花嫁89件「ボイス解放ヒント」件数表照合検証
+console.log(`\n--- 第20弾: 花嫁89件「ボイス解放ヒント」件数表照合検証 ---`);
+const expectedHintsCount = {
+  kokomato_wed_abe_no_seimei: 20, kokomato_wed_achilles: 29, kokomato_wed_alexander: 22,
+  kokomato_wed_astolfo: 30, kokomato_wed_attila: 26, kokomato_wed_augustus: 16,
+  kokomato_wed_bachou: 30, kokomato_wed_beowulf: 23, kokomato_wed_bismarck: 24,
+  kokomato_wed_brynhildr: 24, kokomato_wed_charlemagne: 22, kokomato_wed_chosokabe_motochika: 19,
+  kokomato_wed_chousen: 20, kokomato_wed_cu_chulainn: 22, kokomato_wed_da_vinci: 39,
+  kokomato_wed_dante: 33, kokomato_wed_date_masamune: 24, kokomato_wed_elizabeth: 28,
+  kokomato_wed_frankenstein: 17, kokomato_wed_friedrich: 20, kokomato_wed_gawain: 25,
+  kokomato_wed_genghis_khan: 24, kokomato_wed_gilgamesh: 33, kokomato_wed_heracles: 29,
+  kokomato_wed_himiko: 26, kokomato_wed_inahime: 29, kokomato_wed_ishida_mitsunari: 31,
+  kokomato_wed_jeanne_darc: 24, kokomato_wed_kamiizumi_nobutsuna: 27, kokomato_wed_kouchuu: 32,
+  kokomato_wed_kouu: 30, kokomato_wed_lancelot: 30, kokomato_wed_medea: 23,
+  kokomato_wed_mephisto: 24, kokomato_wed_minamoto_no_yorimitsu: 30, kokomato_wed_mordred: 15,
+  kokomato_wed_nero: 29, kokomato_wed_okita_soji: 20, kokomato_wed_orion: 27,
+  kokomato_wed_perseus: 44, kokomato_wed_rihaku: 29, kokomato_wed_romulus: 32,
+  kokomato_wed_ryohu: 42, kokomato_wed_ryubi: 31, kokomato_wed_sakata_kintoki: 41,
+  kokomato_wed_sasaki_kojiro: 22, kokomato_wed_scathach: 38, kokomato_wed_semiramis: 21,
+  kokomato_wed_shikoutei: 28, kokomato_wed_shizuka_gozen: 21, kokomato_wed_solomon: 34,
+  kokomato_wed_sousou: 22, kokomato_wed_tachibana_dosetsu: 22, kokomato_wed_tachibana_muneshige: 31,
+  kokomato_wed_takeda_shingen: 21, kokomato_wed_takenaka_hanbei: 32, kokomato_wed_tamamo_no_mae: 32,
+  kokomato_wed_tomoe_gozen: 23, kokomato_wed_toyotomi_hideyoshi: 21, kokomato_wed_yaobikuni: 28,
+  kokomato_wed_yukionna: 28,
+  wiki_101: 20, wiki_35: 17, wiki_36: 28, wiki_37: 23, wiki_38: 19, wiki_39: 16,
+  wiki_40: 19, wiki_41: 16, wiki_42: 18, wiki_43: 19, wiki_44: 19, wiki_45: 19,
+  wiki_46: 21, wiki_47: 20, wiki_48: 22, wiki_49: 19, wiki_50: 17, wiki_51: 20,
+  wiki_52: 18, wiki_53: 18, wiki_54: 20, wiki_55: 20, wiki_56: 23, wiki_57: 21,
+  wiki_58: 19, wiki_59: 17, wiki_60: 17, wiki_62: 16
+};
+const hintMismatches = [];
+let totalHintsSum = 0;
+brides.forEach(b => {
+  const got = Array.isArray(b.hints) ? b.hints.length : -1;
+  totalHintsSum += Math.max(0, got);
+  if (got !== expectedHintsCount[b.id]) {
+    hintMismatches.push(`${b.id}:${got}!=${expectedHintsCount[b.id]}`);
+  }
+});
+const hasVoiceHintUI = appJs.includes('ボイス解放ヒント') && appJs.includes('ヒント出典：ココマトブログ「花嫁キャラのヒント一覧」');
+console.log(`  花嫁89件ヒント件数一致: ${hintMismatches.length === 0 ? 'PASS' : 'FAIL (' + hintMismatches.join(', ') + ')'}`);
+console.log(`  合計ヒント数: ${totalHintsSum} (期待値: 2180) -> ${totalHintsSum === 2180 ? 'PASS' : 'FAIL'}`);
+console.log(`  詳細モーダル ボイス解放ヒント＆出典UI実装: ${hasVoiceHintUI ? 'PASS' : 'FAIL'}`);
+
 console.log("\n================ VERIFICATION COMPLETE ================");
