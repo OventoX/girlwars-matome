@@ -278,7 +278,7 @@ const uniqueOfficialRefs = [...new Set(officialRefs)];
 const missingOfficialFiles = uniqueOfficialRefs.filter(rel => !fs.existsSync(`app/${rel}`));
 console.log(`  参照されている assets/official/ ファイル数: ${uniqueOfficialRefs.length}, 実在確認: ${uniqueOfficialRefs.length - missingOfficialFiles.length}/${uniqueOfficialRefs.length} -> ${missingOfficialFiles.length === 0 ? 'PASS' : 'FAIL'}`);
 const infoImagesCount = data.reduce((acc, c) => acc + (c.images || []).filter(i => i.label === '公式性能紹介').length, 0);
-console.log(`  公式性能紹介エントリ数: ${infoImagesCount} 件, 収録画像総数: ${totalImages} 件 -> ${totalImages === 372 && infoImagesCount === 33 ? 'PASS' : 'FAIL'}`);
+console.log(`  公式性能紹介エントリ数: ${infoImagesCount} 件, 収録画像総数: ${totalImages} 件 -> ${totalImages === 382 && infoImagesCount === 33 ? 'PASS' : 'FAIL'}`);
 const ryubiUr = data.find(c => c.id === 'rimuru_ur_劉備');
 const ryubiDone = ryubiUr && ryubiUr.illustUrl === 'assets/official/rimuru_ur_劉備_main.jpg'
   && (ryubiUr.images || []).some(i => i.label === '通常' && i.url === 'assets/official/rimuru_ur_劉備_main.jpg')
@@ -288,5 +288,17 @@ console.log(`  rimuru_ur_劉備 の差し替え・性能紹介・story 完了: $
 const officialSourceCount = data.filter(c => c.illustSource === '少女ウォーズ公式Discord「UR図鑑」').length;
 const hasStorySourceUI = appJs.includes('紹介文出典：少女ウォーズ公式Discord「UR図鑑」');
 console.log(`  公式出典レコード数: ${officialSourceCount} 件, モーダル紹介文出典UI実装: ${hasStorySourceUI ? 'PASS' : 'FAIL'} -> ${officialSourceCount === 33 && hasStorySourceUI ? 'PASS' : 'FAIL'}`);
+
+// Check 18: 第18弾 - 公式Discord「秘密の部屋」イラスト10件検証
+console.log(`\n--- 第18弾: 公式Discord「秘密の部屋」公式イラスト10件検証 ---`);
+const secretIds = [
+  'wiki_77', 'rimuru_ursen_カール大帝', 'wiki_85', 'wiki_105', 'wiki_66',
+  'wiki_68', 'rimuru_ursen_長宗我部元親', 'kokomato_wed_augustus', 'wiki_100', 'rimuru_ursen_安倍晴明'
+];
+const secretOk = secretIds.every(id => {
+  const rec = data.find(c => c.id === id);
+  return rec && (rec.images || []).some(i => i.label === '公式イラスト' && i.source === '少女ウォーズ公式Discord「秘密の部屋」' && i.url === `assets/official/${id}_secret.webp` && fs.existsSync(`app/${i.url}`));
+});
+console.log(`  対象10件の「公式イラスト」エントリ＆ファイル実在: ${secretOk ? 'PASS' : 'FAIL'}`);
 
 console.log("\n================ VERIFICATION COMPLETE ================");

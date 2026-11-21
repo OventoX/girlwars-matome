@@ -18,8 +18,8 @@ window.GIRLWARS_METADATA = {
   withSkillsCount: 72,
   withIllustCount: 215,
   withTagsCount: 125,
-  withVariantsCount: 133,
-  totalImagesCount: 372,
+  withVariantsCount: 140,
+  totalImagesCount: 382,
   brideWithVariantsCount: 87,
   brideTotalImagesCount: 176,
   tagsMaster: [
@@ -660,6 +660,12 @@ window.GIRLWARS_DATA = [
         "url": "https://kokomatoblog.com/wp-content/uploads/2025/12/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BAUR%E9%96%83%E5%AE%89%E5%80%8D%E6%99%B4%E6%98%8E%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ursen_安倍晴明_secret.webp",
+        "source": "少女ウォーズ公式Discord「秘密の部屋」",
+        "credit": "少女ウォーズ公式Discord「秘密の部屋」 / 公式イラスト"
       }
     ]
   },
@@ -2204,6 +2210,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20240528/09/hetarerimuru/eb/30/j/o1679075615444348732.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ursen_カール大帝_secret.webp",
+        "source": "少女ウォーズ公式Discord「秘密の部屋」",
+        "credit": "少女ウォーズ公式Discord「秘密の部屋」 / 公式イラスト"
       }
     ]
   },
@@ -4069,6 +4081,12 @@ window.GIRLWARS_DATA = [
         "url": "https://kokomatoblog.com/wp-content/uploads/2025/04/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AEUR%E9%96%83%E9%95%B7%E5%AE%97%E6%88%91%E9%83%A8%E5%85%83%E8%A6%AA%E3%81%AE%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ursen_長宗我部元親_secret.webp",
+        "source": "少女ウォーズ公式Discord「秘密の部屋」",
+        "credit": "少女ウォーズ公式Discord「秘密の部屋」 / 公式イラスト"
       }
     ]
   },
@@ -12333,6 +12351,12 @@ window.GIRLWARS_DATA = [
         "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfMjQw/MDAxNjg0OTA2NjQyMjUw.HktOCZTg6_Iz-14qtX7qi0honb0ZVO-slDPxpMqtj9Ig.xaiJyqx6V-6H5Mmkr1zYIVccgDeD1LNM8Ou4uxndDPEg.JPEG/%EC%97%98%EB%A6%AC%EC%9E%90%EB%B2%A0%EC%8A%A4.jpg?type=w1678",
         "source": "少女ウォーズ@wiki",
         "credit": "少女ウォーズ@wiki / 公式スチル"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/wiki_85_secret.webp",
+        "source": "少女ウォーズ公式Discord「秘密の部屋」",
+        "credit": "少女ウォーズ公式Discord「秘密の部屋」 / 公式イラスト"
       }
     ]
   },
@@ -13119,6 +13143,12 @@ window.GIRLWARS_DATA = [
         "url": "https://nng-phinf.pstatic.net/MjAyMzA2MjlfMjUx/MDAxNjg4MDI1MjE1OTk4.CcXOBCR82V69JTates8mOuSgoRMRQBMKfvkBGY0-h1wg.j2SW6Ead4RL4Bdss30Putj8i31Nx5KB18Br5gRFGJGQg.JPEG/%EC%82%AC%EC%82%AC%ED%82%A4%EC%BD%94%EC%A7%80%EB%A1%9C.jpg?type=w1678",
         "source": "少女ウォーズ@wiki",
         "credit": "少女ウォーズ@wiki / 公式スチル"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/wiki_77_secret.webp",
+        "source": "少女ウォーズ公式Discord「秘密の部屋」",
+        "credit": "少女ウォーズ公式Discord「秘密の部屋」 / 公式イラスト"
       }
     ]
   },
@@ -14909,6 +14939,12 @@ window.GIRLWARS_DATA = [
         "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfNzIg/MDAxNjg0ODk3NTczNjQz.LsbpzqU4KRwRtLIpYBqq5asgBe4IW4fe97pJzzB6zAsg.hwKtyMFDB-itXPz47RVP2NtE41Z3ram3OBpC7fqx-uIg.PNG/%EB%B9%84%EC%8A%A4%EB%A7%88%EB%A5%B4%ED%81%AC.png?type=w1678",
         "source": "少女ウォーズ@wiki",
         "credit": "少女ウォーズ@wiki / 公式スチル"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/wiki_66_secret.webp",
+        "source": "少女ウォーズ公式Discord「秘密の部屋」",
+        "credit": "少女ウォーズ公式Discord「秘密の部屋」 / 公式イラスト"
       }
     ]
   },
@@ -15080,6 +15116,12 @@ window.GIRLWARS_DATA = [
         "url": "https://img.atwiki.jp/girlwars/attach/105/10/%E3%83%95%E3%83%AA%E3%83%BC%E3%83%89%E3%83%AA%E3%83%92.jpg",
         "source": "少女ウォーズ@wiki",
         "credit": "少女ウォーズ@wiki / 公式スチル"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/wiki_105_secret.webp",
+        "source": "少女ウォーズ公式Discord「秘密の部屋」",
+        "credit": "少女ウォーズ公式Discord「秘密の部屋」 / 公式イラスト"
       }
     ]
   },
@@ -15522,6 +15564,12 @@ window.GIRLWARS_DATA = [
         "url": "https://nng-phinf.pstatic.net/MjAyMzExMjRfMTQg/MDAxNzAwODIwOTMzODc1.22OH9v9kqtPLtyGnmVmEf1dW0_GQ026rAyzMQX-tBzIg.IrwtblFL3Mxx6QDt_MX1aTNoNAgtN5lE7QrC9AiTwvAg.JPEG/%EB%A9%94%EB%8D%B0%EC%9D%B4%EC%95%84.jpg?type=w1678",
         "source": "少女ウォーズ@wiki",
         "credit": "少女ウォーズ@wiki / 公式スチル"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/wiki_100_secret.webp",
+        "source": "少女ウォーズ公式Discord「秘密の部屋」",
+        "credit": "少女ウォーズ公式Discord「秘密の部屋」 / 公式イラスト"
       }
     ]
   },
@@ -15662,6 +15710,12 @@ window.GIRLWARS_DATA = [
         "url": "https://nng-phinf.pstatic.net/MjAyMzA1MjRfOTMg/MDAxNjg0OTA3Mjk0OTgx.few0_NbiPZ-hh_eM0t4jU1-yAJzcw6rDEOcW06tO3OUg.dlvJCB2VfoAidJ8BydDWzQkbunGFzzGAkGVpFwlLwNwg.JPEG/%EB%AA%A8%EB%93%9C%EB%A0%88%EB%93%9C.jpg?type=w1678",
         "source": "少女ウォーズ@wiki",
         "credit": "少女ウォーズ@wiki / 公式スチル"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/wiki_68_secret.webp",
+        "source": "少女ウォーズ公式Discord「秘密の部屋」",
+        "credit": "少女ウォーズ公式Discord「秘密の部屋」 / 公式イラスト"
       }
     ]
   },
@@ -16158,6 +16212,12 @@ window.GIRLWARS_DATA = [
         "url": "https://kokomatoblog.com/wp-content/uploads/2025/02/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E8%8A%B1%E5%AB%81%E3%82%A2%E3%82%A6%E3%82%B0%E3%82%B9%E3%83%88%E3%82%A5%E3%82%B9%E8%84%B1%E8%A1%A3%E5%BE%8C-1024x510.jpg",
         "source": "マトメバコ！ (kokomatoblog)",
         "credit": "マトメバコ！ / ゲーム内スチル"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/kokomato_wed_augustus_secret.webp",
+        "source": "少女ウォーズ公式Discord「秘密の部屋」",
+        "credit": "少女ウォーズ公式Discord「秘密の部屋」 / 公式イラスト"
       }
     ]
   },
