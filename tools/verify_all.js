@@ -278,7 +278,7 @@ const uniqueOfficialRefs = [...new Set(officialRefs)];
 const missingOfficialFiles = uniqueOfficialRefs.filter(rel => !fs.existsSync(`app/${rel}`));
 console.log(`  参照されている assets/official/ ファイル数: ${uniqueOfficialRefs.length}, 実在確認: ${uniqueOfficialRefs.length - missingOfficialFiles.length}/${uniqueOfficialRefs.length} -> ${missingOfficialFiles.length === 0 ? 'PASS' : 'FAIL'}`);
 const infoImagesCount = data.reduce((acc, c) => acc + (c.images || []).filter(i => i.label === '公式性能紹介').length, 0);
-console.log(`  公式性能紹介エントリ数: ${infoImagesCount} 件, 収録画像総数: ${totalImages} 件 -> ${totalImages === 382 && infoImagesCount === 33 ? 'PASS' : 'FAIL'}`);
+console.log(`  公式性能紹介エントリ数: ${infoImagesCount} 件, 収録画像総数: ${totalImages} 件 -> ${totalImages === 400 && infoImagesCount === 33 ? 'PASS' : 'FAIL'}`);
 const ryubiUr = data.find(c => c.id === 'rimuru_ur_劉備');
 const ryubiDone = ryubiUr && ryubiUr.illustUrl === 'assets/official/rimuru_ur_劉備_main.jpg'
   && (ryubiUr.images || []).some(i => i.label === '通常' && i.url === 'assets/official/rimuru_ur_劉備_main.jpg')
@@ -300,5 +300,21 @@ const secretOk = secretIds.every(id => {
   return rec && (rec.images || []).some(i => i.label === '公式イラスト' && i.source === '少女ウォーズ公式Discord「秘密の部屋」' && i.url === `assets/official/${id}_secret.webp` && fs.existsSync(`app/${i.url}`));
 });
 console.log(`  対象10件の「公式イラスト」エントリ＆ファイル実在: ${secretOk ? 'PASS' : 'FAIL'}`);
+
+// Check 19: 第19弾 - 公式Discord「少女図鑑」公式イラスト18件検証
+console.log(`\n--- 第19弾: 公式Discord「少女図鑑」公式イラスト18件検証 ---`);
+const zukanIds = [
+  'rimuru_ur_メフィスト', 'rimuru_ur_ネロ・クラウディウス', 'rimuru_ur_沖田総司',
+  'rimuru_ur_ギルガメッシュ', 'rimuru_ur_坂田金時', 'rimuru_ur_黄忠',
+  'rimuru_ur_斎藤帰蝶', 'rimuru_ur_アキレウス', 'rimuru_ur_李白',
+  'rimuru_ur_趙子龍', 'rimuru_ursen_玉藻前', 'rimuru_ur_カール大帝',
+  'rimuru_ursen_上泉信綱', 'rimuru_ur_エカテリーナ', 'rimuru_ursen_ペルセウス',
+  'rimuru_ursen_ダンテ', 'rimuru_ursen_ダ・ヴィンチ', 'rimuru_ursen_ガウェイン'
+];
+const zukanOk = zukanIds.every(id => {
+  const rec = data.find(c => c.id === id);
+  return rec && (rec.images || []).some(i => i.label === '公式イラスト' && i.source === '少女ウォーズ公式Discord「少女図鑑」' && i.url === `assets/official/${id}_zukan.webp` && fs.existsSync(`app/${i.url}`));
+});
+console.log(`  対象18件の「公式イラスト」エントリ＆ファイル実在: ${zukanOk ? 'PASS' : 'FAIL'}`);
 
 console.log("\n================ VERIFICATION COMPLETE ================");

@@ -1,6 +1,6 @@
 /**
  * 少女ウォーズ キャラクター統合データベース (GirlWars Character Database)
- * Generated: 2026-11-21 00:20
+ * Generated: 2026-11-21 12:58
  * Total characters: 215 (UR閃: 39, UR: 33, SSR: 54, 花嫁: 89)
  * 
  * 厳格な著作権・出典明記ルールに基づき生成されています。
@@ -9,7 +9,7 @@
  */
 
 window.GIRLWARS_METADATA = {
-  generatedAt: "2026-11-21 00:20",
+  generatedAt: "2026-11-21 12:58",
   totalCount: 215,
   urSenCount: 39,
   urCount: 33,
@@ -18,8 +18,8 @@ window.GIRLWARS_METADATA = {
   withSkillsCount: 72,
   withIllustCount: 215,
   withTagsCount: 125,
-  withVariantsCount: 140,
-  totalImagesCount: 382,
+  withVariantsCount: 150,
+  totalImagesCount: 400,
   brideWithVariantsCount: 87,
   brideTotalImagesCount: 176,
   tagsMaster: [
@@ -2059,6 +2059,12 @@ window.GIRLWARS_DATA = [
         "url": "assets/official/rimuru_ursen_上泉信綱_info.webp",
         "source": "少女ウォーズ公式Discord「UR図鑑」",
         "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ursen_上泉信綱_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ],
     "story": "「17歳の剣聖」を自称する少女。代々剣聖の家系に生まれ、やや古風な口調で自らを「信綱」と名乗る。家訓である「何事も極意を求めよ」を信条に、一人旅をしながら剣術の修行に励んでいる。しかし、剣術以外の生活スキルは皆無で、放っておくと餓死しかねないほどのドジっ子剣聖だ。そのためよく「稽古」と称して他人の食料を強奪している。そんな彼女は城主に出会い、勝負を挑むも初めての敗北を喫し、「この人と共に極意を追い求めたい」と考えるようになる。やがて「城主が信綱だけのものになれば、より深く剣の極意を洞察できる」という歪んだ考えを抱くようになり、城主の「正妻」を名乗り始める。しかし「全てに極意を求める」信念と「人妻スキルの無さ」という現実の矛盾によって、城主の日常生活はめちゃくちゃにされていく……"
@@ -2385,6 +2391,12 @@ window.GIRLWARS_DATA = [
         "url": "assets/official/rimuru_ursen_ガウェイン_info.webp",
         "source": "少女ウォーズ公式Discord「UR図鑑」",
         "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ursen_ガウェイン_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ],
     "story": "円卓結成当初から仕える最古参の騎士の一人。太陽のように輝く聖剣を携え、日光の加護の下では無敵を誇る。魔物の侵攻に立ち向かうため反乱軍を率い、戦いが終わるその時まで民と国土を守り抜いた、忠義に厚い騎士である。ただし、戦場で見せる狂気じみた猛りと、平時に漂わせる優雅さとの落差はとても激しい。主君の前では愛らしい忠犬であっても、敵を前にすれば牙を剥く狂犬へと変貌するのだ。"
@@ -3425,6 +3437,12 @@ window.GIRLWARS_DATA = [
         "url": "assets/official/rimuru_ursen_玉藻前_info.webp",
         "source": "少女ウォーズ公式Discord「UR図鑑」",
         "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ursen_玉藻前_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ],
     "story": "正体不明、素性不明、行方不明の大妖怪。気まぐれで不思議な性格をしていて、あらゆる宝石を集めることに熱中している。人々からは「宝を盗む妖狐」と見なされているが、本人は意に介さず、「ただ自分のものを回収しているだけ」と主張している。もしかすると、これらの宝石には、彼女の秘密が隠されているのかもしれない……"
@@ -3758,6 +3776,12 @@ window.GIRLWARS_DATA = [
         "url": "https://kokomatoblog.com/wp-content/uploads/2025/07/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E3%83%80%E3%83%B3%E3%83%86%E3%81%AE%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ursen_ダンテ_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ]
   },
@@ -4802,6 +4826,12 @@ window.GIRLWARS_DATA = [
         "url": "https://kokomatoblog.com/wp-content/uploads/2025/07/%E5%B0%91%E5%A5%B3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%81%AE%E3%83%9A%E3%83%AB%E3%82%BB%E3%82%A6%E3%82%B9%E4%B8%8B%E7%9D%80%E5%A7%BF-1024x576.jpg",
         "source": "マトメバコ！",
         "credit": "マトメバコ！ (kokomatoblog.com)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ursen_ペルセウス_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ]
   },
@@ -6526,6 +6556,12 @@ window.GIRLWARS_DATA = [
         "url": "assets/official/rimuru_ursen_ダ・ヴィンチ_info.webp",
         "source": "少女ウォーズ公式Discord「UR図鑑」",
         "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ursen_ダ・ヴィンチ_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ],
     "story": "幼い頃から卓越した知性を発揮し、科学研究や発明に対して独自の鋭い見解を持っている。周囲から惜しみない賞賛と憧れの眼差しを受けてきたため、気位が高く傲慢な性格となってしまった。やがて「俗物」たちとの共同生活に耐えられなくなり、家を出て一人暮らしを始め、科学に没頭する引きこもりとなった。身につける武器や服装、装飾品のすべては彼女が独自に開発したもので、戦闘においても千変万化、予測不能な戦い方をみせる。しかし生活スキルは皆無であり、部屋をめちゃくちゃにすることもあれば、空腹で気を失うことさえある。"
@@ -7033,6 +7069,12 @@ window.GIRLWARS_DATA = [
         "url": "assets/official/rimuru_ur_アキレウス_info.webp",
         "source": "少女ウォーズ公式Discord「UR図鑑」",
         "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ur_アキレウス_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ],
     "story": "数多くの過酷な戦争を経験しながらも、一度も敗北したことのない強者である。伝説によると彼女は不死の体を持ち、どれほどの傷を負っても再び立ち上がるのだという。故に人々からは尊敬と恐怖の念を抱かれている。幼い頃に三途の川に落ちて死の洗礼を受け、不死の体を得た。しかし、そのとき魂もまた死に浸され、目には万物の死の姿しか映らなくなった。"
@@ -7768,6 +7810,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250618/10/hetarerimuru/f6/97/j/o0920041415618875034.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ur_エカテリーナ_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ]
   },
@@ -7893,6 +7941,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20241219/13/hetarerimuru/c7/49/j/o0822050315523226573.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ur_沖田総司_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ]
   },
@@ -8222,6 +8276,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250519/13/hetarerimuru/62/41/j/o0808036415598551315.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ur_カール大帝_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ]
   },
@@ -8543,6 +8603,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250102/17/hetarerimuru/7f/58/j/o1006058815528737284.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ur_ギルガメッシュ_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ]
   },
@@ -8828,6 +8894,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250205/08/hetarerimuru/e2/5e/j/o1020058315540805884.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ur_黄忠_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ]
   },
@@ -9092,6 +9164,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250218/13/hetarerimuru/9f/11/j/o0922057315545614305.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ur_斎藤帰蝶_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ]
   },
@@ -9231,6 +9309,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250120/15/hetarerimuru/c1/5b/j/o0824037115535225150.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ur_坂田金時_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ]
   },
@@ -10036,6 +10120,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250420/22/hetarerimuru/6e/04/j/o0764041715571678867.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ur_趙子龍_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ]
   },
@@ -11355,6 +11445,12 @@ window.GIRLWARS_DATA = [
         "url": "assets/official/rimuru_ur_メフィスト_info.webp",
         "source": "少女ウォーズ公式Discord「UR図鑑」",
         "credit": "少女ウォーズ公式Discord「UR図鑑」 / 公式性能紹介"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ur_メフィスト_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ],
     "story": "天性の美貌を武器に他人を翻弄し、相手の大切なものを奪い去っていく魅力的な詐欺師。城主と出会ったことで、自分が進むべき道を少しずつ理解していくようになったのだ。"
@@ -11659,6 +11755,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20250320/18/hetarerimuru/a5/88/j/o0830057315556648337.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ur_李白_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ]
   },
@@ -12048,6 +12150,12 @@ window.GIRLWARS_DATA = [
         "url": "https://stat.ameba.jp/user_images/20241204/09/hetarerimuru/78/c0/j/o0936054215517537992.jpg?caw=800",
         "source": "へたれリムルブログ",
         "credit": "へたれゲームプレイヤーリムル (ameblo)"
+      },
+      {
+        "label": "公式イラスト",
+        "url": "assets/official/rimuru_ur_ネロ・クラウディウス_zukan.webp",
+        "source": "少女ウォーズ公式Discord「少女図鑑」",
+        "credit": "少女ウォーズ公式Discord"
       }
     ]
   },

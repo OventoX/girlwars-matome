@@ -1,5 +1,5 @@
 // Service Worker for 少女ウォーズ キャラまとめ表 (Offline Support)
-const CACHE_NAME = 'girlwars-matome-v5';
+const CACHE_NAME = 'girlwars-matome-v6';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
